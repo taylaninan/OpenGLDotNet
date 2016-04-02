@@ -5,3 +5,9 @@
 /OpenGLDotNet.VC.db
 /OpenGLDotNet.VC.VC.opendb
 /.vs/OpenGLDotNet/v14/.suo
+*.suo
+*.user
+Debug/
+Release/
+bin/
+obj/
