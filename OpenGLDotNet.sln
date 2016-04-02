@@ -1,0 +1,61 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2013 for Windows Desktop
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenGLDotNet", "OpenGLDotNet.csproj", "{51991C31-1314-4726-9544-D37E228F5D60}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2264A801-DD54-4621-B983-2861E77ED3D4} = {2264A801-DD54-4621-B983-2861E77ED3D4}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenGLDemos", "OpenGLDemos.csproj", "{46B3BD7D-C426-4890-8D50-B1D7AC2202B7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2264A801-DD54-4621-B983-2861E77ED3D4} = {2264A801-DD54-4621-B983-2861E77ED3D4}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Assembler", "Assembler.vcxproj", "{2264A801-DD54-4621-B983-2861E77ED3D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
+		Debug|x86 = Debug|x86
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Win32 = Release|Win32
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51991C31-1314-4726-9544-D37E228F5D60}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{51991C31-1314-4726-9544-D37E228F5D60}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{51991C31-1314-4726-9544-D37E228F5D60}.Debug|Win32.ActiveCfg = Debug|x86
+		{51991C31-1314-4726-9544-D37E228F5D60}.Debug|x86.ActiveCfg = Debug|x86
+		{51991C31-1314-4726-9544-D37E228F5D60}.Debug|x86.Build.0 = Debug|x86
+		{51991C31-1314-4726-9544-D37E228F5D60}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{51991C31-1314-4726-9544-D37E228F5D60}.Release|Mixed Platforms.Build.0 = Release|x86
+		{51991C31-1314-4726-9544-D37E228F5D60}.Release|Win32.ActiveCfg = Release|x86
+		{51991C31-1314-4726-9544-D37E228F5D60}.Release|x86.ActiveCfg = Release|x86
+		{51991C31-1314-4726-9544-D37E228F5D60}.Release|x86.Build.0 = Release|x86
+		{46B3BD7D-C426-4890-8D50-B1D7AC2202B7}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{46B3BD7D-C426-4890-8D50-B1D7AC2202B7}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{46B3BD7D-C426-4890-8D50-B1D7AC2202B7}.Debug|Win32.ActiveCfg = Debug|x86
+		{46B3BD7D-C426-4890-8D50-B1D7AC2202B7}.Debug|x86.ActiveCfg = Debug|x86
+		{46B3BD7D-C426-4890-8D50-B1D7AC2202B7}.Debug|x86.Build.0 = Debug|x86
+		{46B3BD7D-C426-4890-8D50-B1D7AC2202B7}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{46B3BD7D-C426-4890-8D50-B1D7AC2202B7}.Release|Mixed Platforms.Build.0 = Release|x86
+		{46B3BD7D-C426-4890-8D50-B1D7AC2202B7}.Release|Win32.ActiveCfg = Release|x86
+		{46B3BD7D-C426-4890-8D50-B1D7AC2202B7}.Release|x86.ActiveCfg = Release|x86
+		{46B3BD7D-C426-4890-8D50-B1D7AC2202B7}.Release|x86.Build.0 = Release|x86
+		{2264A801-DD54-4621-B983-2861E77ED3D4}.Debug|Mixed Platforms.ActiveCfg = Release|Win32
+		{2264A801-DD54-4621-B983-2861E77ED3D4}.Debug|Mixed Platforms.Build.0 = Release|Win32
+		{2264A801-DD54-4621-B983-2861E77ED3D4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2264A801-DD54-4621-B983-2861E77ED3D4}.Debug|Win32.Build.0 = Debug|Win32
+		{2264A801-DD54-4621-B983-2861E77ED3D4}.Debug|x86.ActiveCfg = Release|Win32
+		{2264A801-DD54-4621-B983-2861E77ED3D4}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{2264A801-DD54-4621-B983-2861E77ED3D4}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{2264A801-DD54-4621-B983-2861E77ED3D4}.Release|Win32.ActiveCfg = Release|Win32
+		{2264A801-DD54-4621-B983-2861E77ED3D4}.Release|Win32.Build.0 = Release|Win32
+		{2264A801-DD54-4621-B983-2861E77ED3D4}.Release|x86.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{51991C31-1314-4726-9544-D37E228F5D60}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenGLDotNet</RootNamespace>
+    <AssemblyName>OpenGLDotNet</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Source\Common\Common.cs" />
+    <Compile Include="Source\Imaging\IL.Constants.cs" />
+    <Compile Include="Source\Imaging\IL.Functions.cs" />
+    <Compile Include="Source\Imaging\IL.Wrappers.cs" />
+    <Compile Include="Source\Imaging\ILU.Constants.cs" />
+    <Compile Include="Source\Imaging\ILU.Functions.cs" />
+    <Compile Include="Source\Imaging\ILU.Types.cs" />
+    <Compile Include="Source\Imaging\ILU.Wrappers.cs" />
+    <Compile Include="Source\Imaging\ILUT.Constants.cs" />
+    <Compile Include="Source\Imaging\ILUT.Functions.cs" />
+    <Compile Include="Source\Imaging\ILUT.Types.cs" />
+    <Compile Include="Source\Imaging\ILUT.Wrappers.cs" />
+    <Compile Include="Source\Math\OpenGLDotNet.Math.cs" />
+    <Compile Include="Source\OpenGL\FG.Constants.cs" />
+    <Compile Include="Source\OpenGL\FG.Functions.cs" />
+    <Compile Include="Source\OpenGL\FG.Wrappers.cs" />
+    <Compile Include="Source\OpenGL\GL.Base.cs" />
+    <Compile Include="Source\OpenGL\GL.CoreLinker.cs" />
+    <Compile Include="Source\OpenGL\GL.ExtLinker.cs" />
+    <Compile Include="Source\OpenGL\GL.ExtDelegates.cs" />
+    <Compile Include="Source\OpenGL\GL.ExtWrappers.cs" />
+    <Compile Include="Source\OpenGL\GLU.Constants.cs" />
+    <Compile Include="Source\OpenGL\GLU.Functions.cs" />
+    <Compile Include="Source\OpenGL\GLUT.Wrappers.cs" />
+    <Compile Include="Source\OpenGL\GLU.Wrappers.cs" />
+    <Compile Include="Source\OpenGL\WGL.Base.cs" />
+    <Compile Include="Source\OpenGL\WGL.CoreLinker.cs" />
+    <Compile Include="Source\OpenGL\WGL.CoreConstants.cs" />
+    <Compile Include="Source\OpenGL\WGL.CoreDelegates.cs" />
+    <Compile Include="Source\OpenGL\WGL.CoreTypes.cs" />
+    <Compile Include="Source\OpenGL\WGL.CoreWrappers.cs" />
+    <Compile Include="Source\OpenGL\WGL.ExtConstants.cs" />
+    <Compile Include="Source\OpenGL\WGL.ExtLinker.cs" />
+    <Compile Include="Source\OpenGL\WGL.ExtDelegates.cs" />
+    <Compile Include="Source\OpenGL\WGL.ExtWrappers.cs" />
+    <Compile Include="Source\Platform\CPUInfo.cs" />
+    <Compile Include="Source\Platform\Windows.cs" />
+    <Compile Include="Source\OpenGL\GL.CoreConstants.cs" />
+    <Compile Include="Source\OpenGL\GL.CoreDelegates.cs" />
+    <Compile Include="Source\OpenGL\GL.CoreWrappers.cs" />
+    <Compile Include="Source\OpenGL\GL.ExtConstants.cs" />
+    <Compile Include="Source\OpenGL\GLUT.Constants.cs" />
+    <Compile Include="Source\OpenGL\GLUT.Functions.cs" />
+    <Compile Include="Properties\OpenGLDotNet.AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source\Logs\Logs.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
