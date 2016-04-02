@@ -1,0 +1,6 @@
+C:\Development\GitHubRepos\OpenGLDotNet\bin\Debug\OpenGLDemos.exe
+C:\Development\GitHubRepos\OpenGLDotNet\bin\Debug\OpenGLDemos.pdb
+C:\Development\GitHubRepos\OpenGLDotNet\bin\Debug\OpenGLDotNet.pdb
+C:\Development\GitHubRepos\OpenGLDotNet\obj\x86\Debug\OpenGLDemos.csprojResolveAssemblyReference.cache
+C:\Development\GitHubRepos\OpenGLDotNet\obj\x86\Debug\OpenGLDemos.exe
+C:\Development\GitHubRepos\OpenGLDotNet\obj\x86\Debug\OpenGLDemos.pdb

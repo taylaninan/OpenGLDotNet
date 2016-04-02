@@ -30,7 +30,7 @@ namespace OpenGLDemos
         {
             Console.WriteLine("[KEYBOARD] key={0}, x={1}, y={2}", key, x, y);
 
-            if (key == 81 || key == 113)                 // 'Q' key presseda
+            if (key == 81 || key == 113)                 // 'Q' key pressed
             {
                 SpinIncrement += 0.25f;
                 Console.WriteLine("[SPIN] {0}", SpinIncrement);
@@ -233,7 +233,7 @@ namespace OpenGLDemos
         public static void Main(string[] args)
         {
             // First, setup the console window
-            Console.Title = "OpenGLDotNet v1.0";
+            Console.Title = "OpenGLDotNet v1.1.0";
 
             // After that, setup OpenGL window and OpenGL itself
             GLConfig.Init(0, 0, "Demo #02 - Simple Objects", 25, 25, 1024, 768);
