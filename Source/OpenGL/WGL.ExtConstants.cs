@@ -67,6 +67,13 @@ namespace OpenGLDotNet
         public const uint WGL_STENCIL_BUFFER_BIT_ARB                = 0x00000008;
 
         ///////////////////////////////////////////////////////////////////////
+        // WGL_ARB_context_flush_control
+        ///////////////////////////////////////////////////////////////////////
+        public const uint WGL_CONTEXT_RELEASE_BEHAVIOR_ARB          = 0x2097;
+        public const uint WGL_CONTEXT_RELEASE_BEHAVIOR_NONE_ARB     = 0x0000;
+        public const uint WGL_CONTEXT_RELEASE_BEHAVIOR_FLUSH_ARB    = 0x2098;
+
+        ///////////////////////////////////////////////////////////////////////
         // WGL_ARB_create_context
         ///////////////////////////////////////////////////////////////////////
         public const uint WGL_CONTEXT_DEBUG_BIT_ARB                 = 0x00000001;
