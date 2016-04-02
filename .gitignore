@@ -4,5 +4,4 @@
 
 /OpenGLDotNet.VC.db
 /OpenGLDotNet.VC.VC.opendb
-*.suo
-.suo
+/.vs/OpenGLDotNet/v14/.suo
