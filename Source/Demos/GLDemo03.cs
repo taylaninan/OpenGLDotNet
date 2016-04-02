@@ -233,7 +233,7 @@ namespace OpenGLDemos
         public static void Main(string[] args)
         {
             // First, setup the console window
-            Console.Title = "OpenGLDotNet v1.0";
+            Console.Title = "OpenGLDotNet v1.1.0";
 
             uint glLib = 0;
 

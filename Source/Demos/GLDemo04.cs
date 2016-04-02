@@ -271,7 +271,7 @@ namespace OpenGLDemos
         public static void Main(string[] args)
         {
             // First, setup the console window
-            Console.Title = "OpenGLDotNet v1.0";
+            Console.Title = "OpenGLDotNet v1.1.0";
 
             // After that, setup OpenGL window and OpenGL itself
             GLConfig.Init(2, 0, "Demo #04 - Texturing", 25, 25, 1024, 768);

@@ -229,7 +229,7 @@ namespace OpenGLDemos
         public static void Main(string[] args)
         {
             // First, setup the console window
-            Console.Title = "OpenGLDotNet v1.0";
+            Console.Title = "OpenGLDotNet v1.1.0";
 
             // After that, setup OpenGL window and OpenGL itself
             GLConfig.Init(0, 0, "Demo #01 - Orientation", 25, 25, 1024, 768);
