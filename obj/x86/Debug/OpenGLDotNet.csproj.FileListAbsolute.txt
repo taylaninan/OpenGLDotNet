@@ -1,6 +1,0 @@
-C:\Development\GitHubRepos\OpenGLDotNet\bin\Debug\OpenGLDotNet.dll.config
-C:\Development\GitHubRepos\OpenGLDotNet\bin\Debug\OpenGLDotNet.dll
-C:\Development\GitHubRepos\OpenGLDotNet\bin\Debug\OpenGLDotNet.pdb
-C:\Development\GitHubRepos\OpenGLDotNet\obj\x86\Debug\OpenGLDotNet.csprojResolveAssemblyReference.cache
-C:\Development\GitHubRepos\OpenGLDotNet\obj\x86\Debug\OpenGLDotNet.dll
-C:\Development\GitHubRepos\OpenGLDotNet\obj\x86\Debug\OpenGLDotNet.pdb

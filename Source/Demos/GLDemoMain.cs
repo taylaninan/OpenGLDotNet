@@ -9,7 +9,7 @@ namespace OpenGLDemos
         public static void Main(string[] args)
         {
             // First, setup the console window
-            Console.Title = "OpenGLDotNet v1.1.0";
+            Console.Title = "OpenGLDotNet v1.0";
 
             Console.WriteLine(" 0.) OpenGL and CPU Information Demo");
             Console.WriteLine(" 1.) OpenGL Demo #01 - Orientation");
