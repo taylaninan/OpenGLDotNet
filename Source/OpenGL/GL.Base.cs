@@ -633,7 +633,7 @@ namespace OpenGLDotNet
             {"WGL_AMD_gpu_association", true},
             {"WGL_AMDX_gpu_association", false},                    // ATI/AMD GPUs report to support this
             {"WGL_ARB_buffer_region", true},
-            {"WGL_ARB_context_flush_control", true}                        
+            {"WGL_ARB_context_flush_control", true},                        
             {"WGL_ARB_create_context", true},
             {"WGL_ARB_create_context_profile", true},       
             {"WGL_ARB_create_context_robustness", true},           
