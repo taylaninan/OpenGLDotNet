@@ -258,6 +258,7 @@ namespace OpenGLDotNet
             {"GL_ARB_shader_stencil_export", true},
             {"GL_ARB_shader_storage_buffer_object", true},
             {"GL_ARB_shader_subroutine", true},
+            {"GL_ARB_shader_texture_image_samples", true},
             {"GL_ARB_shader_texture_lod", true},
             {"GL_ARB_shading_language_100", true},
             {"GL_ARB_shading_language_420pack", true},

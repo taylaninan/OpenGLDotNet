@@ -2367,6 +2367,10 @@ namespace OpenGLDotNet
         public const uint GL_COMPUTE_SHADER_INVOCATIONS_ARB             = 0x82F5;
         public const uint GL_CLIPPING_INPUT_PRIMITIVES_ARB              = 0x82F6;
         public const uint GL_CLIPPING_OUTPUT_PRIMITIVES_ARB             = 0x82F7;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_shader_texture_image_samples (no constants)
+        ///////////////////////////////////////////////////////////////////////
         #endregion
 
         ///////////////////////////////////////////////////////////////////////
