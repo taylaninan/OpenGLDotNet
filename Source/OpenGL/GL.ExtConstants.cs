@@ -2353,6 +2353,20 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_ARB_get_texture_sub_image (no constants)
         ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_pipeline_statistics_query
+        ///////////////////////////////////////////////////////////////////////
+        public const uint GL_VERTICES_SUBMITTED_ARB                     = 0x82EE;
+        public const uint GL_PRIMITIVES_SUBMITTED_ARB                   = 0x82EF;
+        public const uint GL_VERTEX_SHADER_INVOCATIONS_ARB              = 0x82F0;
+        public const uint GL_TESS_CONTROL_SHADER_PATCHES_ARB            = 0x82F1;
+        public const uint GL_TESS_EVALUATION_SHADER_INVOCATIONS_ARB     = 0x82F2;
+        public const uint GL_GEOMETRY_SHADER_PRIMITIVES_EMITTED_ARB     = 0x82F3;
+        public const uint GL_FRAGMENT_SHADER_INVOCATIONS_ARB            = 0x82F4;
+        public const uint GL_COMPUTE_SHADER_INVOCATIONS_ARB             = 0x82F5;
+        public const uint GL_CLIPPING_INPUT_PRIMITIVES_ARB              = 0x82F6;
+        public const uint GL_CLIPPING_OUTPUT_PRIMITIVES_ARB             = 0x82F7;
         #endregion
 
         ///////////////////////////////////////////////////////////////////////

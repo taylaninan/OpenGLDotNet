@@ -232,6 +232,7 @@ namespace OpenGLDotNet
             {"GL_ARB_multitexture", true},
             {"GL_ARB_occlusion_query", true},
             {"GL_ARB_occlusion_query2", true},
+            {"GL_ARB_pipeline_statistics_query", true},
             {"GL_ARB_pixel_buffer_object", true},
             {"GL_ARB_point_parameters", true},
             {"GL_ARB_point_sprite", true},
