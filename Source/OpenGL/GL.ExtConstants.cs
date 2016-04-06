@@ -1431,19 +1431,20 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_ARB_texture_cube_map_array
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_TEXTURE_CUBE_MAP_ARRAY_ARB = 0x9009;
-        public const uint GL_TEXTURE_BINDING_CUBE_MAP_ARRAY_ARB = 0x900A;
-        public const uint GL_PROXY_TEXTURE_CUBE_MAP_ARRAY_ARB = 0x900B;
-        public const uint GL_SAMPLER_CUBE_MAP_ARRAY_ARB = 0x900C;
-        public const uint GL_SAMPLER_CUBE_MAP_ARRAY_SHADOW_ARB = 0x900D;
-        public const uint GL_INT_SAMPLER_CUBE_MAP_ARRAY_ARB = 0x900E;
-        public const uint GL_UNSIGNED_INT_SAMPLER_CUBE_MAP_ARRAY_ARB = 0x900F;
+        public const uint GL_TEXTURE_CUBE_MAP_ARRAY_ARB                 = 0x9009;
+        public const uint GL_TEXTURE_BINDING_CUBE_MAP_ARRAY_ARB         = 0x900A;
+        public const uint GL_PROXY_TEXTURE_CUBE_MAP_ARRAY_ARB           = 0x900B;
+        public const uint GL_SAMPLER_CUBE_MAP_ARRAY_ARB                 = 0x900C;
+        public const uint GL_SAMPLER_CUBE_MAP_ARRAY_SHADOW_ARB          = 0x900D;
+        public const uint GL_INT_SAMPLER_CUBE_MAP_ARRAY_ARB             = 0x900E;
+        public const uint GL_UNSIGNED_INT_SAMPLER_CUBE_MAP_ARRAY_ARB    = 0x900F;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_ARB_texture_gather
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_MIN_PROGRAM_TEXTURE_GATHER_OFFSET_ARB = 0x8E5E;
-        public const uint GL_MAX_PROGRAM_TEXTURE_GATHER_OFFSET_ARB = 0x8E5F;
+        public const uint GL_MIN_PROGRAM_TEXTURE_GATHER_OFFSET_ARB      = 0x8E5E;
+        public const uint GL_MAX_PROGRAM_TEXTURE_GATHER_OFFSET_ARB      = 0x8E5F;
+        public const uint GL_MAX_PROGRAM_TEXTURE_GATHER_COMPONENTS_ARB  = 0x8F9F;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_ARB_texture_query_lod (no constants)
@@ -1744,40 +1745,40 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_ARB_debug_output
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_DEBUG_OUTPUT_SYNCHRONOUS_ARB = 0x8242;
-        public const uint GL_DEBUG_NEXT_LOGGED_MESSAGE_LENGTH_ARB = 0x8243;
-        public const uint GL_DEBUG_CALLBACK_FUNCTION_ARB = 0x8244;
-        public const uint GL_DEBUG_CALLBACK_USER_PARAM_ARB = 0x8245;
-        public const uint GL_DEBUG_SOURCE_API_ARB = 0x8246;
-        public const uint GL_DEBUG_SOURCE_WINDOW_SYSTEM_ARB = 0x8247;
-        public const uint GL_DEBUG_SOURCE_SHADER_COMPILER_ARB = 0x8248;
-        public const uint GL_DEBUG_SOURCE_THIRD_PARTY_ARB = 0x8249;
-        public const uint GL_DEBUG_SOURCE_APPLICATION_ARB = 0x824A;
-        public const uint GL_DEBUG_SOURCE_OTHER_ARB = 0x824B;
-        public const uint GL_DEBUG_TYPE_ERROR_ARB = 0x824C;
-        public const uint GL_DEBUG_TYPE_DEPRECATED_BEHAVIOR_ARB = 0x824D;
-        public const uint GL_DEBUG_TYPE_UNDEFINED_BEHAVIOR_ARB = 0x824E;
-        public const uint GL_DEBUG_TYPE_PORTABILITY_ARB = 0x824F;
-        public const uint GL_DEBUG_TYPE_PERFORMANCE_ARB = 0x8250;
-        public const uint GL_DEBUG_TYPE_OTHER_ARB = 0x8251;
-        public const uint GL_MAX_DEBUG_MESSAGE_LENGTH_ARB = 0x9143;
-        public const uint GL_MAX_DEBUG_LOGGED_MESSAGES_ARB = 0x9144;
-        public const uint GL_DEBUG_LOGGED_MESSAGES_ARB = 0x9145;
-        public const uint GL_DEBUG_SEVERITY_HIGH_ARB = 0x9146;
-        public const uint GL_DEBUG_SEVERITY_MEDIUM_ARB = 0x9147;
-        public const uint GL_DEBUG_SEVERITY_LOW_ARB = 0x9148;
+        public const uint GL_DEBUG_OUTPUT_SYNCHRONOUS_ARB           = 0x8242;
+        public const uint GL_DEBUG_NEXT_LOGGED_MESSAGE_LENGTH_ARB   = 0x8243;
+        public const uint GL_DEBUG_CALLBACK_FUNCTION_ARB            = 0x8244;
+        public const uint GL_DEBUG_CALLBACK_USER_PARAM_ARB          = 0x8245;
+        public const uint GL_DEBUG_SOURCE_API_ARB                   = 0x8246;
+        public const uint GL_DEBUG_SOURCE_WINDOW_SYSTEM_ARB         = 0x8247;
+        public const uint GL_DEBUG_SOURCE_SHADER_COMPILER_ARB       = 0x8248;
+        public const uint GL_DEBUG_SOURCE_THIRD_PARTY_ARB           = 0x8249;
+        public const uint GL_DEBUG_SOURCE_APPLICATION_ARB           = 0x824A;
+        public const uint GL_DEBUG_SOURCE_OTHER_ARB                 = 0x824B;
+        public const uint GL_DEBUG_TYPE_ERROR_ARB                   = 0x824C;
+        public const uint GL_DEBUG_TYPE_DEPRECATED_BEHAVIOR_ARB     = 0x824D;
+        public const uint GL_DEBUG_TYPE_UNDEFINED_BEHAVIOR_ARB      = 0x824E;
+        public const uint GL_DEBUG_TYPE_PORTABILITY_ARB             = 0x824F;
+        public const uint GL_DEBUG_TYPE_PERFORMANCE_ARB             = 0x8250;
+        public const uint GL_DEBUG_TYPE_OTHER_ARB                   = 0x8251;
+        public const uint GL_MAX_DEBUG_MESSAGE_LENGTH_ARB           = 0x9143;
+        public const uint GL_MAX_DEBUG_LOGGED_MESSAGES_ARB          = 0x9144;
+        public const uint GL_DEBUG_LOGGED_MESSAGES_ARB              = 0x9145;
+        public const uint GL_DEBUG_SEVERITY_HIGH_ARB                = 0x9146;
+        public const uint GL_DEBUG_SEVERITY_MEDIUM_ARB              = 0x9147;
+        public const uint GL_DEBUG_SEVERITY_LOW_ARB                 = 0x9148;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_ARB_robustness
         ///////////////////////////////////////////////////////////////////////
         /* reuse GL_NO_ERROR */
-        public const uint GL_CONTEXT_FLAG_ROBUST_ACCESS_BIT_ARB = 0x00000004;
-        public const uint GL_LOSE_CONTEXT_ON_RESET_ARB = 0x8252;
-        public const uint GL_GUILTY_CONTEXT_RESET_ARB = 0x8253;
-        public const uint GL_INNOCENT_CONTEXT_RESET_ARB = 0x8254;
-        public const uint GL_UNKNOWN_CONTEXT_RESET_ARB = 0x8255;
-        public const uint GL_RESET_NOTIFICATION_STRATEGY_ARB = 0x8256;
-        public const uint GL_NO_RESET_NOTIFICATION_ARB = 0x8261;
+        public const uint GL_CONTEXT_FLAG_ROBUST_ACCESS_BIT_ARB     = 0x00000004;
+        public const uint GL_LOSE_CONTEXT_ON_RESET_ARB              = 0x8252;
+        public const uint GL_GUILTY_CONTEXT_RESET_ARB               = 0x8253;
+        public const uint GL_INNOCENT_CONTEXT_RESET_ARB             = 0x8254;
+        public const uint GL_UNKNOWN_CONTEXT_RESET_ARB              = 0x8255;
+        public const uint GL_RESET_NOTIFICATION_STRATEGY_ARB        = 0x8256;
+        public const uint GL_NO_RESET_NOTIFICATION_ARB              = 0x8261;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_ARB_shader_stencil_export (no constants)
@@ -1956,19 +1957,19 @@ namespace OpenGLDotNet
         // GL_ARB_ES3_compatibility
         ///////////////////////////////////////////////////////////////////////
         /* Defined in OpenGL 4.3
-        public const uint GL_COMPRESSED_RGB8_ETC2           = 0x9274;
-        public const uint GL_COMPRESSED_SRGB8_ETC2          = 0x9275;
-        public const uint GL_COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2 = 0x9276;
-        public const uint GL_COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2 = 0x9277;
-        public const uint GL_COMPRESSED_RGBA8_ETC2_EAC      = 0x9278;
-        public const uint GL_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC = 0x9279;
-        public const uint GL_COMPRESSED_R11_EAC             = 0x9270;
-        public const uint GL_COMPRESSED_SIGNED_R11_EAC      = 0x9271;
-        public const uint GL_COMPRESSED_RG11_EAC            = 0x9272;
-        public const uint GL_COMPRESSED_SIGNED_RG11_EAC     = 0x9273;
-        public const uint GL_PRIMITIVE_RESTART_FIXED_INDEX  = 0x8D69;
-        public const uint GL_ANY_SAMPLES_PASSED_CONSERVATIVE = 0x8D6A;
-        public const uint GL_MAX_ELEMENT_INDEX              = 0x8D6B;
+        public const uint GL_COMPRESSED_RGB8_ETC2                       = 0x9274;
+        public const uint GL_COMPRESSED_SRGB8_ETC2                      = 0x9275;
+        public const uint GL_COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2   = 0x9276;
+        public const uint GL_COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2  = 0x9277;
+        public const uint GL_COMPRESSED_RGBA8_ETC2_EAC                  = 0x9278;
+        public const uint GL_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC           = 0x9279;
+        public const uint GL_COMPRESSED_R11_EAC                         = 0x9270;
+        public const uint GL_COMPRESSED_SIGNED_R11_EAC                  = 0x9271;
+        public const uint GL_COMPRESSED_RG11_EAC                        = 0x9272;
+        public const uint GL_COMPRESSED_SIGNED_RG11_EAC                 = 0x9273;
+        public const uint GL_PRIMITIVE_RESTART_FIXED_INDEX              = 0x8D69;
+        public const uint GL_ANY_SAMPLES_PASSED_CONSERVATIVE            = 0x8D6A;
+        public const uint GL_MAX_ELEMENT_INDEX                          = 0x8D6B;
         */
 
         ///////////////////////////////////////////////////////////////////////
@@ -2310,6 +2311,7 @@ namespace OpenGLDotNet
         public const uint GL_VIRTUAL_PAGE_SIZE_INDEX_ARB                = 0x91A7;
         public const uint GL_MIN_SPARSE_LEVEL_ARB                       = 0x919B;
         public const uint GL_NUM_VIRTUAL_PAGE_SIZES_ARB                 = 0x91A8;
+        public const uint GL_NUM_SPARSE_LEVELS_ARB                      = 0x91AA;
         public const uint GL_VIRTUAL_PAGE_SIZE_X_ARB                    = 0x9195;
         public const uint GL_VIRTUAL_PAGE_SIZE_Y_ARB                    = 0x9196;
         public const uint GL_VIRTUAL_PAGE_SIZE_Z_ARB                    = 0x9197;
@@ -2317,7 +2319,7 @@ namespace OpenGLDotNet
         public const uint GL_MAX_SPARSE_3D_TEXTURE_SIZE_ARB             = 0x9199;
         public const uint GL_MAX_SPARSE_ARRAY_TEXTURE_LAYERS_ARB        = 0x919A;
         public const uint GL_SPARSE_TEXTURE_FULL_ARRAY_CUBE_MIPMAPS_ARB = 0x91A9;
-        
+
         ///////////////////////////////////////////////////////////////////////
         // GL_ARB_enhanced_layouts
         ///////////////////////////////////////////////////////////////////////
@@ -2371,6 +2373,22 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_ARB_shader_texture_image_samples (no constants)
         ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_sparse_buffer
+        ///////////////////////////////////////////////////////////////////////
+        public const uint GL_SPARSE_STORAGE_BIT_ARB                     = 0x0400;
+        public const uint GL_SPARSE_BUFFER_PAGE_SIZE_ARB                = 0x82F8;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_texture_barrier (no constants)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_transform_feedback_overflow_query
+        ///////////////////////////////////////////////////////////////////////
+        public const uint GL_TRANSFORM_FEEDBACK_OVERFLOW_ARB            = 0x82EC;
+        public const uint GL_TRANSFORM_FEEDBACK_STREAM_OVERFLOW_ARB     = 0x82ED;
         #endregion
 
         ///////////////////////////////////////////////////////////////////////
@@ -4052,6 +4070,10 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         #region GL_KHR_xxx CONSTANTS...
         ///////////////////////////////////////////////////////////////////////
+        // GL_KHR_context_flush_control (no constants)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
         // GL_KHR_texture_compression_astc_ldr
         ///////////////////////////////////////////////////////////////////////
         // Constants reused from GL_KHR_texture_compression_astc_hdr
@@ -4135,6 +4157,23 @@ namespace OpenGLDotNet
         reuse GL_STACK_OVERFLOW 
         */
 
+        ///////////////////////////////////////////////////////////////////////
+        // GL_KHR_no_error
+        ///////////////////////////////////////////////////////////////////////
+        public const uint GL_CONTEXT_FLAG_NO_ERROR_BIT_KHR              = 0x00000008;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_KHR_robust_buffer_access_behavior (no constants)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_KHR_robustness
+        ///////////////////////////////////////////////////////////////////////
+        public const uint GL_CONTEXT_ROBUST_ACCESS                      = 0x90F3;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_KHR_texture_compression_astc_sliced_3d (no constants)
+        ///////////////////////////////////////////////////////////////////////
         #endregion
 
         ///////////////////////////////////////////////////////////////////////
