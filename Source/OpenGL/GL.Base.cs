@@ -304,7 +304,7 @@ namespace OpenGLDotNet
             {"GL_ARB_texture_view", true},
             {"GL_ARB_timer_query", true},
             {"GL_ARB_transform_feedback_instanced", true},
-            {"GL_ARB_transform_feedback_overflow_query", true}
+            {"GL_ARB_transform_feedback_overflow_query", true},
             {"GL_ARB_transform_feedback2", true},
             {"GL_ARB_transform_feedback3", true},
             {"GL_ARB_transpose_matrix", true},
