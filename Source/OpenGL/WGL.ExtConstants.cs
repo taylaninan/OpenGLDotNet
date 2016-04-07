@@ -454,6 +454,12 @@ namespace OpenGLDotNet
         public const uint WGL_TEXTURE_FLOAT_RGBA_NV                     = 0x20B8;
 
         ///////////////////////////////////////////////////////////////////////
+        // WGL_NV_gpu_affinity
+        ///////////////////////////////////////////////////////////////////////
+        public const uint ERROR_INCOMPATIBLE_AFFINITY_MASKS_NV          = 0x20D0;
+        public const uint ERROR_MISSING_AFFINITY_MASK_NV                = 0x20D1;
+
+        ///////////////////////////////////////////////////////////////////////
         // WGL_NV_multisample_coverage
         ///////////////////////////////////////////////////////////////////////
         public const uint WGL_COVERAGE_SAMPLES_NV                       = 0x2042;
