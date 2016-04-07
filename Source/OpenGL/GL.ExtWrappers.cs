@@ -4893,6 +4893,43 @@ namespace OpenGLDotNet
         // GL_ARB_shader_texture_image_samples (no function entry points)
         ///////////////////////////////////////////////////////////////////////
 
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_sparse_buffer
+        ///////////////////////////////////////////////////////////////////////
+        // GLAPI void APIENTRY glBufferPageCommitmentARB (GLenum target, GLintptr offset, GLsizeiptr size, GLboolean commit);
+        public static void BufferPageCommitmentARB(GLenum target, GLintptr offset, GLsizeiptr size, GLboolean commit)
+        {
+            if (glBufferPageCommitmentARB != null)
+            {
+                glBufferPageCommitmentARB(target, offset, size, commit);
+            }
+        }
+
+        // GLAPI void APIENTRY glNamedBufferPageCommitmentEXT (GLuint buffer, GLintptr offset, GLsizeiptr size, GLboolean commit);
+        public static void NamedBufferPageCommitmentEXT(GLuint buffer, GLintptr offset, GLsizeiptr size, GLboolean commit)
+        {
+            if (glNamedBufferPageCommitmentEXT != null)
+            {
+                glNamedBufferPageCommitmentEXT(buffer, offset, size, commit);
+            }
+        }
+
+        // GLAPI void APIENTRY glNamedBufferPageCommitmentARB (GLuint buffer, GLintptr offset, GLsizeiptr size, GLboolean commit);
+        public static void NamedBufferPageCommitmentARB(GLuint buffer, GLintptr offset, GLsizeiptr size, GLboolean commit)
+        {
+            if (glNamedBufferPageCommitmentARB != null)
+            {
+                glNamedBufferPageCommitmentARB(buffer, offset, size, commit);
+            }
+        }
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_texture_barrier (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_transform_feedback_overflow_query (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
         #endregion
 
         ///////////////////////////////////////////////////////////////////////
@@ -11723,11 +11760,7 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         #region GL_KHR_xxx WRAPPERS...
         ///////////////////////////////////////////////////////////////////////
-        // GL_KHR_texture_compression_astc_ldr (no function entry points)
-        ///////////////////////////////////////////////////////////////////////
-
-        ///////////////////////////////////////////////////////////////////////
-        // GL_KHR_texture_compression_astc_hdr (no function entry points)
+        // GL_KHR_context_flush_control (no function entry points)
         ///////////////////////////////////////////////////////////////////////
 
         ///////////////////////////////////////////////////////////////////////
@@ -11744,6 +11777,30 @@ namespace OpenGLDotNet
         // GLAPI void APIENTRY glGetObjectLabel (GLenum identifier, GLuint name, GLsizei bufSize, GLsizei *length, GLchar *label);
         // GLAPI void APIENTRY glObjectPtrLabel (const void *ptr, GLsizei length, const GLchar *label);
         // GLAPI void APIENTRY glGetObjectPtrLabel (const void *ptr, GLsizei bufSize, GLsizei *length, GLchar *label);
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_KHR_no_error (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_KHR_robust_buffer_access_behavior (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_KHR_robustness (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_KHR_texture_compression_astc_hdr (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_KHR_texture_compression_astc_ldr (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_KHR_texture_compression_astc_sliced_3d (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
 
         #endregion
 

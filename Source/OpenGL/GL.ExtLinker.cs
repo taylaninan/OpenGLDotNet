@@ -2721,13 +2721,6 @@ namespace OpenGLDotNet
             }
 
             ///////////////////////////////////////////////////////////////////////
-            // GL_ARB_blend_func_extended (no function entry points)
-            ///////////////////////////////////////////////////////////////////////
-            if (GL.LinkGLEXT("GL_ARB_blend_func_extended"))
-            {
-            }
-
-            ///////////////////////////////////////////////////////////////////////
             // GL_ARB_sampler_objects
             ///////////////////////////////////////////////////////////////////////
             /* Defined in OpenGL 3.3 */
@@ -4637,7 +4630,6 @@ namespace OpenGLDotNet
             ///////////////////////////////////////////////////////////////////////
             // GL_ARB_sparse_texture
             ///////////////////////////////////////////////////////////////////////
-            // GLAPI void APIENTRY glTexPageCommitmentARB (GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLboolean resident);
             if (GL.LinkGLEXT("GL_ARB_sparse_texture"))
             {
                 if (GL.LinkProcGLEXT("glTexPageCommitmentARB"))
@@ -4715,6 +4707,42 @@ namespace OpenGLDotNet
             if (GL.LinkGLEXT("GL_ARB_shader_texture_image_samples"))
             {
             }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_ARB_sparse_buffer
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_ARB_sparse_buffer"))
+            {
+                if (GL.LinkProcGLEXT("glBufferPageCommitmentARB"))
+                {
+                    GL.glBufferPageCommitmentARB = (TglBufferPageCommitmentARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglBufferPageCommitmentARB));
+                }
+                
+                if (GL.LinkProcGLEXT("glNamedBufferPageCommitmentEXT"))
+                {
+                    GL.glNamedBufferPageCommitmentEXT = (TglNamedBufferPageCommitmentEXT)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglNamedBufferPageCommitmentEXT));
+                }
+
+                if (GL.LinkProcGLEXT("glNamedBufferPageCommitmentARB"))
+                {
+                    GL.glNamedBufferPageCommitmentARB = (TglNamedBufferPageCommitmentARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglNamedBufferPageCommitmentARB));
+                }
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_ARB_texture_barrier (no function entry points)
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_ARB_texture_barrier"))
+            {
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_ARB_transform_feedback_overflow_query (no function entry points)
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_ARB_transform_feedback_overflow_query"))
+            {
+            }
+            
             #endregion
 
             ///////////////////////////////////////////////////////////////////////
@@ -8643,16 +8671,9 @@ namespace OpenGLDotNet
             ///////////////////////////////////////////////////////////////////////
             #region GL_KHR_xxx FUNCTIONS...
             ///////////////////////////////////////////////////////////////////////
-            // GL_KHR_texture_compression_astc_ldr (no function entry points)
+            // GL_KHR_context_flush_control (no function entry points)
             ///////////////////////////////////////////////////////////////////////
-            if (GL.LinkGLEXT("GL_KHR_texture_compression_astc_ldr"))
-            {
-            }
-
-            ///////////////////////////////////////////////////////////////////////
-            // GL_KHR_texture_compression_astc_hdr (no function entry points)
-            ///////////////////////////////////////////////////////////////////////
-            if (GL.LinkGLEXT("GL_KHR_texture_compression_astc_hdr"))
+            if (GL.LinkGLEXT("GL_KHR_context_flush_control"))
             {
             }
 
@@ -8711,6 +8732,48 @@ namespace OpenGLDotNet
                 {
                     GL.glGetObjectPtrLabel = (TglGetObjectPtrLabel)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglGetObjectPtrLabel));
                 }
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_KHR_no_error (no function entry points)
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_KHR_no_error"))
+            {
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_KHR_robust_buffer_access_behavior (no function entry points)
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_KHR_robust_buffer_access_behavior"))
+            {
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_KHR_robustness (no function entry points)
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_KHR_robustness"))
+            {
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_KHR_texture_compression_astc_hdr (no function entry points)
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_KHR_texture_compression_astc_hdr"))
+            {
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_KHR_texture_compression_astc_ldr (no function entry points)
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_KHR_texture_compression_astc_ldr"))
+            {
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_KHR_texture_compression_astc_sliced_3d (no function entry points)
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_KHR_texture_compression_astc_sliced_3d"))
+            {
             }
 
             #endregion
