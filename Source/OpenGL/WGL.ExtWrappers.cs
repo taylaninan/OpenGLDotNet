@@ -558,6 +558,10 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // WGL_EXT_depth_float (no function entry points)
         ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // WGL_EXT_display_color_table
+        ///////////////////////////////////////////////////////////////////////
         // GLboolean WINAPI wglCreateDisplayColorTableEXT (GLushort id);
         public static GLboolean CreateDisplayColorTableEXT(GLushort id)
         {
@@ -1485,6 +1489,15 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // WGL_NV_float_buffer (no function entry points)
         ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // WGL_NV_gpu_affinity (TODO: SKIPPED FOR NOW!!!)
+        ///////////////////////////////////////////////////////////////////////
+        // BOOL WINAPI wglEnumGpusNV(UINT iGpuIndex, HGPUNV* phGpu);
+        // BOOL WINAPI wglEnumGpuDevicesNV(HGPUNV hGpu, UINT iDeviceIndex, PGPU_DEVICE lpGpuDevice);
+        // HDC WINAPI wglCreateAffinityDCNV(const HGPUNV* phGpuList);
+        // BOOL WINAPI wglEnumGpusFromAffinityDCNV(HDC hAffinityDC, UINT iGpuIndex, HGPUNV* hGpu);
+        // BOOL WINAPI wglDeleteDCNV(HDC hdc);
 
         ///////////////////////////////////////////////////////////////////////
         // WGL_NV_multisample_coverage (no function entry points)
