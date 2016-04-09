@@ -2124,7 +2124,7 @@ namespace OpenGLDotNet
         public const uint GL_COLOR_ENCODING                 = 0x8296;
         public const uint GL_SRGB_READ                      = 0x8297;
         public const uint GL_SRGB_WRITE                     = 0x8298;
-        public const uint GL_SRGB_DECODE_ARB                = 0x8299;
+        public const uint GL_SRGB_DECODE_ARB                = 0x8299; 
         public const uint GL_FILTER                         = 0x829A;
         public const uint GL_VERTEX_TEXTURE                 = 0x829B;
         public const uint GL_TESS_CONTROL_TEXTURE           = 0x829C;
@@ -2459,7 +2459,6 @@ namespace OpenGLDotNet
         public const uint GL_PRIMITIVE_BOUNDING_BOX_ARB                 = 0x92BE;
         public const uint GL_MULTISAMPLE_LINE_WIDTH_RANGE_ARB           = 0x9381;
         public const uint GL_MULTISAMPLE_LINE_WIDTH_GRANULARITY_ARB     = 0x9382;
-        #endregion
 
         ///////////////////////////////////////////////////////////////////////
         // GL_ARB_fragment_shader_interlock (no constants)
@@ -2475,6 +2474,13 @@ namespace OpenGLDotNet
         public const uint GL_UNSIGNED_INT64_VEC2_ARB                    = 0x8FF5;
         public const uint GL_UNSIGNED_INT64_VEC3_ARB                    = 0x8FF6;
         public const uint GL_UNSIGNED_INT64_VEC4_ARB                    = 0x8FF7;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_parallel_shader_compile
+        ///////////////////////////////////////////////////////////////////////
+        public const uint GL_MAX_SHADER_COMPILER_THREADS_ARB            = 0x91B0;
+        public const uint GL_COMPLETION_STATUS_ARB                      = 0x91B1;
+        #endregion
 
         ///////////////////////////////////////////////////////////////////////
         // GL_ATI_xxx CONSTANTS
