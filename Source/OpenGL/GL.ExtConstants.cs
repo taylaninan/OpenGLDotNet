@@ -2389,6 +2389,13 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         public const uint GL_TRANSFORM_FEEDBACK_OVERFLOW_ARB            = 0x82EC;
         public const uint GL_TRANSFORM_FEEDBACK_STREAM_OVERFLOW_ARB     = 0x82ED;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_ES3_2_compatibility
+        ///////////////////////////////////////////////////////////////////////
+        public const uint GL_PRIMITIVE_BOUNDING_BOX_ARB                 = 0x92BE;
+        public const uint GL_MULTISAMPLE_LINE_WIDTH_RANGE_ARB           = 0x9381;
+        public const uint GL_MULTISAMPLE_LINE_WIDTH_GRANULARITY_ARB     = 0x9382;
         #endregion
 
         ///////////////////////////////////////////////////////////////////////
