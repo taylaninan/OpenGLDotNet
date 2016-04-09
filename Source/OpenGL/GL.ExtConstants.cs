@@ -2484,6 +2484,18 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_ARB_post_depth_coverage (no constants)
         ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_sample_locations
+        ///////////////////////////////////////////////////////////////////////
+        public const uint GL_SAMPLE_LOCATION_SUBPIXEL_BITS_ARB = 0x933D;
+        public const uint GL_SAMPLE_LOCATION_PIXEL_GRID_WIDTH_ARB = 0x933E;
+        public const uint GL_SAMPLE_LOCATION_PIXEL_GRID_HEIGHT_ARB = 0x933F;
+        public const uint GL_PROGRAMMABLE_SAMPLE_LOCATION_TABLE_SIZE_ARB = 0x9340;
+        public const uint GL_SAMPLE_LOCATION_ARB = 0x8E50;
+        public const uint GL_PROGRAMMABLE_SAMPLE_LOCATION_ARB = 0x9341;
+        public const uint GL_FRAMEBUFFER_PROGRAMMABLE_SAMPLE_LOCATIONS_ARB = 0x9342;
+        public const uint GL_FRAMEBUFFER_SAMPLE_LOCATION_PIXEL_GRID_ARB = 0x9343;
         #endregion
 
         ///////////////////////////////////////////////////////////////////////
