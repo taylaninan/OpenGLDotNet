@@ -2466,6 +2466,17 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
 
         ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_gpu_shader_int64
+        ///////////////////////////////////////////////////////////////////////
+        public const uint GL_INT64_ARB                                  = 0x140E;
+        public const uint GL_INT64_VEC2_ARB                             = 0x8FE9;
+        public const uint GL_INT64_VEC3_ARB                             = 0x8FEA;
+        public const uint GL_INT64_VEC4_ARB                             = 0x8FEB;
+        public const uint GL_UNSIGNED_INT64_VEC2_ARB                    = 0x8FF5;
+        public const uint GL_UNSIGNED_INT64_VEC3_ARB                    = 0x8FF6;
+        public const uint GL_UNSIGNED_INT64_VEC4_ARB                    = 0x8FF7;
+
+        ///////////////////////////////////////////////////////////////////////
         // GL_ATI_xxx CONSTANTS
         ///////////////////////////////////////////////////////////////////////
         #region GL_ATI_xxx CONSTANTS...
