@@ -2496,6 +2496,10 @@ namespace OpenGLDotNet
         public const uint GL_PROGRAMMABLE_SAMPLE_LOCATION_ARB = 0x9341;
         public const uint GL_FRAMEBUFFER_PROGRAMMABLE_SAMPLE_LOCATIONS_ARB = 0x9342;
         public const uint GL_FRAMEBUFFER_SAMPLE_LOCATION_PIXEL_GRID_ARB = 0x9343;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_shader_atomic_counter_ops (no constants)
+        ///////////////////////////////////////////////////////////////////////
         #endregion
 
         ///////////////////////////////////////////////////////////////////////
