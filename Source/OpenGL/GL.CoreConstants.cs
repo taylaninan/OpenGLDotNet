@@ -1347,10 +1347,6 @@ namespace OpenGLDotNet
         public const uint GL_TEXTURE_BINDING_RECTANGLE                      = 0x84F6;
         public const uint GL_PROXY_TEXTURE_RECTANGLE                        = 0x84F7;
         public const uint GL_MAX_RECTANGLE_TEXTURE_SIZE                     = 0x84F8;
-        public const uint GL_RED_SNORM                                      = 0x8F90;
-        public const uint GL_RG_SNORM                                       = 0x8F91;
-        public const uint GL_RGB_SNORM                                      = 0x8F92;
-        public const uint GL_RGBA_SNORM                                     = 0x8F93;
         public const uint GL_R8_SNORM                                       = 0x8F94;
         public const uint GL_RG8_SNORM                                      = 0x8F95;
         public const uint GL_RGB8_SNORM                                     = 0x8F96;

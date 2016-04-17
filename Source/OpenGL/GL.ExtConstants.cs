@@ -45,29 +45,66 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_AMD_debug_output
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_MAX_DEBUG_LOGGED_MESSAGES_AMD          = 0x9144;
-        public const uint GL_DEBUG_LOGGED_MESSAGES_AMD              = 0x9145;
-        public const uint GL_DEBUG_SEVERITY_HIGH_AMD                = 0x9146;
-        public const uint GL_DEBUG_SEVERITY_MEDIUM_AMD              = 0x9147;
-        public const uint GL_DEBUG_SEVERITY_LOW_AMD                 = 0x9148;
-        public const uint GL_DEBUG_CATEGORY_API_ERROR_AMD           = 0x9149;
-        public const uint GL_DEBUG_CATEGORY_WINDOW_SYSTEM_AMD       = 0x914A;
-        public const uint GL_DEBUG_CATEGORY_DEPRECATION_AMD         = 0x914B;
-        public const uint GL_DEBUG_CATEGORY_UNDEFINED_BEHAVIOR_AMD  = 0x914C;
-        public const uint GL_DEBUG_CATEGORY_PERFORMANCE_AMD         = 0x914D;
-        public const uint GL_DEBUG_CATEGORY_SHADER_COMPILER_AMD     = 0x914E;
-        public const uint GL_DEBUG_CATEGORY_APPLICATION_AMD         = 0x914F;
-        public const uint GL_DEBUG_CATEGORY_OTHER_AMD               = 0x9150;
+        public const uint GL_MAX_DEBUG_MESSAGE_LENGTH_AMD               = 0x9143;
+        public const uint GL_MAX_DEBUG_LOGGED_MESSAGES_AMD              = 0x9144;
+        public const uint GL_DEBUG_LOGGED_MESSAGES_AMD                  = 0x9145;
+        public const uint GL_DEBUG_SEVERITY_HIGH_AMD                    = 0x9146;
+        public const uint GL_DEBUG_SEVERITY_MEDIUM_AMD                  = 0x9147;
+        public const uint GL_DEBUG_SEVERITY_LOW_AMD                     = 0x9148;
+        public const uint GL_DEBUG_CATEGORY_API_ERROR_AMD               = 0x9149;
+        public const uint GL_DEBUG_CATEGORY_WINDOW_SYSTEM_AMD           = 0x914A;
+        public const uint GL_DEBUG_CATEGORY_DEPRECATION_AMD             = 0x914B;
+        public const uint GL_DEBUG_CATEGORY_UNDEFINED_BEHAVIOR_AMD      = 0x914C;
+        public const uint GL_DEBUG_CATEGORY_PERFORMANCE_AMD             = 0x914D;
+        public const uint GL_DEBUG_CATEGORY_SHADER_COMPILER_AMD         = 0x914E;
+        public const uint GL_DEBUG_CATEGORY_APPLICATION_AMD             = 0x914F;
+        public const uint GL_DEBUG_CATEGORY_OTHER_AMD                   = 0x9150;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_AMD_depth_clamp_separate
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_DEPTH_CLAMP_NEAR_AMD           = 0x901E;
-        public const uint GL_DEPTH_CLAMP_FAR_AMD            = 0x901F;
+        public const uint GL_DEPTH_CLAMP_NEAR_AMD                       = 0x901E;
+        public const uint GL_DEPTH_CLAMP_FAR_AMD                        = 0x901F;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_AMD_draw_buffers_blend (no constants)
         ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_AMD_gcn_shader (no constants)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_AMD_gpu_shader_int64
+        ///////////////////////////////////////////////////////////////////////
+        public const uint GL_INT64_NV                                   = 0x140E;
+        public const uint GL_UNSIGNED_INT64_NV                          = 0x140F;
+        public const uint GL_INT8_NV                                    = 0x8FE0;
+        public const uint GL_INT8_VEC2_NV                               = 0x8FE1;
+        public const uint GL_INT8_VEC3_NV                               = 0x8FE2;
+        public const uint GL_INT8_VEC4_NV                               = 0x8FE3;
+        public const uint GL_INT16_NV                                   = 0x8FE4;
+        public const uint GL_INT16_VEC2_NV                              = 0x8FE5;
+        public const uint GL_INT16_VEC3_NV                              = 0x8FE6;
+        public const uint GL_INT16_VEC4_NV                              = 0x8FE7;
+        public const uint GL_INT64_VEC2_NV                              = 0x8FE9;
+        public const uint GL_INT64_VEC3_NV                              = 0x8FEA;
+        public const uint GL_INT64_VEC4_NV                              = 0x8FEB;
+        public const uint GL_UNSIGNED_INT8_NV                           = 0x8FEC;
+        public const uint GL_UNSIGNED_INT8_VEC2_NV                      = 0x8FED;
+        public const uint GL_UNSIGNED_INT8_VEC3_NV                      = 0x8FEE;
+        public const uint GL_UNSIGNED_INT8_VEC4_NV                      = 0x8FEF;
+        public const uint GL_UNSIGNED_INT16_NV                          = 0x8FF0;
+        public const uint GL_UNSIGNED_INT16_VEC2_NV                     = 0x8FF1;
+        public const uint GL_UNSIGNED_INT16_VEC3_NV                     = 0x8FF2;
+        public const uint GL_UNSIGNED_INT16_VEC4_NV                     = 0x8FF3;
+        public const uint GL_UNSIGNED_INT64_VEC2_NV                     = 0x8FF5;
+        public const uint GL_UNSIGNED_INT64_VEC3_NV                     = 0x8FF6;
+        public const uint GL_UNSIGNED_INT64_VEC4_NV                     = 0x8FF7;
+        public const uint GL_FLOAT16_NV                                 = 0x8FF8;
+        public const uint GL_FLOAT16_VEC2_NV                            = 0x8FF9;
+        public const uint GL_FLOAT16_VEC3_NV                            = 0x8FFA;
+        public const uint GL_FLOAT16_VEC4_NV                            = 0x8FFB;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_AMD_multi_draw_indirect (no constants)
@@ -76,39 +113,39 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_AMD_name_gen_delete
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_DATA_BUFFER_AMD                = 0x9151;
-        public const uint GL_PERFORMANCE_MONITOR_AMD        = 0x9152;
-        public const uint GL_QUERY_OBJECT_AMD               = 0x9153;
-        public const uint GL_VERTEX_ARRAY_OBJECT_AMD        = 0x9154;
-        public const uint GL_SAMPLER_OBJECT_AMD             = 0x9155;
+        public const uint GL_DATA_BUFFER_AMD                            = 0x9151;
+        public const uint GL_PERFORMANCE_MONITOR_AMD                    = 0x9152;
+        public const uint GL_QUERY_OBJECT_AMD                           = 0x9153;
+        public const uint GL_VERTEX_ARRAY_OBJECT_AMD                    = 0x9154;
+        public const uint GL_SAMPLER_OBJECT_AMD                         = 0x9155;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_AMD_performance_monitor
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_COUNTER_TYPE_AMD               = 0x8BC0;
-        public const uint GL_COUNTER_RANGE_AMD              = 0x8BC1;
-        public const uint GL_UNSIGNED_INT64_AMD             = 0x8BC2;
-        public const uint GL_PERCENTAGE_AMD                 = 0x8BC3;
-        public const uint GL_PERFMON_RESULT_AVAILABLE_AMD   = 0x8BC4;
-        public const uint GL_PERFMON_RESULT_SIZE_AMD        = 0x8BC5;
-        public const uint GL_PERFMON_RESULT_AMD             = 0x8BC6;
+        public const uint GL_COUNTER_TYPE_AMD                           = 0x8BC0;
+        public const uint GL_COUNTER_RANGE_AMD                          = 0x8BC1;
+        public const uint GL_UNSIGNED_INT64_AMD                         = 0x8BC2;
+        public const uint GL_PERCENTAGE_AMD                             = 0x8BC3;
+        public const uint GL_PERFMON_RESULT_AVAILABLE_AMD               = 0x8BC4;
+        public const uint GL_PERFMON_RESULT_SIZE_AMD                    = 0x8BC5;
+        public const uint GL_PERFMON_RESULT_AMD                         = 0x8BC6;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_AMD_pinned_memory
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_EXTERNAL_VIRTUAL_MEMORY_BUFFER_AMD = 0x9160;
+        public const uint GL_EXTERNAL_VIRTUAL_MEMORY_BUFFER_AMD         = 0x9160;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_AMD_query_buffer_object
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_QUERY_BUFFER_AMD               = 0x9192;
-        public const uint GL_QUERY_BUFFER_BINDING_AMD       = 0x9193;
-        public const uint GL_QUERY_RESULT_NO_WAIT_AMD       = 0x9194;
+        public const uint GL_QUERY_BUFFER_AMD                           = 0x9192;
+        public const uint GL_QUERY_BUFFER_BINDING_AMD                   = 0x9193;
+        public const uint GL_QUERY_RESULT_NO_WAIT_AMD                   = 0x9194;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_AMD_sample_positions
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_SUBSAMPLE_DISTANCE_AMD         = 0x883F;
+        public const uint GL_SUBSAMPLE_DISTANCE_AMD                     = 0x883F;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_AMD_seamless_cubemap_per_texture
@@ -122,10 +159,10 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_AMD_stencil_operation_extended
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_SET_AMD                        = 0x874A;
-        public const uint GL_REPLACE_VALUE_AMD              = 0x874B;
-        public const uint GL_STENCIL_OP_VALUE_AMD           = 0x874C;
-        public const uint GL_STENCIL_BACK_OP_VALUE_AMD      = 0x874D;
+        public const uint GL_SET_AMD                                    = 0x874A;
+        public const uint GL_REPLACE_VALUE_AMD                          = 0x874B;
+        public const uint GL_STENCIL_OP_VALUE_AMD                       = 0x874C;
+        public const uint GL_STENCIL_BACK_OP_VALUE_AMD                  = 0x874D;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_AMD_texture_texture4 (no constants)
@@ -142,13 +179,13 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_AMD_vertex_shader_tessellator
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_SAMPLER_BUFFER_AMD                 = 0x9001;
-        public const uint GL_INT_SAMPLER_BUFFER_AMD             = 0x9002;
-        public const uint GL_UNSIGNED_INT_SAMPLER_BUFFER_AMD    = 0x9003;
-        public const uint GL_TESSELLATION_MODE_AMD              = 0x9004;
-        public const uint GL_TESSELLATION_FACTOR_AMD            = 0x9005;
-        public const uint GL_DISCRETE_AMD                       = 0x9006;
-        public const uint GL_CONTINUOUS_AMD                     = 0x9007;
+        public const uint GL_SAMPLER_BUFFER_AMD                         = 0x9001;
+        public const uint GL_INT_SAMPLER_BUFFER_AMD                     = 0x9002;
+        public const uint GL_UNSIGNED_INT_SAMPLER_BUFFER_AMD            = 0x9003;
+        public const uint GL_TESSELLATION_MODE_AMD                      = 0x9004;
+        public const uint GL_TESSELLATION_FACTOR_AMD                    = 0x9005;
+        public const uint GL_DISCRETE_AMD                               = 0x9006;
+        public const uint GL_CONTINUOUS_AMD                             = 0x9007;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_AMD_vertex_shader_viewport_index (no constants)
@@ -157,15 +194,15 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_AMD_sparse_texture
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_VIRTUAL_PAGE_SIZE_X_AMD            = 0x9195;
-        public const uint GL_VIRTUAL_PAGE_SIZE_Y_AMD            = 0x9196;
-        public const uint GL_VIRTUAL_PAGE_SIZE_Z_AMD            = 0x9197;
-        public const uint GL_MAX_SPARSE_TEXTURE_SIZE_AMD        = 0x9198;
-        public const uint GL_MAX_SPARSE_3D_TEXTURE_SIZE_AMD     = 0x9199;
-        public const uint GL_MAX_SPARSE_ARRAY_TEXTURE_LAYERS    = 0x919A;
-        public const uint GL_MIN_SPARSE_LEVEL_AMD               = 0x919B;
-        public const uint GL_MIN_LOD_WARNING_AMD                = 0x919C;
-        public const uint GL_TEXTURE_STORAGE_SPARSE_BIT_AMD     = 0x00000001;
+        public const uint GL_VIRTUAL_PAGE_SIZE_X_AMD                    = 0x9195;
+        public const uint GL_VIRTUAL_PAGE_SIZE_Y_AMD                    = 0x9196;
+        public const uint GL_VIRTUAL_PAGE_SIZE_Z_AMD                    = 0x9197;
+        public const uint GL_MAX_SPARSE_TEXTURE_SIZE_AMD                = 0x9198;
+        public const uint GL_MAX_SPARSE_3D_TEXTURE_SIZE_AMD             = 0x9199;
+        public const uint GL_MAX_SPARSE_ARRAY_TEXTURE_LAYERS            = 0x919A;
+        public const uint GL_MIN_SPARSE_LEVEL_AMD                       = 0x919B;
+        public const uint GL_MIN_LOD_WARNING_AMD                        = 0x919C;
+        public const uint GL_TEXTURE_STORAGE_SPARSE_BIT_AMD             = 0x00000001;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_AMD_shader_atomic_counter_ops (no constants)
@@ -178,18 +215,23 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_AMD_interleaved_elements
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_VERTEX_ELEMENT_SWIZZLE_AMD         = 0x91A4;
-        public const uint GL_VERTEX_ID_SWIZZLE_AMD              = 0x91A5;
+        public const uint GL_VERTEX_ELEMENT_SWIZZLE_AMD                 = 0x91A4;
+        public const uint GL_VERTEX_ID_SWIZZLE_AMD                      = 0x91A5;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_AMD_occlusion_query_event
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_OCCLUSION_QUERY_EVENT_MASK_AMD         = 0x874F;
-        public const uint GL_QUERY_DEPTH_PASS_EVENT_BIT_AMD         = 0x00000001;
-        public const uint GL_QUERY_DEPTH_FAIL_EVENT_BIT_AMD         = 0x00000002;
-        public const uint GL_QUERY_STENCIL_FAIL_EVENT_BIT_AMD       = 0x00000004;
-        public const uint GL_QUERY_DEPTH_BOUNDS_FAIL_EVENT_BIT_AMD  = 0x00000008;
-        public const uint GL_QUERY_ALL_EVENT_BITS_AMD               = 0xFFFFFFFF;
+        public const uint GL_OCCLUSION_QUERY_EVENT_MASK_AMD             = 0x874F;
+        public const uint GL_QUERY_DEPTH_PASS_EVENT_BIT_AMD             = 0x00000001;
+        public const uint GL_QUERY_DEPTH_FAIL_EVENT_BIT_AMD             = 0x00000002;
+        public const uint GL_QUERY_STENCIL_FAIL_EVENT_BIT_AMD           = 0x00000004;
+        public const uint GL_QUERY_DEPTH_BOUNDS_FAIL_EVENT_BIT_AMD      = 0x00000008;
+        public const uint GL_QUERY_ALL_EVENT_BITS_AMD                   = 0xFFFFFFFF;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_AMD_transform_feedback4
+        ///////////////////////////////////////////////////////////////////////
+        public const uint GL_STREAM_RASTERIZATION_AMD                   = 0x91A0;
 
         #endregion
 
@@ -292,8 +334,10 @@ namespace OpenGLDotNet
         // GL_APPLE_rgb_422
         ///////////////////////////////////////////////////////////////////////
         public const uint GL_RGB_422_APPLE                  = 0x8A1F;
-        /* reuse GL_UNSIGNED_SHORT_8_8_APPLE */
-        /* reuse GL_UNSIGNED_SHORT_8_8_REV_APPLE */
+        public const uint GL_UNSIGNED_SHORT_8_8_APPLE       = 0x85BA;
+        public const uint GL_UNSIGNED_SHORT_8_8_REV_APPLE   = 0x85BB;
+        public const uint GL_RGB_RAW_422_APPLE              = 0x8A51;
+
 
         ///////////////////////////////////////////////////////////////////////
         // GL_APPLE_row_bytes
@@ -304,17 +348,17 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_APPLE_specular_vector
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_LIGHT_MODEL_SPECULAR_VECTOR_APPLE = 0x85B0;
+        public const uint GL_LIGHT_MODEL_SPECULAR_VECTOR_APPLE          = 0x85B0;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_APPLE_texture_range
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_TEXTURE_RANGE_LENGTH_APPLE     = 0x85B7;
-        public const uint GL_TEXTURE_RANGE_POINTER_APPLE    = 0x85B8;
-        public const uint GL_TEXTURE_STORAGE_HINT_APPLE     = 0x85BC;
-        public const uint GL_STORAGE_PRIVATE_APPLE          = 0x85BD;
-        /* reuse GL_STORAGE_CACHED_APPLE */
-        /* reuse GL_STORAGE_SHARED_APPLE */
+        public const uint GL_TEXTURE_RANGE_LENGTH_APPLE                 = 0x85B7;
+        public const uint GL_TEXTURE_RANGE_POINTER_APPLE                = 0x85B8;
+        public const uint GL_TEXTURE_STORAGE_HINT_APPLE                 = 0x85BC;
+        public const uint GL_STORAGE_PRIVATE_APPLE                      = 0x85BD;
+        public const uint GL_STORAGE_CACHED_APPLE                       = 0x85BE;
+        public const uint GL_STORAGE_SHARED_APPLE                       = 0x85BF;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_APPLE_transform_hint
@@ -329,13 +373,15 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_APPLE_vertex_array_range
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_VERTEX_ARRAY_RANGE_APPLE           = 0x851D;
-        public const uint GL_VERTEX_ARRAY_RANGE_LENGTH_APPLE    = 0x851E;
-        public const uint GL_VERTEX_ARRAY_STORAGE_HINT_APPLE    = 0x851F;
-        public const uint GL_VERTEX_ARRAY_RANGE_POINTER_APPLE   = 0x8521;
-        public const uint GL_STORAGE_CLIENT_APPLE               = 0x85B4;
-        public const uint GL_STORAGE_CACHED_APPLE               = 0x85BE;
-        public const uint GL_STORAGE_SHARED_APPLE               = 0x85BF;
+        public const uint GL_VERTEX_ARRAY_RANGE_APPLE                   = 0x851D;
+        public const uint GL_VERTEX_ARRAY_RANGE_LENGTH_APPLE            = 0x851E;
+        public const uint GL_VERTEX_ARRAY_STORAGE_HINT_APPLE            = 0x851F;
+        public const uint GL_VERTEX_ARRAY_RANGE_POINTER_APPLE           = 0x8521;
+        public const uint GL_STORAGE_CLIENT_APPLE                       = 0x85B4;
+        /* reuse
+        public const uint GL_STORAGE_CACHED_APPLE                       = 0x85BE;
+        public const uint GL_STORAGE_SHARED_APPLE                       = 0x85BF;
+        */
 
         ///////////////////////////////////////////////////////////////////////
         // GL_APPLE_vertex_program_evaluators
@@ -355,8 +401,6 @@ namespace OpenGLDotNet
         // GL_APPLE_ycbcr_422
         ///////////////////////////////////////////////////////////////////////
         public const uint GL_YCBCR_422_APPLE                    = 0x85B9;
-        public const uint GL_UNSIGNED_SHORT_8_8_APPLE           = 0x85BA;
-        public const uint GL_UNSIGNED_SHORT_8_8_REV_APPLE       = 0x85BB;
 
         #endregion
 
@@ -786,29 +830,31 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_ARB_vertex_program
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_COLOR_SUM_ARB = 0x8458;
-        public const uint GL_VERTEX_PROGRAM_ARB = 0x8620;
-        public const uint GL_VERTEX_ATTRIB_ARRAY_ENABLED_ARB = 0x8622;
-        public const uint GL_VERTEX_ATTRIB_ARRAY_SIZE_ARB = 0x8623;
-        public const uint GL_VERTEX_ATTRIB_ARRAY_STRIDE_ARB = 0x8624;
-        public const uint GL_VERTEX_ATTRIB_ARRAY_TYPE_ARB = 0x8625;
-        public const uint GL_CURRENT_VERTEX_ATTRIB_ARB = 0x8626;
-        public const uint GL_PROGRAM_LENGTH_ARB = 0x8627;
-        public const uint GL_PROGRAM_STRING_ARB = 0x8628;
-        public const uint GL_MAX_PROGRAM_MATRIX_STACK_DEPTH_ARB = 0x862E;
-        public const uint GL_MAX_PROGRAM_MATRICES_ARB = 0x862F;
-        public const uint GL_CURRENT_MATRIX_STACK_DEPTH_ARB = 0x8640;
-        public const uint GL_CURRENT_MATRIX_ARB = 0x8641;
-        public const uint GL_VERTEX_PROGRAM_POINT_SIZE_ARB = 0x8642;
-        public const uint GL_VERTEX_PROGRAM_TWO_SIDE_ARB = 0x8643;
-        public const uint GL_VERTEX_ATTRIB_ARRAY_POINTER_ARB = 0x8645;
-        public const uint GL_PROGRAM_ERROR_POSITION_ARB = 0x864B;
-        public const uint GL_PROGRAM_BINDING_ARB = 0x8677;
-        public const uint GL_MAX_VERTEX_ATTRIBS_ARB = 0x8869;
-        public const uint GL_VERTEX_ATTRIB_ARRAY_NORMALIZED_ARB = 0x886A;
-        public const uint GL_PROGRAM_ERROR_STRING_ARB = 0x8874;
+        public const uint GL_COLOR_SUM_ARB                              = 0x8458;
+        public const uint GL_VERTEX_PROGRAM_ARB                         = 0x8620;
+        public const uint GL_VERTEX_ATTRIB_ARRAY_ENABLED_ARB            = 0x8622;
+        public const uint GL_VERTEX_ATTRIB_ARRAY_SIZE_ARB               = 0x8623;
+        public const uint GL_VERTEX_ATTRIB_ARRAY_STRIDE_ARB             = 0x8624;
+        public const uint GL_VERTEX_ATTRIB_ARRAY_TYPE_ARB               = 0x8625;
+        public const uint GL_CURRENT_VERTEX_ATTRIB_ARB                  = 0x8626;
+        public const uint GL_VERTEX_PROGRAM_POINT_SIZE_ARB              = 0x8642;
+        public const uint GL_VERTEX_PROGRAM_TWO_SIDE_ARB                = 0x8643;
+        public const uint GL_VERTEX_ATTRIB_ARRAY_POINTER_ARB            = 0x8645;
+        public const uint GL_MAX_VERTEX_ATTRIBS_ARB                     = 0x8869;
+        public const uint GL_VERTEX_ATTRIB_ARRAY_NORMALIZED_ARB         = 0x886A;
+        public const uint GL_PROGRAM_ADDRESS_REGISTERS_ARB              = 0x88B0;
+        public const uint GL_MAX_PROGRAM_ADDRESS_REGISTERS_ARB          = 0x88B1;
+        public const uint GL_PROGRAM_NATIVE_ADDRESS_REGISTERS_ARB       = 0x88B2;
+        public const uint GL_MAX_PROGRAM_NATIVE_ADDRESS_REGISTERS_ARB   = 0x88B3;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_fragment_program
+        ///////////////////////////////////////////////////////////////////////
+        public const uint GL_FRAGMENT_PROGRAM_ARB = 0x8804;
         public const uint GL_PROGRAM_FORMAT_ASCII_ARB = 0x8875;
+        public const uint GL_PROGRAM_LENGTH_ARB = 0x8627;
         public const uint GL_PROGRAM_FORMAT_ARB = 0x8876;
+        public const uint GL_PROGRAM_BINDING_ARB = 0x8677;
         public const uint GL_PROGRAM_INSTRUCTIONS_ARB = 0x88A0;
         public const uint GL_MAX_PROGRAM_INSTRUCTIONS_ARB = 0x88A1;
         public const uint GL_PROGRAM_NATIVE_INSTRUCTIONS_ARB = 0x88A2;
@@ -825,14 +871,31 @@ namespace OpenGLDotNet
         public const uint GL_MAX_PROGRAM_ATTRIBS_ARB = 0x88AD;
         public const uint GL_PROGRAM_NATIVE_ATTRIBS_ARB = 0x88AE;
         public const uint GL_MAX_PROGRAM_NATIVE_ATTRIBS_ARB = 0x88AF;
-        public const uint GL_PROGRAM_ADDRESS_REGISTERS_ARB = 0x88B0;
-        public const uint GL_MAX_PROGRAM_ADDRESS_REGISTERS_ARB = 0x88B1;
-        public const uint GL_PROGRAM_NATIVE_ADDRESS_REGISTERS_ARB = 0x88B2;
-        public const uint GL_MAX_PROGRAM_NATIVE_ADDRESS_REGISTERS_ARB = 0x88B3;
         public const uint GL_MAX_PROGRAM_LOCAL_PARAMETERS_ARB = 0x88B4;
         public const uint GL_MAX_PROGRAM_ENV_PARAMETERS_ARB = 0x88B5;
         public const uint GL_PROGRAM_UNDER_NATIVE_LIMITS_ARB = 0x88B6;
+        public const uint GL_PROGRAM_ALU_INSTRUCTIONS_ARB = 0x8805;
+        public const uint GL_PROGRAM_TEX_INSTRUCTIONS_ARB = 0x8806;
+        public const uint GL_PROGRAM_TEX_INDIRECTIONS_ARB = 0x8807;
+        public const uint GL_PROGRAM_NATIVE_ALU_INSTRUCTIONS_ARB = 0x8808;
+        public const uint GL_PROGRAM_NATIVE_TEX_INSTRUCTIONS_ARB = 0x8809;
+        public const uint GL_PROGRAM_NATIVE_TEX_INDIRECTIONS_ARB = 0x880A;
+        public const uint GL_MAX_PROGRAM_ALU_INSTRUCTIONS_ARB = 0x880B;
+        public const uint GL_MAX_PROGRAM_TEX_INSTRUCTIONS_ARB = 0x880C;
+        public const uint GL_MAX_PROGRAM_TEX_INDIRECTIONS_ARB = 0x880D;
+        public const uint GL_MAX_PROGRAM_NATIVE_ALU_INSTRUCTIONS_ARB = 0x880E;
+        public const uint GL_MAX_PROGRAM_NATIVE_TEX_INSTRUCTIONS_ARB = 0x880F;
+        public const uint GL_MAX_PROGRAM_NATIVE_TEX_INDIRECTIONS_ARB = 0x8810;
+        public const uint GL_PROGRAM_STRING_ARB = 0x8628;
+        public const uint GL_PROGRAM_ERROR_POSITION_ARB = 0x864B;
+        public const uint GL_CURRENT_MATRIX_ARB = 0x8641;
         public const uint GL_TRANSPOSE_CURRENT_MATRIX_ARB = 0x88B7;
+        public const uint GL_CURRENT_MATRIX_STACK_DEPTH_ARB = 0x8640;
+        public const uint GL_MAX_PROGRAM_MATRICES_ARB = 0x862F;
+        public const uint GL_MAX_PROGRAM_MATRIX_STACK_DEPTH_ARB = 0x862E;
+        public const uint GL_MAX_TEXTURE_COORDS_ARB = 0x8871;
+        public const uint GL_MAX_TEXTURE_IMAGE_UNITS_ARB = 0x8872;
+        public const uint GL_PROGRAM_ERROR_STRING_ARB = 0x8874;
         public const uint GL_MATRIX0_ARB = 0x88C0;
         public const uint GL_MATRIX1_ARB = 0x88C1;
         public const uint GL_MATRIX2_ARB = 0x88C2;
@@ -865,88 +928,6 @@ namespace OpenGLDotNet
         public const uint GL_MATRIX29_ARB = 0x88DD;
         public const uint GL_MATRIX30_ARB = 0x88DE;
         public const uint GL_MATRIX31_ARB = 0x88DF;
-
-        ///////////////////////////////////////////////////////////////////////
-        // GL_ARB_fragment_program
-        ///////////////////////////////////////////////////////////////////////
-        public const uint FRAGMENT_PROGRAM_ARB = 0x8804;
-        public const uint PROGRAM_FORMAT_ASCII_ARB = 0x8875;
-        public const uint PROGRAM_LENGTH_ARB = 0x8627;
-        public const uint PROGRAM_FORMAT_ARB = 0x8876;
-        public const uint PROGRAM_BINDING_ARB = 0x8677;
-        public const uint PROGRAM_INSTRUCTIONS_ARB = 0x88A0;
-        public const uint MAX_PROGRAM_INSTRUCTIONS_ARB = 0x88A1;
-        public const uint PROGRAM_NATIVE_INSTRUCTIONS_ARB = 0x88A2;
-        public const uint MAX_PROGRAM_NATIVE_INSTRUCTIONS_ARB = 0x88A3;
-        public const uint PROGRAM_TEMPORARIES_ARB = 0x88A4;
-        public const uint MAX_PROGRAM_TEMPORARIES_ARB = 0x88A5;
-        public const uint PROGRAM_NATIVE_TEMPORARIES_ARB = 0x88A6;
-        public const uint MAX_PROGRAM_NATIVE_TEMPORARIES_ARB = 0x88A7;
-        public const uint PROGRAM_PARAMETERS_ARB = 0x88A8;
-        public const uint MAX_PROGRAM_PARAMETERS_ARB = 0x88A9;
-        public const uint PROGRAM_NATIVE_PARAMETERS_ARB = 0x88AA;
-        public const uint MAX_PROGRAM_NATIVE_PARAMETERS_ARB = 0x88AB;
-        public const uint PROGRAM_ATTRIBS_ARB = 0x88AC;
-        public const uint MAX_PROGRAM_ATTRIBS_ARB = 0x88AD;
-        public const uint PROGRAM_NATIVE_ATTRIBS_ARB = 0x88AE;
-        public const uint MAX_PROGRAM_NATIVE_ATTRIBS_ARB = 0x88AF;
-        public const uint MAX_PROGRAM_LOCAL_PARAMETERS_ARB = 0x88B4;
-        public const uint MAX_PROGRAM_ENV_PARAMETERS_ARB = 0x88B5;
-        public const uint PROGRAM_UNDER_NATIVE_LIMITS_ARB = 0x88B6;
-        public const uint PROGRAM_ALU_INSTRUCTIONS_ARB = 0x8805;
-        public const uint PROGRAM_TEX_INSTRUCTIONS_ARB = 0x8806;
-        public const uint PROGRAM_TEX_INDIRECTIONS_ARB = 0x8807;
-        public const uint PROGRAM_NATIVE_ALU_INSTRUCTIONS_ARB = 0x8808;
-        public const uint PROGRAM_NATIVE_TEX_INSTRUCTIONS_ARB = 0x8809;
-        public const uint PROGRAM_NATIVE_TEX_INDIRECTIONS_ARB = 0x880A;
-        public const uint MAX_PROGRAM_ALU_INSTRUCTIONS_ARB = 0x880B;
-        public const uint MAX_PROGRAM_TEX_INSTRUCTIONS_ARB = 0x880C;
-        public const uint MAX_PROGRAM_TEX_INDIRECTIONS_ARB = 0x880D;
-        public const uint MAX_PROGRAM_NATIVE_ALU_INSTRUCTIONS_ARB = 0x880E;
-        public const uint MAX_PROGRAM_NATIVE_TEX_INSTRUCTIONS_ARB = 0x880F;
-        public const uint MAX_PROGRAM_NATIVE_TEX_INDIRECTIONS_ARB = 0x8810;
-        public const uint PROGRAM_STRING_ARB = 0x8628;
-        public const uint PROGRAM_ERROR_POSITION_ARB = 0x864B;
-        public const uint CURRENT_MATRIX_ARB = 0x8641;
-        public const uint TRANSPOSE_CURRENT_MATRIX_ARB = 0x88B7;
-        public const uint CURRENT_MATRIX_STACK_DEPTH_ARB = 0x8640;
-        public const uint MAX_PROGRAM_MATRICES_ARB = 0x862F;
-        public const uint MAX_PROGRAM_MATRIX_STACK_DEPTH_ARB = 0x862E;
-        public const uint MAX_TEXTURE_COORDS_ARB = 0x8871;
-        public const uint MAX_TEXTURE_IMAGE_UNITS_ARB = 0x8872;
-        public const uint PROGRAM_ERROR_STRING_ARB = 0x8874;
-        public const uint MATRIX0_ARB = 0x88C0;
-        public const uint MATRIX1_ARB = 0x88C1;
-        public const uint MATRIX2_ARB = 0x88C2;
-        public const uint MATRIX3_ARB = 0x88C3;
-        public const uint MATRIX4_ARB = 0x88C4;
-        public const uint MATRIX5_ARB = 0x88C5;
-        public const uint MATRIX6_ARB = 0x88C6;
-        public const uint MATRIX7_ARB = 0x88C7;
-        public const uint MATRIX8_ARB = 0x88C8;
-        public const uint MATRIX9_ARB = 0x88C9;
-        public const uint MATRIX10_ARB = 0x88CA;
-        public const uint MATRIX11_ARB = 0x88CB;
-        public const uint MATRIX12_ARB = 0x88CC;
-        public const uint MATRIX13_ARB = 0x88CD;
-        public const uint MATRIX14_ARB = 0x88CE;
-        public const uint MATRIX15_ARB = 0x88CF;
-        public const uint MATRIX16_ARB = 0x88D0;
-        public const uint MATRIX17_ARB = 0x88D1;
-        public const uint MATRIX18_ARB = 0x88D2;
-        public const uint MATRIX19_ARB = 0x88D3;
-        public const uint MATRIX20_ARB = 0x88D4;
-        public const uint MATRIX21_ARB = 0x88D5;
-        public const uint MATRIX22_ARB = 0x88D6;
-        public const uint MATRIX23_ARB = 0x88D7;
-        public const uint MATRIX24_ARB = 0x88D8;
-        public const uint MATRIX25_ARB = 0x88D9;
-        public const uint MATRIX26_ARB = 0x88DA;
-        public const uint MATRIX27_ARB = 0x88DB;
-        public const uint MATRIX28_ARB = 0x88DC;
-        public const uint MATRIX29_ARB = 0x88DD;
-        public const uint MATRIX30_ARB = 0x88DE;
-        public const uint MATRIX31_ARB = 0x88DF;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_ARB_vertex_buffer_object
@@ -1297,11 +1278,11 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_ARB_texture_buffer_object
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_TEXTURE_BUFFER_ARB = 0x8C2A;
-        public const uint GL_MAX_TEXTURE_BUFFER_SIZE_ARB = 0x8C2B;
-        public const uint GL_TEXTURE_BINDING_BUFFER_ARB = 0x8C2C;
-        public const uint GL_TEXTURE_BUFFER_DATA_STORE_BINDING_ARB = 0x8C2D;
-        public const uint GL_TEXTURE_BUFFER_FORMAT_ARB = 0x8C2E;
+        public const uint GL_TEXTURE_BUFFER_ARB                         = 0x8C2A;
+        public const uint GL_MAX_TEXTURE_BUFFER_SIZE_ARB                = 0x8C2B;
+        public const uint GL_TEXTURE_BINDING_BUFFER_ARB                 = 0x8C2C;
+        public const uint GL_TEXTURE_BUFFER_DATA_STORE_BINDING_ARB      = 0x8C2D;
+        public const uint GL_TEXTURE_BUFFER_FORMAT_ARB                  = 0x8C2E;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_ARB_texture_compression_rgtc
@@ -2508,6 +2489,24 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_ARB_shader_clock (no constants)
         ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_shader_viewport_layer_array (no constants)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_sparse_texture2 (no constants)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_sparse_texture_clamp (no constants)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_texture_filter_minmax
+        ///////////////////////////////////////////////////////////////////////
+        public const uint GL_TEXTURE_REDUCTION_MODE_ARB                 = 0x9366;
+        public const uint GL_WEIGHTED_AVERAGE_ARB                       = 0x9367;
         #endregion
 
         ///////////////////////////////////////////////////////////////////////
@@ -2716,6 +2715,7 @@ namespace OpenGLDotNet
         // GL_ATI_pixel_format_float
         ///////////////////////////////////////////////////////////////////////
         public const uint GL_TYPE_RGBA_FLOAT_ATI                    = 0x8820;
+        public const uint GL_RGBA_FLOAT_MODE_ATI                    = 0x8820;
         public const uint GL_COLOR_CLEAR_UNCLAMPED_VALUE_ATI        = 0x8835;
 
         ///////////////////////////////////////////////////////////////////////
@@ -3089,8 +3089,8 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_bgra
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_BGR_EXT = 0x80E0;
-        public const uint GL_BGRA_EXT = 0x80E1;
+        public const uint GL_BGR_EXT                        = 0x80E0;
+        public const uint GL_BGRA_EXT                       = 0x80E1;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_texture_format_BGRA8888
@@ -3103,15 +3103,15 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_pixel_transform
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_PIXEL_TRANSFORM_2D_EXT         = 0x8330;
-        public const uint GL_PIXEL_MAG_FILTER_EXT           = 0x8331;
-        public const uint GL_PIXEL_MIN_FILTER_EXT           = 0x8332;
-        public const uint GL_PIXEL_CUBIC_WEIGHT_EXT         = 0x8333;
-        public const uint GL_CUBIC_EXT                      = 0x8334;
-        public const uint GL_AVERAGE_EXT                    = 0x8335;
-        public const uint GL_PIXEL_TRANSFORM_2D_STACK_DEPTH_EXT = 0x8336;
-        public const uint GL_MAX_PIXEL_TRANSFORM_2D_STACK_DEPTH_EXT = 0x8337;
-        public const uint GL_PIXEL_TRANSFORM_2D_MATRIX_EXT  = 0x8338;
+        public const uint GL_PIXEL_TRANSFORM_2D_EXT                     = 0x8330;
+        public const uint GL_PIXEL_MAG_FILTER_EXT                       = 0x8331;
+        public const uint GL_PIXEL_MIN_FILTER_EXT                       = 0x8332;
+        public const uint GL_PIXEL_CUBIC_WEIGHT_EXT                     = 0x8333;
+        public const uint GL_CUBIC_EXT                                  = 0x8334;
+        public const uint GL_AVERAGE_EXT                                = 0x8335;
+        public const uint GL_PIXEL_TRANSFORM_2D_STACK_DEPTH_EXT         = 0x8336;
+        public const uint GL_MAX_PIXEL_TRANSFORM_2D_STACK_DEPTH_EXT     = 0x8337;
+        public const uint GL_PIXEL_TRANSFORM_2D_MATRIX_EXT              = 0x8338;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_pixel_transform_color_table (no constants)
@@ -3132,19 +3132,19 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_secondary_color
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_COLOR_SUM_EXT                  = 0x8458;
-        public const uint GL_CURRENT_SECONDARY_COLOR_EXT    = 0x8459;
-        public const uint GL_SECONDARY_COLOR_ARRAY_SIZE_EXT = 0x845A;
-        public const uint GL_SECONDARY_COLOR_ARRAY_TYPE_EXT = 0x845B;
-        public const uint GL_SECONDARY_COLOR_ARRAY_STRIDE_EXT = 0x845C;
-        public const uint GL_SECONDARY_COLOR_ARRAY_POINTER_EXT = 0x845D;
-        public const uint GL_SECONDARY_COLOR_ARRAY_EXT      = 0x845E;
+        public const uint GL_COLOR_SUM_EXT                              = 0x8458;
+        public const uint GL_CURRENT_SECONDARY_COLOR_EXT                = 0x8459;
+        public const uint GL_SECONDARY_COLOR_ARRAY_SIZE_EXT             = 0x845A;
+        public const uint GL_SECONDARY_COLOR_ARRAY_TYPE_EXT             = 0x845B;
+        public const uint GL_SECONDARY_COLOR_ARRAY_STRIDE_EXT           = 0x845C;
+        public const uint GL_SECONDARY_COLOR_ARRAY_POINTER_EXT          = 0x845D;
+        public const uint GL_SECONDARY_COLOR_ARRAY_EXT                  = 0x845E;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_texture_perturb_normal
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_PERTURB_EXT                    = 0x85AE;
-        public const uint GL_TEXTURE_NORMAL_EXT             = 0x85AF;
+        public const uint GL_PERTURB_EXT                                = 0x85AE;
+        public const uint GL_TEXTURE_NORMAL_EXT                         = 0x85AF;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_multi_draw_arrays (no constants)
@@ -3153,14 +3153,14 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_fog_coord
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_FOG_COORDINATE_SOURCE_EXT      = 0x8450;
-        public const uint GL_FOG_COORDINATE_EXT             = 0x8451;
-        public const uint GL_FRAGMENT_DEPTH_EXT             = 0x8452;
-        public const uint GL_CURRENT_FOG_COORDINATE_EXT     = 0x8453;
-        public const uint GL_FOG_COORDINATE_ARRAY_TYPE_EXT  = 0x8454;
-        public const uint GL_FOG_COORDINATE_ARRAY_STRIDE_EXT = 0x8455;
-        public const uint GL_FOG_COORDINATE_ARRAY_POINTER_EXT = 0x8456;
-        public const uint GL_FOG_COORDINATE_ARRAY_EXT       = 0x8457;
+        public const uint GL_FOG_COORDINATE_SOURCE_EXT                  = 0x8450;
+        public const uint GL_FOG_COORDINATE_EXT                         = 0x8451;
+        public const uint GL_FRAGMENT_DEPTH_EXT                         = 0x8452;
+        public const uint GL_CURRENT_FOG_COORDINATE_EXT                 = 0x8453;
+        public const uint GL_FOG_COORDINATE_ARRAY_TYPE_EXT              = 0x8454;
+        public const uint GL_FOG_COORDINATE_ARRAY_STRIDE_EXT            = 0x8455;
+        public const uint GL_FOG_COORDINATE_ARRAY_POINTER_EXT           = 0x8456;
+        public const uint GL_FOG_COORDINATE_ARRAY_EXT                   = 0x8457;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_coordinate_frame
@@ -3263,19 +3263,19 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_vertex_weighting
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_MODELVIEW0_STACK_DEPTH_EXT     = GL_MODELVIEW_STACK_DEPTH;
-        public const uint GL_MODELVIEW1_STACK_DEPTH_EXT     = 0x8502;
-        public const uint GL_MODELVIEW0_MATRIX_EXT          = GL_MODELVIEW_MATRIX;
-        public const uint GL_MODELVIEW1_MATRIX_EXT          = 0x8506;
-        public const uint GL_VERTEX_WEIGHTING_EXT           = 0x8509;
-        public const uint GL_MODELVIEW0_EXT                 = GL_MODELVIEW;
-        public const uint GL_MODELVIEW1_EXT                 = 0x850A;
-        public const uint GL_CURRENT_VERTEX_WEIGHT_EXT      = 0x850B;
-        public const uint GL_VERTEX_WEIGHT_ARRAY_EXT        = 0x850C;
-        public const uint GL_VERTEX_WEIGHT_ARRAY_SIZE_EXT   = 0x850D;
-        public const uint GL_VERTEX_WEIGHT_ARRAY_TYPE_EXT   = 0x850E;
-        public const uint GL_VERTEX_WEIGHT_ARRAY_STRIDE_EXT = 0x850F;
-        public const uint GL_VERTEX_WEIGHT_ARRAY_POINTER_EXT = 0x8510;
+        public const uint GL_MODELVIEW0_STACK_DEPTH_EXT                 = 0x0BA3;
+        public const uint GL_MODELVIEW1_STACK_DEPTH_EXT                 = 0x8502;
+        public const uint GL_MODELVIEW0_MATRIX_EXT                      = 0x0BA6;
+        public const uint GL_MODELVIEW1_MATRIX_EXT                      = 0x8506;
+        public const uint GL_VERTEX_WEIGHTING_EXT                       = 0x8509;
+        public const uint GL_MODELVIEW0_EXT                             = 0x1700;
+        public const uint GL_MODELVIEW1_EXT                             = 0x850A;
+        public const uint GL_CURRENT_VERTEX_WEIGHT_EXT                  = 0x850B;
+        public const uint GL_VERTEX_WEIGHT_ARRAY_EXT                    = 0x850C;
+        public const uint GL_VERTEX_WEIGHT_ARRAY_SIZE_EXT               = 0x850D;
+        public const uint GL_VERTEX_WEIGHT_ARRAY_TYPE_EXT               = 0x850E;
+        public const uint GL_VERTEX_WEIGHT_ARRAY_STRIDE_EXT             = 0x850F;
+        public const uint GL_VERTEX_WEIGHT_ARRAY_POINTER_EXT            = 0x8510;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_texture_compression_dxt1
@@ -3323,116 +3323,116 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_vertex_shader
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_VERTEX_SHADER_EXT              = 0x8780;
-        public const uint GL_VERTEX_SHADER_BINDING_EXT      = 0x8781;
-        public const uint GL_OP_INDEX_EXT                   = 0x8782;
-        public const uint GL_OP_NEGATE_EXT                  = 0x8783;
-        public const uint GL_OP_DOT3_EXT                    = 0x8784;
-        public const uint GL_OP_DOT4_EXT                    = 0x8785;
-        public const uint GL_OP_MUL_EXT                     = 0x8786;
-        public const uint GL_OP_ADD_EXT                     = 0x8787;
-        public const uint GL_OP_MADD_EXT                    = 0x8788;
-        public const uint GL_OP_FRAC_EXT                    = 0x8789;
-        public const uint GL_OP_MAX_EXT                     = 0x878A;
-        public const uint GL_OP_MIN_EXT                     = 0x878B;
-        public const uint GL_OP_SET_GE_EXT                  = 0x878C;
-        public const uint GL_OP_SET_LT_EXT                  = 0x878D;
-        public const uint GL_OP_CLAMP_EXT                   = 0x878E;
-        public const uint GL_OP_FLOOR_EXT                   = 0x878F;
-        public const uint GL_OP_ROUND_EXT                   = 0x8790;
-        public const uint GL_OP_EXP_BASE_2_EXT              = 0x8791;
-        public const uint GL_OP_LOG_BASE_2_EXT              = 0x8792;
-        public const uint GL_OP_POWER_EXT                   = 0x8793;
-        public const uint GL_OP_RECIP_EXT                   = 0x8794;
-        public const uint GL_OP_RECIP_SQRT_EXT              = 0x8795;
-        public const uint GL_OP_SUB_EXT                     = 0x8796;
-        public const uint GL_OP_CROSS_PRODUCT_EXT           = 0x8797;
-        public const uint GL_OP_MULTIPLY_MATRIX_EXT         = 0x8798;
-        public const uint GL_OP_MOV_EXT                     = 0x8799;
-        public const uint GL_OUTPUT_VERTEX_EXT              = 0x879A;
-        public const uint GL_OUTPUT_COLOR0_EXT              = 0x879B;
-        public const uint GL_OUTPUT_COLOR1_EXT              = 0x879C;
-        public const uint GL_OUTPUT_TEXTURE_COORD0_EXT      = 0x879D;
-        public const uint GL_OUTPUT_TEXTURE_COORD1_EXT      = 0x879E;
-        public const uint GL_OUTPUT_TEXTURE_COORD2_EXT      = 0x879F;
-        public const uint GL_OUTPUT_TEXTURE_COORD3_EXT      = 0x87A0;
-        public const uint GL_OUTPUT_TEXTURE_COORD4_EXT      = 0x87A1;
-        public const uint GL_OUTPUT_TEXTURE_COORD5_EXT      = 0x87A2;
-        public const uint GL_OUTPUT_TEXTURE_COORD6_EXT      = 0x87A3;
-        public const uint GL_OUTPUT_TEXTURE_COORD7_EXT      = 0x87A4;
-        public const uint GL_OUTPUT_TEXTURE_COORD8_EXT      = 0x87A5;
-        public const uint GL_OUTPUT_TEXTURE_COORD9_EXT      = 0x87A6;
-        public const uint GL_OUTPUT_TEXTURE_COORD10_EXT     = 0x87A7;
-        public const uint GL_OUTPUT_TEXTURE_COORD11_EXT     = 0x87A8;
-        public const uint GL_OUTPUT_TEXTURE_COORD12_EXT     = 0x87A9;
-        public const uint GL_OUTPUT_TEXTURE_COORD13_EXT     = 0x87AA;
-        public const uint GL_OUTPUT_TEXTURE_COORD14_EXT     = 0x87AB;
-        public const uint GL_OUTPUT_TEXTURE_COORD15_EXT     = 0x87AC;
-        public const uint GL_OUTPUT_TEXTURE_COORD16_EXT     = 0x87AD;
-        public const uint GL_OUTPUT_TEXTURE_COORD17_EXT     = 0x87AE;
-        public const uint GL_OUTPUT_TEXTURE_COORD18_EXT     = 0x87AF;
-        public const uint GL_OUTPUT_TEXTURE_COORD19_EXT     = 0x87B0;
-        public const uint GL_OUTPUT_TEXTURE_COORD20_EXT     = 0x87B1;
-        public const uint GL_OUTPUT_TEXTURE_COORD21_EXT     = 0x87B2;
-        public const uint GL_OUTPUT_TEXTURE_COORD22_EXT     = 0x87B3;
-        public const uint GL_OUTPUT_TEXTURE_COORD23_EXT     = 0x87B4;
-        public const uint GL_OUTPUT_TEXTURE_COORD24_EXT     = 0x87B5;
-        public const uint GL_OUTPUT_TEXTURE_COORD25_EXT     = 0x87B6;
-        public const uint GL_OUTPUT_TEXTURE_COORD26_EXT     = 0x87B7;
-        public const uint GL_OUTPUT_TEXTURE_COORD27_EXT     = 0x87B8;
-        public const uint GL_OUTPUT_TEXTURE_COORD28_EXT     = 0x87B9;
-        public const uint GL_OUTPUT_TEXTURE_COORD29_EXT     = 0x87BA;
-        public const uint GL_OUTPUT_TEXTURE_COORD30_EXT     = 0x87BB;
-        public const uint GL_OUTPUT_TEXTURE_COORD31_EXT     = 0x87BC;
-        public const uint GL_OUTPUT_FOG_EXT                 = 0x87BD;
-        public const uint GL_SCALAR_EXT                     = 0x87BE;
-        public const uint GL_VECTOR_EXT                     = 0x87BF;
-        public const uint GL_MATRIX_EXT                     = 0x87C0;
-        public const uint GL_VARIANT_EXT                    = 0x87C1;
-        public const uint GL_INVARIANT_EXT                  = 0x87C2;
-        public const uint GL_LOCAL_CONSTANT_EXT             = 0x87C3;
-        public const uint GL_LOCAL_EXT                      = 0x87C4;
-        public const uint GL_MAX_VERTEX_SHADER_INSTRUCTIONS_EXT = 0x87C5;
-        public const uint GL_MAX_VERTEX_SHADER_VARIANTS_EXT = 0x87C6;
-        public const uint GL_MAX_VERTEX_SHADER_INVARIANTS_EXT = 0x87C7;
-        public const uint GL_MAX_VERTEX_SHADER_LOCAL_CONSTANTS_EXT = 0x87C8;
-        public const uint GL_MAX_VERTEX_SHADER_LOCALS_EXT   = 0x87C9;
-        public const uint GL_MAX_OPTIMIZED_VERTEX_SHADER_INSTRUCTIONS_EXT = 0x87CA;
-        public const uint GL_MAX_OPTIMIZED_VERTEX_SHADER_VARIANTS_EXT = 0x87CB;
-        public const uint GL_MAX_OPTIMIZED_VERTEX_SHADER_LOCAL_CONSTANTS_EXT = 0x87CC;
-        public const uint GL_MAX_OPTIMIZED_VERTEX_SHADER_INVARIANTS_EXT = 0x87CD;
-        public const uint GL_MAX_OPTIMIZED_VERTEX_SHADER_LOCALS_EXT = 0x87CE;
-        public const uint GL_VERTEX_SHADER_INSTRUCTIONS_EXT = 0x87CF;
-        public const uint GL_VERTEX_SHADER_VARIANTS_EXT     = 0x87D0;
-        public const uint GL_VERTEX_SHADER_INVARIANTS_EXT   = 0x87D1;
-        public const uint GL_VERTEX_SHADER_LOCAL_CONSTANTS_EXT = 0x87D2;
-        public const uint GL_VERTEX_SHADER_LOCALS_EXT       = 0x87D3;
-        public const uint GL_VERTEX_SHADER_OPTIMIZED_EXT    = 0x87D4;
-        public const uint GL_X_EXT                          = 0x87D5;
-        public const uint GL_Y_EXT                          = 0x87D6;
-        public const uint GL_Z_EXT                          = 0x87D7;
-        public const uint GL_W_EXT                          = 0x87D8;
-        public const uint GL_NEGATIVE_X_EXT                 = 0x87D9;
-        public const uint GL_NEGATIVE_Y_EXT                 = 0x87DA;
-        public const uint GL_NEGATIVE_Z_EXT                 = 0x87DB;
-        public const uint GL_NEGATIVE_W_EXT                 = 0x87DC;
-        public const uint GL_ZERO_EXT                       = 0x87DD;
-        public const uint GL_ONE_EXT                        = 0x87DE;
-        public const uint GL_NEGATIVE_ONE_EXT               = 0x87DF;
-        public const uint GL_NORMALIZED_RANGE_EXT           = 0x87E0;
-        public const uint GL_FULL_RANGE_EXT                 = 0x87E1;
-        public const uint GL_CURRENT_VERTEX_EXT             = 0x87E2;
-        public const uint GL_MVP_MATRIX_EXT                 = 0x87E3;
-        public const uint GL_VARIANT_VALUE_EXT              = 0x87E4;
-        public const uint GL_VARIANT_DATATYPE_EXT           = 0x87E5;
-        public const uint GL_VARIANT_ARRAY_STRIDE_EXT       = 0x87E6;
-        public const uint GL_VARIANT_ARRAY_TYPE_EXT         = 0x87E7;
-        public const uint GL_VARIANT_ARRAY_EXT              = 0x87E8;
-        public const uint GL_VARIANT_ARRAY_POINTER_EXT      = 0x87E9;
-        public const uint GL_INVARIANT_VALUE_EXT            = 0x87EA;
-        public const uint GL_INVARIANT_DATATYPE_EXT         = 0x87EB;
-        public const uint GL_LOCAL_CONSTANT_VALUE_EXT       = 0x87EC;
-        public const uint GL_LOCAL_CONSTANT_DATATYPE_EXT    = 0x87ED;
+        public const uint GL_VERTEX_SHADER_EXT                          = 0x8780;
+        public const uint GL_VERTEX_SHADER_BINDING_EXT                  = 0x8781;
+        public const uint GL_OP_INDEX_EXT                               = 0x8782;
+        public const uint GL_OP_NEGATE_EXT                              = 0x8783;
+        public const uint GL_OP_DOT3_EXT                                = 0x8784;
+        public const uint GL_OP_DOT4_EXT                                = 0x8785;
+        public const uint GL_OP_MUL_EXT                                 = 0x8786;
+        public const uint GL_OP_ADD_EXT                                 = 0x8787;
+        public const uint GL_OP_MADD_EXT                                = 0x8788;
+        public const uint GL_OP_FRAC_EXT                                = 0x8789;
+        public const uint GL_OP_MAX_EXT                                 = 0x878A;
+        public const uint GL_OP_MIN_EXT                                 = 0x878B;
+        public const uint GL_OP_SET_GE_EXT                              = 0x878C;
+        public const uint GL_OP_SET_LT_EXT                              = 0x878D;
+        public const uint GL_OP_CLAMP_EXT                               = 0x878E;
+        public const uint GL_OP_FLOOR_EXT                               = 0x878F;
+        public const uint GL_OP_ROUND_EXT                               = 0x8790;
+        public const uint GL_OP_EXP_BASE_2_EXT                          = 0x8791;
+        public const uint GL_OP_LOG_BASE_2_EXT                          = 0x8792;
+        public const uint GL_OP_POWER_EXT                               = 0x8793;
+        public const uint GL_OP_RECIP_EXT                               = 0x8794;
+        public const uint GL_OP_RECIP_SQRT_EXT                          = 0x8795;
+        public const uint GL_OP_SUB_EXT                                 = 0x8796;
+        public const uint GL_OP_CROSS_PRODUCT_EXT                       = 0x8797;
+        public const uint GL_OP_MULTIPLY_MATRIX_EXT                     = 0x8798;
+        public const uint GL_OP_MOV_EXT                                 = 0x8799;
+        public const uint GL_OUTPUT_VERTEX_EXT                          = 0x879A;
+        public const uint GL_OUTPUT_COLOR0_EXT                          = 0x879B;
+        public const uint GL_OUTPUT_COLOR1_EXT                          = 0x879C;
+        public const uint GL_OUTPUT_TEXTURE_COORD0_EXT                  = 0x879D;
+        public const uint GL_OUTPUT_TEXTURE_COORD1_EXT                  = 0x879E;
+        public const uint GL_OUTPUT_TEXTURE_COORD2_EXT                  = 0x879F;
+        public const uint GL_OUTPUT_TEXTURE_COORD3_EXT                  = 0x87A0;
+        public const uint GL_OUTPUT_TEXTURE_COORD4_EXT                  = 0x87A1;
+        public const uint GL_OUTPUT_TEXTURE_COORD5_EXT                  = 0x87A2;
+        public const uint GL_OUTPUT_TEXTURE_COORD6_EXT                  = 0x87A3;
+        public const uint GL_OUTPUT_TEXTURE_COORD7_EXT                  = 0x87A4;
+        public const uint GL_OUTPUT_TEXTURE_COORD8_EXT                  = 0x87A5;
+        public const uint GL_OUTPUT_TEXTURE_COORD9_EXT                  = 0x87A6;
+        public const uint GL_OUTPUT_TEXTURE_COORD10_EXT                 = 0x87A7;
+        public const uint GL_OUTPUT_TEXTURE_COORD11_EXT                 = 0x87A8;
+        public const uint GL_OUTPUT_TEXTURE_COORD12_EXT                 = 0x87A9;
+        public const uint GL_OUTPUT_TEXTURE_COORD13_EXT                 = 0x87AA;
+        public const uint GL_OUTPUT_TEXTURE_COORD14_EXT                 = 0x87AB;
+        public const uint GL_OUTPUT_TEXTURE_COORD15_EXT                 = 0x87AC;
+        public const uint GL_OUTPUT_TEXTURE_COORD16_EXT                 = 0x87AD;
+        public const uint GL_OUTPUT_TEXTURE_COORD17_EXT                 = 0x87AE;
+        public const uint GL_OUTPUT_TEXTURE_COORD18_EXT                 = 0x87AF;
+        public const uint GL_OUTPUT_TEXTURE_COORD19_EXT                 = 0x87B0;
+        public const uint GL_OUTPUT_TEXTURE_COORD20_EXT                 = 0x87B1;
+        public const uint GL_OUTPUT_TEXTURE_COORD21_EXT                 = 0x87B2;
+        public const uint GL_OUTPUT_TEXTURE_COORD22_EXT                 = 0x87B3;
+        public const uint GL_OUTPUT_TEXTURE_COORD23_EXT                 = 0x87B4;
+        public const uint GL_OUTPUT_TEXTURE_COORD24_EXT                 = 0x87B5;
+        public const uint GL_OUTPUT_TEXTURE_COORD25_EXT                 = 0x87B6;
+        public const uint GL_OUTPUT_TEXTURE_COORD26_EXT                 = 0x87B7;
+        public const uint GL_OUTPUT_TEXTURE_COORD27_EXT                 = 0x87B8;
+        public const uint GL_OUTPUT_TEXTURE_COORD28_EXT                 = 0x87B9;
+        public const uint GL_OUTPUT_TEXTURE_COORD29_EXT                 = 0x87BA;
+        public const uint GL_OUTPUT_TEXTURE_COORD30_EXT                 = 0x87BB;
+        public const uint GL_OUTPUT_TEXTURE_COORD31_EXT                 = 0x87BC;
+        public const uint GL_OUTPUT_FOG_EXT                             = 0x87BD;
+        public const uint GL_SCALAR_EXT                                 = 0x87BE;
+        public const uint GL_VECTOR_EXT                                 = 0x87BF;
+        public const uint GL_MATRIX_EXT                                 = 0x87C0;
+        public const uint GL_VARIANT_EXT                                = 0x87C1;
+        public const uint GL_INVARIANT_EXT                              = 0x87C2;
+        public const uint GL_LOCAL_CONSTANT_EXT                         = 0x87C3;
+        public const uint GL_LOCAL_EXT                                  = 0x87C4;
+        public const uint GL_MAX_VERTEX_SHADER_INSTRUCTIONS_EXT         = 0x87C5;
+        public const uint GL_MAX_VERTEX_SHADER_VARIANTS_EXT             = 0x87C6;
+        public const uint GL_MAX_VERTEX_SHADER_INVARIANTS_EXT           = 0x87C7;
+        public const uint GL_MAX_VERTEX_SHADER_LOCAL_CONSTANTS_EXT      = 0x87C8;
+        public const uint GL_MAX_VERTEX_SHADER_LOCALS_EXT               = 0x87C9;
+        public const uint GL_MAX_OPTIMIZED_VERTEX_SHADER_INSTRUCTIONS_EXT       = 0x87CA;
+        public const uint GL_MAX_OPTIMIZED_VERTEX_SHADER_VARIANTS_EXT           = 0x87CB;
+        public const uint GL_MAX_OPTIMIZED_VERTEX_SHADER_LOCAL_CONSTANTS_EXT    = 0x87CC;
+        public const uint GL_MAX_OPTIMIZED_VERTEX_SHADER_INVARIANTS_EXT         = 0x87CD;
+        public const uint GL_MAX_OPTIMIZED_VERTEX_SHADER_LOCALS_EXT             = 0x87CE;
+        public const uint GL_VERTEX_SHADER_INSTRUCTIONS_EXT             = 0x87CF;
+        public const uint GL_VERTEX_SHADER_VARIANTS_EXT                 = 0x87D0;
+        public const uint GL_VERTEX_SHADER_INVARIANTS_EXT               = 0x87D1;
+        public const uint GL_VERTEX_SHADER_LOCAL_CONSTANTS_EXT          = 0x87D2;
+        public const uint GL_VERTEX_SHADER_LOCALS_EXT                   = 0x87D3;
+        public const uint GL_VERTEX_SHADER_OPTIMIZED_EXT                = 0x87D4;
+        public const uint GL_X_EXT                                      = 0x87D5;
+        public const uint GL_Y_EXT                                      = 0x87D6;
+        public const uint GL_Z_EXT                                      = 0x87D7;
+        public const uint GL_W_EXT                                      = 0x87D8;
+        public const uint GL_NEGATIVE_X_EXT                             = 0x87D9;
+        public const uint GL_NEGATIVE_Y_EXT                             = 0x87DA;
+        public const uint GL_NEGATIVE_Z_EXT                             = 0x87DB;
+        public const uint GL_NEGATIVE_W_EXT                             = 0x87DC;
+        public const uint GL_ZERO_EXT                                   = 0x87DD;
+        public const uint GL_ONE_EXT                                    = 0x87DE;
+        public const uint GL_NEGATIVE_ONE_EXT                           = 0x87DF;
+        public const uint GL_NORMALIZED_RANGE_EXT                       = 0x87E0;
+        public const uint GL_FULL_RANGE_EXT                             = 0x87E1;
+        public const uint GL_CURRENT_VERTEX_EXT                         = 0x87E2;
+        public const uint GL_MVP_MATRIX_EXT                             = 0x87E3;
+        public const uint GL_VARIANT_VALUE_EXT                          = 0x87E4;
+        public const uint GL_VARIANT_DATATYPE_EXT                       = 0x87E5;
+        public const uint GL_VARIANT_ARRAY_STRIDE_EXT                   = 0x87E6;
+        public const uint GL_VARIANT_ARRAY_TYPE_EXT                     = 0x87E7;
+        public const uint GL_VARIANT_ARRAY_EXT                          = 0x87E8;
+        public const uint GL_VARIANT_ARRAY_POINTER_EXT                  = 0x87E9;
+        public const uint GL_INVARIANT_VALUE_EXT                        = 0x87EA;
+        public const uint GL_INVARIANT_DATATYPE_EXT                     = 0x87EB;
+        public const uint GL_LOCAL_CONSTANT_VALUE_EXT                   = 0x87EC;
+        public const uint GL_LOCAL_CONSTANT_DATATYPE_EXT                = 0x87ED;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_shadow_funcs (no constants)
@@ -3447,21 +3447,21 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_depth_bounds_test
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_DEPTH_BOUNDS_TEST_EXT          = 0x8890;
-        public const uint GL_DEPTH_BOUNDS_EXT               = 0x8891;
+        public const uint GL_DEPTH_BOUNDS_TEST_EXT              = 0x8890;
+        public const uint GL_DEPTH_BOUNDS_EXT                   = 0x8891;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_texture_mirror_clamp
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_MIRROR_CLAMP_EXT               = 0x8742;
-        public const uint GL_MIRROR_CLAMP_TO_EDGE_EXT       = 0x8743;
-        public const uint GL_MIRROR_CLAMP_TO_BORDER_EXT     = 0x8912;
+        public const uint GL_MIRROR_CLAMP_EXT                   = 0x8742;
+        public const uint GL_MIRROR_CLAMP_TO_EDGE_EXT           = 0x8743;
+        public const uint GL_MIRROR_CLAMP_TO_BORDER_EXT         = 0x8912;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_blend_equation_separate
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_BLEND_EQUATION_RGB_EXT         = 0x8009;
-        public const uint GL_BLEND_EQUATION_ALPHA_EXT       = 0x883D;
+        public const uint GL_BLEND_EQUATION_RGB_EXT             = 0x8009;
+        public const uint GL_BLEND_EQUATION_ALPHA_EXT           = 0x883D;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_pixel_buffer_object
@@ -3474,57 +3474,57 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_framebuffer_object
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_INVALID_FRAMEBUFFER_OPERATION_EXT = 0x0506;
-        public const uint GL_MAX_RENDERBUFFER_SIZE_EXT      = 0x84E8;
-        public const uint GL_FRAMEBUFFER_BINDING_EXT        = 0x8CA6;
-        public const uint GL_RENDERBUFFER_BINDING_EXT       = 0x8CA7;
-        public const uint GL_FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE_EXT = 0x8CD0;
-        public const uint GL_FRAMEBUFFER_ATTACHMENT_OBJECT_NAME_EXT = 0x8CD1;
-        public const uint GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL_EXT = 0x8CD2;
-        public const uint GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE_EXT = 0x8CD3;
-        public const uint GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_3D_ZOFFSET_EXT = 0x8CD4;
-        public const uint GL_FRAMEBUFFER_COMPLETE_EXT       = 0x8CD5;
-        public const uint GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT_EXT = 0x8CD6;
-        public const uint GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT_EXT = 0x8CD7;
-        public const uint GL_FRAMEBUFFER_INCOMPLETE_DIMENSIONS_EXT = 0x8CD9;
-        public const uint GL_FRAMEBUFFER_INCOMPLETE_FORMATS_EXT = 0x8CDA;
-        public const uint GL_FRAMEBUFFER_INCOMPLETE_DRAW_BUFFER_EXT = 0x8CDB;
-        public const uint GL_FRAMEBUFFER_INCOMPLETE_READ_BUFFER_EXT = 0x8CDC;
-        public const uint GL_FRAMEBUFFER_UNSUPPORTED_EXT    = 0x8CDD;
-        public const uint GL_MAX_COLOR_ATTACHMENTS_EXT      = 0x8CDF;
-        public const uint GL_COLOR_ATTACHMENT0_EXT          = 0x8CE0;
-        public const uint GL_COLOR_ATTACHMENT1_EXT          = 0x8CE1;
-        public const uint GL_COLOR_ATTACHMENT2_EXT          = 0x8CE2;
-        public const uint GL_COLOR_ATTACHMENT3_EXT          = 0x8CE3;
-        public const uint GL_COLOR_ATTACHMENT4_EXT          = 0x8CE4;
-        public const uint GL_COLOR_ATTACHMENT5_EXT          = 0x8CE5;
-        public const uint GL_COLOR_ATTACHMENT6_EXT          = 0x8CE6;
-        public const uint GL_COLOR_ATTACHMENT7_EXT          = 0x8CE7;
-        public const uint GL_COLOR_ATTACHMENT8_EXT          = 0x8CE8;
-        public const uint GL_COLOR_ATTACHMENT9_EXT          = 0x8CE9;
-        public const uint GL_COLOR_ATTACHMENT10_EXT         = 0x8CEA;
-        public const uint GL_COLOR_ATTACHMENT11_EXT         = 0x8CEB;
-        public const uint GL_COLOR_ATTACHMENT12_EXT         = 0x8CEC;
-        public const uint GL_COLOR_ATTACHMENT13_EXT         = 0x8CED;
-        public const uint GL_COLOR_ATTACHMENT14_EXT         = 0x8CEE;
-        public const uint GL_COLOR_ATTACHMENT15_EXT         = 0x8CEF;
-        public const uint GL_DEPTH_ATTACHMENT_EXT           = 0x8D00;
-        public const uint GL_STENCIL_ATTACHMENT_EXT         = 0x8D20;
-        public const uint GL_FRAMEBUFFER_EXT                = 0x8D40;
-        public const uint GL_RENDERBUFFER_EXT               = 0x8D41;
-        public const uint GL_RENDERBUFFER_WIDTH_EXT         = 0x8D42;
-        public const uint GL_RENDERBUFFER_HEIGHT_EXT        = 0x8D43;
-        public const uint GL_RENDERBUFFER_INTERNAL_FORMAT_EXT = 0x8D44;
-        public const uint GL_STENCIL_INDEX1_EXT             = 0x8D46;
-        public const uint GL_STENCIL_INDEX4_EXT             = 0x8D47;
-        public const uint GL_STENCIL_INDEX8_EXT             = 0x8D48;
-        public const uint GL_STENCIL_INDEX16_EXT            = 0x8D49;
-        public const uint GL_RENDERBUFFER_RED_SIZE_EXT      = 0x8D50;
-        public const uint GL_RENDERBUFFER_GREEN_SIZE_EXT    = 0x8D51;
-        public const uint GL_RENDERBUFFER_BLUE_SIZE_EXT     = 0x8D52;
-        public const uint GL_RENDERBUFFER_ALPHA_SIZE_EXT    = 0x8D53;
-        public const uint GL_RENDERBUFFER_DEPTH_SIZE_EXT    = 0x8D54;
-        public const uint GL_RENDERBUFFER_STENCIL_SIZE_EXT  = 0x8D55;
+        public const uint GL_INVALID_FRAMEBUFFER_OPERATION_EXT                  = 0x0506;
+        public const uint GL_MAX_RENDERBUFFER_SIZE_EXT                          = 0x84E8;
+        public const uint GL_FRAMEBUFFER_BINDING_EXT                            = 0x8CA6;
+        public const uint GL_RENDERBUFFER_BINDING_EXT                           = 0x8CA7;
+        public const uint GL_FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE_EXT             = 0x8CD0;
+        public const uint GL_FRAMEBUFFER_ATTACHMENT_OBJECT_NAME_EXT             = 0x8CD1;
+        public const uint GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL_EXT           = 0x8CD2;
+        public const uint GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE_EXT   = 0x8CD3;
+        public const uint GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_3D_ZOFFSET_EXT      = 0x8CD4;
+        public const uint GL_FRAMEBUFFER_COMPLETE_EXT                           = 0x8CD5;
+        public const uint GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT_EXT              = 0x8CD6;
+        public const uint GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT_EXT      = 0x8CD7;
+        public const uint GL_FRAMEBUFFER_INCOMPLETE_DIMENSIONS_EXT              = 0x8CD9;
+        public const uint GL_FRAMEBUFFER_INCOMPLETE_FORMATS_EXT                 = 0x8CDA;
+        public const uint GL_FRAMEBUFFER_INCOMPLETE_DRAW_BUFFER_EXT             = 0x8CDB;
+        public const uint GL_FRAMEBUFFER_INCOMPLETE_READ_BUFFER_EXT             = 0x8CDC;
+        public const uint GL_FRAMEBUFFER_UNSUPPORTED_EXT                        = 0x8CDD;
+        public const uint GL_MAX_COLOR_ATTACHMENTS_EXT                          = 0x8CDF;
+        public const uint GL_COLOR_ATTACHMENT0_EXT                              = 0x8CE0;
+        public const uint GL_COLOR_ATTACHMENT1_EXT                              = 0x8CE1;
+        public const uint GL_COLOR_ATTACHMENT2_EXT                              = 0x8CE2;
+        public const uint GL_COLOR_ATTACHMENT3_EXT                              = 0x8CE3;
+        public const uint GL_COLOR_ATTACHMENT4_EXT                              = 0x8CE4;
+        public const uint GL_COLOR_ATTACHMENT5_EXT                              = 0x8CE5;
+        public const uint GL_COLOR_ATTACHMENT6_EXT                              = 0x8CE6;
+        public const uint GL_COLOR_ATTACHMENT7_EXT                              = 0x8CE7;
+        public const uint GL_COLOR_ATTACHMENT8_EXT                              = 0x8CE8;
+        public const uint GL_COLOR_ATTACHMENT9_EXT                              = 0x8CE9;
+        public const uint GL_COLOR_ATTACHMENT10_EXT                             = 0x8CEA;
+        public const uint GL_COLOR_ATTACHMENT11_EXT                             = 0x8CEB;
+        public const uint GL_COLOR_ATTACHMENT12_EXT                             = 0x8CEC;
+        public const uint GL_COLOR_ATTACHMENT13_EXT                             = 0x8CED;
+        public const uint GL_COLOR_ATTACHMENT14_EXT                             = 0x8CEE;
+        public const uint GL_COLOR_ATTACHMENT15_EXT                             = 0x8CEF;
+        public const uint GL_DEPTH_ATTACHMENT_EXT                               = 0x8D00;
+        public const uint GL_STENCIL_ATTACHMENT_EXT                             = 0x8D20;
+        public const uint GL_FRAMEBUFFER_EXT                                    = 0x8D40;
+        public const uint GL_RENDERBUFFER_EXT                                   = 0x8D41;
+        public const uint GL_RENDERBUFFER_WIDTH_EXT                             = 0x8D42;
+        public const uint GL_RENDERBUFFER_HEIGHT_EXT                            = 0x8D43;
+        public const uint GL_RENDERBUFFER_INTERNAL_FORMAT_EXT                   = 0x8D44;
+        public const uint GL_STENCIL_INDEX1_EXT                                 = 0x8D46;
+        public const uint GL_STENCIL_INDEX4_EXT                                 = 0x8D47;
+        public const uint GL_STENCIL_INDEX8_EXT                                 = 0x8D48;
+        public const uint GL_STENCIL_INDEX16_EXT                                = 0x8D49;
+        public const uint GL_RENDERBUFFER_RED_SIZE_EXT                          = 0x8D50;
+        public const uint GL_RENDERBUFFER_GREEN_SIZE_EXT                        = 0x8D51;
+        public const uint GL_RENDERBUFFER_BLUE_SIZE_EXT                         = 0x8D52;
+        public const uint GL_RENDERBUFFER_ALPHA_SIZE_EXT                        = 0x8D53;
+        public const uint GL_RENDERBUFFER_DEPTH_SIZE_EXT                        = 0x8D54;
+        public const uint GL_RENDERBUFFER_STENCIL_SIZE_EXT                      = 0x8D55;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_packed_depth_stencil
@@ -3543,29 +3543,29 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_texture_sRGB
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_SRGB_EXT                       = 0x8C40;
-        public const uint GL_SRGB8_EXT                      = 0x8C41;
-        public const uint GL_SRGB_ALPHA_EXT                 = 0x8C42;
-        public const uint GL_SRGB8_ALPHA8_EXT               = 0x8C43;
-        public const uint GL_SLUMINANCE_ALPHA_EXT           = 0x8C44;
-        public const uint GL_SLUMINANCE8_ALPHA8_EXT         = 0x8C45;
-        public const uint GL_SLUMINANCE_EXT                 = 0x8C46;
-        public const uint GL_SLUMINANCE8_EXT                = 0x8C47;
-        public const uint GL_COMPRESSED_SRGB_EXT            = 0x8C48;
-        public const uint GL_COMPRESSED_SRGB_ALPHA_EXT      = 0x8C49;
-        public const uint GL_COMPRESSED_SLUMINANCE_EXT      = 0x8C4A;
-        public const uint GL_COMPRESSED_SLUMINANCE_ALPHA_EXT = 0x8C4B;
-        public const uint GL_COMPRESSED_SRGB_S3TC_DXT1_EXT  = 0x8C4C;
-        public const uint GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT = 0x8C4D;
-        public const uint GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT = 0x8C4E;
-        public const uint GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT = 0x8C4F;
+        public const uint GL_SRGB_EXT                                           = 0x8C40;
+        public const uint GL_SRGB8_EXT                                          = 0x8C41;
+        public const uint GL_SRGB_ALPHA_EXT                                     = 0x8C42;
+        public const uint GL_SRGB8_ALPHA8_EXT                                   = 0x8C43;
+        public const uint GL_SLUMINANCE_ALPHA_EXT                               = 0x8C44;
+        public const uint GL_SLUMINANCE8_ALPHA8_EXT                             = 0x8C45;
+        public const uint GL_SLUMINANCE_EXT                                     = 0x8C46;
+        public const uint GL_SLUMINANCE8_EXT                                    = 0x8C47;
+        public const uint GL_COMPRESSED_SRGB_EXT                                = 0x8C48;
+        public const uint GL_COMPRESSED_SRGB_ALPHA_EXT                          = 0x8C49;
+        public const uint GL_COMPRESSED_SLUMINANCE_EXT                          = 0x8C4A;
+        public const uint GL_COMPRESSED_SLUMINANCE_ALPHA_EXT                    = 0x8C4B;
+        public const uint GL_COMPRESSED_SRGB_S3TC_DXT1_EXT                      = 0x8C4C;
+        public const uint GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT                = 0x8C4D;
+        public const uint GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT                = 0x8C4E;
+        public const uint GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT                = 0x8C4F;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_framebuffer_blit
         ///////////////////////////////////////////////////////////////////////
         public const uint GL_READ_FRAMEBUFFER_EXT           = 0x8CA8;
         public const uint GL_DRAW_FRAMEBUFFER_EXT           = 0x8CA9;
-        public const uint GL_DRAW_FRAMEBUFFER_BINDING_EXT   = GL_FRAMEBUFFER_BINDING_EXT;
+        public const uint GL_DRAW_FRAMEBUFFER_BINDING_EXT   = 0x8CA6;
         public const uint GL_READ_FRAMEBUFFER_BINDING_EXT   = 0x8CAA;
 
         ///////////////////////////////////////////////////////////////////////
@@ -3587,55 +3587,58 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_geometry_shader4
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_GEOMETRY_SHADER_EXT            = 0x8DD9;
-        /* reuse GL_GEOMETRY_VERTICES_OUT_EXT */
-        /* reuse GL_GEOMETRY_INPUT_TYPE_EXT */
-        /* reuse GL_GEOMETRY_OUTPUT_TYPE_EXT */
-        /* reuse GL_MAX_GEOMETRY_TEXTURE_IMAGE_UNITS_EXT */
-        public const uint GL_MAX_GEOMETRY_VARYING_COMPONENTS_EXT = 0x8DDD;
-        public const uint GL_MAX_VERTEX_VARYING_COMPONENTS_EXT = 0x8DDE;
-        public const uint GL_MAX_VARYING_COMPONENTS_EXT     = 0x8B4B;
-        public const uint GL_MAX_GEOMETRY_UNIFORM_COMPONENTS_EXT = 0x8DDF;
-        public const uint GL_MAX_GEOMETRY_OUTPUT_VERTICES_EXT = 0x8DE0;
-        public const uint GL_MAX_GEOMETRY_TOTAL_OUTPUT_COMPONENTS_EXT = 0x8DE1;
-        /* reuse GL_LINES_ADJACENCY_EXT */
-        /* reuse GL_LINE_STRIP_ADJACENCY_EXT */
-        /* reuse GL_TRIANGLES_ADJACENCY_EXT */
-        /* reuse GL_TRIANGLE_STRIP_ADJACENCY_EXT */
-        /* reuse GL_FRAMEBUFFER_INCOMPLETE_LAYER_TARGETS_EXT */
-        /* reuse GL_FRAMEBUFFER_INCOMPLETE_LAYER_COUNT_EXT */
-        /* reuse GL_FRAMEBUFFER_ATTACHMENT_LAYERED_EXT */
-        /* reuse GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER_EXT */
-        /* reuse GL_PROGRAM_POINT_SIZE_EXT */
+        public const uint GL_GEOMETRY_SHADER_EXT                            = 0x8DD9;
+        public const uint GL_GEOMETRY_VERTICES_OUT_EXT                      = 0x8DDA;
+        public const uint GL_GEOMETRY_INPUT_TYPE_EXT                        = 0x8DDB;
+        public const uint GL_GEOMETRY_OUTPUT_TYPE_EXT                       = 0x8DDC;
+        public const uint GL_MAX_GEOMETRY_TEXTURE_IMAGE_UNITS_EXT           = 0x8C29;
+        public const uint GL_MAX_GEOMETRY_VARYING_COMPONENTS_EXT            = 0x8DDD;
+        public const uint GL_MAX_VERTEX_VARYING_COMPONENTS_EXT              = 0x8DDE;
+        public const uint GL_MAX_VARYING_COMPONENTS_EXT                     = 0x8B4B;
+        public const uint GL_MAX_GEOMETRY_UNIFORM_COMPONENTS_EXT            = 0x8DDF;
+        public const uint GL_MAX_GEOMETRY_OUTPUT_VERTICES_EXT               = 0x8DE0;
+        public const uint GL_MAX_GEOMETRY_TOTAL_OUTPUT_COMPONENTS_EXT       = 0x8DE1;
+        public const uint GL_LINES_ADJACENCY_EXT                            = 0x000A;
+        public const uint GL_LINE_STRIP_ADJACENCY_EXT                       = 0x000B;
+        public const uint GL_TRIANGLES_ADJACENCY_EXT                        = 0x000C;
+        public const uint GL_TRIANGLE_STRIP_ADJACENCY_EXT                   = 0x000D;
+        public const uint GL_FRAMEBUFFER_INCOMPLETE_LAYER_TARGETS_EXT       = 0x8DA8;
+        public const uint GL_FRAMEBUFFER_INCOMPLETE_LAYER_COUNT_EXT         = 0x8DA9;
+        public const uint GL_FRAMEBUFFER_ATTACHMENT_LAYERED_EXT             = 0x8DA7;
+        public const uint GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER_EXT       = 0x8CD4;
+        public const uint GL_PROGRAM_POINT_SIZE_EXT                         = 0x8642;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_gpu_shader4
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_SAMPLER_1D_ARRAY_EXT           = 0x8DC0;
-        public const uint GL_SAMPLER_2D_ARRAY_EXT           = 0x8DC1;
-        public const uint GL_SAMPLER_BUFFER_EXT             = 0x8DC2;
-        public const uint GL_SAMPLER_1D_ARRAY_SHADOW_EXT    = 0x8DC3;
-        public const uint GL_SAMPLER_2D_ARRAY_SHADOW_EXT    = 0x8DC4;
-        public const uint GL_SAMPLER_CUBE_SHADOW_EXT        = 0x8DC5;
-        public const uint GL_UNSIGNED_INT_VEC2_EXT          = 0x8DC6;
-        public const uint GL_UNSIGNED_INT_VEC3_EXT          = 0x8DC7;
-        public const uint GL_UNSIGNED_INT_VEC4_EXT          = 0x8DC8;
-        public const uint GL_INT_SAMPLER_1D_EXT             = 0x8DC9;
-        public const uint GL_INT_SAMPLER_2D_EXT             = 0x8DCA;
-        public const uint GL_INT_SAMPLER_3D_EXT             = 0x8DCB;
-        public const uint GL_INT_SAMPLER_CUBE_EXT           = 0x8DCC;
-        public const uint GL_INT_SAMPLER_2D_RECT_EXT        = 0x8DCD;
-        public const uint GL_INT_SAMPLER_1D_ARRAY_EXT       = 0x8DCE;
-        public const uint GL_INT_SAMPLER_2D_ARRAY_EXT       = 0x8DCF;
-        public const uint GL_INT_SAMPLER_BUFFER_EXT         = 0x8DD0;
-        public const uint GL_UNSIGNED_INT_SAMPLER_1D_EXT    = 0x8DD1;
-        public const uint GL_UNSIGNED_INT_SAMPLER_2D_EXT    = 0x8DD2;
-        public const uint GL_UNSIGNED_INT_SAMPLER_3D_EXT    = 0x8DD3;
-        public const uint GL_UNSIGNED_INT_SAMPLER_CUBE_EXT  = 0x8DD4;
-        public const uint GL_UNSIGNED_INT_SAMPLER_2D_RECT_EXT = 0x8DD5;
-        public const uint GL_UNSIGNED_INT_SAMPLER_1D_ARRAY_EXT = 0x8DD6;
-        public const uint GL_UNSIGNED_INT_SAMPLER_2D_ARRAY_EXT = 0x8DD7;
-        public const uint GL_UNSIGNED_INT_SAMPLER_BUFFER_EXT = 0x8DD8;
+        public const uint GL_VERTEX_ATTRIB_ARRAY_INTEGER_EXT            = 0x88FD;
+        public const uint GL_SAMPLER_1D_ARRAY_EXT                       = 0x8DC0;
+        public const uint GL_SAMPLER_2D_ARRAY_EXT                       = 0x8DC1;
+        public const uint GL_SAMPLER_BUFFER_EXT                         = 0x8DC2;
+        public const uint GL_SAMPLER_1D_ARRAY_SHADOW_EXT                = 0x8DC3;
+        public const uint GL_SAMPLER_2D_ARRAY_SHADOW_EXT                = 0x8DC4;
+        public const uint GL_SAMPLER_CUBE_SHADOW_EXT                    = 0x8DC5;
+        public const uint GL_UNSIGNED_INT_VEC2_EXT                      = 0x8DC6;
+        public const uint GL_UNSIGNED_INT_VEC3_EXT                      = 0x8DC7;
+        public const uint GL_UNSIGNED_INT_VEC4_EXT                      = 0x8DC8;
+        public const uint GL_INT_SAMPLER_1D_EXT                         = 0x8DC9;
+        public const uint GL_INT_SAMPLER_2D_EXT                         = 0x8DCA;
+        public const uint GL_INT_SAMPLER_3D_EXT                         = 0x8DCB;
+        public const uint GL_INT_SAMPLER_CUBE_EXT                       = 0x8DCC;
+        public const uint GL_INT_SAMPLER_2D_RECT_EXT                    = 0x8DCD;
+        public const uint GL_INT_SAMPLER_1D_ARRAY_EXT                   = 0x8DCE;
+        public const uint GL_INT_SAMPLER_2D_ARRAY_EXT                   = 0x8DCF;
+        public const uint GL_INT_SAMPLER_BUFFER_EXT                     = 0x8DD0;
+        public const uint GL_UNSIGNED_INT_SAMPLER_1D_EXT                = 0x8DD1;
+        public const uint GL_UNSIGNED_INT_SAMPLER_2D_EXT                = 0x8DD2;
+        public const uint GL_UNSIGNED_INT_SAMPLER_3D_EXT                = 0x8DD3;
+        public const uint GL_UNSIGNED_INT_SAMPLER_CUBE_EXT              = 0x8DD4;
+        public const uint GL_UNSIGNED_INT_SAMPLER_2D_RECT_EXT           = 0x8DD5;
+        public const uint GL_UNSIGNED_INT_SAMPLER_1D_ARRAY_EXT          = 0x8DD6;
+        public const uint GL_UNSIGNED_INT_SAMPLER_2D_ARRAY_EXT          = 0x8DD7;
+        public const uint GL_UNSIGNED_INT_SAMPLER_BUFFER_EXT            = 0x8DD8;
+        public const uint GL_MIN_PROGRAM_TEXEL_OFFSET_EXT               = 0x8904;
+        public const uint GL_MAX_PROGRAM_TEXEL_OFFSET_EXT               = 0x8905;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_draw_instanced (no constants)
@@ -3644,60 +3647,60 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_packed_float
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_R11F_G11F_B10F_EXT             = 0x8C3A;
-        public const uint GL_UNSIGNED_INT_10F_11F_11F_REV_EXT = 0x8C3B;
-        public const uint GL_RGBA_SIGNED_COMPONENTS_EXT     = 0x8C3C;
+        public const uint GL_R11F_G11F_B10F_EXT                         = 0x8C3A;
+        public const uint GL_UNSIGNED_INT_10F_11F_11F_REV_EXT           = 0x8C3B;
+        public const uint GL_RGBA_SIGNED_COMPONENTS_EXT                 = 0x8C3C;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_texture_array
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_TEXTURE_1D_ARRAY_EXT           = 0x8C18;
-        public const uint GL_PROXY_TEXTURE_1D_ARRAY_EXT     = 0x8C19;
-        public const uint GL_TEXTURE_2D_ARRAY_EXT           = 0x8C1A;
-        public const uint GL_PROXY_TEXTURE_2D_ARRAY_EXT     = 0x8C1B;
-        public const uint GL_TEXTURE_BINDING_1D_ARRAY_EXT   = 0x8C1C;
-        public const uint GL_TEXTURE_BINDING_2D_ARRAY_EXT   = 0x8C1D;
-        public const uint GL_MAX_ARRAY_TEXTURE_LAYERS_EXT   = 0x88FF;
-        public const uint GL_COMPARE_REF_DEPTH_TO_TEXTURE_EXT = 0x884E;
+        public const uint GL_TEXTURE_1D_ARRAY_EXT                       = 0x8C18;
+        public const uint GL_PROXY_TEXTURE_1D_ARRAY_EXT                 = 0x8C19;
+        public const uint GL_TEXTURE_2D_ARRAY_EXT                       = 0x8C1A;
+        public const uint GL_PROXY_TEXTURE_2D_ARRAY_EXT                 = 0x8C1B;
+        public const uint GL_TEXTURE_BINDING_1D_ARRAY_EXT               = 0x8C1C;
+        public const uint GL_TEXTURE_BINDING_2D_ARRAY_EXT               = 0x8C1D;
+        public const uint GL_MAX_ARRAY_TEXTURE_LAYERS_EXT               = 0x88FF;
+        public const uint GL_COMPARE_REF_DEPTH_TO_TEXTURE_EXT           = 0x884E;
         /* reuse GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER_EXT */
 
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_texture_buffer_object
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_TEXTURE_BUFFER_EXT             = 0x8C2A;
-        public const uint GL_MAX_TEXTURE_BUFFER_SIZE_EXT    = 0x8C2B;
-        public const uint GL_TEXTURE_BINDING_BUFFER_EXT     = 0x8C2C;
-        public const uint GL_TEXTURE_BUFFER_DATA_STORE_BINDING_EXT = 0x8C2D;
-        public const uint GL_TEXTURE_BUFFER_FORMAT_EXT      = 0x8C2E;
+        public const uint GL_TEXTURE_BUFFER_EXT                         = 0x8C2A;
+        public const uint GL_MAX_TEXTURE_BUFFER_SIZE_EXT                = 0x8C2B;
+        public const uint GL_TEXTURE_BINDING_BUFFER_EXT                 = 0x8C2C;
+        public const uint GL_TEXTURE_BUFFER_DATA_STORE_BINDING_EXT      = 0x8C2D;
+        public const uint GL_TEXTURE_BUFFER_FORMAT_EXT                  = 0x8C2E;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_texture_compression_latc
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_COMPRESSED_LUMINANCE_LATC1_EXT = 0x8C70;
-        public const uint GL_COMPRESSED_SIGNED_LUMINANCE_LATC1_EXT = 0x8C71;
-        public const uint GL_COMPRESSED_LUMINANCE_ALPHA_LATC2_EXT = 0x8C72;
-        public const uint GL_COMPRESSED_SIGNED_LUMINANCE_ALPHA_LATC2_EXT = 0x8C73;
+        public const uint GL_COMPRESSED_LUMINANCE_LATC1_EXT                 = 0x8C70;
+        public const uint GL_COMPRESSED_SIGNED_LUMINANCE_LATC1_EXT          = 0x8C71;
+        public const uint GL_COMPRESSED_LUMINANCE_ALPHA_LATC2_EXT           = 0x8C72;
+        public const uint GL_COMPRESSED_SIGNED_LUMINANCE_ALPHA_LATC2_EXT    = 0x8C73;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_texture_compression_rgtc
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_COMPRESSED_RED_RGTC1_EXT       = 0x8DBB;
-        public const uint GL_COMPRESSED_SIGNED_RED_RGTC1_EXT = 0x8DBC;
-        public const uint GL_COMPRESSED_RED_GREEN_RGTC2_EXT = 0x8DBD;
-        public const uint GL_COMPRESSED_SIGNED_RED_GREEN_RGTC2_EXT = 0x8DBE;
+        public const uint GL_COMPRESSED_RED_RGTC1_EXT                       = 0x8DBB;
+        public const uint GL_COMPRESSED_SIGNED_RED_RGTC1_EXT                = 0x8DBC;
+        public const uint GL_COMPRESSED_RED_GREEN_RGTC2_EXT                 = 0x8DBD;
+        public const uint GL_COMPRESSED_SIGNED_RED_GREEN_RGTC2_EXT          = 0x8DBE;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_texture_shared_exponent
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_RGB9_E5_EXT                    = 0x8C3D;
-        public const uint GL_UNSIGNED_INT_5_9_9_9_REV_EXT   = 0x8C3E;
-        public const uint GL_TEXTURE_SHARED_SIZE_EXT        = 0x8C3F;
+        public const uint GL_RGB9_E5_EXT                                    = 0x8C3D;
+        public const uint GL_UNSIGNED_INT_5_9_9_9_REV_EXT                   = 0x8C3E;
+        public const uint GL_TEXTURE_SHARED_SIZE_EXT                        = 0x8C3F;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_framebuffer_sRGB
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_FRAMEBUFFER_SRGB_EXT           = 0x8DB9;
-        public const uint GL_FRAMEBUFFER_SRGB_CAPABLE_EXT   = 0x8DBA;
+        public const uint GL_FRAMEBUFFER_SRGB_EXT                           = 0x8DB9;
+        public const uint GL_FRAMEBUFFER_SRGB_CAPABLE_EXT                   = 0x8DBA;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_draw_buffers2 (no constants)
@@ -3706,12 +3709,12 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_bindable_uniform
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_MAX_VERTEX_BINDABLE_UNIFORMS_EXT = 0x8DE2;
-        public const uint GL_MAX_FRAGMENT_BINDABLE_UNIFORMS_EXT = 0x8DE3;
-        public const uint GL_MAX_GEOMETRY_BINDABLE_UNIFORMS_EXT = 0x8DE4;
-        public const uint GL_MAX_BINDABLE_UNIFORM_SIZE_EXT  = 0x8DED;
-        public const uint GL_UNIFORM_BUFFER_EXT             = 0x8DEE;
-        public const uint GL_UNIFORM_BUFFER_BINDING_EXT     = 0x8DEF;
+        public const uint GL_MAX_VERTEX_BINDABLE_UNIFORMS_EXT           = 0x8DE2;
+        public const uint GL_MAX_FRAGMENT_BINDABLE_UNIFORMS_EXT         = 0x8DE3;
+        public const uint GL_MAX_GEOMETRY_BINDABLE_UNIFORMS_EXT         = 0x8DE4;
+        public const uint GL_MAX_BINDABLE_UNIFORM_SIZE_EXT              = 0x8DED;
+        public const uint GL_UNIFORM_BUFFER_EXT                         = 0x8DEE;
+        public const uint GL_UNIFORM_BUFFER_BINDING_EXT                 = 0x8DEF;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_texture_integer
@@ -3767,28 +3770,28 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_transform_feedback
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_TRANSFORM_FEEDBACK_BUFFER_EXT  = 0x8C8E;
-        public const uint GL_TRANSFORM_FEEDBACK_BUFFER_START_EXT = 0x8C84;
-        public const uint GL_TRANSFORM_FEEDBACK_BUFFER_SIZE_EXT = 0x8C85;
-        public const uint GL_TRANSFORM_FEEDBACK_BUFFER_BINDING_EXT = 0x8C8F;
-        public const uint GL_INTERLEAVED_ATTRIBS_EXT        = 0x8C8C;
-        public const uint GL_SEPARATE_ATTRIBS_EXT           = 0x8C8D;
-        public const uint GL_PRIMITIVES_GENERATED_EXT       = 0x8C87;
-        public const uint GL_TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN_EXT = 0x8C88;
-        public const uint GL_RASTERIZER_DISCARD_EXT         = 0x8C89;
-        public const uint GL_MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS_EXT = 0x8C8A;
-        public const uint GL_MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS_EXT = 0x8C8B;
-        public const uint GL_MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS_EXT = 0x8C80;
-        public const uint GL_TRANSFORM_FEEDBACK_VARYINGS_EXT = 0x8C83;
-        public const uint GL_TRANSFORM_FEEDBACK_BUFFER_MODE_EXT = 0x8C7F;
-        public const uint GL_TRANSFORM_FEEDBACK_VARYING_MAX_LENGTH_EXT = 0x8C76;
+        public const uint GL_TRANSFORM_FEEDBACK_BUFFER_EXT                      = 0x8C8E;
+        public const uint GL_TRANSFORM_FEEDBACK_BUFFER_START_EXT                = 0x8C84;
+        public const uint GL_TRANSFORM_FEEDBACK_BUFFER_SIZE_EXT                 = 0x8C85;
+        public const uint GL_TRANSFORM_FEEDBACK_BUFFER_BINDING_EXT              = 0x8C8F;
+        public const uint GL_INTERLEAVED_ATTRIBS_EXT                            = 0x8C8C;
+        public const uint GL_SEPARATE_ATTRIBS_EXT                               = 0x8C8D;
+        public const uint GL_PRIMITIVES_GENERATED_EXT                           = 0x8C87;
+        public const uint GL_TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN_EXT          = 0x8C88;
+        public const uint GL_RASTERIZER_DISCARD_EXT                             = 0x8C89;
+        public const uint GL_MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS_EXT  = 0x8C8A;
+        public const uint GL_MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS_EXT        = 0x8C8B;
+        public const uint GL_MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS_EXT     = 0x8C80;
+        public const uint GL_TRANSFORM_FEEDBACK_VARYINGS_EXT                    = 0x8C83;
+        public const uint GL_TRANSFORM_FEEDBACK_BUFFER_MODE_EXT                 = 0x8C7F;
+        public const uint GL_TRANSFORM_FEEDBACK_VARYING_MAX_LENGTH_EXT          = 0x8C76;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_direct_state_access
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_PROGRAM_MATRIX_EXT             = 0x8E2D;
-        public const uint GL_TRANSPOSE_PROGRAM_MATRIX_EXT   = 0x8E2E;
-        public const uint GL_PROGRAM_MATRIX_STACK_DEPTH_EXT = 0x8E2F;
+        public const uint GL_PROGRAM_MATRIX_EXT                         = 0x8E2D;
+        public const uint GL_TRANSPOSE_PROGRAM_MATRIX_EXT               = 0x8E2E;
+        public const uint GL_PROGRAM_MATRIX_STACK_DEPTH_EXT             = 0x8E2F;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_vertex_array_bgra
@@ -3812,39 +3815,30 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_provoking_vertex
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_QUADS_FOLLOW_PROVOKING_VERTEX_CONVENTION_EXT = 0x8E4C;
-        public const uint GL_FIRST_VERTEX_CONVENTION_EXT    = 0x8E4D;
-        public const uint GL_LAST_VERTEX_CONVENTION_EXT     = 0x8E4E;
-        public const uint GL_PROVOKING_VERTEX_EXT           = 0x8E4F;
+        public const uint GL_QUADS_FOLLOW_PROVOKING_VERTEX_CONVENTION_EXT   = 0x8E4C;
+        public const uint GL_FIRST_VERTEX_CONVENTION_EXT                    = 0x8E4D;
+        public const uint GL_LAST_VERTEX_CONVENTION_EXT                     = 0x8E4E;
+        public const uint GL_PROVOKING_VERTEX_EXT                           = 0x8E4F;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_texture_snorm
         ///////////////////////////////////////////////////////////////////////
-        /* reuse GL_RED_SNORM (defined in OpenGL 3.1) */
-        /* reuse GL_RG_SNORM (defined in OpenGL 3.1) */
-        /* reuse GL_RGB_SNORM (defined in OpenGL 3.1) */
-        /* reuse GL_RGBA_SNORM (defined in OpenGL 3.1) */
-        public const uint GL_ALPHA_SNORM                    = 0x9010;
-        public const uint GL_LUMINANCE_SNORM                = 0x9011;
-        public const uint GL_LUMINANCE_ALPHA_SNORM          = 0x9012;
-        public const uint GL_INTENSITY_SNORM                = 0x9013;
-        /* reuse GL_R8_SNORM (defined in OpenGL 3.1) */
-        /* reuse GL_RG8_SNORM (defined in OpenGL 3.1) */
-        /* reuse GL_RGB8_SNORM (defined in OpenGL 3.1) */
-        /* reuse GL_RGBA8_SNORM (defined in OpenGL 3.1) */
-        public const uint GL_ALPHA8_SNORM                   = 0x9014;
-        public const uint GL_LUMINANCE8_SNORM               = 0x9015;
-        public const uint GL_LUMINANCE8_ALPHA8_SNORM        = 0x9016;
-        public const uint GL_INTENSITY8_SNORM               = 0x9017;
-        /* reuse GL_R16_SNORM (defined in OpenGL 3.1) */
-        /* reuse GL_RG16_SNORM (defined in OpenGL 3.1) */
-        /* reuse GL_RGB16_SNORM (defined in OpenGL 3.1) */
-        /* reuse GL_RGBA16_SNORM (defined in OpenGL 3.1) */
-        public const uint GL_ALPHA16_SNORM                  = 0x9018;
-        public const uint GL_LUMINANCE16_SNORM              = 0x9019;
-        public const uint GL_LUMINANCE16_ALPHA16_SNORM      = 0x901A;
-        public const uint GL_INTENSITY16_SNORM              = 0x901B;
-        /* reuse GL_SIGNED_NORMALIZED (defined in OpenGL 3.1) */
+        public const uint GL_ALPHA_SNORM                                = 0x9010;
+        public const uint GL_LUMINANCE_SNORM                            = 0x9011;
+        public const uint GL_LUMINANCE_ALPHA_SNORM                      = 0x9012;
+        public const uint GL_INTENSITY_SNORM                            = 0x9013;
+        public const uint GL_ALPHA8_SNORM                               = 0x9014;
+        public const uint GL_LUMINANCE8_SNORM                           = 0x9015;
+        public const uint GL_LUMINANCE8_ALPHA8_SNORM                    = 0x9016;
+        public const uint GL_INTENSITY8_SNORM                           = 0x9017;
+        public const uint GL_ALPHA16_SNORM                              = 0x9018;
+        public const uint GL_LUMINANCE16_SNORM                          = 0x9019;
+        public const uint GL_LUMINANCE16_ALPHA16_SNORM                  = 0x901A;
+        public const uint GL_INTENSITY16_SNORM                          = 0x901B;
+        public const uint GL_RED_SNORM                                  = 0x8F90;
+        public const uint GL_RG_SNORM                                   = 0x8F91;
+        public const uint GL_RGB_SNORM                                  = 0x8F92;
+        public const uint GL_RGBA_SNORM                                 = 0x8F93;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_separate_shader_objects
@@ -3854,61 +3848,61 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_shader_image_load_store
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_MAX_IMAGE_UNITS_EXT            = 0x8F38;
-        public const uint GL_MAX_COMBINED_IMAGE_UNITS_AND_FRAGMENT_OUTPUTS_EXT = 0x8F39;
-        public const uint GL_IMAGE_BINDING_NAME_EXT         = 0x8F3A;
-        public const uint GL_IMAGE_BINDING_LEVEL_EXT        = 0x8F3B;
-        public const uint GL_IMAGE_BINDING_LAYERED_EXT      = 0x8F3C;
-        public const uint GL_IMAGE_BINDING_LAYER_EXT        = 0x8F3D;
-        public const uint GL_IMAGE_BINDING_ACCESS_EXT       = 0x8F3E;
-        public const uint GL_IMAGE_1D_EXT                   = 0x904C;
-        public const uint GL_IMAGE_2D_EXT                   = 0x904D;
-        public const uint GL_IMAGE_3D_EXT                   = 0x904E;
-        public const uint GL_IMAGE_2D_RECT_EXT              = 0x904F;
-        public const uint GL_IMAGE_CUBE_EXT                 = 0x9050;
-        public const uint GL_IMAGE_BUFFER_EXT               = 0x9051;
-        public const uint GL_IMAGE_1D_ARRAY_EXT             = 0x9052;
-        public const uint GL_IMAGE_2D_ARRAY_EXT             = 0x9053;
-        public const uint GL_IMAGE_CUBE_MAP_ARRAY_EXT       = 0x9054;
-        public const uint GL_IMAGE_2D_MULTISAMPLE_EXT       = 0x9055;
-        public const uint GL_IMAGE_2D_MULTISAMPLE_ARRAY_EXT = 0x9056;
-        public const uint GL_INT_IMAGE_1D_EXT               = 0x9057;
-        public const uint GL_INT_IMAGE_2D_EXT               = 0x9058;
-        public const uint GL_INT_IMAGE_3D_EXT               = 0x9059;
-        public const uint GL_INT_IMAGE_2D_RECT_EXT          = 0x905A;
-        public const uint GL_INT_IMAGE_CUBE_EXT             = 0x905B;
-        public const uint GL_INT_IMAGE_BUFFER_EXT           = 0x905C;
-        public const uint GL_INT_IMAGE_1D_ARRAY_EXT         = 0x905D;
-        public const uint GL_INT_IMAGE_2D_ARRAY_EXT         = 0x905E;
-        public const uint GL_INT_IMAGE_CUBE_MAP_ARRAY_EXT   = 0x905F;
-        public const uint GL_INT_IMAGE_2D_MULTISAMPLE_EXT   = 0x9060;
-        public const uint GL_INT_IMAGE_2D_MULTISAMPLE_ARRAY_EXT = 0x9061;
-        public const uint GL_UNSIGNED_INT_IMAGE_1D_EXT      = 0x9062;
-        public const uint GL_UNSIGNED_INT_IMAGE_2D_EXT      = 0x9063;
-        public const uint GL_UNSIGNED_INT_IMAGE_3D_EXT      = 0x9064;
-        public const uint GL_UNSIGNED_INT_IMAGE_2D_RECT_EXT = 0x9065;
-        public const uint GL_UNSIGNED_INT_IMAGE_CUBE_EXT    = 0x9066;
-        public const uint GL_UNSIGNED_INT_IMAGE_BUFFER_EXT  = 0x9067;
-        public const uint GL_UNSIGNED_INT_IMAGE_1D_ARRAY_EXT = 0x9068;
-        public const uint GL_UNSIGNED_INT_IMAGE_2D_ARRAY_EXT = 0x9069;
-        public const uint GL_UNSIGNED_INT_IMAGE_CUBE_MAP_ARRAY_EXT = 0x906A;
-        public const uint GL_UNSIGNED_INT_IMAGE_2D_MULTISAMPLE_EXT = 0x906B;
-        public const uint GL_UNSIGNED_INT_IMAGE_2D_MULTISAMPLE_ARRAY_EXT = 0x906C;
-        public const uint GL_MAX_IMAGE_SAMPLES_EXT          = 0x906D;
-        public const uint GL_IMAGE_BINDING_FORMAT_EXT       = 0x906E;
-        public const uint GL_VERTEX_ATTRIB_ARRAY_BARRIER_BIT_EXT = 0x00000001;
-        public const uint GL_ELEMENT_ARRAY_BARRIER_BIT_EXT  = 0x00000002;
-        public const uint GL_UNIFORM_BARRIER_BIT_EXT        = 0x00000004;
-        public const uint GL_TEXTURE_FETCH_BARRIER_BIT_EXT  = 0x00000008;
-        public const uint GL_SHADER_IMAGE_ACCESS_BARRIER_BIT_EXT = 0x00000020;
-        public const uint GL_COMMAND_BARRIER_BIT_EXT        = 0x00000040;
-        public const uint GL_PIXEL_BUFFER_BARRIER_BIT_EXT   = 0x00000080;
-        public const uint GL_TEXTURE_UPDATE_BARRIER_BIT_EXT = 0x00000100;
-        public const uint GL_BUFFER_UPDATE_BARRIER_BIT_EXT  = 0x00000200;
-        public const uint GL_FRAMEBUFFER_BARRIER_BIT_EXT    = 0x00000400;
-        public const uint GL_TRANSFORM_FEEDBACK_BARRIER_BIT_EXT = 0x00000800;
-        public const uint GL_ATOMIC_COUNTER_BARRIER_BIT_EXT = 0x00001000;
-        public const uint GL_ALL_BARRIER_BITS_EXT           = 0xFFFFFFFF;
+        public const uint GL_MAX_IMAGE_UNITS_EXT                                = 0x8F38;
+        public const uint GL_MAX_COMBINED_IMAGE_UNITS_AND_FRAGMENT_OUTPUTS_EXT  = 0x8F39;
+        public const uint GL_IMAGE_BINDING_NAME_EXT                             = 0x8F3A;
+        public const uint GL_IMAGE_BINDING_LEVEL_EXT                            = 0x8F3B;
+        public const uint GL_IMAGE_BINDING_LAYERED_EXT                          = 0x8F3C;
+        public const uint GL_IMAGE_BINDING_LAYER_EXT                            = 0x8F3D;
+        public const uint GL_IMAGE_BINDING_ACCESS_EXT                           = 0x8F3E;
+        public const uint GL_IMAGE_1D_EXT                                       = 0x904C;
+        public const uint GL_IMAGE_2D_EXT                                       = 0x904D;
+        public const uint GL_IMAGE_3D_EXT                                       = 0x904E;
+        public const uint GL_IMAGE_2D_RECT_EXT                                  = 0x904F;
+        public const uint GL_IMAGE_CUBE_EXT                                     = 0x9050;
+        public const uint GL_IMAGE_BUFFER_EXT                                   = 0x9051;
+        public const uint GL_IMAGE_1D_ARRAY_EXT                                 = 0x9052;
+        public const uint GL_IMAGE_2D_ARRAY_EXT                                 = 0x9053;
+        public const uint GL_IMAGE_CUBE_MAP_ARRAY_EXT                           = 0x9054;
+        public const uint GL_IMAGE_2D_MULTISAMPLE_EXT                           = 0x9055;
+        public const uint GL_IMAGE_2D_MULTISAMPLE_ARRAY_EXT                     = 0x9056;
+        public const uint GL_INT_IMAGE_1D_EXT                                   = 0x9057;
+        public const uint GL_INT_IMAGE_2D_EXT                                   = 0x9058;
+        public const uint GL_INT_IMAGE_3D_EXT                                   = 0x9059;
+        public const uint GL_INT_IMAGE_2D_RECT_EXT                              = 0x905A;
+        public const uint GL_INT_IMAGE_CUBE_EXT                                 = 0x905B;
+        public const uint GL_INT_IMAGE_BUFFER_EXT                               = 0x905C;
+        public const uint GL_INT_IMAGE_1D_ARRAY_EXT                             = 0x905D;
+        public const uint GL_INT_IMAGE_2D_ARRAY_EXT                             = 0x905E;
+        public const uint GL_INT_IMAGE_CUBE_MAP_ARRAY_EXT                       = 0x905F;
+        public const uint GL_INT_IMAGE_2D_MULTISAMPLE_EXT                       = 0x9060;
+        public const uint GL_INT_IMAGE_2D_MULTISAMPLE_ARRAY_EXT                 = 0x9061;
+        public const uint GL_UNSIGNED_INT_IMAGE_1D_EXT                          = 0x9062;
+        public const uint GL_UNSIGNED_INT_IMAGE_2D_EXT                          = 0x9063;
+        public const uint GL_UNSIGNED_INT_IMAGE_3D_EXT                          = 0x9064;
+        public const uint GL_UNSIGNED_INT_IMAGE_2D_RECT_EXT                     = 0x9065;
+        public const uint GL_UNSIGNED_INT_IMAGE_CUBE_EXT                        = 0x9066;
+        public const uint GL_UNSIGNED_INT_IMAGE_BUFFER_EXT                      = 0x9067;
+        public const uint GL_UNSIGNED_INT_IMAGE_1D_ARRAY_EXT                    = 0x9068;
+        public const uint GL_UNSIGNED_INT_IMAGE_2D_ARRAY_EXT                    = 0x9069;
+        public const uint GL_UNSIGNED_INT_IMAGE_CUBE_MAP_ARRAY_EXT              = 0x906A;
+        public const uint GL_UNSIGNED_INT_IMAGE_2D_MULTISAMPLE_EXT              = 0x906B;
+        public const uint GL_UNSIGNED_INT_IMAGE_2D_MULTISAMPLE_ARRAY_EXT        = 0x906C;
+        public const uint GL_MAX_IMAGE_SAMPLES_EXT                              = 0x906D;
+        public const uint GL_IMAGE_BINDING_FORMAT_EXT                           = 0x906E;
+        public const uint GL_VERTEX_ATTRIB_ARRAY_BARRIER_BIT_EXT                = 0x00000001;
+        public const uint GL_ELEMENT_ARRAY_BARRIER_BIT_EXT                      = 0x00000002;
+        public const uint GL_UNIFORM_BARRIER_BIT_EXT                            = 0x00000004;
+        public const uint GL_TEXTURE_FETCH_BARRIER_BIT_EXT                      = 0x00000008;
+        public const uint GL_SHADER_IMAGE_ACCESS_BARRIER_BIT_EXT                = 0x00000020;
+        public const uint GL_COMMAND_BARRIER_BIT_EXT                            = 0x00000040;
+        public const uint GL_PIXEL_BUFFER_BARRIER_BIT_EXT                       = 0x00000080;
+        public const uint GL_TEXTURE_UPDATE_BARRIER_BIT_EXT                     = 0x00000100;
+        public const uint GL_BUFFER_UPDATE_BARRIER_BIT_EXT                      = 0x00000200;
+        public const uint GL_FRAMEBUFFER_BARRIER_BIT_EXT                        = 0x00000400;
+        public const uint GL_TRANSFORM_FEEDBACK_BARRIER_BIT_EXT                 = 0x00000800;
+        public const uint GL_ATOMIC_COUNTER_BARRIER_BIT_EXT                     = 0x00001000;
+        public const uint GL_ALL_BARRIER_BITS_EXT                               = 0xFFFFFFFF;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_EXT_vertex_attrib_64bit
@@ -3995,6 +3989,36 @@ namespace OpenGLDotNet
         public const uint GL_TRANSFORM_FEEDBACK_BUFFER_ACTIVE_EXT   = 0x8E24;
         public const uint GL_TRANSFORM_FEEDBACK_BINDING_EXT         = 0x8E25;
 
+        ///////////////////////////////////////////////////////////////////////
+        // GL_EXT_polygon_offset_clamp
+        ///////////////////////////////////////////////////////////////////////
+        public const uint GL_POLYGON_OFFSET_CLAMP_EXT               = 0x8E1B;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_EXT_post_depth_coverage (no constants)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_EXT_raster_multisample
+        ///////////////////////////////////////////////////////////////////////
+        public const uint GL_RASTER_MULTISAMPLE_EXT                 = 0x9327;
+        public const uint GL_RASTER_SAMPLES_EXT                     = 0x9328;
+        public const uint GL_MAX_RASTER_SAMPLES_EXT                 = 0x9329;
+        public const uint GL_RASTER_FIXED_SAMPLE_LOCATIONS_EXT      = 0x932A;
+        public const uint GL_MULTISAMPLE_RASTERIZATION_ALLOWED_EXT  = 0x932B;
+        public const uint GL_EFFECTIVE_RASTER_SAMPLES_EXT           = 0x932C;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_EXT_shader_image_load_formatted (no constants)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_EXT_sparse_texture2 (no constants)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_EXT_texture_filter_minmax (no constants)
+        ///////////////////////////////////////////////////////////////////////
         #endregion
         
         ///////////////////////////////////////////////////////////////////////
@@ -4018,21 +4042,21 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_HP_image_transform
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_IMAGE_SCALE_X_HP               = 0x8155;
-        public const uint GL_IMAGE_SCALE_Y_HP               = 0x8156;
-        public const uint GL_IMAGE_TRANSLATE_X_HP           = 0x8157;
-        public const uint GL_IMAGE_TRANSLATE_Y_HP           = 0x8158;
-        public const uint GL_IMAGE_ROTATE_ANGLE_HP          = 0x8159;
-        public const uint GL_IMAGE_ROTATE_ORIGIN_X_HP       = 0x815A;
-        public const uint GL_IMAGE_ROTATE_ORIGIN_Y_HP       = 0x815B;
-        public const uint GL_IMAGE_MAG_FILTER_HP            = 0x815C;
-        public const uint GL_IMAGE_MIN_FILTER_HP            = 0x815D;
-        public const uint GL_IMAGE_CUBIC_WEIGHT_HP          = 0x815E;
-        public const uint GL_CUBIC_HP                       = 0x815F;
-        public const uint GL_AVERAGE_HP                     = 0x8160;
-        public const uint GL_IMAGE_TRANSFORM_2D_HP          = 0x8161;
-        public const uint GL_POST_IMAGE_TRANSFORM_COLOR_TABLE_HP = 0x8162;
-        public const uint GL_PROXY_POST_IMAGE_TRANSFORM_COLOR_TABLE_HP = 0x8163;
+        public const uint GL_IMAGE_SCALE_X_HP                           = 0x8155;
+        public const uint GL_IMAGE_SCALE_Y_HP                           = 0x8156;
+        public const uint GL_IMAGE_TRANSLATE_X_HP                       = 0x8157;
+        public const uint GL_IMAGE_TRANSLATE_Y_HP                       = 0x8158;
+        public const uint GL_IMAGE_ROTATE_ANGLE_HP                      = 0x8159;
+        public const uint GL_IMAGE_ROTATE_ORIGIN_X_HP                   = 0x815A;
+        public const uint GL_IMAGE_ROTATE_ORIGIN_Y_HP                   = 0x815B;
+        public const uint GL_IMAGE_MAG_FILTER_HP                        = 0x815C;
+        public const uint GL_IMAGE_MIN_FILTER_HP                        = 0x815D;
+        public const uint GL_IMAGE_CUBIC_WEIGHT_HP                      = 0x815E;
+        public const uint GL_CUBIC_HP                                   = 0x815F;
+        public const uint GL_AVERAGE_HP                                 = 0x8160;
+        public const uint GL_IMAGE_TRANSFORM_2D_HP                      = 0x8161;
+        public const uint GL_POST_IMAGE_TRANSFORM_COLOR_TABLE_HP        = 0x8162;
+        public const uint GL_PROXY_POST_IMAGE_TRANSFORM_COLOR_TABLE_HP  = 0x8163;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_HP_convolution_border_modes
@@ -4043,18 +4067,17 @@ namespace OpenGLDotNet
         public const uint GL_CONVOLUTION_BORDER_COLOR_HP    = 0x8154;
 
         ///////////////////////////////////////////////////////////////////////
-        // GL_HP_texture_lighting
-        ///////////////////////////////////////////////////////////////////////
-        public const uint GL_TEXTURE_LIGHTING_MODE_HP       = 0x8167;
-        public const uint GL_TEXTURE_POST_SPECULAR_HP       = 0x8168;
-        public const uint GL_TEXTURE_PRE_SPECULAR_HP        = 0x8169;
-
-        ///////////////////////////////////////////////////////////////////////
         // GL_HP_occlusion_test
         ///////////////////////////////////////////////////////////////////////
         public const uint GL_OCCLUSION_TEST_HP              = 0x8165;
         public const uint GL_OCCLUSION_TEST_RESULT_HP       = 0x8166;
 
+        ///////////////////////////////////////////////////////////////////////
+        // GL_HP_texture_lighting
+        ///////////////////////////////////////////////////////////////////////
+        public const uint GL_TEXTURE_LIGHTING_MODE_HP       = 0x8167;
+        public const uint GL_TEXTURE_POST_SPECULAR_HP       = 0x8168;
+        public const uint GL_TEXTURE_PRE_SPECULAR_HP        = 0x8169;
         #endregion
 
         ///////////////////////////////////////////////////////////////////////
@@ -4064,12 +4087,12 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_IBM_rasterpos_clip
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_RASTER_POSITION_UNCLIPPED_IBM  = 0x19262;
+        public const uint GL_RASTER_POSITION_UNCLIPPED_IBM              = 0x19262;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_IBM_cull_vertex
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_CULL_VERTEX_IBM                = 103050;
+        public const uint GL_CULL_VERTEX_IBM                            = 103050;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_IBM_multimode_draw_arrays (no constants)
@@ -4078,27 +4101,33 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_IBM_vertex_array_lists
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_VERTEX_ARRAY_LIST_IBM          = 103070;
-        public const uint GL_NORMAL_ARRAY_LIST_IBM          = 103071;
-        public const uint GL_COLOR_ARRAY_LIST_IBM           = 103072;
-        public const uint GL_INDEX_ARRAY_LIST_IBM           = 103073;
-        public const uint GL_TEXTURE_COORD_ARRAY_LIST_IBM   = 103074;
-        public const uint GL_EDGE_FLAG_ARRAY_LIST_IBM       = 103075;
-        public const uint GL_FOG_COORDINATE_ARRAY_LIST_IBM  = 103076;
-        public const uint GL_SECONDARY_COLOR_ARRAY_LIST_IBM = 103077;
-        public const uint GL_VERTEX_ARRAY_LIST_STRIDE_IBM   = 103080;
-        public const uint GL_NORMAL_ARRAY_LIST_STRIDE_IBM   = 103081;
-        public const uint GL_COLOR_ARRAY_LIST_STRIDE_IBM    = 103082;
-        public const uint GL_INDEX_ARRAY_LIST_STRIDE_IBM    = 103083;
-        public const uint GL_TEXTURE_COORD_ARRAY_LIST_STRIDE_IBM = 103084;
-        public const uint GL_EDGE_FLAG_ARRAY_LIST_STRIDE_IBM = 103085;
-        public const uint GL_FOG_COORDINATE_ARRAY_LIST_STRIDE_IBM = 103086;
-        public const uint GL_SECONDARY_COLOR_ARRAY_LIST_STRIDE_IBM = 103087;
+        public const uint GL_VERTEX_ARRAY_LIST_IBM                      = 103070;
+        public const uint GL_NORMAL_ARRAY_LIST_IBM                      = 103071;
+        public const uint GL_COLOR_ARRAY_LIST_IBM                       = 103072;
+        public const uint GL_INDEX_ARRAY_LIST_IBM                       = 103073;
+        public const uint GL_TEXTURE_COORD_ARRAY_LIST_IBM               = 103074;
+        public const uint GL_EDGE_FLAG_ARRAY_LIST_IBM                   = 103075;
+        public const uint GL_FOG_COORDINATE_ARRAY_LIST_IBM              = 103076;
+        public const uint GL_SECONDARY_COLOR_ARRAY_LIST_IBM             = 103077;
+        public const uint GL_VERTEX_ARRAY_LIST_STRIDE_IBM               = 103080;
+        public const uint GL_NORMAL_ARRAY_LIST_STRIDE_IBM               = 103081;
+        public const uint GL_COLOR_ARRAY_LIST_STRIDE_IBM                = 103082;
+        public const uint GL_INDEX_ARRAY_LIST_STRIDE_IBM                = 103083;
+        public const uint GL_TEXTURE_COORD_ARRAY_LIST_STRIDE_IBM        = 103084;
+        public const uint GL_EDGE_FLAG_ARRAY_LIST_STRIDE_IBM            = 103085;
+        public const uint GL_FOG_COORDINATE_ARRAY_LIST_STRIDE_IBM       = 103086;
+        public const uint GL_SECONDARY_COLOR_ARRAY_LIST_STRIDE_IBM      = 103087;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_IBM_texture_mirrored_repeat
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_MIRRORED_REPEAT_IBM = 0x8370;
+        public const uint GL_MIRRORED_REPEAT_IBM                        = 0x8370;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_IBM_static_data
+        ///////////////////////////////////////////////////////////////////////
+        public const uint GL_ALL_STATIC_DATA_IBM                        = 103060;
+        public const uint GL_STATIC_VERTEX_ARRAY_IBM                    = 103061;
 
         #endregion
 
@@ -4182,12 +4211,39 @@ namespace OpenGLDotNet
         public const uint GL_PERFQUERY_COUNTER_DESC_LENGTH_MAX_INTEL        = 0x94FF;
         public const uint GL_PERFQUERY_GPA_EXTENDED_COUNTERS_INTEL          = 0x9500;
 
+        ///////////////////////////////////////////////////////////////////////
+        // GL_INTEL_framebuffer_CMAA (no constants)
+        ///////////////////////////////////////////////////////////////////////
         #endregion
 
         ///////////////////////////////////////////////////////////////////////
         // GL_KHR_xxx CONSTANTS
         ///////////////////////////////////////////////////////////////////////
         #region GL_KHR_xxx CONSTANTS...
+        ///////////////////////////////////////////////////////////////////////
+        // GL_KHR_blend_equation_advanced
+        ///////////////////////////////////////////////////////////////////////
+        public const uint GL_MULTIPLY_KHR                               = 0x9294;
+        public const uint GL_SCREEN_KHR                                 = 0x9295;
+        public const uint GL_OVERLAY_KHR                                = 0x9296;
+        public const uint GL_DARKEN_KHR                                 = 0x9297;
+        public const uint GL_LIGHTEN_KHR                                = 0x9298;
+        public const uint GL_COLORDODGE_KHR                             = 0x9299;
+        public const uint GL_COLORBURN_KHR                              = 0x929A;
+        public const uint GL_HARDLIGHT_KHR                              = 0x929B;
+        public const uint GL_SOFTLIGHT_KHR                              = 0x929C;
+        public const uint GL_DIFFERENCE_KHR                             = 0x929E;
+        public const uint GL_EXCLUSION_KHR                              = 0x92A0;
+        public const uint GL_HSL_HUE_KHR                                = 0x92AD;
+        public const uint GL_HSL_SATURATION_KHR                         = 0x92AE;
+        public const uint GL_HSL_COLOR_KHR                              = 0x92AF;
+        public const uint GL_HSL_LUMINOSITY_KHR                         = 0x92B0;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_KHR_blend_equation_advanced_coherent
+        ///////////////////////////////////////////////////////////////////////
+        public const uint GL_BLEND_ADVANCED_COHERENT_KHR                = 0x9285;
+
         ///////////////////////////////////////////////////////////////////////
         // GL_KHR_context_flush_control (no constants)
         ///////////////////////////////////////////////////////////////////////
@@ -4324,14 +4380,14 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_MESA_pack_invert
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_PACK_INVERT_MESA = 0x8758;
+        public const uint GL_PACK_INVERT_MESA                           = 0x8758;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_MESA_ycbcr_texture
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_UNSIGNED_SHORT_8_8_MESA = 0x85BA;
-        public const uint GL_UNSIGNED_SHORT_8_8_REV_MESA = 0x85BB;
-        public const uint GL_YCBCR_MESA = 0x8757;
+        public const uint GL_UNSIGNED_SHORT_8_8_MESA                    = 0x85BA;
+        public const uint GL_UNSIGNED_SHORT_8_8_REV_MESA                = 0x85BB;
+        public const uint GL_YCBCR_MESA                                 = 0x8757;
 
         #endregion
 
@@ -4358,78 +4414,78 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_texgen_reflection
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_NORMAL_MAP_NV                  = 0x8511;
-        public const uint GL_REFLECTION_MAP_NV              = 0x8512;
+        public const uint GL_NORMAL_MAP_NV                              = 0x8511;
+        public const uint GL_REFLECTION_MAP_NV                          = 0x8512;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_light_max_exponent
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_MAX_SHININESS_NV               = 0x8504;
-        public const uint GL_MAX_SPOT_EXPONENT_NV           = 0x8505;
+        public const uint GL_MAX_SHININESS_NV                           = 0x8504;
+        public const uint GL_MAX_SPOT_EXPONENT_NV                       = 0x8505;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_vertex_array_range
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_VERTEX_ARRAY_RANGE_NV          = 0x851D;
-        public const uint GL_VERTEX_ARRAY_RANGE_LENGTH_NV   = 0x851E;
-        public const uint GL_VERTEX_ARRAY_RANGE_VALID_NV    = 0x851F;
-        public const uint GL_MAX_VERTEX_ARRAY_RANGE_ELEMENT_NV = 0x8520;
-        public const uint GL_VERTEX_ARRAY_RANGE_POINTER_NV  = 0x8521;
+        public const uint GL_VERTEX_ARRAY_RANGE_NV                      = 0x851D;
+        public const uint GL_VERTEX_ARRAY_RANGE_LENGTH_NV               = 0x851E;
+        public const uint GL_VERTEX_ARRAY_RANGE_VALID_NV                = 0x851F;
+        public const uint GL_MAX_VERTEX_ARRAY_RANGE_ELEMENT_NV          = 0x8520;
+        public const uint GL_VERTEX_ARRAY_RANGE_POINTER_NV              = 0x8521;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_register_combiners
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_REGISTER_COMBINERS_NV          = 0x8522;
-        public const uint GL_VARIABLE_A_NV                  = 0x8523;
-        public const uint GL_VARIABLE_B_NV                  = 0x8524;
-        public const uint GL_VARIABLE_C_NV                  = 0x8525;
-        public const uint GL_VARIABLE_D_NV                  = 0x8526;
-        public const uint GL_VARIABLE_E_NV                  = 0x8527;
-        public const uint GL_VARIABLE_F_NV                  = 0x8528;
-        public const uint GL_VARIABLE_G_NV                  = 0x8529;
-        public const uint GL_CONSTANT_COLOR0_NV             = 0x852A;
-        public const uint GL_CONSTANT_COLOR1_NV             = 0x852B;
-        public const uint GL_PRIMARY_COLOR_NV               = 0x852C;
-        public const uint GL_SECONDARY_COLOR_NV             = 0x852D;
-        public const uint GL_SPARE0_NV                      = 0x852E;
-        public const uint GL_SPARE1_NV                      = 0x852F;
-        public const uint GL_DISCARD_NV                     = 0x8530;
-        public const uint GL_E_TIMES_F_NV                   = 0x8531;
-        public const uint GL_SPARE0_PLUS_SECONDARY_COLOR_NV = 0x8532;
-        public const uint GL_UNSIGNED_IDENTITY_NV           = 0x8536;
-        public const uint GL_UNSIGNED_INVERT_NV             = 0x8537;
-        public const uint GL_EXPAND_NORMAL_NV               = 0x8538;
-        public const uint GL_EXPAND_NEGATE_NV               = 0x8539;
-        public const uint GL_HALF_BIAS_NORMAL_NV            = 0x853A;
-        public const uint GL_HALF_BIAS_NEGATE_NV            = 0x853B;
-        public const uint GL_SIGNED_IDENTITY_NV             = 0x853C;
-        public const uint GL_SIGNED_NEGATE_NV               = 0x853D;
-        public const uint GL_SCALE_BY_TWO_NV                = 0x853E;
-        public const uint GL_SCALE_BY_FOUR_NV               = 0x853F;
-        public const uint GL_SCALE_BY_ONE_HALF_NV           = 0x8540;
-        public const uint GL_BIAS_BY_NEGATIVE_ONE_HALF_NV   = 0x8541;
-        public const uint GL_COMBINER_INPUT_NV              = 0x8542;
-        public const uint GL_COMBINER_MAPPING_NV            = 0x8543;
-        public const uint GL_COMBINER_COMPONENT_USAGE_NV    = 0x8544;
-        public const uint GL_COMBINER_AB_DOT_PRODUCT_NV     = 0x8545;
-        public const uint GL_COMBINER_CD_DOT_PRODUCT_NV     = 0x8546;
-        public const uint GL_COMBINER_MUX_SUM_NV            = 0x8547;
-        public const uint GL_COMBINER_SCALE_NV              = 0x8548;
-        public const uint GL_COMBINER_BIAS_NV               = 0x8549;
-        public const uint GL_COMBINER_AB_OUTPUT_NV          = 0x854A;
-        public const uint GL_COMBINER_CD_OUTPUT_NV          = 0x854B;
-        public const uint GL_COMBINER_SUM_OUTPUT_NV         = 0x854C;
-        public const uint GL_MAX_GENERAL_COMBINERS_NV       = 0x854D;
-        public const uint GL_NUM_GENERAL_COMBINERS_NV       = 0x854E;
-        public const uint GL_COLOR_SUM_CLAMP_NV             = 0x854F;
-        public const uint GL_COMBINER0_NV                   = 0x8550;
-        public const uint GL_COMBINER1_NV                   = 0x8551;
-        public const uint GL_COMBINER2_NV                   = 0x8552;
-        public const uint GL_COMBINER3_NV                   = 0x8553;
-        public const uint GL_COMBINER4_NV                   = 0x8554;
-        public const uint GL_COMBINER5_NV                   = 0x8555;
-        public const uint GL_COMBINER6_NV                   = 0x8556;
-        public const uint GL_COMBINER7_NV                   = 0x8557;
+        public const uint GL_REGISTER_COMBINERS_NV                      = 0x8522;
+        public const uint GL_VARIABLE_A_NV                              = 0x8523;
+        public const uint GL_VARIABLE_B_NV                              = 0x8524;
+        public const uint GL_VARIABLE_C_NV                              = 0x8525;
+        public const uint GL_VARIABLE_D_NV                              = 0x8526;
+        public const uint GL_VARIABLE_E_NV                              = 0x8527;
+        public const uint GL_VARIABLE_F_NV                              = 0x8528;
+        public const uint GL_VARIABLE_G_NV                              = 0x8529;
+        public const uint GL_CONSTANT_COLOR0_NV                         = 0x852A;
+        public const uint GL_CONSTANT_COLOR1_NV                         = 0x852B;
+        public const uint GL_PRIMARY_COLOR_NV                           = 0x852C;
+        public const uint GL_SECONDARY_COLOR_NV                         = 0x852D;
+        public const uint GL_SPARE0_NV                                  = 0x852E;
+        public const uint GL_SPARE1_NV                                  = 0x852F;
+        public const uint GL_DISCARD_NV                                 = 0x8530;
+        public const uint GL_E_TIMES_F_NV                               = 0x8531;
+        public const uint GL_SPARE0_PLUS_SECONDARY_COLOR_NV             = 0x8532;
+        public const uint GL_UNSIGNED_IDENTITY_NV                       = 0x8536;
+        public const uint GL_UNSIGNED_INVERT_NV                         = 0x8537;
+        public const uint GL_EXPAND_NORMAL_NV                           = 0x8538;
+        public const uint GL_EXPAND_NEGATE_NV                           = 0x8539;
+        public const uint GL_HALF_BIAS_NORMAL_NV                        = 0x853A;
+        public const uint GL_HALF_BIAS_NEGATE_NV                        = 0x853B;
+        public const uint GL_SIGNED_IDENTITY_NV                         = 0x853C;
+        public const uint GL_SIGNED_NEGATE_NV                           = 0x853D;
+        public const uint GL_SCALE_BY_TWO_NV                            = 0x853E;
+        public const uint GL_SCALE_BY_FOUR_NV                           = 0x853F;
+        public const uint GL_SCALE_BY_ONE_HALF_NV                       = 0x8540;
+        public const uint GL_BIAS_BY_NEGATIVE_ONE_HALF_NV               = 0x8541;
+        public const uint GL_COMBINER_INPUT_NV                          = 0x8542;
+        public const uint GL_COMBINER_MAPPING_NV                        = 0x8543;
+        public const uint GL_COMBINER_COMPONENT_USAGE_NV                = 0x8544;
+        public const uint GL_COMBINER_AB_DOT_PRODUCT_NV                 = 0x8545;
+        public const uint GL_COMBINER_CD_DOT_PRODUCT_NV                 = 0x8546;
+        public const uint GL_COMBINER_MUX_SUM_NV                        = 0x8547;
+        public const uint GL_COMBINER_SCALE_NV                          = 0x8548;
+        public const uint GL_COMBINER_BIAS_NV                           = 0x8549;
+        public const uint GL_COMBINER_AB_OUTPUT_NV                      = 0x854A;
+        public const uint GL_COMBINER_CD_OUTPUT_NV                      = 0x854B;
+        public const uint GL_COMBINER_SUM_OUTPUT_NV                     = 0x854C;
+        public const uint GL_MAX_GENERAL_COMBINERS_NV                   = 0x854D;
+        public const uint GL_NUM_GENERAL_COMBINERS_NV                   = 0x854E;
+        public const uint GL_COLOR_SUM_CLAMP_NV                         = 0x854F;
+        public const uint GL_COMBINER0_NV                               = 0x8550;
+        public const uint GL_COMBINER1_NV                               = 0x8551;
+        public const uint GL_COMBINER2_NV                               = 0x8552;
+        public const uint GL_COMBINER3_NV                               = 0x8553;
+        public const uint GL_COMBINER4_NV                               = 0x8554;
+        public const uint GL_COMBINER5_NV                               = 0x8555;
+        public const uint GL_COMBINER6_NV                               = 0x8556;
+        public const uint GL_COMBINER7_NV                               = 0x8557;
         /* reuse GL_TEXTURE0_ARB */
         /* reuse GL_TEXTURE1_ARB */
         /* reuse GL_ZERO */
@@ -4439,17 +4495,17 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_fog_distance
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_FOG_DISTANCE_MODE_NV           = 0x855A;
-        public const uint GL_EYE_RADIAL_NV                  = 0x855B;
-        public const uint GL_EYE_PLANE_ABSOLUTE_NV          = 0x855C;
+        public const uint GL_FOG_DISTANCE_MODE_NV                       = 0x855A;
+        public const uint GL_EYE_RADIAL_NV                              = 0x855B;
+        public const uint GL_EYE_PLANE_ABSOLUTE_NV                      = 0x855C;
         /* reuse GL_EYE_PLANE */
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_texgen_emboss
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_EMBOSS_LIGHT_NV                = 0x855D;
-        public const uint GL_EMBOSS_CONSTANT_NV             = 0x855E;
-        public const uint GL_EMBOSS_MAP_NV                  = 0x855F;
+        public const uint GL_EMBOSS_LIGHT_NV                            = 0x855D;
+        public const uint GL_EMBOSS_CONSTANT_NV                         = 0x855E;
+        public const uint GL_EMBOSS_MAP_NV                              = 0x855F;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_blend_square (no constants)
@@ -4458,78 +4514,78 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_texture_env_combine4
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_COMBINE4_NV                    = 0x8503;
-        public const uint GL_SOURCE3_RGB_NV                 = 0x8583;
-        public const uint GL_SOURCE3_ALPHA_NV               = 0x858B;
-        public const uint GL_OPERAND3_RGB_NV                = 0x8593;
-        public const uint GL_OPERAND3_ALPHA_NV              = 0x859B;
+        public const uint GL_COMBINE4_NV                                = 0x8503;
+        public const uint GL_SOURCE3_RGB_NV                             = 0x8583;
+        public const uint GL_SOURCE3_ALPHA_NV                           = 0x858B;
+        public const uint GL_OPERAND3_RGB_NV                            = 0x8593;
+        public const uint GL_OPERAND3_ALPHA_NV                          = 0x859B;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_fbo_color_attachments
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_COLOR_ATTACHMENT0_NV           = 0x8CE0;
-        public const uint GL_COLOR_ATTACHMENT1_NV           = 0x8CE1;
-        public const uint GL_COLOR_ATTACHMENT2_NV           = 0x8CE2;
-        public const uint GL_COLOR_ATTACHMENT3_NV           = 0x8CE3;
-        public const uint GL_COLOR_ATTACHMENT4_NV           = 0x8CE4;
-        public const uint GL_COLOR_ATTACHMENT5_NV           = 0x8CE5;
-        public const uint GL_COLOR_ATTACHMENT6_NV           = 0x8CE6;
-        public const uint GL_COLOR_ATTACHMENT7_NV           = 0x8CE7;
-        public const uint GL_COLOR_ATTACHMENT8_NV           = 0x8CE8;
-        public const uint GL_COLOR_ATTACHMENT9_NV           = 0x8CE9;
-        public const uint GL_COLOR_ATTACHMENT10_NV          = 0x8CEA;
-        public const uint GL_COLOR_ATTACHMENT11_NV          = 0x8CEB;
-        public const uint GL_COLOR_ATTACHMENT12_NV          = 0x8CEC;
-        public const uint GL_COLOR_ATTACHMENT13_NV          = 0x8CED;
-        public const uint GL_COLOR_ATTACHMENT14_NV          = 0x8CEE;
-        public const uint GL_COLOR_ATTACHMENT15_NV          = 0x8CEF;
-        public const uint GL_MAX_COLOR_ATTACHMENTS_NV       = 0x8CDF;
+        public const uint GL_COLOR_ATTACHMENT0_NV                       = 0x8CE0;
+        public const uint GL_COLOR_ATTACHMENT1_NV                       = 0x8CE1;
+        public const uint GL_COLOR_ATTACHMENT2_NV                       = 0x8CE2;
+        public const uint GL_COLOR_ATTACHMENT3_NV                       = 0x8CE3;
+        public const uint GL_COLOR_ATTACHMENT4_NV                       = 0x8CE4;
+        public const uint GL_COLOR_ATTACHMENT5_NV                       = 0x8CE5;
+        public const uint GL_COLOR_ATTACHMENT6_NV                       = 0x8CE6;
+        public const uint GL_COLOR_ATTACHMENT7_NV                       = 0x8CE7;
+        public const uint GL_COLOR_ATTACHMENT8_NV                       = 0x8CE8;
+        public const uint GL_COLOR_ATTACHMENT9_NV                       = 0x8CE9;
+        public const uint GL_COLOR_ATTACHMENT10_NV                      = 0x8CEA;
+        public const uint GL_COLOR_ATTACHMENT11_NV                      = 0x8CEB;
+        public const uint GL_COLOR_ATTACHMENT12_NV                      = 0x8CEC;
+        public const uint GL_COLOR_ATTACHMENT13_NV                      = 0x8CED;
+        public const uint GL_COLOR_ATTACHMENT14_NV                      = 0x8CEE;
+        public const uint GL_COLOR_ATTACHMENT15_NV                      = 0x8CEF;
+        public const uint GL_MAX_COLOR_ATTACHMENTS_NV                   = 0x8CDF;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_fence
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_ALL_COMPLETED_NV               = 0x84F2;
-        public const uint GL_FENCE_STATUS_NV                = 0x84F3;
-        public const uint GL_FENCE_CONDITION_NV             = 0x84F4;
+        public const uint GL_ALL_COMPLETED_NV                           = 0x84F2;
+        public const uint GL_FENCE_STATUS_NV                            = 0x84F3;
+        public const uint GL_FENCE_CONDITION_NV                         = 0x84F4;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_evaluators
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_EVAL_2D_NV                     = 0x86C0;
-        public const uint GL_EVAL_TRIANGULAR_2D_NV          = 0x86C1;
-        public const uint GL_MAP_TESSELLATION_NV            = 0x86C2;
-        public const uint GL_MAP_ATTRIB_U_ORDER_NV          = 0x86C3;
-        public const uint GL_MAP_ATTRIB_V_ORDER_NV          = 0x86C4;
-        public const uint GL_EVAL_FRACTIONAL_TESSELLATION_NV = 0x86C5;
-        public const uint GL_EVAL_VERTEX_ATTRIB0_NV         = 0x86C6;
-        public const uint GL_EVAL_VERTEX_ATTRIB1_NV         = 0x86C7;
-        public const uint GL_EVAL_VERTEX_ATTRIB2_NV         = 0x86C8;
-        public const uint GL_EVAL_VERTEX_ATTRIB3_NV         = 0x86C9;
-        public const uint GL_EVAL_VERTEX_ATTRIB4_NV         = 0x86CA;
-        public const uint GL_EVAL_VERTEX_ATTRIB5_NV         = 0x86CB;
-        public const uint GL_EVAL_VERTEX_ATTRIB6_NV         = 0x86CC;
-        public const uint GL_EVAL_VERTEX_ATTRIB7_NV         = 0x86CD;
-        public const uint GL_EVAL_VERTEX_ATTRIB8_NV         = 0x86CE;
-        public const uint GL_EVAL_VERTEX_ATTRIB9_NV         = 0x86CF;
-        public const uint GL_EVAL_VERTEX_ATTRIB10_NV        = 0x86D0;
-        public const uint GL_EVAL_VERTEX_ATTRIB11_NV        = 0x86D1;
-        public const uint GL_EVAL_VERTEX_ATTRIB12_NV        = 0x86D2;
-        public const uint GL_EVAL_VERTEX_ATTRIB13_NV        = 0x86D3;
-        public const uint GL_EVAL_VERTEX_ATTRIB14_NV        = 0x86D4;
-        public const uint GL_EVAL_VERTEX_ATTRIB15_NV        = 0x86D5;
-        public const uint GL_MAX_MAP_TESSELLATION_NV        = 0x86D6;
-        public const uint GL_MAX_RATIONAL_EVAL_ORDER_NV     = 0x86D7;
+        public const uint GL_EVAL_2D_NV                                 = 0x86C0;
+        public const uint GL_EVAL_TRIANGULAR_2D_NV                      = 0x86C1;
+        public const uint GL_MAP_TESSELLATION_NV                        = 0x86C2;
+        public const uint GL_MAP_ATTRIB_U_ORDER_NV                      = 0x86C3;
+        public const uint GL_MAP_ATTRIB_V_ORDER_NV                      = 0x86C4;
+        public const uint GL_EVAL_FRACTIONAL_TESSELLATION_NV            = 0x86C5;
+        public const uint GL_EVAL_VERTEX_ATTRIB0_NV                     = 0x86C6;
+        public const uint GL_EVAL_VERTEX_ATTRIB1_NV                     = 0x86C7;
+        public const uint GL_EVAL_VERTEX_ATTRIB2_NV                     = 0x86C8;
+        public const uint GL_EVAL_VERTEX_ATTRIB3_NV                     = 0x86C9;
+        public const uint GL_EVAL_VERTEX_ATTRIB4_NV                     = 0x86CA;
+        public const uint GL_EVAL_VERTEX_ATTRIB5_NV                     = 0x86CB;
+        public const uint GL_EVAL_VERTEX_ATTRIB6_NV                     = 0x86CC;
+        public const uint GL_EVAL_VERTEX_ATTRIB7_NV                     = 0x86CD;
+        public const uint GL_EVAL_VERTEX_ATTRIB8_NV                     = 0x86CE;
+        public const uint GL_EVAL_VERTEX_ATTRIB9_NV                     = 0x86CF;
+        public const uint GL_EVAL_VERTEX_ATTRIB10_NV                    = 0x86D0;
+        public const uint GL_EVAL_VERTEX_ATTRIB11_NV                    = 0x86D1;
+        public const uint GL_EVAL_VERTEX_ATTRIB12_NV                    = 0x86D2;
+        public const uint GL_EVAL_VERTEX_ATTRIB13_NV                    = 0x86D3;
+        public const uint GL_EVAL_VERTEX_ATTRIB14_NV                    = 0x86D4;
+        public const uint GL_EVAL_VERTEX_ATTRIB15_NV                    = 0x86D5;
+        public const uint GL_MAX_MAP_TESSELLATION_NV                    = 0x86D6;
+        public const uint GL_MAX_RATIONAL_EVAL_ORDER_NV                 = 0x86D7;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_packed_depth_stencil
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_DEPTH_STENCIL_NV               = 0x84F9;
-        public const uint GL_UNSIGNED_INT_24_8_NV           = 0x84FA;
+        public const uint GL_DEPTH_STENCIL_NV                           = 0x84F9;
+        public const uint GL_UNSIGNED_INT_24_8_NV                       = 0x84FA;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_register_combiners2
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_PER_STAGE_CONSTANTS_NV         = 0x8535;
+        public const uint GL_PER_STAGE_CONSTANTS_NV                     = 0x8535;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_texture_compression_vtc (no constants)
@@ -4538,236 +4594,236 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_texture_rectangle
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_TEXTURE_RECTANGLE_NV           = 0x84F5;
-        public const uint GL_TEXTURE_BINDING_RECTANGLE_NV   = 0x84F6;
-        public const uint GL_PROXY_TEXTURE_RECTANGLE_NV     = 0x84F7;
-        public const uint GL_MAX_RECTANGLE_TEXTURE_SIZE_NV  = 0x84F8;
+        public const uint GL_TEXTURE_RECTANGLE_NV                       = 0x84F5;
+        public const uint GL_TEXTURE_BINDING_RECTANGLE_NV               = 0x84F6;
+        public const uint GL_PROXY_TEXTURE_RECTANGLE_NV                 = 0x84F7;
+        public const uint GL_MAX_RECTANGLE_TEXTURE_SIZE_NV              = 0x84F8;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_texture_shader
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_OFFSET_TEXTURE_RECTANGLE_NV    = 0x864C;
-        public const uint GL_OFFSET_TEXTURE_RECTANGLE_SCALE_NV = 0x864D;
-        public const uint GL_DOT_PRODUCT_TEXTURE_RECTANGLE_NV = 0x864E;
-        public const uint GL_RGBA_UNSIGNED_DOT_PRODUCT_MAPPING_NV = 0x86D9;
-        public const uint GL_UNSIGNED_INT_S8_S8_8_8_NV      = 0x86DA;
-        public const uint GL_UNSIGNED_INT_8_8_S8_S8_REV_NV  = 0x86DB;
-        public const uint GL_DSDT_MAG_INTENSITY_NV          = 0x86DC;
-        public const uint GL_SHADER_CONSISTENT_NV           = 0x86DD;
-        public const uint GL_TEXTURE_SHADER_NV              = 0x86DE;
-        public const uint GL_SHADER_OPERATION_NV            = 0x86DF;
-        public const uint GL_CULL_MODES_NV                  = 0x86E0;
-        public const uint GL_OFFSET_TEXTURE_MATRIX_NV       = 0x86E1;
-        public const uint GL_OFFSET_TEXTURE_SCALE_NV        = 0x86E2;
-        public const uint GL_OFFSET_TEXTURE_BIAS_NV         = 0x86E3;
-        public const uint GL_OFFSET_TEXTURE_2D_MATRIX_NV    = GL_OFFSET_TEXTURE_MATRIX_NV;
-        public const uint GL_OFFSET_TEXTURE_2D_SCALE_NV     = GL_OFFSET_TEXTURE_SCALE_NV;
-        public const uint GL_OFFSET_TEXTURE_2D_BIAS_NV      = GL_OFFSET_TEXTURE_BIAS_NV;
-        public const uint GL_PREVIOUS_TEXTURE_INPUT_NV      = 0x86E4;
-        public const uint GL_CONST_EYE_NV                   = 0x86E5;
-        public const uint GL_PASS_THROUGH_NV                = 0x86E6;
-        public const uint GL_CULL_FRAGMENT_NV               = 0x86E7;
-        public const uint GL_OFFSET_TEXTURE_2D_NV           = 0x86E8;
-        public const uint GL_DEPENDENT_AR_TEXTURE_2D_NV     = 0x86E9;
-        public const uint GL_DEPENDENT_GB_TEXTURE_2D_NV     = 0x86EA;
-        public const uint GL_DOT_PRODUCT_NV                 = 0x86EC;
-        public const uint GL_DOT_PRODUCT_DEPTH_REPLACE_NV   = 0x86ED;
-        public const uint GL_DOT_PRODUCT_TEXTURE_2D_NV      = 0x86EE;
-        public const uint GL_DOT_PRODUCT_TEXTURE_CUBE_MAP_NV = 0x86F0;
-        public const uint GL_DOT_PRODUCT_DIFFUSE_CUBE_MAP_NV = 0x86F1;
-        public const uint GL_DOT_PRODUCT_REFLECT_CUBE_MAP_NV = 0x86F2;
-        public const uint GL_DOT_PRODUCT_CONST_EYE_REFLECT_CUBE_MAP_NV = 0x86F3;
-        public const uint GL_HILO_NV                        = 0x86F4;
-        public const uint GL_DSDT_NV                        = 0x86F5;
-        public const uint GL_DSDT_MAG_NV                    = 0x86F6;
-        public const uint GL_DSDT_MAG_VIB_NV                = 0x86F7;
-        public const uint GL_HILO16_NV                      = 0x86F8;
-        public const uint GL_SIGNED_HILO_NV                 = 0x86F9;
-        public const uint GL_SIGNED_HILO16_NV               = 0x86FA;
-        public const uint GL_SIGNED_RGBA_NV                 = 0x86FB;
-        public const uint GL_SIGNED_RGBA8_NV                = 0x86FC;
-        public const uint GL_SIGNED_RGB_NV                  = 0x86FE;
-        public const uint GL_SIGNED_RGB8_NV                 = 0x86FF;
-        public const uint GL_SIGNED_LUMINANCE_NV            = 0x8701;
-        public const uint GL_SIGNED_LUMINANCE8_NV           = 0x8702;
-        public const uint GL_SIGNED_LUMINANCE_ALPHA_NV      = 0x8703;
-        public const uint GL_SIGNED_LUMINANCE8_ALPHA8_NV    = 0x8704;
-        public const uint GL_SIGNED_ALPHA_NV                = 0x8705;
-        public const uint GL_SIGNED_ALPHA8_NV               = 0x8706;
-        public const uint GL_SIGNED_INTENSITY_NV            = 0x8707;
-        public const uint GL_SIGNED_INTENSITY8_NV           = 0x8708;
-        public const uint GL_DSDT8_NV                       = 0x8709;
-        public const uint GL_DSDT8_MAG8_NV                  = 0x870A;
-        public const uint GL_DSDT8_MAG8_INTENSITY8_NV       = 0x870B;
-        public const uint GL_SIGNED_RGB_UNSIGNED_ALPHA_NV   = 0x870C;
-        public const uint GL_SIGNED_RGB8_UNSIGNED_ALPHA8_NV = 0x870D;
-        public const uint GL_HI_SCALE_NV                    = 0x870E;
-        public const uint GL_LO_SCALE_NV                    = 0x870F;
-        public const uint GL_DS_SCALE_NV                    = 0x8710;
-        public const uint GL_DT_SCALE_NV                    = 0x8711;
-        public const uint GL_MAGNITUDE_SCALE_NV             = 0x8712;
-        public const uint GL_VIBRANCE_SCALE_NV              = 0x8713;
-        public const uint GL_HI_BIAS_NV                     = 0x8714;
-        public const uint GL_LO_BIAS_NV                     = 0x8715;
-        public const uint GL_DS_BIAS_NV                     = 0x8716;
-        public const uint GL_DT_BIAS_NV                     = 0x8717;
-        public const uint GL_MAGNITUDE_BIAS_NV              = 0x8718;
-        public const uint GL_VIBRANCE_BIAS_NV               = 0x8719;
-        public const uint GL_TEXTURE_BORDER_VALUES_NV       = 0x871A;
-        public const uint GL_TEXTURE_HI_SIZE_NV             = 0x871B;
-        public const uint GL_TEXTURE_LO_SIZE_NV             = 0x871C;
-        public const uint GL_TEXTURE_DS_SIZE_NV             = 0x871D;
-        public const uint GL_TEXTURE_DT_SIZE_NV             = 0x871E;
-        public const uint GL_TEXTURE_MAG_SIZE_NV            = 0x871F;
+        public const uint GL_OFFSET_TEXTURE_RECTANGLE_NV                = 0x864C;
+        public const uint GL_OFFSET_TEXTURE_RECTANGLE_SCALE_NV          = 0x864D;
+        public const uint GL_DOT_PRODUCT_TEXTURE_RECTANGLE_NV           = 0x864E;
+        public const uint GL_RGBA_UNSIGNED_DOT_PRODUCT_MAPPING_NV       = 0x86D9;
+        public const uint GL_UNSIGNED_INT_S8_S8_8_8_NV                  = 0x86DA;
+        public const uint GL_UNSIGNED_INT_8_8_S8_S8_REV_NV              = 0x86DB;
+        public const uint GL_DSDT_MAG_INTENSITY_NV                      = 0x86DC;
+        public const uint GL_SHADER_CONSISTENT_NV                       = 0x86DD;
+        public const uint GL_TEXTURE_SHADER_NV                          = 0x86DE;
+        public const uint GL_SHADER_OPERATION_NV                        = 0x86DF;
+        public const uint GL_CULL_MODES_NV                              = 0x86E0;
+        public const uint GL_OFFSET_TEXTURE_MATRIX_NV                   = 0x86E1;
+        public const uint GL_OFFSET_TEXTURE_SCALE_NV                    = 0x86E2;
+        public const uint GL_OFFSET_TEXTURE_BIAS_NV                     = 0x86E3;
+        public const uint GL_OFFSET_TEXTURE_2D_MATRIX_NV                = GL_OFFSET_TEXTURE_MATRIX_NV;
+        public const uint GL_OFFSET_TEXTURE_2D_SCALE_NV                 = GL_OFFSET_TEXTURE_SCALE_NV;
+        public const uint GL_OFFSET_TEXTURE_2D_BIAS_NV                  = GL_OFFSET_TEXTURE_BIAS_NV;
+        public const uint GL_PREVIOUS_TEXTURE_INPUT_NV                  = 0x86E4;
+        public const uint GL_CONST_EYE_NV                               = 0x86E5;
+        public const uint GL_PASS_THROUGH_NV                            = 0x86E6;
+        public const uint GL_CULL_FRAGMENT_NV                           = 0x86E7;
+        public const uint GL_OFFSET_TEXTURE_2D_NV                       = 0x86E8;
+        public const uint GL_DEPENDENT_AR_TEXTURE_2D_NV                 = 0x86E9;
+        public const uint GL_DEPENDENT_GB_TEXTURE_2D_NV                 = 0x86EA;
+        public const uint GL_DOT_PRODUCT_NV                             = 0x86EC;
+        public const uint GL_DOT_PRODUCT_DEPTH_REPLACE_NV               = 0x86ED;
+        public const uint GL_DOT_PRODUCT_TEXTURE_2D_NV                  = 0x86EE;
+        public const uint GL_DOT_PRODUCT_TEXTURE_CUBE_MAP_NV            = 0x86F0;
+        public const uint GL_DOT_PRODUCT_DIFFUSE_CUBE_MAP_NV            = 0x86F1;
+        public const uint GL_DOT_PRODUCT_REFLECT_CUBE_MAP_NV            = 0x86F2;
+        public const uint GL_DOT_PRODUCT_CONST_EYE_REFLECT_CUBE_MAP_NV  = 0x86F3;
+        public const uint GL_HILO_NV                                    = 0x86F4;
+        public const uint GL_DSDT_NV                                    = 0x86F5;
+        public const uint GL_DSDT_MAG_NV                                = 0x86F6;
+        public const uint GL_DSDT_MAG_VIB_NV                            = 0x86F7;
+        public const uint GL_HILO16_NV                                  = 0x86F8;
+        public const uint GL_SIGNED_HILO_NV                             = 0x86F9;
+        public const uint GL_SIGNED_HILO16_NV                           = 0x86FA;
+        public const uint GL_SIGNED_RGBA_NV                             = 0x86FB;
+        public const uint GL_SIGNED_RGBA8_NV                            = 0x86FC;
+        public const uint GL_SIGNED_RGB_NV                              = 0x86FE;
+        public const uint GL_SIGNED_RGB8_NV                             = 0x86FF;
+        public const uint GL_SIGNED_LUMINANCE_NV                        = 0x8701;
+        public const uint GL_SIGNED_LUMINANCE8_NV                       = 0x8702;
+        public const uint GL_SIGNED_LUMINANCE_ALPHA_NV                  = 0x8703;
+        public const uint GL_SIGNED_LUMINANCE8_ALPHA8_NV                = 0x8704;
+        public const uint GL_SIGNED_ALPHA_NV                            = 0x8705;
+        public const uint GL_SIGNED_ALPHA8_NV                           = 0x8706;
+        public const uint GL_SIGNED_INTENSITY_NV                        = 0x8707;
+        public const uint GL_SIGNED_INTENSITY8_NV                       = 0x8708;
+        public const uint GL_DSDT8_NV                                   = 0x8709;
+        public const uint GL_DSDT8_MAG8_NV                              = 0x870A;
+        public const uint GL_DSDT8_MAG8_INTENSITY8_NV                   = 0x870B;
+        public const uint GL_SIGNED_RGB_UNSIGNED_ALPHA_NV               = 0x870C;
+        public const uint GL_SIGNED_RGB8_UNSIGNED_ALPHA8_NV             = 0x870D;
+        public const uint GL_HI_SCALE_NV                                = 0x870E;
+        public const uint GL_LO_SCALE_NV                                = 0x870F;
+        public const uint GL_DS_SCALE_NV                                = 0x8710;
+        public const uint GL_DT_SCALE_NV                                = 0x8711;
+        public const uint GL_MAGNITUDE_SCALE_NV                         = 0x8712;
+        public const uint GL_VIBRANCE_SCALE_NV                          = 0x8713;
+        public const uint GL_HI_BIAS_NV                                 = 0x8714;
+        public const uint GL_LO_BIAS_NV                                 = 0x8715;
+        public const uint GL_DS_BIAS_NV                                 = 0x8716;
+        public const uint GL_DT_BIAS_NV                                 = 0x8717;
+        public const uint GL_MAGNITUDE_BIAS_NV                          = 0x8718;
+        public const uint GL_VIBRANCE_BIAS_NV                           = 0x8719;
+        public const uint GL_TEXTURE_BORDER_VALUES_NV                   = 0x871A;
+        public const uint GL_TEXTURE_HI_SIZE_NV                         = 0x871B;
+        public const uint GL_TEXTURE_LO_SIZE_NV                         = 0x871C;
+        public const uint GL_TEXTURE_DS_SIZE_NV                         = 0x871D;
+        public const uint GL_TEXTURE_DT_SIZE_NV                         = 0x871E;
+        public const uint GL_TEXTURE_MAG_SIZE_NV                        = 0x871F;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_texture_shader2
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_DOT_PRODUCT_TEXTURE_3D_NV      = 0x86EF;
+        public const uint GL_DOT_PRODUCT_TEXTURE_3D_NV                  = 0x86EF;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_vertex_array_range2
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_VERTEX_ARRAY_RANGE_WITHOUT_FLUSH_NV = 0x8533;
+        public const uint GL_VERTEX_ARRAY_RANGE_WITHOUT_FLUSH_NV        = 0x8533;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_vertex_program
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_VERTEX_PROGRAM_NV              = 0x8620;
-        public const uint GL_VERTEX_STATE_PROGRAM_NV        = 0x8621;
-        public const uint GL_ATTRIB_ARRAY_SIZE_NV           = 0x8623;
-        public const uint GL_ATTRIB_ARRAY_STRIDE_NV         = 0x8624;
-        public const uint GL_ATTRIB_ARRAY_TYPE_NV           = 0x8625;
-        public const uint GL_CURRENT_ATTRIB_NV              = 0x8626;
-        public const uint GL_PROGRAM_LENGTH_NV              = 0x8627;
-        public const uint GL_PROGRAM_STRING_NV              = 0x8628;
-        public const uint GL_MODELVIEW_PROJECTION_NV        = 0x8629;
-        public const uint GL_IDENTITY_NV                    = 0x862A;
-        public const uint GL_INVERSE_NV                     = 0x862B;
-        public const uint GL_TRANSPOSE_NV                   = 0x862C;
-        public const uint GL_INVERSE_TRANSPOSE_NV           = 0x862D;
-        public const uint GL_MAX_TRACK_MATRIX_STACK_DEPTH_NV = 0x862E;
-        public const uint GL_MAX_TRACK_MATRICES_NV          = 0x862F;
-        public const uint GL_MATRIX0_NV                     = 0x8630;
-        public const uint GL_MATRIX1_NV                     = 0x8631;
-        public const uint GL_MATRIX2_NV                     = 0x8632;
-        public const uint GL_MATRIX3_NV                     = 0x8633;
-        public const uint GL_MATRIX4_NV                     = 0x8634;
-        public const uint GL_MATRIX5_NV                     = 0x8635;
-        public const uint GL_MATRIX6_NV                     = 0x8636;
-        public const uint GL_MATRIX7_NV                     = 0x8637;
-        public const uint GL_CURRENT_MATRIX_STACK_DEPTH_NV  = 0x8640;
-        public const uint GL_CURRENT_MATRIX_NV              = 0x8641;
-        public const uint GL_VERTEX_PROGRAM_POINT_SIZE_NV   = 0x8642;
-        public const uint GL_VERTEX_PROGRAM_TWO_SIDE_NV     = 0x8643;
-        public const uint GL_PROGRAM_PARAMETER_NV           = 0x8644;
-        public const uint GL_ATTRIB_ARRAY_POINTER_NV        = 0x8645;
-        public const uint GL_PROGRAM_TARGET_NV              = 0x8646;
-        public const uint GL_PROGRAM_RESIDENT_NV            = 0x8647;
-        public const uint GL_TRACK_MATRIX_NV                = 0x8648;
-        public const uint GL_TRACK_MATRIX_TRANSFORM_NV      = 0x8649;
-        public const uint GL_VERTEX_PROGRAM_BINDING_NV      = 0x864A;
-        public const uint GL_PROGRAM_ERROR_POSITION_NV      = 0x864B;
-        public const uint GL_VERTEX_ATTRIB_ARRAY0_NV        = 0x8650;
-        public const uint GL_VERTEX_ATTRIB_ARRAY1_NV        = 0x8651;
-        public const uint GL_VERTEX_ATTRIB_ARRAY2_NV        = 0x8652;
-        public const uint GL_VERTEX_ATTRIB_ARRAY3_NV        = 0x8653;
-        public const uint GL_VERTEX_ATTRIB_ARRAY4_NV        = 0x8654;
-        public const uint GL_VERTEX_ATTRIB_ARRAY5_NV        = 0x8655;
-        public const uint GL_VERTEX_ATTRIB_ARRAY6_NV        = 0x8656;
-        public const uint GL_VERTEX_ATTRIB_ARRAY7_NV        = 0x8657;
-        public const uint GL_VERTEX_ATTRIB_ARRAY8_NV        = 0x8658;
-        public const uint GL_VERTEX_ATTRIB_ARRAY9_NV        = 0x8659;
-        public const uint GL_VERTEX_ATTRIB_ARRAY10_NV       = 0x865A;
-        public const uint GL_VERTEX_ATTRIB_ARRAY11_NV       = 0x865B;
-        public const uint GL_VERTEX_ATTRIB_ARRAY12_NV       = 0x865C;
-        public const uint GL_VERTEX_ATTRIB_ARRAY13_NV       = 0x865D;
-        public const uint GL_VERTEX_ATTRIB_ARRAY14_NV       = 0x865E;
-        public const uint GL_VERTEX_ATTRIB_ARRAY15_NV       = 0x865F;
-        public const uint GL_MAP1_VERTEX_ATTRIB0_4_NV       = 0x8660;
-        public const uint GL_MAP1_VERTEX_ATTRIB1_4_NV       = 0x8661;
-        public const uint GL_MAP1_VERTEX_ATTRIB2_4_NV       = 0x8662;
-        public const uint GL_MAP1_VERTEX_ATTRIB3_4_NV       = 0x8663;
-        public const uint GL_MAP1_VERTEX_ATTRIB4_4_NV       = 0x8664;
-        public const uint GL_MAP1_VERTEX_ATTRIB5_4_NV       = 0x8665;
-        public const uint GL_MAP1_VERTEX_ATTRIB6_4_NV       = 0x8666;
-        public const uint GL_MAP1_VERTEX_ATTRIB7_4_NV       = 0x8667;
-        public const uint GL_MAP1_VERTEX_ATTRIB8_4_NV       = 0x8668;
-        public const uint GL_MAP1_VERTEX_ATTRIB9_4_NV       = 0x8669;
-        public const uint GL_MAP1_VERTEX_ATTRIB10_4_NV      = 0x866A;
-        public const uint GL_MAP1_VERTEX_ATTRIB11_4_NV      = 0x866B;
-        public const uint GL_MAP1_VERTEX_ATTRIB12_4_NV      = 0x866C;
-        public const uint GL_MAP1_VERTEX_ATTRIB13_4_NV      = 0x866D;
-        public const uint GL_MAP1_VERTEX_ATTRIB14_4_NV      = 0x866E;
-        public const uint GL_MAP1_VERTEX_ATTRIB15_4_NV      = 0x866F;
-        public const uint GL_MAP2_VERTEX_ATTRIB0_4_NV       = 0x8670;
-        public const uint GL_MAP2_VERTEX_ATTRIB1_4_NV       = 0x8671;
-        public const uint GL_MAP2_VERTEX_ATTRIB2_4_NV       = 0x8672;
-        public const uint GL_MAP2_VERTEX_ATTRIB3_4_NV       = 0x8673;
-        public const uint GL_MAP2_VERTEX_ATTRIB4_4_NV       = 0x8674;
-        public const uint GL_MAP2_VERTEX_ATTRIB5_4_NV       = 0x8675;
-        public const uint GL_MAP2_VERTEX_ATTRIB6_4_NV       = 0x8676;
-        public const uint GL_MAP2_VERTEX_ATTRIB7_4_NV       = 0x8677;
-        public const uint GL_MAP2_VERTEX_ATTRIB8_4_NV       = 0x8678;
-        public const uint GL_MAP2_VERTEX_ATTRIB9_4_NV       = 0x8679;
-        public const uint GL_MAP2_VERTEX_ATTRIB10_4_NV      = 0x867A;
-        public const uint GL_MAP2_VERTEX_ATTRIB11_4_NV      = 0x867B;
-        public const uint GL_MAP2_VERTEX_ATTRIB12_4_NV      = 0x867C;
-        public const uint GL_MAP2_VERTEX_ATTRIB13_4_NV      = 0x867D;
-        public const uint GL_MAP2_VERTEX_ATTRIB14_4_NV      = 0x867E;
-        public const uint GL_MAP2_VERTEX_ATTRIB15_4_NV      = 0x867F;
+        public const uint GL_VERTEX_PROGRAM_NV                          = 0x8620;
+        public const uint GL_VERTEX_STATE_PROGRAM_NV                    = 0x8621;
+        public const uint GL_ATTRIB_ARRAY_SIZE_NV                       = 0x8623;
+        public const uint GL_ATTRIB_ARRAY_STRIDE_NV                     = 0x8624;
+        public const uint GL_ATTRIB_ARRAY_TYPE_NV                       = 0x8625;
+        public const uint GL_CURRENT_ATTRIB_NV                          = 0x8626;
+        public const uint GL_PROGRAM_LENGTH_NV                          = 0x8627;
+        public const uint GL_PROGRAM_STRING_NV                          = 0x8628;
+        public const uint GL_MODELVIEW_PROJECTION_NV                    = 0x8629;
+        public const uint GL_IDENTITY_NV                                = 0x862A;
+        public const uint GL_INVERSE_NV                                 = 0x862B;
+        public const uint GL_TRANSPOSE_NV                               = 0x862C;
+        public const uint GL_INVERSE_TRANSPOSE_NV                       = 0x862D;
+        public const uint GL_MAX_TRACK_MATRIX_STACK_DEPTH_NV            = 0x862E;
+        public const uint GL_MAX_TRACK_MATRICES_NV                      = 0x862F;
+        public const uint GL_MATRIX0_NV                                 = 0x8630;
+        public const uint GL_MATRIX1_NV                                 = 0x8631;
+        public const uint GL_MATRIX2_NV                                 = 0x8632;
+        public const uint GL_MATRIX3_NV                                 = 0x8633;
+        public const uint GL_MATRIX4_NV                                 = 0x8634;
+        public const uint GL_MATRIX5_NV                                 = 0x8635;
+        public const uint GL_MATRIX6_NV                                 = 0x8636;
+        public const uint GL_MATRIX7_NV                                 = 0x8637;
+        public const uint GL_CURRENT_MATRIX_STACK_DEPTH_NV              = 0x8640;
+        public const uint GL_CURRENT_MATRIX_NV                          = 0x8641;
+        public const uint GL_VERTEX_PROGRAM_POINT_SIZE_NV               = 0x8642;
+        public const uint GL_VERTEX_PROGRAM_TWO_SIDE_NV                 = 0x8643;
+        public const uint GL_PROGRAM_PARAMETER_NV                       = 0x8644;
+        public const uint GL_ATTRIB_ARRAY_POINTER_NV                    = 0x8645;
+        public const uint GL_PROGRAM_TARGET_NV                          = 0x8646;
+        public const uint GL_PROGRAM_RESIDENT_NV                        = 0x8647;
+        public const uint GL_TRACK_MATRIX_NV                            = 0x8648;
+        public const uint GL_TRACK_MATRIX_TRANSFORM_NV                  = 0x8649;
+        public const uint GL_VERTEX_PROGRAM_BINDING_NV                  = 0x864A;
+        public const uint GL_PROGRAM_ERROR_POSITION_NV                  = 0x864B;
+        public const uint GL_VERTEX_ATTRIB_ARRAY0_NV                    = 0x8650;
+        public const uint GL_VERTEX_ATTRIB_ARRAY1_NV                    = 0x8651;
+        public const uint GL_VERTEX_ATTRIB_ARRAY2_NV                    = 0x8652;
+        public const uint GL_VERTEX_ATTRIB_ARRAY3_NV                    = 0x8653;
+        public const uint GL_VERTEX_ATTRIB_ARRAY4_NV                    = 0x8654;
+        public const uint GL_VERTEX_ATTRIB_ARRAY5_NV                    = 0x8655;
+        public const uint GL_VERTEX_ATTRIB_ARRAY6_NV                    = 0x8656;
+        public const uint GL_VERTEX_ATTRIB_ARRAY7_NV                    = 0x8657;
+        public const uint GL_VERTEX_ATTRIB_ARRAY8_NV                    = 0x8658;
+        public const uint GL_VERTEX_ATTRIB_ARRAY9_NV                    = 0x8659;
+        public const uint GL_VERTEX_ATTRIB_ARRAY10_NV                   = 0x865A;
+        public const uint GL_VERTEX_ATTRIB_ARRAY11_NV                   = 0x865B;
+        public const uint GL_VERTEX_ATTRIB_ARRAY12_NV                   = 0x865C;
+        public const uint GL_VERTEX_ATTRIB_ARRAY13_NV                   = 0x865D;
+        public const uint GL_VERTEX_ATTRIB_ARRAY14_NV                   = 0x865E;
+        public const uint GL_VERTEX_ATTRIB_ARRAY15_NV                   = 0x865F;
+        public const uint GL_MAP1_VERTEX_ATTRIB0_4_NV                   = 0x8660;
+        public const uint GL_MAP1_VERTEX_ATTRIB1_4_NV                   = 0x8661;
+        public const uint GL_MAP1_VERTEX_ATTRIB2_4_NV                   = 0x8662;
+        public const uint GL_MAP1_VERTEX_ATTRIB3_4_NV                   = 0x8663;
+        public const uint GL_MAP1_VERTEX_ATTRIB4_4_NV                   = 0x8664;
+        public const uint GL_MAP1_VERTEX_ATTRIB5_4_NV                   = 0x8665;
+        public const uint GL_MAP1_VERTEX_ATTRIB6_4_NV                   = 0x8666;
+        public const uint GL_MAP1_VERTEX_ATTRIB7_4_NV                   = 0x8667;
+        public const uint GL_MAP1_VERTEX_ATTRIB8_4_NV                   = 0x8668;
+        public const uint GL_MAP1_VERTEX_ATTRIB9_4_NV                   = 0x8669;
+        public const uint GL_MAP1_VERTEX_ATTRIB10_4_NV                  = 0x866A;
+        public const uint GL_MAP1_VERTEX_ATTRIB11_4_NV                  = 0x866B;
+        public const uint GL_MAP1_VERTEX_ATTRIB12_4_NV                  = 0x866C;
+        public const uint GL_MAP1_VERTEX_ATTRIB13_4_NV                  = 0x866D;
+        public const uint GL_MAP1_VERTEX_ATTRIB14_4_NV                  = 0x866E;
+        public const uint GL_MAP1_VERTEX_ATTRIB15_4_NV                  = 0x866F;
+        public const uint GL_MAP2_VERTEX_ATTRIB0_4_NV                   = 0x8670;
+        public const uint GL_MAP2_VERTEX_ATTRIB1_4_NV                   = 0x8671;
+        public const uint GL_MAP2_VERTEX_ATTRIB2_4_NV                   = 0x8672;
+        public const uint GL_MAP2_VERTEX_ATTRIB3_4_NV                   = 0x8673;
+        public const uint GL_MAP2_VERTEX_ATTRIB4_4_NV                   = 0x8674;
+        public const uint GL_MAP2_VERTEX_ATTRIB5_4_NV                   = 0x8675;
+        public const uint GL_MAP2_VERTEX_ATTRIB6_4_NV                   = 0x8676;
+        public const uint GL_MAP2_VERTEX_ATTRIB7_4_NV                   = 0x8677;
+        public const uint GL_MAP2_VERTEX_ATTRIB8_4_NV                   = 0x8678;
+        public const uint GL_MAP2_VERTEX_ATTRIB9_4_NV                   = 0x8679;
+        public const uint GL_MAP2_VERTEX_ATTRIB10_4_NV                  = 0x867A;
+        public const uint GL_MAP2_VERTEX_ATTRIB11_4_NV                  = 0x867B;
+        public const uint GL_MAP2_VERTEX_ATTRIB12_4_NV                  = 0x867C;
+        public const uint GL_MAP2_VERTEX_ATTRIB13_4_NV                  = 0x867D;
+        public const uint GL_MAP2_VERTEX_ATTRIB14_4_NV                  = 0x867E;
+        public const uint GL_MAP2_VERTEX_ATTRIB15_4_NV                  = 0x867F;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_copy_depth_to_color
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_DEPTH_STENCIL_TO_RGBA_NV       = 0x886E;
-        public const uint GL_DEPTH_STENCIL_TO_BGRA_NV       = 0x886F;
+        public const uint GL_DEPTH_STENCIL_TO_RGBA_NV                   = 0x886E;
+        public const uint GL_DEPTH_STENCIL_TO_BGRA_NV                   = 0x886F;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_multisample_filter_hint
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_MULTISAMPLE_FILTER_HINT_NV     = 0x8534;
+        public const uint GL_MULTISAMPLE_FILTER_HINT_NV                 = 0x8534;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_depth_clamp
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_DEPTH_CLAMP_NV                 = 0x864F;
+        public const uint GL_DEPTH_CLAMP_NV                             = 0x864F;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_occlusion_query
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_PIXEL_COUNTER_BITS_NV          = 0x8864;
-        public const uint GL_CURRENT_OCCLUSION_QUERY_ID_NV  = 0x8865;
-        public const uint GL_PIXEL_COUNT_NV                 = 0x8866;
-        public const uint GL_PIXEL_COUNT_AVAILABLE_NV       = 0x8867;
+        public const uint GL_PIXEL_COUNTER_BITS_NV                      = 0x8864;
+        public const uint GL_CURRENT_OCCLUSION_QUERY_ID_NV              = 0x8865;
+        public const uint GL_PIXEL_COUNT_NV                             = 0x8866;
+        public const uint GL_PIXEL_COUNT_AVAILABLE_NV                   = 0x8867;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_point_sprite
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_POINT_SPRITE_NV                = 0x8861;
-        public const uint GL_COORD_REPLACE_NV               = 0x8862;
-        public const uint GL_POINT_SPRITE_R_MODE_NV         = 0x8863;
+        public const uint GL_POINT_SPRITE_NV                            = 0x8861;
+        public const uint GL_COORD_REPLACE_NV                           = 0x8862;
+        public const uint GL_POINT_SPRITE_R_MODE_NV                     = 0x8863;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_texture_shader3
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_OFFSET_PROJECTIVE_TEXTURE_2D_NV = 0x8850;
-        public const uint GL_OFFSET_PROJECTIVE_TEXTURE_2D_SCALE_NV = 0x8851;
-        public const uint GL_OFFSET_PROJECTIVE_TEXTURE_RECTANGLE_NV = 0x8852;
-        public const uint GL_OFFSET_PROJECTIVE_TEXTURE_RECTANGLE_SCALE_NV = 0x8853;
-        public const uint GL_OFFSET_HILO_TEXTURE_2D_NV      = 0x8854;
-        public const uint GL_OFFSET_HILO_TEXTURE_RECTANGLE_NV = 0x8855;
-        public const uint GL_OFFSET_HILO_PROJECTIVE_TEXTURE_2D_NV = 0x8856;
-        public const uint GL_OFFSET_HILO_PROJECTIVE_TEXTURE_RECTANGLE_NV = 0x8857;
-        public const uint GL_DEPENDENT_HILO_TEXTURE_2D_NV   = 0x8858;
-        public const uint GL_DEPENDENT_RGB_TEXTURE_3D_NV    = 0x8859;
-        public const uint GL_DEPENDENT_RGB_TEXTURE_CUBE_MAP_NV = 0x885A;
-        public const uint GL_DOT_PRODUCT_PASS_THROUGH_NV    = 0x885B;
-        public const uint GL_DOT_PRODUCT_TEXTURE_1D_NV      = 0x885C;
-        public const uint GL_DOT_PRODUCT_AFFINE_DEPTH_REPLACE_NV = 0x885D;
-        public const uint GL_HILO8_NV                       = 0x885E;
-        public const uint GL_SIGNED_HILO8_NV                = 0x885F;
-        public const uint GL_FORCE_BLUE_TO_ONE_NV           = 0x8860;
+        public const uint GL_OFFSET_PROJECTIVE_TEXTURE_2D_NV                = 0x8850;
+        public const uint GL_OFFSET_PROJECTIVE_TEXTURE_2D_SCALE_NV          = 0x8851;
+        public const uint GL_OFFSET_PROJECTIVE_TEXTURE_RECTANGLE_NV         = 0x8852;
+        public const uint GL_OFFSET_PROJECTIVE_TEXTURE_RECTANGLE_SCALE_NV   = 0x8853;
+        public const uint GL_OFFSET_HILO_TEXTURE_2D_NV                      = 0x8854;
+        public const uint GL_OFFSET_HILO_TEXTURE_RECTANGLE_NV               = 0x8855;
+        public const uint GL_OFFSET_HILO_PROJECTIVE_TEXTURE_2D_NV           = 0x8856;
+        public const uint GL_OFFSET_HILO_PROJECTIVE_TEXTURE_RECTANGLE_NV    = 0x8857;
+        public const uint GL_DEPENDENT_HILO_TEXTURE_2D_NV                   = 0x8858;
+        public const uint GL_DEPENDENT_RGB_TEXTURE_3D_NV                    = 0x8859;
+        public const uint GL_DEPENDENT_RGB_TEXTURE_CUBE_MAP_NV              = 0x885A;
+        public const uint GL_DOT_PRODUCT_PASS_THROUGH_NV                    = 0x885B;
+        public const uint GL_DOT_PRODUCT_TEXTURE_1D_NV                      = 0x885C;
+        public const uint GL_DOT_PRODUCT_AFFINE_DEPTH_REPLACE_NV            = 0x885D;
+        public const uint GL_HILO8_NV                                       = 0x885E;
+        public const uint GL_SIGNED_HILO8_NV                                = 0x885F;
+        public const uint GL_FORCE_BLUE_TO_ONE_NV                           = 0x8860;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_vertex_program1_1 (no constants)
@@ -4776,57 +4832,57 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_float_buffer
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_FLOAT_R_NV                     = 0x8880;
-        public const uint GL_FLOAT_RG_NV                    = 0x8881;
-        public const uint GL_FLOAT_RGB_NV                   = 0x8882;
-        public const uint GL_FLOAT_RGBA_NV                  = 0x8883;
-        public const uint GL_FLOAT_R16_NV                   = 0x8884;
-        public const uint GL_FLOAT_R32_NV                   = 0x8885;
-        public const uint GL_FLOAT_RG16_NV                  = 0x8886;
-        public const uint GL_FLOAT_RG32_NV                  = 0x8887;
-        public const uint GL_FLOAT_RGB16_NV                 = 0x8888;
-        public const uint GL_FLOAT_RGB32_NV                 = 0x8889;
-        public const uint GL_FLOAT_RGBA16_NV                = 0x888A;
-        public const uint GL_FLOAT_RGBA32_NV                = 0x888B;
-        public const uint GL_TEXTURE_FLOAT_COMPONENTS_NV    = 0x888C;
-        public const uint GL_FLOAT_CLEAR_COLOR_VALUE_NV     = 0x888D;
-        public const uint GL_FLOAT_RGBA_MODE_NV             = 0x888E;
+        public const uint GL_FLOAT_R_NV                                 = 0x8880;
+        public const uint GL_FLOAT_RG_NV                                = 0x8881;
+        public const uint GL_FLOAT_RGB_NV                               = 0x8882;
+        public const uint GL_FLOAT_RGBA_NV                              = 0x8883;
+        public const uint GL_FLOAT_R16_NV                               = 0x8884;
+        public const uint GL_FLOAT_R32_NV                               = 0x8885;
+        public const uint GL_FLOAT_RG16_NV                              = 0x8886;
+        public const uint GL_FLOAT_RG32_NV                              = 0x8887;
+        public const uint GL_FLOAT_RGB16_NV                             = 0x8888;
+        public const uint GL_FLOAT_RGB32_NV                             = 0x8889;
+        public const uint GL_FLOAT_RGBA16_NV                            = 0x888A;
+        public const uint GL_FLOAT_RGBA32_NV                            = 0x888B;
+        public const uint GL_TEXTURE_FLOAT_COMPONENTS_NV                = 0x888C;
+        public const uint GL_FLOAT_CLEAR_COLOR_VALUE_NV                 = 0x888D;
+        public const uint GL_FLOAT_RGBA_MODE_NV                         = 0x888E;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_fragment_program
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_MAX_FRAGMENT_PROGRAM_LOCAL_PARAMETERS_NV = 0x8868;
-        public const uint GL_FRAGMENT_PROGRAM_NV            = 0x8870;
-        public const uint GL_MAX_TEXTURE_COORDS_NV          = 0x8871;
-        public const uint GL_MAX_TEXTURE_IMAGE_UNITS_NV     = 0x8872;
-        public const uint GL_FRAGMENT_PROGRAM_BINDING_NV    = 0x8873;
-        public const uint GL_PROGRAM_ERROR_STRING_NV        = 0x8874;
+        public const uint GL_MAX_FRAGMENT_PROGRAM_LOCAL_PARAMETERS_NV   = 0x8868;
+        public const uint GL_FRAGMENT_PROGRAM_NV                        = 0x8870;
+        public const uint GL_MAX_TEXTURE_COORDS_NV                      = 0x8871;
+        public const uint GL_MAX_TEXTURE_IMAGE_UNITS_NV                 = 0x8872;
+        public const uint GL_FRAGMENT_PROGRAM_BINDING_NV                = 0x8873;
+        public const uint GL_PROGRAM_ERROR_STRING_NV                    = 0x8874;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_half_float
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_HALF_FLOAT_NV                  = 0x140B;
+        public const uint GL_HALF_FLOAT_NV                              = 0x140B;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_pixel_data_range
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_WRITE_PIXEL_DATA_RANGE_NV      = 0x8878;
-        public const uint GL_READ_PIXEL_DATA_RANGE_NV       = 0x8879;
-        public const uint GL_WRITE_PIXEL_DATA_RANGE_LENGTH_NV = 0x887A;
-        public const uint GL_READ_PIXEL_DATA_RANGE_LENGTH_NV = 0x887B;
-        public const uint GL_WRITE_PIXEL_DATA_RANGE_POINTER_NV = 0x887C;
-        public const uint GL_READ_PIXEL_DATA_RANGE_POINTER_NV = 0x887D;
+        public const uint GL_WRITE_PIXEL_DATA_RANGE_NV                  = 0x8878;
+        public const uint GL_READ_PIXEL_DATA_RANGE_NV                   = 0x8879;
+        public const uint GL_WRITE_PIXEL_DATA_RANGE_LENGTH_NV           = 0x887A;
+        public const uint GL_READ_PIXEL_DATA_RANGE_LENGTH_NV            = 0x887B;
+        public const uint GL_WRITE_PIXEL_DATA_RANGE_POINTER_NV          = 0x887C;
+        public const uint GL_READ_PIXEL_DATA_RANGE_POINTER_NV           = 0x887D;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_primitive_restart
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_PRIMITIVE_RESTART_NV           = 0x8558;
-        public const uint GL_PRIMITIVE_RESTART_INDEX_NV     = 0x8559;
+        public const uint GL_PRIMITIVE_RESTART_NV                       = 0x8558;
+        public const uint GL_PRIMITIVE_RESTART_INDEX_NV                 = 0x8559;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_texture_expand_normal
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_TEXTURE_UNSIGNED_REMAP_MODE_NV = 0x888F;
+        public const uint GL_TEXTURE_UNSIGNED_REMAP_MODE_NV             = 0x888F;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_vertex_program2 (no constants)
@@ -4839,11 +4895,11 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_fragment_program2
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_MAX_PROGRAM_EXEC_INSTRUCTIONS_NV = 0x88F4;
-        public const uint GL_MAX_PROGRAM_CALL_DEPTH_NV      = 0x88F5;
-        public const uint GL_MAX_PROGRAM_IF_DEPTH_NV        = 0x88F6;
-        public const uint GL_MAX_PROGRAM_LOOP_DEPTH_NV      = 0x88F7;
-        public const uint GL_MAX_PROGRAM_LOOP_COUNT_NV      = 0x88F8;
+        public const uint GL_MAX_PROGRAM_EXEC_INSTRUCTIONS_NV           = 0x88F4;
+        public const uint GL_MAX_PROGRAM_CALL_DEPTH_NV                  = 0x88F5;
+        public const uint GL_MAX_PROGRAM_IF_DEPTH_NV                    = 0x88F6;
+        public const uint GL_MAX_PROGRAM_LOOP_DEPTH_NV                  = 0x88F7;
+        public const uint GL_MAX_PROGRAM_LOOP_COUNT_NV                  = 0x88F8;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_vertex_program2_option
@@ -4859,47 +4915,34 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_gpu_program4
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_MIN_PROGRAM_TEXEL_OFFSET_NV    = 0x8904;
-        public const uint GL_MAX_PROGRAM_TEXEL_OFFSET_NV    = 0x8905;
-        public const uint GL_PROGRAM_ATTRIB_COMPONENTS_NV   = 0x8906;
-        public const uint GL_PROGRAM_RESULT_COMPONENTS_NV   = 0x8907;
-        public const uint GL_MAX_PROGRAM_ATTRIB_COMPONENTS_NV = 0x8908;
-        public const uint GL_MAX_PROGRAM_RESULT_COMPONENTS_NV = 0x8909;
-        public const uint GL_MAX_PROGRAM_GENERIC_ATTRIBS_NV = 0x8DA5;
-        public const uint GL_MAX_PROGRAM_GENERIC_RESULTS_NV = 0x8DA6;
+        public const uint GL_MIN_PROGRAM_TEXEL_OFFSET_NV                = 0x8904;
+        public const uint GL_MAX_PROGRAM_TEXEL_OFFSET_NV                = 0x8905;
+        public const uint GL_PROGRAM_ATTRIB_COMPONENTS_NV               = 0x8906;
+        public const uint GL_PROGRAM_RESULT_COMPONENTS_NV               = 0x8907;
+        public const uint GL_MAX_PROGRAM_ATTRIB_COMPONENTS_NV           = 0x8908;
+        public const uint GL_MAX_PROGRAM_RESULT_COMPONENTS_NV           = 0x8909;
+        public const uint GL_MAX_PROGRAM_GENERIC_ATTRIBS_NV             = 0x8DA5;
+        public const uint GL_MAX_PROGRAM_GENERIC_RESULTS_NV             = 0x8DA6;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_geometry_program4
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_LINES_ADJACENCY_EXT            = 0x000A;
-        public const uint GL_LINE_STRIP_ADJACENCY_EXT       = 0x000B;
-        public const uint GL_TRIANGLES_ADJACENCY_EXT        = 0x000C;
-        public const uint GL_TRIANGLE_STRIP_ADJACENCY_EXT   = 0x000D;
-        public const uint GL_GEOMETRY_PROGRAM_NV            = 0x8C26;
-        public const uint GL_MAX_PROGRAM_OUTPUT_VERTICES_NV = 0x8C27;
-        public const uint GL_MAX_PROGRAM_TOTAL_OUTPUT_COMPONENTS_NV = 0x8C28;
-        public const uint GL_GEOMETRY_VERTICES_OUT_EXT      = 0x8DDA;
-        public const uint GL_GEOMETRY_INPUT_TYPE_EXT        = 0x8DDB;
-        public const uint GL_GEOMETRY_OUTPUT_TYPE_EXT       = 0x8DDC;
-        public const uint GL_MAX_GEOMETRY_TEXTURE_IMAGE_UNITS_EXT = 0x8C29;
-        public const uint GL_FRAMEBUFFER_ATTACHMENT_LAYERED_EXT = 0x8DA7;
-        public const uint GL_FRAMEBUFFER_INCOMPLETE_LAYER_TARGETS_EXT = 0x8DA8;
-        public const uint GL_FRAMEBUFFER_INCOMPLETE_LAYER_COUNT_EXT = 0x8DA9;
-        public const uint GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER_EXT = 0x8CD4;
-        public const uint GL_PROGRAM_POINT_SIZE_EXT         = 0x8642;
+        public const uint GL_GEOMETRY_PROGRAM_NV                        = 0x8C26;
+        public const uint GL_MAX_PROGRAM_OUTPUT_VERTICES_NV             = 0x8C27;
+        public const uint GL_MAX_PROGRAM_TOTAL_OUTPUT_COMPONENTS_NV     = 0x8C28;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_vertex_program4
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_VERTEX_ATTRIB_ARRAY_INTEGER_NV = 0x88FD;
+        public const uint GL_VERTEX_ATTRIB_ARRAY_INTEGER_NV             = 0x88FD;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_depth_buffer_float
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_DEPTH_COMPONENT32F_NV          = 0x8DAB;
-        public const uint GL_DEPTH32F_STENCIL8_NV           = 0x8DAC;
-        public const uint GL_FLOAT_32_UNSIGNED_INT_24_8_REV_NV = 0x8DAD;
-        public const uint GL_DEPTH_BUFFER_FLOAT_MODE_NV     = 0x8DAF;
+        public const uint GL_DEPTH_COMPONENT32F_NV                      = 0x8DAB;
+        public const uint GL_DEPTH32F_STENCIL8_NV                       = 0x8DAC;
+        public const uint GL_FLOAT_32_UNSIGNED_INT_24_8_REV_NV          = 0x8DAD;
+        public const uint GL_DEPTH_BUFFER_FLOAT_MODE_NV                 = 0x8DAF;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_fragment_program4 (no constants)
@@ -4908,175 +4951,175 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_framebuffer_multisample_coverage
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_RENDERBUFFER_COVERAGE_SAMPLES_NV = 0x8CAB;
-        public const uint GL_RENDERBUFFER_COLOR_SAMPLES_NV  = 0x8E10;
-        public const uint GL_MAX_MULTISAMPLE_COVERAGE_MODES_NV = 0x8E11;
-        public const uint GL_MULTISAMPLE_COVERAGE_MODES_NV  = 0x8E12;
+        public const uint GL_RENDERBUFFER_COVERAGE_SAMPLES_NV           = 0x8CAB;
+        public const uint GL_RENDERBUFFER_COLOR_SAMPLES_NV              = 0x8E10;
+        public const uint GL_MAX_MULTISAMPLE_COVERAGE_MODES_NV          = 0x8E11;
+        public const uint GL_MULTISAMPLE_COVERAGE_MODES_NV              = 0x8E12;
 
         ///////////////////////////////////////////////////////////////////////
-        // GL_NV_geometry_shader4
+        // GL_NV_geometry_shader4 (no constants)
         ///////////////////////////////////////////////////////////////////////
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_parameter_buffer_object
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_MAX_PROGRAM_PARAMETER_BUFFER_BINDINGS_NV = 0x8DA0;
-        public const uint GL_MAX_PROGRAM_PARAMETER_BUFFER_SIZE_NV = 0x8DA1;
-        public const uint GL_VERTEX_PROGRAM_PARAMETER_BUFFER_NV = 0x8DA2;
-        public const uint GL_GEOMETRY_PROGRAM_PARAMETER_BUFFER_NV = 0x8DA3;
-        public const uint GL_FRAGMENT_PROGRAM_PARAMETER_BUFFER_NV = 0x8DA4;
+        public const uint GL_MAX_PROGRAM_PARAMETER_BUFFER_BINDINGS_NV   = 0x8DA0;
+        public const uint GL_MAX_PROGRAM_PARAMETER_BUFFER_SIZE_NV       = 0x8DA1;
+        public const uint GL_VERTEX_PROGRAM_PARAMETER_BUFFER_NV         = 0x8DA2;
+        public const uint GL_GEOMETRY_PROGRAM_PARAMETER_BUFFER_NV       = 0x8DA3;
+        public const uint GL_FRAGMENT_PROGRAM_PARAMETER_BUFFER_NV       = 0x8DA4;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_transform_feedback
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_BACK_PRIMARY_COLOR_NV          = 0x8C77;
-        public const uint GL_BACK_SECONDARY_COLOR_NV        = 0x8C78;
-        public const uint GL_TEXTURE_COORD_NV               = 0x8C79;
-        public const uint GL_CLIP_DISTANCE_NV               = 0x8C7A;
-        public const uint GL_VERTEX_ID_NV                   = 0x8C7B;
-        public const uint GL_PRIMITIVE_ID_NV                = 0x8C7C;
-        public const uint GL_GENERIC_ATTRIB_NV              = 0x8C7D;
-        public const uint GL_TRANSFORM_FEEDBACK_ATTRIBS_NV  = 0x8C7E;
-        public const uint GL_TRANSFORM_FEEDBACK_BUFFER_MODE_NV = 0x8C7F;
-        public const uint GL_MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS_NV = 0x8C80;
-        public const uint GL_ACTIVE_VARYINGS_NV             = 0x8C81;
-        public const uint GL_ACTIVE_VARYING_MAX_LENGTH_NV   = 0x8C82;
-        public const uint GL_TRANSFORM_FEEDBACK_VARYINGS_NV = 0x8C83;
-        public const uint GL_TRANSFORM_FEEDBACK_BUFFER_START_NV = 0x8C84;
-        public const uint GL_TRANSFORM_FEEDBACK_BUFFER_SIZE_NV = 0x8C85;
-        public const uint GL_TRANSFORM_FEEDBACK_RECORD_NV   = 0x8C86;
-        public const uint GL_PRIMITIVES_GENERATED_NV        = 0x8C87;
-        public const uint GL_TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN_NV = 0x8C88;
-        public const uint GL_RASTERIZER_DISCARD_NV          = 0x8C89;
-        public const uint GL_MAX_TRANSFORM_FEEDBACK_INTERLEAVED_ATTRIBS_NV = 0x8C8A;
-        public const uint GL_MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS_NV = 0x8C8B;
-        public const uint GL_INTERLEAVED_ATTRIBS_NV         = 0x8C8C;
-        public const uint GL_SEPARATE_ATTRIBS_NV            = 0x8C8D;
-        public const uint GL_TRANSFORM_FEEDBACK_BUFFER_NV   = 0x8C8E;
-        public const uint GL_TRANSFORM_FEEDBACK_BUFFER_BINDING_NV = 0x8C8F;
-        public const uint GL_LAYER_NV                       = 0x8DAA;
-        public const  int GL_NEXT_BUFFER_NV                 = -2;
-        public const  int GL_SKIP_COMPONENTS4_NV            = -3;
-        public const  int GL_SKIP_COMPONENTS3_NV            = -4;
-        public const  int GL_SKIP_COMPONENTS2_NV            = -5;
-        public const  int GL_SKIP_COMPONENTS1_NV            = -6;
+        public const uint GL_BACK_PRIMARY_COLOR_NV                          = 0x8C77;
+        public const uint GL_BACK_SECONDARY_COLOR_NV                        = 0x8C78;
+        public const uint GL_TEXTURE_COORD_NV                               = 0x8C79;
+        public const uint GL_CLIP_DISTANCE_NV                               = 0x8C7A;
+        public const uint GL_VERTEX_ID_NV                                   = 0x8C7B;
+        public const uint GL_PRIMITIVE_ID_NV                                = 0x8C7C;
+        public const uint GL_GENERIC_ATTRIB_NV                              = 0x8C7D;
+        public const uint GL_TRANSFORM_FEEDBACK_ATTRIBS_NV                  = 0x8C7E;
+        public const uint GL_TRANSFORM_FEEDBACK_BUFFER_MODE_NV              = 0x8C7F;
+        public const uint GL_MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS_NV  = 0x8C80;
+        public const uint GL_ACTIVE_VARYINGS_NV                             = 0x8C81;
+        public const uint GL_ACTIVE_VARYING_MAX_LENGTH_NV                   = 0x8C82;
+        public const uint GL_TRANSFORM_FEEDBACK_VARYINGS_NV                 = 0x8C83;
+        public const uint GL_TRANSFORM_FEEDBACK_BUFFER_START_NV             = 0x8C84;
+        public const uint GL_TRANSFORM_FEEDBACK_BUFFER_SIZE_NV              = 0x8C85;
+        public const uint GL_TRANSFORM_FEEDBACK_RECORD_NV                   = 0x8C86;
+        public const uint GL_PRIMITIVES_GENERATED_NV                        = 0x8C87;
+        public const uint GL_TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN_NV       = 0x8C88;
+        public const uint GL_RASTERIZER_DISCARD_NV                          = 0x8C89;
+        public const uint GL_MAX_TRANSFORM_FEEDBACK_INTERLEAVED_ATTRIBS_NV  = 0x8C8A;
+        public const uint GL_MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS_NV     = 0x8C8B;
+        public const uint GL_INTERLEAVED_ATTRIBS_NV                         = 0x8C8C;
+        public const uint GL_SEPARATE_ATTRIBS_NV                            = 0x8C8D;
+        public const uint GL_TRANSFORM_FEEDBACK_BUFFER_NV                   = 0x8C8E;
+        public const uint GL_TRANSFORM_FEEDBACK_BUFFER_BINDING_NV           = 0x8C8F;
+        public const uint GL_LAYER_NV                                       = 0x8DAA;
+        public const  int GL_NEXT_BUFFER_NV                                 = -2;
+        public const  int GL_SKIP_COMPONENTS4_NV                            = -3;
+        public const  int GL_SKIP_COMPONENTS3_NV                            = -4;
+        public const  int GL_SKIP_COMPONENTS2_NV                            = -5;
+        public const  int GL_SKIP_COMPONENTS1_NV                            = -6;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_conditional_render
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_QUERY_WAIT_NV                  = 0x8E13;
-        public const uint GL_QUERY_NO_WAIT_NV               = 0x8E14;
-        public const uint GL_QUERY_BY_REGION_WAIT_NV        = 0x8E15;
-        public const uint GL_QUERY_BY_REGION_NO_WAIT_NV     = 0x8E16;
+        public const uint GL_QUERY_WAIT_NV                                  = 0x8E13;
+        public const uint GL_QUERY_NO_WAIT_NV                               = 0x8E14;
+        public const uint GL_QUERY_BY_REGION_WAIT_NV                        = 0x8E15;
+        public const uint GL_QUERY_BY_REGION_NO_WAIT_NV                     = 0x8E16;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_present_video
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_FRAME_NV                       = 0x8E26;
-        public const uint GL_FIELDS_NV                      = 0x8E27;
-        public const uint GL_CURRENT_TIME_NV                = 0x8E28;
-        public const uint GL_NUM_FILL_STREAMS_NV            = 0x8E29;
-        public const uint GL_PRESENT_TIME_NV                = 0x8E2A;
-        public const uint GL_PRESENT_DURATION_NV            = 0x8E2B;
+        public const uint GL_FRAME_NV                                       = 0x8E26;
+        public const uint GL_FIELDS_NV                                      = 0x8E27;
+        public const uint GL_CURRENT_TIME_NV                                = 0x8E28;
+        public const uint GL_NUM_FILL_STREAMS_NV                            = 0x8E29;
+        public const uint GL_PRESENT_TIME_NV                                = 0x8E2A;
+        public const uint GL_PRESENT_DURATION_NV                            = 0x8E2B;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_explicit_multisample
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_SAMPLE_POSITION_NV             = 0x8E50;
-        public const uint GL_SAMPLE_MASK_NV                 = 0x8E51;
-        public const uint GL_SAMPLE_MASK_VALUE_NV           = 0x8E52;
-        public const uint GL_TEXTURE_BINDING_RENDERBUFFER_NV = 0x8E53;
-        public const uint GL_TEXTURE_RENDERBUFFER_DATA_STORE_BINDING_NV = 0x8E54;
-        public const uint GL_TEXTURE_RENDERBUFFER_NV        = 0x8E55;
-        public const uint GL_SAMPLER_RENDERBUFFER_NV        = 0x8E56;
-        public const uint GL_INT_SAMPLER_RENDERBUFFER_NV    = 0x8E57;
-        public const uint GL_UNSIGNED_INT_SAMPLER_RENDERBUFFER_NV = 0x8E58;
-        public const uint GL_MAX_SAMPLE_MASK_WORDS_NV       = 0x8E59;
+        public const uint GL_SAMPLE_POSITION_NV                             = 0x8E50;
+        public const uint GL_SAMPLE_MASK_NV                                 = 0x8E51;
+        public const uint GL_SAMPLE_MASK_VALUE_NV                           = 0x8E52;
+        public const uint GL_TEXTURE_BINDING_RENDERBUFFER_NV                = 0x8E53;
+        public const uint GL_TEXTURE_RENDERBUFFER_DATA_STORE_BINDING_NV     = 0x8E54;
+        public const uint GL_TEXTURE_RENDERBUFFER_NV                        = 0x8E55;
+        public const uint GL_SAMPLER_RENDERBUFFER_NV                        = 0x8E56;
+        public const uint GL_INT_SAMPLER_RENDERBUFFER_NV                    = 0x8E57;
+        public const uint GL_UNSIGNED_INT_SAMPLER_RENDERBUFFER_NV           = 0x8E58;
+        public const uint GL_MAX_SAMPLE_MASK_WORDS_NV                       = 0x8E59;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_transform_feedback2
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_TRANSFORM_FEEDBACK_NV          = 0x8E22;
-        public const uint GL_TRANSFORM_FEEDBACK_BUFFER_PAUSED_NV = 0x8E23;
-        public const uint GL_TRANSFORM_FEEDBACK_BUFFER_ACTIVE_NV = 0x8E24;
-        public const uint GL_TRANSFORM_FEEDBACK_BINDING_NV  = 0x8E25;
+        public const uint GL_TRANSFORM_FEEDBACK_NV                          = 0x8E22;
+        public const uint GL_TRANSFORM_FEEDBACK_BUFFER_PAUSED_NV            = 0x8E23;
+        public const uint GL_TRANSFORM_FEEDBACK_BUFFER_ACTIVE_NV            = 0x8E24;
+        public const uint GL_TRANSFORM_FEEDBACK_BINDING_NV                  = 0x8E25;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_video_capture
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_VIDEO_BUFFER_NV                = 0x9020;
-        public const uint GL_VIDEO_BUFFER_BINDING_NV        = 0x9021;
-        public const uint GL_FIELD_UPPER_NV                 = 0x9022;
-        public const uint GL_FIELD_LOWER_NV                 = 0x9023;
-        public const uint GL_NUM_VIDEO_CAPTURE_STREAMS_NV   = 0x9024;
-        public const uint GL_NEXT_VIDEO_CAPTURE_BUFFER_STATUS_NV = 0x9025;
-        public const uint GL_VIDEO_CAPTURE_TO_422_SUPPORTED_NV = 0x9026;
-        public const uint GL_LAST_VIDEO_CAPTURE_STATUS_NV   = 0x9027;
-        public const uint GL_VIDEO_BUFFER_PITCH_NV          = 0x9028;
-        public const uint GL_VIDEO_COLOR_CONVERSION_MATRIX_NV = 0x9029;
-        public const uint GL_VIDEO_COLOR_CONVERSION_MAX_NV  = 0x902A;
-        public const uint GL_VIDEO_COLOR_CONVERSION_MIN_NV  = 0x902B;
-        public const uint GL_VIDEO_COLOR_CONVERSION_OFFSET_NV = 0x902C;
-        public const uint GL_VIDEO_BUFFER_INTERNAL_FORMAT_NV = 0x902D;
-        public const uint GL_PARTIAL_SUCCESS_NV             = 0x902E;
-        public const uint GL_SUCCESS_NV                     = 0x902F;
-        public const uint GL_FAILURE_NV                     = 0x9030;
-        public const uint GL_YCBYCR8_422_NV                 = 0x9031;
-        public const uint GL_YCBAYCR8A_4224_NV              = 0x9032;
-        public const uint GL_Z6Y10Z6CB10Z6Y10Z6CR10_422_NV  = 0x9033;
-        public const uint GL_Z6Y10Z6CB10Z6A10Z6Y10Z6CR10Z6A10_4224_NV = 0x9034;
-        public const uint GL_Z4Y12Z4CB12Z4Y12Z4CR12_422_NV  = 0x9035;
-        public const uint GL_Z4Y12Z4CB12Z4A12Z4Y12Z4CR12Z4A12_4224_NV = 0x9036;
-        public const uint GL_Z4Y12Z4CB12Z4CR12_444_NV       = 0x9037;
-        public const uint GL_VIDEO_CAPTURE_FRAME_WIDTH_NV   = 0x9038;
-        public const uint GL_VIDEO_CAPTURE_FRAME_HEIGHT_NV  = 0x9039;
-        public const uint GL_VIDEO_CAPTURE_FIELD_UPPER_HEIGHT_NV = 0x903A;
-        public const uint GL_VIDEO_CAPTURE_FIELD_LOWER_HEIGHT_NV = 0x903B;
-        public const uint GL_VIDEO_CAPTURE_SURFACE_ORIGIN_NV = 0x903C;
+        public const uint GL_VIDEO_BUFFER_NV                                = 0x9020;
+        public const uint GL_VIDEO_BUFFER_BINDING_NV                        = 0x9021;
+        public const uint GL_FIELD_UPPER_NV                                 = 0x9022;
+        public const uint GL_FIELD_LOWER_NV                                 = 0x9023;
+        public const uint GL_NUM_VIDEO_CAPTURE_STREAMS_NV                   = 0x9024;
+        public const uint GL_NEXT_VIDEO_CAPTURE_BUFFER_STATUS_NV            = 0x9025;
+        public const uint GL_VIDEO_CAPTURE_TO_422_SUPPORTED_NV              = 0x9026;
+        public const uint GL_LAST_VIDEO_CAPTURE_STATUS_NV                   = 0x9027;
+        public const uint GL_VIDEO_BUFFER_PITCH_NV                          = 0x9028;
+        public const uint GL_VIDEO_COLOR_CONVERSION_MATRIX_NV               = 0x9029;
+        public const uint GL_VIDEO_COLOR_CONVERSION_MAX_NV                  = 0x902A;
+        public const uint GL_VIDEO_COLOR_CONVERSION_MIN_NV                  = 0x902B;
+        public const uint GL_VIDEO_COLOR_CONVERSION_OFFSET_NV               = 0x902C;
+        public const uint GL_VIDEO_BUFFER_INTERNAL_FORMAT_NV                = 0x902D;
+        public const uint GL_PARTIAL_SUCCESS_NV                             = 0x902E;
+        public const uint GL_SUCCESS_NV                                     = 0x902F;
+        public const uint GL_FAILURE_NV                                     = 0x9030;
+        public const uint GL_YCBYCR8_422_NV                                 = 0x9031;
+        public const uint GL_YCBAYCR8A_4224_NV                              = 0x9032;
+        public const uint GL_Z6Y10Z6CB10Z6Y10Z6CR10_422_NV                  = 0x9033;
+        public const uint GL_Z6Y10Z6CB10Z6A10Z6Y10Z6CR10Z6A10_4224_NV       = 0x9034;
+        public const uint GL_Z4Y12Z4CB12Z4Y12Z4CR12_422_NV                  = 0x9035;
+        public const uint GL_Z4Y12Z4CB12Z4A12Z4Y12Z4CR12Z4A12_4224_NV       = 0x9036;
+        public const uint GL_Z4Y12Z4CB12Z4CR12_444_NV                       = 0x9037;
+        public const uint GL_VIDEO_CAPTURE_FRAME_WIDTH_NV                   = 0x9038;
+        public const uint GL_VIDEO_CAPTURE_FRAME_HEIGHT_NV                  = 0x9039;
+        public const uint GL_VIDEO_CAPTURE_FIELD_UPPER_HEIGHT_NV            = 0x903A;
+        public const uint GL_VIDEO_CAPTURE_FIELD_LOWER_HEIGHT_NV            = 0x903B;
+        public const uint GL_VIDEO_CAPTURE_SURFACE_ORIGIN_NV                = 0x903C;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_copy_image (no constants)
         ///////////////////////////////////////////////////////////////////////
  
         ///////////////////////////////////////////////////////////////////////
-        // GL_NV_parameter_buffer_object2
+        // GL_NV_parameter_buffer_object2 (no constants)
         ///////////////////////////////////////////////////////////////////////
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_shader_buffer_load
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_BUFFER_GPU_ADDRESS_NV          = 0x8F1D;
-        public const uint GL_GPU_ADDRESS_NV                 = 0x8F34;
-        public const uint GL_MAX_SHADER_BUFFER_ADDRESS_NV   = 0x8F35;
+        public const uint GL_BUFFER_GPU_ADDRESS_NV                          = 0x8F1D;
+        public const uint GL_GPU_ADDRESS_NV                                 = 0x8F34;
+        public const uint GL_MAX_SHADER_BUFFER_ADDRESS_NV                   = 0x8F35;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_vertex_buffer_unified_memory
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_VERTEX_ATTRIB_ARRAY_UNIFIED_NV = 0x8F1E;
-        public const uint GL_ELEMENT_ARRAY_UNIFIED_NV       = 0x8F1F;
-        public const uint GL_VERTEX_ATTRIB_ARRAY_ADDRESS_NV = 0x8F20;
-        public const uint GL_VERTEX_ARRAY_ADDRESS_NV        = 0x8F21;
-        public const uint GL_NORMAL_ARRAY_ADDRESS_NV        = 0x8F22;
-        public const uint GL_COLOR_ARRAY_ADDRESS_NV         = 0x8F23;
-        public const uint GL_INDEX_ARRAY_ADDRESS_NV         = 0x8F24;
-        public const uint GL_TEXTURE_COORD_ARRAY_ADDRESS_NV = 0x8F25;
-        public const uint GL_EDGE_FLAG_ARRAY_ADDRESS_NV     = 0x8F26;
-        public const uint GL_SECONDARY_COLOR_ARRAY_ADDRESS_NV = 0x8F27;
-        public const uint GL_FOG_COORD_ARRAY_ADDRESS_NV     = 0x8F28;
-        public const uint GL_ELEMENT_ARRAY_ADDRESS_NV       = 0x8F29;
-        public const uint GL_VERTEX_ATTRIB_ARRAY_LENGTH_NV  = 0x8F2A;
-        public const uint GL_VERTEX_ARRAY_LENGTH_NV         = 0x8F2B;
-        public const uint GL_NORMAL_ARRAY_LENGTH_NV         = 0x8F2C;
-        public const uint GL_COLOR_ARRAY_LENGTH_NV          = 0x8F2D;
-        public const uint GL_INDEX_ARRAY_LENGTH_NV          = 0x8F2E;
-        public const uint GL_TEXTURE_COORD_ARRAY_LENGTH_NV  = 0x8F2F;
-        public const uint GL_EDGE_FLAG_ARRAY_LENGTH_NV      = 0x8F30;
-        public const uint GL_SECONDARY_COLOR_ARRAY_LENGTH_NV = 0x8F31;
-        public const uint GL_FOG_COORD_ARRAY_LENGTH_NV      = 0x8F32;
-        public const uint GL_ELEMENT_ARRAY_LENGTH_NV        = 0x8F33;
-        public const uint GL_DRAW_INDIRECT_UNIFIED_NV       = 0x8F40;
-        public const uint GL_DRAW_INDIRECT_ADDRESS_NV       = 0x8F41;
-        public const uint GL_DRAW_INDIRECT_LENGTH_NV        = 0x8F42;
+        public const uint GL_VERTEX_ATTRIB_ARRAY_UNIFIED_NV                 = 0x8F1E;
+        public const uint GL_ELEMENT_ARRAY_UNIFIED_NV                       = 0x8F1F;
+        public const uint GL_VERTEX_ATTRIB_ARRAY_ADDRESS_NV                 = 0x8F20;
+        public const uint GL_VERTEX_ARRAY_ADDRESS_NV                        = 0x8F21;
+        public const uint GL_NORMAL_ARRAY_ADDRESS_NV                        = 0x8F22;
+        public const uint GL_COLOR_ARRAY_ADDRESS_NV                         = 0x8F23;
+        public const uint GL_INDEX_ARRAY_ADDRESS_NV                         = 0x8F24;
+        public const uint GL_TEXTURE_COORD_ARRAY_ADDRESS_NV                 = 0x8F25;
+        public const uint GL_EDGE_FLAG_ARRAY_ADDRESS_NV                     = 0x8F26;
+        public const uint GL_SECONDARY_COLOR_ARRAY_ADDRESS_NV               = 0x8F27;
+        public const uint GL_FOG_COORD_ARRAY_ADDRESS_NV                     = 0x8F28;
+        public const uint GL_ELEMENT_ARRAY_ADDRESS_NV                       = 0x8F29;
+        public const uint GL_VERTEX_ATTRIB_ARRAY_LENGTH_NV                  = 0x8F2A;
+        public const uint GL_VERTEX_ARRAY_LENGTH_NV                         = 0x8F2B;
+        public const uint GL_NORMAL_ARRAY_LENGTH_NV                         = 0x8F2C;
+        public const uint GL_COLOR_ARRAY_LENGTH_NV                          = 0x8F2D;
+        public const uint GL_INDEX_ARRAY_LENGTH_NV                          = 0x8F2E;
+        public const uint GL_TEXTURE_COORD_ARRAY_LENGTH_NV                  = 0x8F2F;
+        public const uint GL_EDGE_FLAG_ARRAY_LENGTH_NV                      = 0x8F30;
+        public const uint GL_SECONDARY_COLOR_ARRAY_LENGTH_NV                = 0x8F31;
+        public const uint GL_FOG_COORD_ARRAY_LENGTH_NV                      = 0x8F32;
+        public const uint GL_ELEMENT_ARRAY_LENGTH_NV                        = 0x8F33;
+        public const uint GL_DRAW_INDIRECT_UNIFIED_NV                       = 0x8F40;
+        public const uint GL_DRAW_INDIRECT_ADDRESS_NV                       = 0x8F41;
+        public const uint GL_DRAW_INDIRECT_LENGTH_NV                        = 0x8F42;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_texture_barrier (no constants)
@@ -5085,65 +5128,34 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_gpu_program5
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_MAX_GEOMETRY_PROGRAM_INVOCATIONS_NV = 0x8E5A;
-        public const uint GL_MIN_FRAGMENT_INTERPOLATION_OFFSET_NV = 0x8E5B;
-        public const uint GL_MAX_FRAGMENT_INTERPOLATION_OFFSET_NV = 0x8E5C;
-        public const uint GL_FRAGMENT_PROGRAM_INTERPOLATION_OFFSET_BITS_NV = 0x8E5D;
-        public const uint GL_MIN_PROGRAM_TEXTURE_GATHER_OFFSET_NV = 0x8E5E;
-        public const uint GL_MAX_PROGRAM_TEXTURE_GATHER_OFFSET_NV = 0x8E5F;
-        public const uint GL_MAX_PROGRAM_SUBROUTINE_PARAMETERS_NV = 0x8F44;
-        public const uint GL_MAX_PROGRAM_SUBROUTINE_NUM_NV  = 0x8F45;
+        public const uint GL_MAX_GEOMETRY_PROGRAM_INVOCATIONS_NV            = 0x8E5A;
+        public const uint GL_MIN_FRAGMENT_INTERPOLATION_OFFSET_NV           = 0x8E5B;
+        public const uint GL_MAX_FRAGMENT_INTERPOLATION_OFFSET_NV           = 0x8E5C;
+        public const uint GL_FRAGMENT_PROGRAM_INTERPOLATION_OFFSET_BITS_NV  = 0x8E5D;
+        public const uint GL_MIN_PROGRAM_TEXTURE_GATHER_OFFSET_NV           = 0x8E5E;
+        public const uint GL_MAX_PROGRAM_TEXTURE_GATHER_OFFSET_NV           = 0x8E5F;
+        public const uint GL_MAX_PROGRAM_SUBROUTINE_PARAMETERS_NV           = 0x8F44;
+        public const uint GL_MAX_PROGRAM_SUBROUTINE_NUM_NV                  = 0x8F45;
 
         ///////////////////////////////////////////////////////////////////////
-        // GL_NV_gpu_shader5
+        // GL_NV_gpu_shader5 (no constants)
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_INT64_NV                       = 0x140E;
-        public const uint GL_UNSIGNED_INT64_NV              = 0x140F;
-        public const uint GL_INT8_NV                        = 0x8FE0;
-        public const uint GL_INT8_VEC2_NV                   = 0x8FE1;
-        public const uint GL_INT8_VEC3_NV                   = 0x8FE2;
-        public const uint GL_INT8_VEC4_NV                   = 0x8FE3;
-        public const uint GL_INT16_NV                       = 0x8FE4;
-        public const uint GL_INT16_VEC2_NV                  = 0x8FE5;
-        public const uint GL_INT16_VEC3_NV                  = 0x8FE6;
-        public const uint GL_INT16_VEC4_NV                  = 0x8FE7;
-        public const uint GL_INT64_VEC2_NV                  = 0x8FE9;
-        public const uint GL_INT64_VEC3_NV                  = 0x8FEA;
-        public const uint GL_INT64_VEC4_NV                  = 0x8FEB;
-        public const uint GL_UNSIGNED_INT8_NV               = 0x8FEC;
-        public const uint GL_UNSIGNED_INT8_VEC2_NV          = 0x8FED;
-        public const uint GL_UNSIGNED_INT8_VEC3_NV          = 0x8FEE;
-        public const uint GL_UNSIGNED_INT8_VEC4_NV          = 0x8FEF;
-        public const uint GL_UNSIGNED_INT16_NV              = 0x8FF0;
-        public const uint GL_UNSIGNED_INT16_VEC2_NV         = 0x8FF1;
-        public const uint GL_UNSIGNED_INT16_VEC3_NV         = 0x8FF2;
-        public const uint GL_UNSIGNED_INT16_VEC4_NV         = 0x8FF3;
-        public const uint GL_UNSIGNED_INT64_VEC2_NV         = 0x8FF5;
-        public const uint GL_UNSIGNED_INT64_VEC3_NV         = 0x8FF6;
-        public const uint GL_UNSIGNED_INT64_VEC4_NV         = 0x8FF7;
-        public const uint GL_FLOAT16_NV                     = 0x8FF8;
-        public const uint GL_FLOAT16_VEC2_NV                = 0x8FF9;
-        public const uint GL_FLOAT16_VEC3_NV                = 0x8FFA;
-        public const uint GL_FLOAT16_VEC4_NV                = 0x8FFB;
-        /* reuse GL_PATCHES */
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_shader_buffer_store
         ///////////////////////////////////////////////////////////////////////
- 
-        public const uint GL_SHADER_GLOBAL_ACCESS_BARRIER_BIT_NV = 0x00000010;
+        public const uint GL_SHADER_GLOBAL_ACCESS_BARRIER_BIT_NV            = 0x00000010;
         /* reuse GL_READ_WRITE */
         /* reuse GL_WRITE_ONLY */
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_tessellation_program5
         ///////////////////////////////////////////////////////////////////////
- 
-        public const uint GL_MAX_PROGRAM_PATCH_ATTRIBS_NV   = 0x86D8;
-        public const uint GL_TESS_CONTROL_PROGRAM_NV        = 0x891E;
-        public const uint GL_TESS_EVALUATION_PROGRAM_NV     = 0x891F;
-        public const uint GL_TESS_CONTROL_PROGRAM_PARAMETER_BUFFER_NV = 0x8C74;
-        public const uint GL_TESS_EVALUATION_PROGRAM_PARAMETER_BUFFER_NV = 0x8C75;
+        public const uint GL_MAX_PROGRAM_PATCH_ATTRIBS_NV                   = 0x86D8;
+        public const uint GL_TESS_CONTROL_PROGRAM_NV                        = 0x891E;
+        public const uint GL_TESS_EVALUATION_PROGRAM_NV                     = 0x891F;
+        public const uint GL_TESS_CONTROL_PROGRAM_PARAMETER_BUFFER_NV       = 0x8C74;
+        public const uint GL_TESS_EVALUATION_PROGRAM_PARAMETER_BUFFER_NV    = 0x8C75;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_vertex_attrib_integer_64bit
@@ -5152,163 +5164,161 @@ namespace OpenGLDotNet
         /* reuse GL_UNSIGNED_INT64_NV */
 
         ///////////////////////////////////////////////////////////////////////
-        // GL_NV_multisample_coverage
+        // GL_NV_multisample_coverage (no constants)
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_COVERAGE_SAMPLES_NV            = 0x80A9;
-        public const uint GL_COLOR_SAMPLES_NV               = 0x8E20;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_vdpau_interop
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_SURFACE_STATE_NV               = 0x86EB;
-        public const uint GL_SURFACE_REGISTERED_NV          = 0x86FD;
-        public const uint GL_SURFACE_MAPPED_NV              = 0x8700;
-        public const uint GL_WRITE_DISCARD_NV               = 0x88BE;
+        public const uint GL_SURFACE_STATE_NV                               = 0x86EB;
+        public const uint GL_SURFACE_REGISTERED_NV                          = 0x86FD;
+        public const uint GL_SURFACE_MAPPED_NV                              = 0x8700;
+        public const uint GL_WRITE_DISCARD_NV                               = 0x88BE;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_texture_multisample
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_TEXTURE_COVERAGE_SAMPLES_NV    = 0x9045;
-        public const uint GL_TEXTURE_COLOR_SAMPLES_NV       = 0x9046;
+        public const uint GL_TEXTURE_COVERAGE_SAMPLES_NV                    = 0x9045;
+        public const uint GL_TEXTURE_COLOR_SAMPLES_NV                       = 0x9046;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_path_rendering
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_PATH_FORMAT_SVG_NV             = 0x9070;
-        public const uint GL_PATH_FORMAT_PS_NV              = 0x9071;
-        public const uint GL_STANDARD_FONT_NAME_NV          = 0x9072;
-        public const uint GL_SYSTEM_FONT_NAME_NV            = 0x9073;
-        public const uint GL_FILE_NAME_NV                   = 0x9074;
-        public const uint GL_PATH_STROKE_WIDTH_NV           = 0x9075;
-        public const uint GL_PATH_END_CAPS_NV               = 0x9076;
-        public const uint GL_PATH_INITIAL_END_CAP_NV        = 0x9077;
-        public const uint GL_PATH_TERMINAL_END_CAP_NV       = 0x9078;
-        public const uint GL_PATH_JOIN_STYLE_NV             = 0x9079;
-        public const uint GL_PATH_MITER_LIMIT_NV            = 0x907A;
-        public const uint GL_PATH_DASH_CAPS_NV              = 0x907B;
-        public const uint GL_PATH_INITIAL_DASH_CAP_NV       = 0x907C;
-        public const uint GL_PATH_TERMINAL_DASH_CAP_NV      = 0x907D;
-        public const uint GL_PATH_DASH_OFFSET_NV            = 0x907E;
-        public const uint GL_PATH_CLIENT_LENGTH_NV          = 0x907F;
-        public const uint GL_PATH_FILL_MODE_NV              = 0x9080;
-        public const uint GL_PATH_FILL_MASK_NV              = 0x9081;
-        public const uint GL_PATH_FILL_COVER_MODE_NV        = 0x9082;
-        public const uint GL_PATH_STROKE_COVER_MODE_NV      = 0x9083;
-        public const uint GL_PATH_STROKE_MASK_NV            = 0x9084;
-        public const uint GL_PATH_SAMPLE_QUALITY_NV         = 0x9085;
-        public const uint GL_PATH_STROKE_BOUND_NV           = 0x9086;
-        public const uint GL_PATH_STROKE_OVERSAMPLE_COUNT_NV = 0x9087;
-        public const uint GL_COUNT_UP_NV                    = 0x9088;
-        public const uint GL_COUNT_DOWN_NV                  = 0x9089;
-        public const uint GL_PATH_OBJECT_BOUNDING_BOX_NV    = 0x908A;
-        public const uint GL_CONVEX_HULL_NV                 = 0x908B;
-        public const uint GL_MULTI_HULLS_NV                 = 0x908C;
-        public const uint GL_BOUNDING_BOX_NV                = 0x908D;
-        public const uint GL_TRANSLATE_X_NV                 = 0x908E;
-        public const uint GL_TRANSLATE_Y_NV                 = 0x908F;
-        public const uint GL_TRANSLATE_2D_NV                = 0x9090;
-        public const uint GL_TRANSLATE_3D_NV                = 0x9091;
-        public const uint GL_AFFINE_2D_NV                   = 0x9092;
-        public const uint GL_PROJECTIVE_2D_NV               = 0x9093;
-        public const uint GL_AFFINE_3D_NV                   = 0x9094;
-        public const uint GL_PROJECTIVE_3D_NV               = 0x9095;
-        public const uint GL_TRANSPOSE_AFFINE_2D_NV         = 0x9096;
-        public const uint GL_TRANSPOSE_PROJECTIVE_2D_NV     = 0x9097;
-        public const uint GL_TRANSPOSE_AFFINE_3D_NV         = 0x9098;
-        public const uint GL_TRANSPOSE_PROJECTIVE_3D_NV     = 0x9099;
-        public const uint GL_UTF8_NV                        = 0x909A;
-        public const uint GL_UTF16_NV                       = 0x909B;
-        public const uint GL_BOUNDING_BOX_OF_BOUNDING_BOXES_NV = 0x909C;
-        public const uint GL_PATH_COMMAND_COUNT_NV          = 0x909D;
-        public const uint GL_PATH_COORD_COUNT_NV            = 0x909E;
-        public const uint GL_PATH_DASH_ARRAY_COUNT_NV       = 0x909F;
-        public const uint GL_PATH_COMPUTED_LENGTH_NV        = 0x90A0;
-        public const uint GL_PATH_FILL_BOUNDING_BOX_NV      = 0x90A1;
-        public const uint GL_PATH_STROKE_BOUNDING_BOX_NV    = 0x90A2;
-        public const uint GL_SQUARE_NV                      = 0x90A3;
-        public const uint GL_ROUND_NV                       = 0x90A4;
-        public const uint GL_TRIANGULAR_NV                  = 0x90A5;
-        public const uint GL_BEVEL_NV                       = 0x90A6;
-        public const uint GL_MITER_REVERT_NV                = 0x90A7;
-        public const uint GL_MITER_TRUNCATE_NV              = 0x90A8;
-        public const uint GL_SKIP_MISSING_GLYPH_NV          = 0x90A9;
-        public const uint GL_USE_MISSING_GLYPH_NV           = 0x90AA;
-        public const uint GL_PATH_ERROR_POSITION_NV         = 0x90AB;
-        public const uint GL_PATH_FOG_GEN_MODE_NV           = 0x90AC;
-        public const uint GL_ACCUM_ADJACENT_PAIRS_NV        = 0x90AD;
-        public const uint GL_ADJACENT_PAIRS_NV              = 0x90AE;
-        public const uint GL_FIRST_TO_REST_NV               = 0x90AF;
-        public const uint GL_PATH_GEN_MODE_NV               = 0x90B0;
-        public const uint GL_PATH_GEN_COEFF_NV              = 0x90B1;
-        public const uint GL_PATH_GEN_COLOR_FORMAT_NV       = 0x90B2;
-        public const uint GL_PATH_GEN_COMPONENTS_NV         = 0x90B3;
-        public const uint GL_PATH_STENCIL_FUNC_NV           = 0x90B7;
-        public const uint GL_PATH_STENCIL_REF_NV            = 0x90B8;
-        public const uint GL_PATH_STENCIL_VALUE_MASK_NV     = 0x90B9;
-        public const uint GL_PATH_STENCIL_DEPTH_OFFSET_FACTOR_NV = 0x90BD;
-        public const uint GL_PATH_STENCIL_DEPTH_OFFSET_UNITS_NV = 0x90BE;
-        public const uint GL_PATH_COVER_DEPTH_FUNC_NV       = 0x90BF;
-        public const uint GL_PATH_DASH_OFFSET_RESET_NV      = 0x90B4;
-        public const uint GL_MOVE_TO_RESETS_NV              = 0x90B5;
-        public const uint GL_MOVE_TO_CONTINUES_NV           = 0x90B6;
-        public const uint GL_CLOSE_PATH_NV                  = 0x00;
-        public const uint GL_MOVE_TO_NV                     = 0x02;
-        public const uint GL_RELATIVE_MOVE_TO_NV            = 0x03;
-        public const uint GL_LINE_TO_NV                     = 0x04;
-        public const uint GL_RELATIVE_LINE_TO_NV            = 0x05;
-        public const uint GL_HORIZONTAL_LINE_TO_NV          = 0x06;
-        public const uint GL_RELATIVE_HORIZONTAL_LINE_TO_NV = 0x07;
-        public const uint GL_VERTICAL_LINE_TO_NV            = 0x08;
-        public const uint GL_RELATIVE_VERTICAL_LINE_TO_NV   = 0x09;
-        public const uint GL_QUADRATIC_CURVE_TO_NV          = 0x0A;
-        public const uint GL_RELATIVE_QUADRATIC_CURVE_TO_NV = 0x0B;
-        public const uint GL_CUBIC_CURVE_TO_NV              = 0x0C;
-        public const uint GL_RELATIVE_CUBIC_CURVE_TO_NV     = 0x0D;
-        public const uint GL_SMOOTH_QUADRATIC_CURVE_TO_NV   = 0x0E;
-        public const uint GL_RELATIVE_SMOOTH_QUADRATIC_CURVE_TO_NV = 0x0F;
-        public const uint GL_SMOOTH_CUBIC_CURVE_TO_NV       = 0x10;
-        public const uint GL_RELATIVE_SMOOTH_CUBIC_CURVE_TO_NV = 0x11;
-        public const uint GL_SMALL_CCW_ARC_TO_NV            = 0x12;
-        public const uint GL_RELATIVE_SMALL_CCW_ARC_TO_NV   = 0x13;
-        public const uint GL_SMALL_CW_ARC_TO_NV             = 0x14;
-        public const uint GL_RELATIVE_SMALL_CW_ARC_TO_NV    = 0x15;
-        public const uint GL_LARGE_CCW_ARC_TO_NV            = 0x16;
-        public const uint GL_RELATIVE_LARGE_CCW_ARC_TO_NV   = 0x17;
-        public const uint GL_LARGE_CW_ARC_TO_NV             = 0x18;
-        public const uint GL_RELATIVE_LARGE_CW_ARC_TO_NV    = 0x19;
-        public const uint GL_RESTART_PATH_NV                = 0xF0;
-        public const uint GL_DUP_FIRST_CUBIC_CURVE_TO_NV    = 0xF2;
-        public const uint GL_DUP_LAST_CUBIC_CURVE_TO_NV     = 0xF4;
-        public const uint GL_RECT_NV                        = 0xF6;
-        public const uint GL_CIRCULAR_CCW_ARC_TO_NV         = 0xF8;
-        public const uint GL_CIRCULAR_CW_ARC_TO_NV          = 0xFA;
-        public const uint GL_CIRCULAR_TANGENT_ARC_TO_NV     = 0xFC;
-        public const uint GL_ARC_TO_NV                      = 0xFE;
-        public const uint GL_RELATIVE_ARC_TO_NV             = 0xFF;
-        public const uint GL_BOLD_BIT_NV                    = 0x01;
-        public const uint GL_ITALIC_BIT_NV                  = 0x02;
-        public const uint GL_GLYPH_WIDTH_BIT_NV             = 0x01;
-        public const uint GL_GLYPH_HEIGHT_BIT_NV            = 0x02;
-        public const uint GL_GLYPH_HORIZONTAL_BEARING_X_BIT_NV = 0x04;
-        public const uint GL_GLYPH_HORIZONTAL_BEARING_Y_BIT_NV = 0x08;
-        public const uint GL_GLYPH_HORIZONTAL_BEARING_ADVANCE_BIT_NV = 0x10;
-        public const uint GL_GLYPH_VERTICAL_BEARING_X_BIT_NV = 0x20;
-        public const uint GL_GLYPH_VERTICAL_BEARING_Y_BIT_NV = 0x40;
-        public const uint GL_GLYPH_VERTICAL_BEARING_ADVANCE_BIT_NV = 0x80;
-        public const uint GL_GLYPH_HAS_KERNING_NV           = 0x100;
-        public const uint GL_FONT_X_MIN_BOUNDS_NV           = 0x00010000;
-        public const uint GL_FONT_Y_MIN_BOUNDS_NV           = 0x00020000;
-        public const uint GL_FONT_X_MAX_BOUNDS_NV           = 0x00040000;
-        public const uint GL_FONT_Y_MAX_BOUNDS_NV           = 0x00080000;
-        public const uint GL_FONT_UNITS_PER_EM_NV           = 0x00100000;
-        public const uint GL_FONT_ASCENDER_NV               = 0x00200000;
-        public const uint GL_FONT_DESCENDER_NV              = 0x00400000;
-        public const uint GL_FONT_HEIGHT_NV                 = 0x00800000;
-        public const uint GL_FONT_MAX_ADVANCE_WIDTH_NV      = 0x01000000;
-        public const uint GL_FONT_MAX_ADVANCE_HEIGHT_NV     = 0x02000000;
-        public const uint GL_FONT_UNDERLINE_POSITION_NV     = 0x04000000;
-        public const uint GL_FONT_UNDERLINE_THICKNESS_NV    = 0x08000000;
-        public const uint GL_FONT_HAS_KERNING_NV            = 0x10000000;
+        public const uint GL_PATH_FORMAT_SVG_NV                             = 0x9070;
+        public const uint GL_PATH_FORMAT_PS_NV                              = 0x9071;
+        public const uint GL_STANDARD_FONT_NAME_NV                          = 0x9072;
+        public const uint GL_SYSTEM_FONT_NAME_NV                            = 0x9073;
+        public const uint GL_FILE_NAME_NV                                   = 0x9074;
+        public const uint GL_PATH_STROKE_WIDTH_NV                           = 0x9075;
+        public const uint GL_PATH_END_CAPS_NV                               = 0x9076;
+        public const uint GL_PATH_INITIAL_END_CAP_NV                        = 0x9077;
+        public const uint GL_PATH_TERMINAL_END_CAP_NV                       = 0x9078;
+        public const uint GL_PATH_JOIN_STYLE_NV                             = 0x9079;
+        public const uint GL_PATH_MITER_LIMIT_NV                            = 0x907A;
+        public const uint GL_PATH_DASH_CAPS_NV                              = 0x907B;
+        public const uint GL_PATH_INITIAL_DASH_CAP_NV                       = 0x907C;
+        public const uint GL_PATH_TERMINAL_DASH_CAP_NV                      = 0x907D;
+        public const uint GL_PATH_DASH_OFFSET_NV                            = 0x907E;
+        public const uint GL_PATH_CLIENT_LENGTH_NV                          = 0x907F;
+        public const uint GL_PATH_FILL_MODE_NV                              = 0x9080;
+        public const uint GL_PATH_FILL_MASK_NV                              = 0x9081;
+        public const uint GL_PATH_FILL_COVER_MODE_NV                        = 0x9082;
+        public const uint GL_PATH_STROKE_COVER_MODE_NV                      = 0x9083;
+        public const uint GL_PATH_STROKE_MASK_NV                            = 0x9084;
+        public const uint GL_PATH_SAMPLE_QUALITY_NV                         = 0x9085;
+        public const uint GL_PATH_STROKE_BOUND_NV                           = 0x9086;
+        public const uint GL_PATH_STROKE_OVERSAMPLE_COUNT_NV                = 0x9087;
+        public const uint GL_COUNT_UP_NV                                    = 0x9088;
+        public const uint GL_COUNT_DOWN_NV                                  = 0x9089;
+        public const uint GL_PATH_OBJECT_BOUNDING_BOX_NV                    = 0x908A;
+        public const uint GL_CONVEX_HULL_NV                                 = 0x908B;
+        public const uint GL_MULTI_HULLS_NV                                 = 0x908C;
+        public const uint GL_BOUNDING_BOX_NV                                = 0x908D;
+        public const uint GL_TRANSLATE_X_NV                                 = 0x908E;
+        public const uint GL_TRANSLATE_Y_NV                                 = 0x908F;
+        public const uint GL_TRANSLATE_2D_NV                                = 0x9090;
+        public const uint GL_TRANSLATE_3D_NV                                = 0x9091;
+        public const uint GL_AFFINE_2D_NV                                   = 0x9092;
+        public const uint GL_PROJECTIVE_2D_NV                               = 0x9093;
+        public const uint GL_AFFINE_3D_NV                                   = 0x9094;
+        public const uint GL_PROJECTIVE_3D_NV                               = 0x9095;
+        public const uint GL_TRANSPOSE_AFFINE_2D_NV                         = 0x9096;
+        public const uint GL_TRANSPOSE_PROJECTIVE_2D_NV                     = 0x9097;
+        public const uint GL_TRANSPOSE_AFFINE_3D_NV                         = 0x9098;
+        public const uint GL_TRANSPOSE_PROJECTIVE_3D_NV                     = 0x9099;
+        public const uint GL_UTF8_NV                                        = 0x909A;
+        public const uint GL_UTF16_NV                                       = 0x909B;
+        public const uint GL_BOUNDING_BOX_OF_BOUNDING_BOXES_NV              = 0x909C;
+        public const uint GL_PATH_COMMAND_COUNT_NV                          = 0x909D;
+        public const uint GL_PATH_COORD_COUNT_NV                            = 0x909E;
+        public const uint GL_PATH_DASH_ARRAY_COUNT_NV                       = 0x909F;
+        public const uint GL_PATH_COMPUTED_LENGTH_NV                        = 0x90A0;
+        public const uint GL_PATH_FILL_BOUNDING_BOX_NV                      = 0x90A1;
+        public const uint GL_PATH_STROKE_BOUNDING_BOX_NV                    = 0x90A2;
+        public const uint GL_SQUARE_NV                                      = 0x90A3;
+        public const uint GL_ROUND_NV                                       = 0x90A4;
+        public const uint GL_TRIANGULAR_NV                                  = 0x90A5;
+        public const uint GL_BEVEL_NV                                       = 0x90A6;
+        public const uint GL_MITER_REVERT_NV                                = 0x90A7;
+        public const uint GL_MITER_TRUNCATE_NV                              = 0x90A8;
+        public const uint GL_SKIP_MISSING_GLYPH_NV                          = 0x90A9;
+        public const uint GL_USE_MISSING_GLYPH_NV                           = 0x90AA;
+        public const uint GL_PATH_ERROR_POSITION_NV                         = 0x90AB;
+        public const uint GL_PATH_FOG_GEN_MODE_NV                           = 0x90AC;
+        public const uint GL_ACCUM_ADJACENT_PAIRS_NV                        = 0x90AD;
+        public const uint GL_ADJACENT_PAIRS_NV                              = 0x90AE;
+        public const uint GL_FIRST_TO_REST_NV                               = 0x90AF;
+        public const uint GL_PATH_GEN_MODE_NV                               = 0x90B0;
+        public const uint GL_PATH_GEN_COEFF_NV                              = 0x90B1;
+        public const uint GL_PATH_GEN_COLOR_FORMAT_NV                       = 0x90B2;
+        public const uint GL_PATH_GEN_COMPONENTS_NV                         = 0x90B3;
+        public const uint GL_PATH_STENCIL_FUNC_NV                           = 0x90B7;
+        public const uint GL_PATH_STENCIL_REF_NV                            = 0x90B8;
+        public const uint GL_PATH_STENCIL_VALUE_MASK_NV                     = 0x90B9;
+        public const uint GL_PATH_STENCIL_DEPTH_OFFSET_FACTOR_NV            = 0x90BD;
+        public const uint GL_PATH_STENCIL_DEPTH_OFFSET_UNITS_NV             = 0x90BE;
+        public const uint GL_PATH_COVER_DEPTH_FUNC_NV                       = 0x90BF;
+        public const uint GL_PATH_DASH_OFFSET_RESET_NV                      = 0x90B4;
+        public const uint GL_MOVE_TO_RESETS_NV                              = 0x90B5;
+        public const uint GL_MOVE_TO_CONTINUES_NV                           = 0x90B6;
+        public const uint GL_CLOSE_PATH_NV                                  = 0x0000;
+        public const uint GL_MOVE_TO_NV                                     = 0x0002;
+        public const uint GL_RELATIVE_MOVE_TO_NV                            = 0x0003;
+        public const uint GL_LINE_TO_NV                                     = 0x0004;
+        public const uint GL_RELATIVE_LINE_TO_NV                            = 0x0005;
+        public const uint GL_HORIZONTAL_LINE_TO_NV                          = 0x0006;
+        public const uint GL_RELATIVE_HORIZONTAL_LINE_TO_NV                 = 0x0007;
+        public const uint GL_VERTICAL_LINE_TO_NV                            = 0x0008;
+        public const uint GL_RELATIVE_VERTICAL_LINE_TO_NV                   = 0x0009;
+        public const uint GL_QUADRATIC_CURVE_TO_NV                          = 0x000A;
+        public const uint GL_RELATIVE_QUADRATIC_CURVE_TO_NV                 = 0x000B;
+        public const uint GL_CUBIC_CURVE_TO_NV                              = 0x000C;
+        public const uint GL_RELATIVE_CUBIC_CURVE_TO_NV                     = 0x000D;
+        public const uint GL_SMOOTH_QUADRATIC_CURVE_TO_NV                   = 0x000E;
+        public const uint GL_RELATIVE_SMOOTH_QUADRATIC_CURVE_TO_NV          = 0x000F;
+        public const uint GL_SMOOTH_CUBIC_CURVE_TO_NV                       = 0x0010;
+        public const uint GL_RELATIVE_SMOOTH_CUBIC_CURVE_TO_NV              = 0x0011;
+        public const uint GL_SMALL_CCW_ARC_TO_NV                            = 0x0012;
+        public const uint GL_RELATIVE_SMALL_CCW_ARC_TO_NV                   = 0x0013;
+        public const uint GL_SMALL_CW_ARC_TO_NV                             = 0x0014;
+        public const uint GL_RELATIVE_SMALL_CW_ARC_TO_NV                    = 0x0015;
+        public const uint GL_LARGE_CCW_ARC_TO_NV                            = 0x0016;
+        public const uint GL_RELATIVE_LARGE_CCW_ARC_TO_NV                   = 0x0017;
+        public const uint GL_LARGE_CW_ARC_TO_NV                             = 0x0018;
+        public const uint GL_RELATIVE_LARGE_CW_ARC_TO_NV                    = 0x0019;
+        public const uint GL_RESTART_PATH_NV                                = 0x00F0;
+        public const uint GL_DUP_FIRST_CUBIC_CURVE_TO_NV                    = 0x00F2;
+        public const uint GL_DUP_LAST_CUBIC_CURVE_TO_NV                     = 0x00F4;
+        public const uint GL_RECT_NV                                        = 0x00F6;
+        public const uint GL_CIRCULAR_CCW_ARC_TO_NV                         = 0x00F8;
+        public const uint GL_CIRCULAR_CW_ARC_TO_NV                          = 0x00FA;
+        public const uint GL_CIRCULAR_TANGENT_ARC_TO_NV                     = 0x00FC;
+        public const uint GL_ARC_TO_NV                                      = 0x00FE;
+        public const uint GL_RELATIVE_ARC_TO_NV                             = 0x00FF;
+        public const uint GL_BOLD_BIT_NV                                    = 0x0001;
+        public const uint GL_ITALIC_BIT_NV                                  = 0x0002;
+        public const uint GL_GLYPH_WIDTH_BIT_NV                             = 0x0001;
+        public const uint GL_GLYPH_HEIGHT_BIT_NV                            = 0x0002;
+        public const uint GL_GLYPH_HORIZONTAL_BEARING_X_BIT_NV              = 0x0004;
+        public const uint GL_GLYPH_HORIZONTAL_BEARING_Y_BIT_NV              = 0x0008;
+        public const uint GL_GLYPH_HORIZONTAL_BEARING_ADVANCE_BIT_NV        = 0x0010;
+        public const uint GL_GLYPH_VERTICAL_BEARING_X_BIT_NV                = 0x0020;
+        public const uint GL_GLYPH_VERTICAL_BEARING_Y_BIT_NV                = 0x0040;
+        public const uint GL_GLYPH_VERTICAL_BEARING_ADVANCE_BIT_NV          = 0x0080;
+        public const uint GL_GLYPH_HAS_KERNING_NV                           = 0x0100;
+        public const uint GL_FONT_X_MIN_BOUNDS_NV                           = 0x00010000;
+        public const uint GL_FONT_Y_MIN_BOUNDS_NV                           = 0x00020000;
+        public const uint GL_FONT_X_MAX_BOUNDS_NV                           = 0x00040000;
+        public const uint GL_FONT_Y_MAX_BOUNDS_NV                           = 0x00080000;
+        public const uint GL_FONT_UNITS_PER_EM_NV                           = 0x00100000;
+        public const uint GL_FONT_ASCENDER_NV                               = 0x00200000;
+        public const uint GL_FONT_DESCENDER_NV                              = 0x00400000;
+        public const uint GL_FONT_HEIGHT_NV                                 = 0x00800000;
+        public const uint GL_FONT_MAX_ADVANCE_WIDTH_NV                      = 0x01000000;
+        public const uint GL_FONT_MAX_ADVANCE_HEIGHT_NV                     = 0x02000000;
+        public const uint GL_FONT_UNDERLINE_POSITION_NV                     = 0x04000000;
+        public const uint GL_FONT_UNDERLINE_THICKNESS_NV                    = 0x08000000;
+        public const uint GL_FONT_HAS_KERNING_NV                            = 0x10000000;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_bindless_texture (no constants)
@@ -5337,72 +5347,72 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_blend_equation_advanced
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_BLEND_OVERLAP_NV               = 0x9281;
-        public const uint GL_BLEND_PREMULTIPLIED_SRC_NV     = 0x9280;
-        public const uint GL_BLUE_NV                        = 0x1905;
-        public const uint GL_COLORBURN_NV                   = 0x929A;
-        public const uint GL_COLORDODGE_NV                  = 0x9299;
-        public const uint GL_CONJOINT_NV                    = 0x9284;
-        public const uint GL_CONTRAST_NV                    = 0x92A1;
-        public const uint GL_DARKEN_NV                      = 0x9297;
-        public const uint GL_DIFFERENCE_NV                  = 0x929E;
-        public const uint GL_DISJOINT_NV                    = 0x9283;
-        public const uint GL_DST_ATOP_NV                    = 0x928F;
-        public const uint GL_DST_IN_NV                      = 0x928B;
-        public const uint GL_DST_NV                         = 0x9287;
-        public const uint GL_DST_OUT_NV                     = 0x928D;
-        public const uint GL_DST_OVER_NV                    = 0x9289;
-        public const uint GL_EXCLUSION_NV                   = 0x92A0;
-        public const uint GL_GREEN_NV                       = 0x1904;
-        public const uint GL_HARDLIGHT_NV                   = 0x929B;
-        public const uint GL_HARDMIX_NV                     = 0x92A9;
-        public const uint GL_HSL_COLOR_NV                   = 0x92AF;
-        public const uint GL_HSL_HUE_NV                     = 0x92AD;
-        public const uint GL_HSL_LUMINOSITY_NV              = 0x92B0;
-        public const uint GL_HSL_SATURATION_NV              = 0x92AE;
-        public const uint GL_INVERT_OVG_NV                  = 0x92B4;
-        public const uint GL_INVERT_RGB_NV                  = 0x92A3;
-        public const uint GL_LIGHTEN_NV                     = 0x9298;
-        public const uint GL_LINEARBURN_NV                  = 0x92A5;
-        public const uint GL_LINEARDODGE_NV                 = 0x92A4;
-        public const uint GL_LINEARLIGHT_NV                 = 0x92A7;
-        public const uint GL_MINUS_CLAMPED_NV               = 0x92B3;
-        public const uint GL_MINUS_NV                       = 0x929F;
-        public const uint GL_MULTIPLY_NV                    = 0x9294;
-        public const uint GL_OVERLAY_NV                     = 0x9296;
-        public const uint GL_PINLIGHT_NV                    = 0x92A8;
-        public const uint GL_PLUS_CLAMPED_ALPHA_NV          = 0x92B2;
-        public const uint GL_PLUS_CLAMPED_NV                = 0x92B1;
-        public const uint GL_PLUS_DARKER_NV                 = 0x9292;
-        public const uint GL_PLUS_NV                        = 0x9291;
-        public const uint GL_RED_NV                         = 0x1903;
-        public const uint GL_SCREEN_NV                      = 0x9295;
-        public const uint GL_SOFTLIGHT_NV                   = 0x929C;
-        public const uint GL_SRC_ATOP_NV                    = 0x928E;
-        public const uint GL_SRC_IN_NV                      = 0x928A;
-        public const uint GL_SRC_NV                         = 0x9286;
-        public const uint GL_SRC_OUT_NV                     = 0x928C;
-        public const uint GL_SRC_OVER_NV                    = 0x9288;
-        public const uint GL_UNCORRELATED_NV                = 0x9282;
-        public const uint GL_VIVIDLIGHT_NV                  = 0x92A6;
-        public const uint GL_XOR_NV                         = 0x1506;
+        public const uint GL_BLEND_OVERLAP_NV                               = 0x9281;
+        public const uint GL_BLEND_PREMULTIPLIED_SRC_NV                     = 0x9280;
+        public const uint GL_BLUE_NV                                        = 0x1905;
+        public const uint GL_COLORBURN_NV                                   = 0x929A;
+        public const uint GL_COLORDODGE_NV                                  = 0x9299;
+        public const uint GL_CONJOINT_NV                                    = 0x9284;
+        public const uint GL_CONTRAST_NV                                    = 0x92A1;
+        public const uint GL_DARKEN_NV                                      = 0x9297;
+        public const uint GL_DIFFERENCE_NV                                  = 0x929E;
+        public const uint GL_DISJOINT_NV                                    = 0x9283;
+        public const uint GL_DST_ATOP_NV                                    = 0x928F;
+        public const uint GL_DST_IN_NV                                      = 0x928B;
+        public const uint GL_DST_NV                                         = 0x9287;
+        public const uint GL_DST_OUT_NV                                     = 0x928D;
+        public const uint GL_DST_OVER_NV                                    = 0x9289;
+        public const uint GL_EXCLUSION_NV                                   = 0x92A0;
+        public const uint GL_GREEN_NV                                       = 0x1904;
+        public const uint GL_HARDLIGHT_NV                                   = 0x929B;
+        public const uint GL_HARDMIX_NV                                     = 0x92A9;
+        public const uint GL_HSL_COLOR_NV                                   = 0x92AF;
+        public const uint GL_HSL_HUE_NV                                     = 0x92AD;
+        public const uint GL_HSL_LUMINOSITY_NV                              = 0x92B0;
+        public const uint GL_HSL_SATURATION_NV                              = 0x92AE;
+        public const uint GL_INVERT_OVG_NV                                  = 0x92B4;
+        public const uint GL_INVERT_RGB_NV                                  = 0x92A3;
+        public const uint GL_LIGHTEN_NV                                     = 0x9298;
+        public const uint GL_LINEARBURN_NV                                  = 0x92A5;
+        public const uint GL_LINEARDODGE_NV                                 = 0x92A4;
+        public const uint GL_LINEARLIGHT_NV                                 = 0x92A7;
+        public const uint GL_MINUS_CLAMPED_NV                               = 0x92B3;
+        public const uint GL_MINUS_NV                                       = 0x929F;
+        public const uint GL_MULTIPLY_NV                                    = 0x9294;
+        public const uint GL_OVERLAY_NV                                     = 0x9296;
+        public const uint GL_PINLIGHT_NV                                    = 0x92A8;
+        public const uint GL_PLUS_CLAMPED_ALPHA_NV                          = 0x92B2;
+        public const uint GL_PLUS_CLAMPED_NV                                = 0x92B1;
+        public const uint GL_PLUS_DARKER_NV                                 = 0x9292;
+        public const uint GL_PLUS_NV                                        = 0x9291;
+        public const uint GL_RED_NV                                         = 0x1903;
+        public const uint GL_SCREEN_NV                                      = 0x9295;
+        public const uint GL_SOFTLIGHT_NV                                   = 0x929C;
+        public const uint GL_SRC_ATOP_NV                                    = 0x928E;
+        public const uint GL_SRC_IN_NV                                      = 0x928A;
+        public const uint GL_SRC_NV                                         = 0x9286;
+        public const uint GL_SRC_OUT_NV                                     = 0x928C;
+        public const uint GL_SRC_OVER_NV                                    = 0x9288;
+        public const uint GL_UNCORRELATED_NV                                = 0x9282;
+        public const uint GL_VIVIDLIGHT_NV                                  = 0x92A6;
+        public const uint GL_XOR_NV                                         = 0x1506;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_blend_equation_advanced_coherent
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_BLEND_ADVANCED_COHERENT_NV     = 0x9285;
+        public const uint GL_BLEND_ADVANCED_COHERENT_NV                     = 0x9285;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_compute_program5
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_COMPUTE_PROGRAM_NV                     = 0x90FB;
-        public const uint GL_COMPUTE_PROGRAM_PARAMETER_BUFFER_NV    = 0x90FC;
+        public const uint GL_COMPUTE_PROGRAM_NV                             = 0x90FB;
+        public const uint GL_COMPUTE_PROGRAM_PARAMETER_BUFFER_NV            = 0x90FC;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_deep_texture3D
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_MAX_DEEP_3D_TEXTURE_WIDTH_HEIGHT_NV    = 0x90D0;
-        public const uint GL_MAX_DEEP_3D_TEXTURE_DEPTH_NV           = 0x90D1;
+        public const uint GL_MAX_DEEP_3D_TEXTURE_WIDTH_HEIGHT_NV            = 0x90D0;
+        public const uint GL_MAX_DEEP_3D_TEXTURE_DEPTH_NV                   = 0x90D1;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_draw_texture (no constants)
@@ -5412,6 +5422,86 @@ namespace OpenGLDotNet
         // GL_NV_gpu_program_fp64 (no constants)
         ///////////////////////////////////////////////////////////////////////
 
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_bindless_multi_draw_indirect_count (no constants)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_command_list
+        ///////////////////////////////////////////////////////////////////////
+        public const uint GL_TERMINATE_SEQUENCE_COMMAND_NV                  = 0x0000;
+        public const uint GL_NOP_COMMAND_NV                                 = 0x0001;
+        public const uint GL_DRAW_ELEMENTS_COMMAND_NV                       = 0x0002;
+        public const uint GL_DRAW_ARRAYS_COMMAND_NV                         = 0x0003;
+        public const uint GL_DRAW_ELEMENTS_STRIP_COMMAND_NV                 = 0x0004;
+        public const uint GL_DRAW_ARRAYS_STRIP_COMMAND_NV                   = 0x0005;
+        public const uint GL_DRAW_ELEMENTS_INSTANCED_COMMAND_NV             = 0x0006;
+        public const uint GL_DRAW_ARRAYS_INSTANCED_COMMAND_NV               = 0x0007;
+        public const uint GL_ELEMENT_ADDRESS_COMMAND_NV                     = 0x0008;
+        public const uint GL_ATTRIBUTE_ADDRESS_COMMAND_NV                   = 0x0009;
+        public const uint GL_UNIFORM_ADDRESS_COMMAND_NV                     = 0x000A;
+        public const uint GL_BLEND_COLOR_COMMAND_NV                         = 0x000B;
+        public const uint GL_STENCIL_REF_COMMAND_NV                         = 0x000C;
+        public const uint GL_LINE_WIDTH_COMMAND_NV                          = 0x000D;
+        public const uint GL_POLYGON_OFFSET_COMMAND_NV                      = 0x000E;
+        public const uint GL_ALPHA_REF_COMMAND_NV                           = 0x000F;
+        public const uint GL_VIEWPORT_COMMAND_NV                            = 0x0010;
+        public const uint GL_SCISSOR_COMMAND_NV                             = 0x0011;
+        public const uint GL_FRONT_FACE_COMMAND_NV                          = 0x0012;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_conservative_raster
+        ///////////////////////////////////////////////////////////////////////
+        public const uint GL_CONSERVATIVE_RASTERIZATION_NV                  = 0x9346;
+        public const uint GL_SUBPIXEL_PRECISION_BIAS_X_BITS_NV              = 0x9347;
+        public const uint GL_SUBPIXEL_PRECISION_BIAS_Y_BITS_NV              = 0x9348;
+        public const uint GL_MAX_SUBPIXEL_PRECISION_BIAS_BITS_NV            = 0x9349;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_conservative_raster_dilate
+        ///////////////////////////////////////////////////////////////////////
+        public const uint GL_CONSERVATIVE_RASTER_DILATE_NV                  = 0x9379;
+        public const uint GL_CONSERVATIVE_RASTER_DILATE_RANGE_NV            = 0x937A;
+        public const uint GL_CONSERVATIVE_RASTER_DILATE_GRANULARITY_NV      = 0x937B;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_fill_rectangle
+        ///////////////////////////////////////////////////////////////////////
+        public const uint GL_FILL_RECTANGLE_NV                              = 0x933C;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_fragment_coverage_to_color
+        ///////////////////////////////////////////////////////////////////////
+        public const uint GL_FRAGMENT_COVERAGE_TO_COLOR_NV                  = 0x92DD;
+        public const uint GL_FRAGMENT_COVERAGE_COLOR_NV                     = 0x92DE;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_fragment_shader_interlock (no constants)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_framebuffer_mixed_samples
+        ///////////////////////////////////////////////////////////////////////
+        public const uint GL_COVERAGE_MODULATION_TABLE_NV                   = 0x9331;
+        public const uint GL_COLOR_SAMPLES_NV                               = 0x8E20;
+        public const uint GL_DEPTH_SAMPLES_NV                               = 0x932D;
+        public const uint GL_STENCIL_SAMPLES_NV                             = 0x932E;
+        public const uint GL_MIXED_DEPTH_SAMPLES_SUPPORTED_NV               = 0x932F;
+        public const uint GL_MIXED_STENCIL_SAMPLES_SUPPORTED_NV             = 0x9330;
+        public const uint GL_COVERAGE_MODULATION_NV                         = 0x9332;
+        public const uint GL_COVERAGE_MODULATION_TABLE_SIZE_NV              = 0x9333;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_geometry_shader_passthrough (no constants)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_internalformat_sample_query
+        ///////////////////////////////////////////////////////////////////////
+        public const uint GL_MULTISAMPLES_NV                                = 0x9371;
+        public const uint GL_SUPERSAMPLE_SCALE_X_NV                         = 0x9372;
+        public const uint GL_SUPERSAMPLE_SCALE_Y_NV                         = 0x9373;
+        public const uint GL_CONFORMANT_NV                                  = 0x9374;
         #endregion
 
         ///////////////////////////////////////////////////////////////////////
@@ -5421,11 +5511,11 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_NVX_gpu_memory_info
         ///////////////////////////////////////////////////////////////////////
-        public const uint GPU_MEMORY_INFO_DEDICATED_VIDMEM_NVX = 0x9047;
-        public const uint GPU_MEMORY_INFO_TOTAL_AVAILABLE_MEMORY_NVX = 0x9048;
-        public const uint GPU_MEMORY_INFO_CURRENT_AVAILABLE_VIDMEM_NVX = 0x9049;
-        public const uint GPU_MEMORY_INFO_EVICTION_COUNT_NVX = 0x904A;
-        public const uint GPU_MEMORY_INFO_EVICTED_MEMORY_NVX = 0x904B;
+        public const uint GPU_MEMORY_INFO_DEDICATED_VIDMEM_NVX          = 0x9047;
+        public const uint GPU_MEMORY_INFO_TOTAL_AVAILABLE_MEMORY_NVX    = 0x9048;
+        public const uint GPU_MEMORY_INFO_CURRENT_AVAILABLE_VIDMEM_NVX  = 0x9049;
+        public const uint GPU_MEMORY_INFO_EVICTION_COUNT_NVX            = 0x904A;
+        public const uint GPU_MEMORY_INFO_EVICTED_MEMORY_NVX            = 0x904B;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NVX_conditional_render (no constants)
@@ -5454,8 +5544,8 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_OES_read_format
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_IMPLEMENTATION_COLOR_READ_TYPE_OES     = 0x8B9A;
-        public const uint GL_IMPLEMENTATION_COLOR_READ_FORMAT_OES   = 0x8B9B;
+        public const uint GL_IMPLEMENTATION_COLOR_READ_TYPE_OES         = 0x8B9A;
+        public const uint GL_IMPLEMENTATION_COLOR_READ_FORMAT_OES       = 0x8B9B;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_OES_query_matrix (no constants)
@@ -5472,7 +5562,7 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_OES_fixed_point
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_FIXED_OES                              = 0x140C;
+        public const uint GL_FIXED_OES                                  = 0x140C;
 
         #endregion
 
