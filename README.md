@@ -20,10 +20,10 @@ OpenGL/GLUT & FREEGLUT	:	Open(GL) (U)tility (T)oolkit (which is actually very us
  
 Math/OpenGLDotNet.Math	:	Is a set of object-oriented classes, which help you with Vector and Matrix operations along with other primitives like Point, Rectangle, Circle, Sphere etc…
  
-Assembler	:	Is a simple, short C/C++ source code showing how to use assembler to write functions in a DLL (mostly for CPUID instruction, which gives detailed information about the processor) and after that importing and using these functions in C#.
+Assembler	:	Is a simple, short C/C++ source code showing how to use assembler to write functions in a DLL (mostly for [CPUID instruction](http://en.wikipedia.org/wiki/CPUID), which gives detailed information about the processor) and after that importing and using these functions in C#.
  
-Platform/CPUInfo	:	Is a class with the aim of giving detailed CPU Information (Processor Vendor, Speed, Name, supported instruction sets and features etc…), so that use of necessary optimizations (mostly instruction sets like SSE2 or SSE3) can be decided later at run-time.
+Platform/CPUInfo	:	Is a class with the aim of giving detailed CPU Information (Processor Vendor, Speed, Name, supported instruction sets and features etc…), so that use of necessary optimizations (mostly instruction sets like [SSE2](http://en.wikipedia.org/wiki/SSE2) or [SSE3](http://en.wikipedia.org/wiki/SSE3)) can be decided later at run-time.
  
-Imaging/DevIL	:	Is the main imaging DLL written in C/C++ for speed. DevIL is a acronym for “Developer's Image Library”. The original project website can be found here. It allows loading and saving of a lot different picture/image types and uploading them as textures to the OpenGL.
+Imaging/DevIL	:	Is the main imaging DLL written in C/C++ for speed. DevIL is a acronym for “Developer's Image Library”. The original project website can be found [here](http://openil.sourceforge.net/). It allows loading and saving of a lot different picture/image types and uploading them as textures to the OpenGL.
  
 Imaging/ILU & ILUT	:	ILU is (I)mage (L)ibrary Utility and ILUT is (I)mage (L)ibrary (U)tility (T)oolkit of DevIL, the Developer's Image Library.
