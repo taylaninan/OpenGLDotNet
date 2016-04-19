@@ -2942,7 +2942,7 @@ namespace OpenGLDotNet
 
         // GLAPI void APIENTRY glUniform1ui64ARB (GLint location, GLuint64 x);
         [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private delegate void glUniform1ui64ARB(GLint location, GLuint64 x);
+        private delegate void TglUniform1ui64ARB(GLint location, GLuint64 x);
         private static TglUniform1ui64ARB glUniform1ui64ARB = null;
 
         // GLAPI void APIENTRY glUniform2ui64ARB (GLint location, GLuint64 x, GLuint64 y);
