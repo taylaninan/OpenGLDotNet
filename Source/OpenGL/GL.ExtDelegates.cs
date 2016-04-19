@@ -2884,6 +2884,202 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_ARB_transform_feedback_overflow_query (no function entry points)
         ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_ES3_2_compatibility
+        ///////////////////////////////////////////////////////////////////////
+        // GLAPI void APIENTRY glPrimitiveBoundingBoxARB (GLfloat minX, GLfloat minY, GLfloat minZ, GLfloat minW, GLfloat maxX, GLfloat maxY, GLfloat maxZ, GLfloat maxW);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglPrimitiveBoundingBoxARB(GLfloat minX, GLfloat minY, GLfloat minZ, GLfloat minW, GLfloat maxX, GLfloat maxY, GLfloat maxZ, GLfloat maxW);
+        private static TglPrimitiveBoundingBoxARB glPrimitiveBoundingBoxARB = null;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_fragment_shader_interlock (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_gpu_shader_int64
+        ///////////////////////////////////////////////////////////////////////
+        // GLAPI void APIENTRY glUniform1i64ARB (GLint location, GLint64 x);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglUniform1i64ARB(GLint location, GLint64 x);
+        private static TglUniform1i64ARB glUniform1i64ARB = null;
+
+        // GLAPI void APIENTRY glUniform2i64ARB (GLint location, GLint64 x, GLint64 y);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglUniform2i64ARB(GLint location, GLint64 x, GLint64 y);
+        private static TglUniform2i64ARB glUniform2i64ARB = null;
+
+        // GLAPI void APIENTRY glUniform3i64ARB (GLint location, GLint64 x, GLint64 y, GLint64 z);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglUniform3i64ARB(GLint location, GLint64 x, GLint64 y, GLint64 z);
+        private static TglUniform3i64ARB glUniform3i64ARB = null;
+
+        // GLAPI void APIENTRY glUniform4i64ARB (GLint location, GLint64 x, GLint64 y, GLint64 z, GLint64 w);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglUniform4i64ARB(GLint location, GLint64 x, GLint64 y, GLint64 z, GLint64 w);
+        private static TglUniform4i64ARB glUniform4i64ARB = null;
+
+        // GLAPI void APIENTRY glUniform1i64vARB (GLint location, GLsizei count, const GLint64 *value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglUniform1i64vARB(GLint location, GLsizei count, GLint64* value);
+        private static TglUniform1i64vARB glUniform1i64vARB = null;
+
+        // GLAPI void APIENTRY glUniform2i64vARB (GLint location, GLsizei count, const GLint64 *value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglUniform2i64vARB(GLint location, GLsizei count, GLint64* value);
+        private static TglUniform2i64vARB glUniform2i64vARB = null;
+
+        // GLAPI void APIENTRY glUniform3i64vARB (GLint location, GLsizei count, const GLint64 *value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglUniform3i64vARB(GLint location, GLsizei count, GLint64* value);
+        private static TglUniform3i64vARB glUniform3i64vARB = null;
+
+        // GLAPI void APIENTRY glUniform4i64vARB (GLint location, GLsizei count, const GLint64 *value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglUniform4i64vARB(GLint location, GLsizei count, GLint64* value);
+        private static TglUniform4i64vARB glUniform4i64vARB = null;
+
+        // GLAPI void APIENTRY glUniform1ui64ARB (GLint location, GLuint64 x);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void glUniform1ui64ARB(GLint location, GLuint64 x);
+        private static TglUniform1ui64ARB glUniform1ui64ARB = null;
+
+        // GLAPI void APIENTRY glUniform2ui64ARB (GLint location, GLuint64 x, GLuint64 y);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglUniform2ui64ARB(GLint location, GLuint64 x, GLuint64 y);
+        private static TglUniform2ui64ARB glUniform2ui64ARB = null;
+
+        // GLAPI void APIENTRY glUniform3ui64ARB (GLint location, GLuint64 x, GLuint64 y, GLuint64 z);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglUniform3ui64ARB(GLint location, GLuint64 x, GLuint64 y, GLuint64 z);
+        private static TglUniform3ui64ARB glUniform3ui64ARB = null;
+
+        // GLAPI void APIENTRY glUniform4ui64ARB (GLint location, GLuint64 x, GLuint64 y, GLuint64 z, GLuint64 w);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglUniform4ui64ARB(GLint location, GLuint64 x, GLuint64 y, GLuint64 z, GLuint64 w);
+        private static TglUniform4ui64ARB glUniform4ui64ARB = null;
+
+        // GLAPI void APIENTRY glUniform1ui64vARB (GLint location, GLsizei count, const GLuint64 *value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglUniform1ui64vARB(GLint location, GLsizei count, GLuint64* value);
+        private static TglUniform1ui64vARB glUniform1ui64vARB = null;
+
+        // GLAPI void APIENTRY glUniform2ui64vARB (GLint location, GLsizei count, const GLuint64 *value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglUniform2ui64vARB(GLint location, GLsizei count, GLuint64* value);
+        private static TglUniform2ui64vARB glUniform2ui64vARB = null;
+
+        // GLAPI void APIENTRY glUniform3ui64vARB (GLint location, GLsizei count, const GLuint64 *value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglUniform3ui64vARB(GLint location, GLsizei count, GLuint64* value);
+        private static TglUniform3ui64vARB glUniform3ui64vARB = null;
+
+        // GLAPI void APIENTRY glUniform4ui64vARB (GLint location, GLsizei count, const GLuint64 *value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglUniform4ui64vARB(GLint location, GLsizei count, GLuint64* value);
+        private static TglUniform4ui64vARB glUniform4ui64vARB = null;
+
+        // GLAPI void APIENTRY glGetUniformi64vARB (GLuint program, GLint location, GLint64 *params);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglGetUniformi64vARB(GLuint program, GLint location, GLint64* parameters);
+        private static TglGetUniformi64vARB glGetUniformi64vARB = null;
+
+        // GLAPI void APIENTRY glGetUniformui64vARB (GLuint program, GLint location, GLuint64 *params);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglGetUniformui64vARB(GLuint program, GLint location, GLuint64* parameters);
+        private static TglGetUniformui64vARB glGetUniformui64vARB = null;
+
+        // GLAPI void APIENTRY glGetnUniformi64vARB (GLuint program, GLint location, GLsizei bufSize, GLint64 *params);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglGetnUniformi64vARB(GLuint program, GLint location, GLsizei bufSize, GLint64* parameters);
+        private static TglGetnUniformi64vARB glGetnUniformi64vARB = null;
+
+        // GLAPI void APIENTRY glGetnUniformui64vARB (GLuint program, GLint location, GLsizei bufSize, GLuint64 *params);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglGetnUniformui64vARB(GLuint program, GLint location, GLsizei bufSize, GLuint64* parameters);
+        private static TglGetnUniformui64vARB glGetnUniformui64vARB = null;
+
+        // GLAPI void APIENTRY glProgramUniform1i64ARB (GLuint program, GLint location, GLint64 x);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglProgramUniform1i64ARB(GLuint program, GLint location, GLint64 x);
+        private static TglProgramUniform1i64ARB glProgramUniform1i64ARB = null;
+
+        // GLAPI void APIENTRY glProgramUniform2i64ARB (GLuint program, GLint location, GLint64 x, GLint64 y);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglProgramUniform2i64ARB(GLuint program, GLint location, GLint64 x, GLint64 y);
+        private static TglProgramUniform2i64ARB glProgramUniform2i64ARB = null;
+
+        // GLAPI void APIENTRY glProgramUniform3i64ARB (GLuint program, GLint location, GLint64 x, GLint64 y, GLint64 z);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglProgramUniform3i64ARB(GLuint program, GLint location, GLint64 x, GLint64 y, GLint64 z);
+        private static TglProgramUniform3i64ARB glProgramUniform3i64ARB = null;
+
+        // GLAPI void APIENTRY glProgramUniform4i64ARB (GLuint program, GLint location, GLint64 x, GLint64 y, GLint64 z, GLint64 w);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglProgramUniform4i64ARB(GLuint program, GLint location, GLint64 x, GLint64 y, GLint64 z, GLint64 w);
+        private static TglProgramUniform4i64ARB glProgramUniform4i64ARB = null;
+
+        // GLAPI void APIENTRY glProgramUniform1i64vARB (GLuint program, GLint location, GLsizei count, const GLint64 *value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglProgramUniform1i64vARB(GLuint program, GLint location, GLsizei count, GLint64* value);
+        private static TglProgramUniform1i64vARB glProgramUniform1i64vARB = null;
+
+        // GLAPI void APIENTRY glProgramUniform2i64vARB (GLuint program, GLint location, GLsizei count, const GLint64 *value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglProgramUniform2i64vARB(GLuint program, GLint location, GLsizei count, GLint64* value);
+        private static TglProgramUniform2i64vARB glProgramUniform2i64vARB = null;
+
+        // GLAPI void APIENTRY glProgramUniform3i64vARB (GLuint program, GLint location, GLsizei count, const GLint64 *value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglProgramUniform3i64vARB(GLuint program, GLint location, GLsizei count, GLint64* value);
+        private static TglProgramUniform3i64vARB glProgramUniform3i64vARB = null;
+
+        // GLAPI void APIENTRY glProgramUniform4i64vARB (GLuint program, GLint location, GLsizei count, const GLint64 *value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglProgramUniform4i64vARB(GLuint program, GLint location, GLsizei count, GLint64* value);
+        private static TglProgramUniform4i64vARB glProgramUniform4i64vARB = null;
+
+        // GLAPI void APIENTRY glProgramUniform1ui64ARB (GLuint program, GLint location, GLuint64 x);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglProgramUniform1ui64ARB(GLuint program, GLint location, GLuint64 x);
+        private static TglProgramUniform1ui64ARB glProgramUniform1ui64ARB = null;
+
+        // GLAPI void APIENTRY glProgramUniform2ui64ARB (GLuint program, GLint location, GLuint64 x, GLuint64 y);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglProgramUniform2ui64ARB(GLuint program, GLint location, GLuint64 x, GLuint64 y);
+        private static TglProgramUniform2ui64ARB glProgramUniform2ui64ARB = null;
+
+        // GLAPI void APIENTRY glProgramUniform3ui64ARB (GLuint program, GLint location, GLuint64 x, GLuint64 y, GLuint64 z);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglProgramUniform3ui64ARB(GLuint program, GLint location, GLuint64 x, GLuint64 y, GLuint64 z);
+        private static TglProgramUniform3ui64ARB glProgramUniform3ui64ARB = null;
+
+        // GLAPI void APIENTRY glProgramUniform4ui64ARB (GLuint program, GLint location, GLuint64 x, GLuint64 y, GLuint64 z, GLuint64 w);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglProgramUniform4ui64ARB(GLuint program, GLint location, GLuint64 x, GLuint64 y, GLuint64 z, GLuint64 w);
+        private static TglProgramUniform4ui64ARB glProgramUniform4ui64ARB = null;
+
+        // GLAPI void APIENTRY glProgramUniform1ui64vARB (GLuint program, GLint location, GLsizei count, const GLuint64 *value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglProgramUniform1ui64vARB(GLuint program, GLint location, GLsizei count, GLuint64* value);
+        private static TglProgramUniform1ui64vARB glProgramUniform1ui64vARB = null;
+
+        // GLAPI void APIENTRY glProgramUniform2ui64vARB (GLuint program, GLint location, GLsizei count, const GLuint64 *value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglProgramUniform2ui64vARB(GLuint program, GLint location, GLsizei count, GLuint64* value);
+        private static TglProgramUniform2ui64vARB glProgramUniform2ui64vARB = null;
+
+        // GLAPI void APIENTRY glProgramUniform3ui64vARB (GLuint program, GLint location, GLsizei count, const GLuint64 *value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglProgramUniform3ui64vARB(GLuint program, GLint location, GLsizei count, GLuint64* value);
+        private static TglProgramUniform3ui64vARB glProgramUniform3ui64vARB = null;
+
+        // GLAPI void APIENTRY glProgramUniform4ui64vARB (GLuint program, GLint location, GLsizei count, const GLuint64 *value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglProgramUniform4ui64vARB(GLuint program, GLint location, GLsizei count, GLuint64* value);
+        private static TglProgramUniform4ui64vARB glProgramUniform4ui64vARB = null;
+
         #endregion
 
         ///////////////////////////////////////////////////////////////////////

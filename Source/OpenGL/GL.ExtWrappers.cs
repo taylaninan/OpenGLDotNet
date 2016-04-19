@@ -4930,6 +4930,23 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_ARB_transform_feedback_overflow_query (no function entry points)
         ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_ES3_2_compatibility
+        ///////////////////////////////////////////////////////////////////////
+        // GLAPI void APIENTRY glPrimitiveBoundingBoxARB (GLfloat minX, GLfloat minY, GLfloat minZ, GLfloat minW, GLfloat maxX, GLfloat maxY, GLfloat maxZ, GLfloat maxW);
+        public static void PrimitiveBoundingBoxARB(GLfloat minX, GLfloat minY, GLfloat minZ, GLfloat minW, GLfloat maxX, GLfloat maxY, GLfloat maxZ, GLfloat maxW)
+        {
+            if (glPrimitiveBoundingBoxARB != null)
+            {
+                glPrimitiveBoundingBoxARB(minX, minY, minZ, minW, maxX, maxY, maxZ, maxW);
+            }
+        }
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_fragment_shader_interlock (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
         #endregion
 
         ///////////////////////////////////////////////////////////////////////

@@ -5645,25 +5645,41 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_OML_interlace
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_INTERLACE_OML = 0x8980;
-        public const uint GL_INTERLACE_READ_OML = 0x8981;
+        public const uint GL_INTERLACE_OML                              = 0x8980;
+        public const uint GL_INTERLACE_READ_OML                         = 0x8981;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_OML_subsample
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_FORMAT_SUBSAMPLE_24_24_OML = 0x8982;
-        public const uint GL_FORMAT_SUBSAMPLE_244_244_OML = 0x8983;
+        public const uint GL_FORMAT_SUBSAMPLE_24_24_OML                 = 0x8982;
+        public const uint GL_FORMAT_SUBSAMPLE_244_244_OML               = 0x8983;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_OML_resample
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_PACK_RESAMPLE_OML = 0x8984;
-        public const uint GL_UNPACK_RESAMPLE_OML = 0x8985;
-        public const uint GL_RESAMPLE_REPLICATE_OML = 0x8986;
-        public const uint GL_RESAMPLE_ZERO_FILL_OML = 0x8987;
-        public const uint GL_RESAMPLE_AVERAGE_OML = 0x8988;
-        public const uint GL_RESAMPLE_DECIMATE_OML = 0x8989;
+        public const uint GL_PACK_RESAMPLE_OML                          = 0x8984;
+        public const uint GL_UNPACK_RESAMPLE_OML                        = 0x8985;
+        public const uint GL_RESAMPLE_REPLICATE_OML                     = 0x8986;
+        public const uint GL_RESAMPLE_ZERO_FILL_OML                     = 0x8987;
+        public const uint GL_RESAMPLE_AVERAGE_OML                       = 0x8988;
+        public const uint GL_RESAMPLE_DECIMATE_OML                      = 0x8989;
 
+        #endregion
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_OVR_xxx CONSTANTS
+        ///////////////////////////////////////////////////////////////////////
+        #region GL_OVR_xxx CONSTANTS...
+        ///////////////////////////////////////////////////////////////////////
+        // GL_OVR_multiview
+        ///////////////////////////////////////////////////////////////////////
+        public const uint GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_NUM_VIEWS_OVR       = 0x9630;
+        public const uint GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_BASE_VIEW_INDEX_OVR = 0x9632;
+        public const uint GL_MAX_VIEWS_OVR                                      = 0x9631;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_OVR_multiview2 (no constants)
+        ///////////////////////////////////////////////////////////////////////
         #endregion
 
         ///////////////////////////////////////////////////////////////////////
@@ -5673,52 +5689,52 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_PGI_vertex_hints
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_VERTEX_DATA_HINT_PGI           = 0x1A22A;
-        public const uint GL_VERTEX_CONSISTENT_HINT_PGI     = 0x1A22B;
-        public const uint GL_MATERIAL_SIDE_HINT_PGI         = 0x1A22C;
-        public const uint GL_MAX_VERTEX_HINT_PGI            = 0x1A22D;
-        public const uint GL_COLOR3_BIT_PGI                 = 0x00010000;
-        public const uint GL_COLOR4_BIT_PGI                 = 0x00020000;
-        public const uint GL_EDGEFLAG_BIT_PGI               = 0x00040000;
-        public const uint GL_INDEX_BIT_PGI                  = 0x00080000;
-        public const uint GL_MAT_AMBIENT_BIT_PGI            = 0x00100000;
-        public const uint GL_MAT_AMBIENT_AND_DIFFUSE_BIT_PGI = 0x00200000;
-        public const uint GL_MAT_DIFFUSE_BIT_PGI            = 0x00400000;
-        public const uint GL_MAT_EMISSION_BIT_PGI           = 0x00800000;
-        public const uint GL_MAT_COLOR_INDEXES_BIT_PGI      = 0x01000000;
-        public const uint GL_MAT_SHININESS_BIT_PGI          = 0x02000000;
-        public const uint GL_MAT_SPECULAR_BIT_PGI           = 0x04000000;
-        public const uint GL_NORMAL_BIT_PGI                 = 0x08000000;
-        public const uint GL_TEXCOORD1_BIT_PGI              = 0x10000000;
-        public const uint GL_TEXCOORD2_BIT_PGI              = 0x20000000;
-        public const uint GL_TEXCOORD3_BIT_PGI              = 0x40000000;
-        public const uint GL_TEXCOORD4_BIT_PGI              = 0x80000000;
-        public const uint GL_VERTEX23_BIT_PGI               = 0x00000004;
-        public const uint GL_VERTEX4_BIT_PGI                = 0x00000008;
+        public const uint GL_VERTEX_DATA_HINT_PGI                       = 0x1A22A;
+        public const uint GL_VERTEX_CONSISTENT_HINT_PGI                 = 0x1A22B;
+        public const uint GL_MATERIAL_SIDE_HINT_PGI                     = 0x1A22C;
+        public const uint GL_MAX_VERTEX_HINT_PGI                        = 0x1A22D;
+        public const uint GL_COLOR3_BIT_PGI                             = 0x00010000;
+        public const uint GL_COLOR4_BIT_PGI                             = 0x00020000;
+        public const uint GL_EDGEFLAG_BIT_PGI                           = 0x00040000;
+        public const uint GL_INDEX_BIT_PGI                              = 0x00080000;
+        public const uint GL_MAT_AMBIENT_BIT_PGI                        = 0x00100000;
+        public const uint GL_MAT_AMBIENT_AND_DIFFUSE_BIT_PGI            = 0x00200000;
+        public const uint GL_MAT_DIFFUSE_BIT_PGI                        = 0x00400000;
+        public const uint GL_MAT_EMISSION_BIT_PGI                       = 0x00800000;
+        public const uint GL_MAT_COLOR_INDEXES_BIT_PGI                  = 0x01000000;
+        public const uint GL_MAT_SHININESS_BIT_PGI                      = 0x02000000;
+        public const uint GL_MAT_SPECULAR_BIT_PGI                       = 0x04000000;
+        public const uint GL_NORMAL_BIT_PGI                             = 0x08000000;
+        public const uint GL_TEXCOORD1_BIT_PGI                          = 0x10000000;
+        public const uint GL_TEXCOORD2_BIT_PGI                          = 0x20000000;
+        public const uint GL_TEXCOORD3_BIT_PGI                          = 0x40000000;
+        public const uint GL_TEXCOORD4_BIT_PGI                          = 0x80000000;
+        public const uint GL_VERTEX23_BIT_PGI                           = 0x00000004;
+        public const uint GL_VERTEX4_BIT_PGI                            = 0x00000008;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_PGI_misc_hints
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_PREFER_DOUBLEBUFFER_HINT_PGI   = 0x1A1F8;
-        public const uint GL_CONSERVE_MEMORY_HINT_PGI       = 0x1A1FD;
-        public const uint GL_RECLAIM_MEMORY_HINT_PGI        = 0x1A1FE;
-        public const uint GL_NATIVE_GRAPHICS_HANDLE_PGI     = 0x1A202;
-        public const uint GL_NATIVE_GRAPHICS_BEGIN_HINT_PGI = 0x1A203;
-        public const uint GL_NATIVE_GRAPHICS_END_HINT_PGI   = 0x1A204;
-        public const uint GL_ALWAYS_FAST_HINT_PGI           = 0x1A20C;
-        public const uint GL_ALWAYS_SOFT_HINT_PGI           = 0x1A20D;
-        public const uint GL_ALLOW_DRAW_OBJ_HINT_PGI        = 0x1A20E;
-        public const uint GL_ALLOW_DRAW_WIN_HINT_PGI        = 0x1A20F;
-        public const uint GL_ALLOW_DRAW_FRG_HINT_PGI        = 0x1A210;
-        public const uint GL_ALLOW_DRAW_MEM_HINT_PGI        = 0x1A211;
-        public const uint GL_STRICT_DEPTHFUNC_HINT_PGI      = 0x1A216;
-        public const uint GL_STRICT_LIGHTING_HINT_PGI       = 0x1A217;
-        public const uint GL_STRICT_SCISSOR_HINT_PGI        = 0x1A218;
-        public const uint GL_FULL_STIPPLE_HINT_PGI          = 0x1A219;
-        public const uint GL_CLIP_NEAR_HINT_PGI             = 0x1A220;
-        public const uint GL_CLIP_FAR_HINT_PGI              = 0x1A221;
-        public const uint GL_WIDE_LINE_HINT_PGI             = 0x1A222;
-        public const uint GL_BACK_NORMALS_HINT_PGI          = 0x1A223;
+        public const uint GL_PREFER_DOUBLEBUFFER_HINT_PGI               = 0x1A1F8;
+        public const uint GL_CONSERVE_MEMORY_HINT_PGI                   = 0x1A1FD;
+        public const uint GL_RECLAIM_MEMORY_HINT_PGI                    = 0x1A1FE;
+        public const uint GL_NATIVE_GRAPHICS_HANDLE_PGI                 = 0x1A202;
+        public const uint GL_NATIVE_GRAPHICS_BEGIN_HINT_PGI             = 0x1A203;
+        public const uint GL_NATIVE_GRAPHICS_END_HINT_PGI               = 0x1A204;
+        public const uint GL_ALWAYS_FAST_HINT_PGI                       = 0x1A20C;
+        public const uint GL_ALWAYS_SOFT_HINT_PGI                       = 0x1A20D;
+        public const uint GL_ALLOW_DRAW_OBJ_HINT_PGI                    = 0x1A20E;
+        public const uint GL_ALLOW_DRAW_WIN_HINT_PGI                    = 0x1A20F;
+        public const uint GL_ALLOW_DRAW_FRG_HINT_PGI                    = 0x1A210;
+        public const uint GL_ALLOW_DRAW_MEM_HINT_PGI                    = 0x1A211;
+        public const uint GL_STRICT_DEPTHFUNC_HINT_PGI                  = 0x1A216;
+        public const uint GL_STRICT_LIGHTING_HINT_PGI                   = 0x1A217;
+        public const uint GL_STRICT_SCISSOR_HINT_PGI                    = 0x1A218;
+        public const uint GL_FULL_STIPPLE_HINT_PGI                      = 0x1A219;
+        public const uint GL_CLIP_NEAR_HINT_PGI                         = 0x1A220;
+        public const uint GL_CLIP_FAR_HINT_PGI                          = 0x1A221;
+        public const uint GL_WIDE_LINE_HINT_PGI                         = 0x1A222;
+        public const uint GL_BACK_NORMALS_HINT_PGI                      = 0x1A223;
 
         #endregion
 
@@ -5729,8 +5745,8 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_REND_screen_coordinates
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_SCREEN_COORDINATES_REND        = 0x8490;
-        public const uint GL_INVERTED_SCREEN_W_REND         = 0x8491;
+        public const uint GL_SCREEN_COORDINATES_REND                    = 0x8490;
+        public const uint GL_INVERTED_SCREEN_W_REND                     = 0x8491;
 
         #endregion
 
@@ -5741,10 +5757,12 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_S3_s3tc
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_RGB_S3TC                       = 0x83A0;
-        public const uint GL_RGB4_S3TC                      = 0x83A1;
-        public const uint GL_RGBA_S3TC                      = 0x83A2;
-        public const uint GL_RGBA4_S3TC                     = 0x83A3;
+        public const uint GL_RGB_S3TC                                   = 0x83A0;
+        public const uint GL_RGB4_S3TC                                  = 0x83A1;
+        public const uint GL_RGBA_S3TC                                  = 0x83A2;
+        public const uint GL_RGBA4_S3TC                                 = 0x83A3;
+        public const uint GL_RGBA_DXT5_S3TC                             = 0x83A4;
+        public const uint GL_RGBA4_DXT5_S3TC                            = 0x83A5;
 
         #endregion
 
@@ -5755,17 +5773,17 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_SGI_color_matrix
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_COLOR_MATRIX_SGI               = 0x80B1;
-        public const uint GL_COLOR_MATRIX_STACK_DEPTH_SGI   = 0x80B2;
-        public const uint GL_MAX_COLOR_MATRIX_STACK_DEPTH_SGI = 0x80B3;
-        public const uint GL_POST_COLOR_MATRIX_RED_SCALE_SGI = 0x80B4;
-        public const uint GL_POST_COLOR_MATRIX_GREEN_SCALE_SGI = 0x80B5;
-        public const uint GL_POST_COLOR_MATRIX_BLUE_SCALE_SGI = 0x80B6;
-        public const uint GL_POST_COLOR_MATRIX_ALPHA_SCALE_SGI = 0x80B7;
-        public const uint GL_POST_COLOR_MATRIX_RED_BIAS_SGI = 0x80B8;
-        public const uint GL_POST_COLOR_MATRIX_GREEN_BIAS_SGI = 0x80B9;
-        public const uint GL_POST_COLOR_MATRIX_BLUE_BIAS_SGI = 0x80BA;
-        public const uint GL_POST_COLOR_MATRIX_ALPHA_BIAS_SGI = 0x80BB;
+        public const uint GL_COLOR_MATRIX_SGI                           = 0x80B1;
+        public const uint GL_COLOR_MATRIX_STACK_DEPTH_SGI               = 0x80B2;
+        public const uint GL_MAX_COLOR_MATRIX_STACK_DEPTH_SGI           = 0x80B3;
+        public const uint GL_POST_COLOR_MATRIX_RED_SCALE_SGI            = 0x80B4;
+        public const uint GL_POST_COLOR_MATRIX_GREEN_SCALE_SGI          = 0x80B5;
+        public const uint GL_POST_COLOR_MATRIX_BLUE_SCALE_SGI           = 0x80B6;
+        public const uint GL_POST_COLOR_MATRIX_ALPHA_SCALE_SGI          = 0x80B7;
+        public const uint GL_POST_COLOR_MATRIX_RED_BIAS_SGI             = 0x80B8;
+        public const uint GL_POST_COLOR_MATRIX_GREEN_BIAS_SGI           = 0x80B9;
+        public const uint GL_POST_COLOR_MATRIX_BLUE_BIAS_SGI            = 0x80BA;
+        public const uint GL_POST_COLOR_MATRIX_ALPHA_BIAS_SGI           = 0x80BB;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGI_color_table
@@ -5809,152 +5827,152 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIS_texture_filter4
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_FILTER4_SGIS                   = 0x8146;
-        public const uint GL_TEXTURE_FILTER4_SIZE_SGIS      = 0x8147;
+        public const uint GL_FILTER4_SGIS                               = 0x8146;
+        public const uint GL_TEXTURE_FILTER4_SIZE_SGIS                  = 0x8147;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIS_pixel_texture
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_PIXEL_TEXTURE_SGIS             = 0x8353;
-        public const uint GL_PIXEL_FRAGMENT_RGB_SOURCE_SGIS = 0x8354;
-        public const uint GL_PIXEL_FRAGMENT_ALPHA_SOURCE_SGIS = 0x8355;
-        public const uint GL_PIXEL_GROUP_COLOR_SGIS         = 0x8356;
+        public const uint GL_PIXEL_TEXTURE_SGIS                         = 0x8353;
+        public const uint GL_PIXEL_FRAGMENT_RGB_SOURCE_SGIS             = 0x8354;
+        public const uint GL_PIXEL_FRAGMENT_ALPHA_SOURCE_SGIS           = 0x8355;
+        public const uint GL_PIXEL_GROUP_COLOR_SGIS                     = 0x8356;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIS_texture4D
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_PACK_SKIP_VOLUMES_SGIS         = 0x8130;
-        public const uint GL_PACK_IMAGE_DEPTH_SGIS          = 0x8131;
-        public const uint GL_UNPACK_SKIP_VOLUMES_SGIS       = 0x8132;
-        public const uint GL_UNPACK_IMAGE_DEPTH_SGIS        = 0x8133;
-        public const uint GL_TEXTURE_4D_SGIS                = 0x8134;
-        public const uint GL_PROXY_TEXTURE_4D_SGIS          = 0x8135;
-        public const uint GL_TEXTURE_4DSIZE_SGIS            = 0x8136;
-        public const uint GL_TEXTURE_WRAP_Q_SGIS            = 0x8137;
-        public const uint GL_MAX_4D_TEXTURE_SIZE_SGIS       = 0x8138;
-        public const uint GL_TEXTURE_4D_BINDING_SGIS        = 0x814F;
+        public const uint GL_PACK_SKIP_VOLUMES_SGIS                     = 0x8130;
+        public const uint GL_PACK_IMAGE_DEPTH_SGIS                      = 0x8131;
+        public const uint GL_UNPACK_SKIP_VOLUMES_SGIS                   = 0x8132;
+        public const uint GL_UNPACK_IMAGE_DEPTH_SGIS                    = 0x8133;
+        public const uint GL_TEXTURE_4D_SGIS                            = 0x8134;
+        public const uint GL_PROXY_TEXTURE_4D_SGIS                      = 0x8135;
+        public const uint GL_TEXTURE_4DSIZE_SGIS                        = 0x8136;
+        public const uint GL_TEXTURE_WRAP_Q_SGIS                        = 0x8137;
+        public const uint GL_MAX_4D_TEXTURE_SIZE_SGIS                   = 0x8138;
+        public const uint GL_TEXTURE_4D_BINDING_SGIS                    = 0x814F;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIS_detail_texture
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_DETAIL_TEXTURE_2D_SGIS         = 0x8095;
-        public const uint GL_DETAIL_TEXTURE_2D_BINDING_SGIS = 0x8096;
-        public const uint GL_LINEAR_DETAIL_SGIS             = 0x8097;
-        public const uint GL_LINEAR_DETAIL_ALPHA_SGIS       = 0x8098;
-        public const uint GL_LINEAR_DETAIL_COLOR_SGIS       = 0x8099;
-        public const uint GL_DETAIL_TEXTURE_LEVEL_SGIS      = 0x809A;
-        public const uint GL_DETAIL_TEXTURE_MODE_SGIS       = 0x809B;
-        public const uint GL_DETAIL_TEXTURE_FUNC_POINTS_SGIS = 0x809C;
+        public const uint GL_DETAIL_TEXTURE_2D_SGIS                     = 0x8095;
+        public const uint GL_DETAIL_TEXTURE_2D_BINDING_SGIS             = 0x8096;
+        public const uint GL_LINEAR_DETAIL_SGIS                         = 0x8097;
+        public const uint GL_LINEAR_DETAIL_ALPHA_SGIS                   = 0x8098;
+        public const uint GL_LINEAR_DETAIL_COLOR_SGIS                   = 0x8099;
+        public const uint GL_DETAIL_TEXTURE_LEVEL_SGIS                  = 0x809A;
+        public const uint GL_DETAIL_TEXTURE_MODE_SGIS                   = 0x809B;
+        public const uint GL_DETAIL_TEXTURE_FUNC_POINTS_SGIS            = 0x809C;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIS_sharpen_texture
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_LINEAR_SHARPEN_SGIS            = 0x80AD;
-        public const uint GL_LINEAR_SHARPEN_ALPHA_SGIS      = 0x80AE;
-        public const uint GL_LINEAR_SHARPEN_COLOR_SGIS      = 0x80AF;
-        public const uint GL_SHARPEN_TEXTURE_FUNC_POINTS_SGIS = 0x80B0;
+        public const uint GL_LINEAR_SHARPEN_SGIS                        = 0x80AD;
+        public const uint GL_LINEAR_SHARPEN_ALPHA_SGIS                  = 0x80AE;
+        public const uint GL_LINEAR_SHARPEN_COLOR_SGIS                  = 0x80AF;
+        public const uint GL_SHARPEN_TEXTURE_FUNC_POINTS_SGIS           = 0x80B0;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIS_texture_lod
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_TEXTURE_MIN_LOD_SGIS           = 0x813A;
-        public const uint GL_TEXTURE_MAX_LOD_SGIS           = 0x813B;
-        public const uint GL_TEXTURE_BASE_LEVEL_SGIS        = 0x813C;
-        public const uint GL_TEXTURE_MAX_LEVEL_SGIS         = 0x813D;
+        public const uint GL_TEXTURE_MIN_LOD_SGIS                       = 0x813A;
+        public const uint GL_TEXTURE_MAX_LOD_SGIS                       = 0x813B;
+        public const uint GL_TEXTURE_BASE_LEVEL_SGIS                    = 0x813C;
+        public const uint GL_TEXTURE_MAX_LEVEL_SGIS                     = 0x813D;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIS_multisample
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_MULTISAMPLE_SGIS               = 0x809D;
-        public const uint GL_SAMPLE_ALPHA_TO_MASK_SGIS      = 0x809E;
-        public const uint GL_SAMPLE_ALPHA_TO_ONE_SGIS       = 0x809F;
-        public const uint GL_SAMPLE_MASK_SGIS               = 0x80A0;
-        public const uint GL_1PASS_SGIS                     = 0x80A1;
-        public const uint GL_2PASS_0_SGIS                   = 0x80A2;
-        public const uint GL_2PASS_1_SGIS                   = 0x80A3;
-        public const uint GL_4PASS_0_SGIS                   = 0x80A4;
-        public const uint GL_4PASS_1_SGIS                   = 0x80A5;
-        public const uint GL_4PASS_2_SGIS                   = 0x80A6;
-        public const uint GL_4PASS_3_SGIS                   = 0x80A7;
-        public const uint GL_SAMPLE_BUFFERS_SGIS            = 0x80A8;
-        public const uint GL_SAMPLES_SGIS                   = 0x80A9;
-        public const uint GL_SAMPLE_MASK_VALUE_SGIS         = 0x80AA;
-        public const uint GL_SAMPLE_MASK_INVERT_SGIS        = 0x80AB;
-        public const uint GL_SAMPLE_PATTERN_SGIS            = 0x80AC;
+        public const uint GL_MULTISAMPLE_SGIS                           = 0x809D;
+        public const uint GL_SAMPLE_ALPHA_TO_MASK_SGIS                  = 0x809E;
+        public const uint GL_SAMPLE_ALPHA_TO_ONE_SGIS                   = 0x809F;
+        public const uint GL_SAMPLE_MASK_SGIS                           = 0x80A0;
+        public const uint GL_1PASS_SGIS                                 = 0x80A1;
+        public const uint GL_2PASS_0_SGIS                               = 0x80A2;
+        public const uint GL_2PASS_1_SGIS                               = 0x80A3;
+        public const uint GL_4PASS_0_SGIS                               = 0x80A4;
+        public const uint GL_4PASS_1_SGIS                               = 0x80A5;
+        public const uint GL_4PASS_2_SGIS                               = 0x80A6;
+        public const uint GL_4PASS_3_SGIS                               = 0x80A7;
+        public const uint GL_SAMPLE_BUFFERS_SGIS                        = 0x80A8;
+        public const uint GL_SAMPLES_SGIS                               = 0x80A9;
+        public const uint GL_SAMPLE_MASK_VALUE_SGIS                     = 0x80AA;
+        public const uint GL_SAMPLE_MASK_INVERT_SGIS                    = 0x80AB;
+        public const uint GL_SAMPLE_PATTERN_SGIS                        = 0x80AC;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIS_generate_mipmap
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_GENERATE_MIPMAP_SGIS           = 0x8191;
-        public const uint GL_GENERATE_MIPMAP_HINT_SGIS      = 0x8192;
+        public const uint GL_GENERATE_MIPMAP_SGIS                       = 0x8191;
+        public const uint GL_GENERATE_MIPMAP_HINT_SGIS                  = 0x8192;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIS_texture_edge_clamp
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_CLAMP_TO_EDGE_SGIS             = 0x812F;
+        public const uint GL_CLAMP_TO_EDGE_SGIS                         = 0x812F;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIS_texture_border_clamp
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_CLAMP_TO_BORDER_SGIS           = 0x812D;
+        public const uint GL_CLAMP_TO_BORDER_SGIS                       = 0x812D;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIS_texture_select
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_DUAL_ALPHA4_SGIS               = 0x8110;
-        public const uint GL_DUAL_ALPHA8_SGIS               = 0x8111;
-        public const uint GL_DUAL_ALPHA12_SGIS              = 0x8112;
-        public const uint GL_DUAL_ALPHA16_SGIS              = 0x8113;
-        public const uint GL_DUAL_LUMINANCE4_SGIS           = 0x8114;
-        public const uint GL_DUAL_LUMINANCE8_SGIS           = 0x8115;
-        public const uint GL_DUAL_LUMINANCE12_SGIS          = 0x8116;
-        public const uint GL_DUAL_LUMINANCE16_SGIS          = 0x8117;
-        public const uint GL_DUAL_INTENSITY4_SGIS           = 0x8118;
-        public const uint GL_DUAL_INTENSITY8_SGIS           = 0x8119;
-        public const uint GL_DUAL_INTENSITY12_SGIS          = 0x811A;
-        public const uint GL_DUAL_INTENSITY16_SGIS          = 0x811B;
-        public const uint GL_DUAL_LUMINANCE_ALPHA4_SGIS     = 0x811C;
-        public const uint GL_DUAL_LUMINANCE_ALPHA8_SGIS     = 0x811D;
-        public const uint GL_QUAD_ALPHA4_SGIS               = 0x811E;
-        public const uint GL_QUAD_ALPHA8_SGIS               = 0x811F;
-        public const uint GL_QUAD_LUMINANCE4_SGIS           = 0x8120;
-        public const uint GL_QUAD_LUMINANCE8_SGIS           = 0x8121;
-        public const uint GL_QUAD_INTENSITY4_SGIS           = 0x8122;
-        public const uint GL_QUAD_INTENSITY8_SGIS           = 0x8123;
-        public const uint GL_DUAL_TEXTURE_SELECT_SGIS       = 0x8124;
-        public const uint GL_QUAD_TEXTURE_SELECT_SGIS       = 0x8125;
+        public const uint GL_DUAL_ALPHA4_SGIS                           = 0x8110;
+        public const uint GL_DUAL_ALPHA8_SGIS                           = 0x8111;
+        public const uint GL_DUAL_ALPHA12_SGIS                          = 0x8112;
+        public const uint GL_DUAL_ALPHA16_SGIS                          = 0x8113;
+        public const uint GL_DUAL_LUMINANCE4_SGIS                       = 0x8114;
+        public const uint GL_DUAL_LUMINANCE8_SGIS                       = 0x8115;
+        public const uint GL_DUAL_LUMINANCE12_SGIS                      = 0x8116;
+        public const uint GL_DUAL_LUMINANCE16_SGIS                      = 0x8117;
+        public const uint GL_DUAL_INTENSITY4_SGIS                       = 0x8118;
+        public const uint GL_DUAL_INTENSITY8_SGIS                       = 0x8119;
+        public const uint GL_DUAL_INTENSITY12_SGIS                      = 0x811A;
+        public const uint GL_DUAL_INTENSITY16_SGIS                      = 0x811B;
+        public const uint GL_DUAL_LUMINANCE_ALPHA4_SGIS                 = 0x811C;
+        public const uint GL_DUAL_LUMINANCE_ALPHA8_SGIS                 = 0x811D;
+        public const uint GL_QUAD_ALPHA4_SGIS                           = 0x811E;
+        public const uint GL_QUAD_ALPHA8_SGIS                           = 0x811F;
+        public const uint GL_QUAD_LUMINANCE4_SGIS                       = 0x8120;
+        public const uint GL_QUAD_LUMINANCE8_SGIS                       = 0x8121;
+        public const uint GL_QUAD_INTENSITY4_SGIS                       = 0x8122;
+        public const uint GL_QUAD_INTENSITY8_SGIS                       = 0x8123;
+        public const uint GL_DUAL_TEXTURE_SELECT_SGIS                   = 0x8124;
+        public const uint GL_QUAD_TEXTURE_SELECT_SGIS                   = 0x8125;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIS_point_parameters
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_POINT_SIZE_MIN_SGIS            = 0x8126;
-        public const uint GL_POINT_SIZE_MAX_SGIS            = 0x8127;
-        public const uint GL_POINT_FADE_THRESHOLD_SIZE_SGIS = 0x8128;
-        public const uint GL_DISTANCE_ATTENUATION_SGIS      = 0x8129;
+        public const uint GL_POINT_SIZE_MIN_SGIS                        = 0x8126;
+        public const uint GL_POINT_SIZE_MAX_SGIS                        = 0x8127;
+        public const uint GL_POINT_FADE_THRESHOLD_SIZE_SGIS             = 0x8128;
+        public const uint GL_DISTANCE_ATTENUATION_SGIS                  = 0x8129;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIS_fog_function
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_FOG_FUNC_SGIS                  = 0x812A;
-        public const uint GL_FOG_FUNC_POINTS_SGIS           = 0x812B;
-        public const uint GL_MAX_FOG_FUNC_POINTS_SGIS       = 0x812C;
+        public const uint GL_FOG_FUNC_SGIS                              = 0x812A;
+        public const uint GL_FOG_FUNC_POINTS_SGIS                       = 0x812B;
+        public const uint GL_MAX_FOG_FUNC_POINTS_SGIS                   = 0x812C;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIS_point_line_texgen
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_EYE_DISTANCE_TO_POINT_SGIS     = 0x81F0;
-        public const uint GL_OBJECT_DISTANCE_TO_POINT_SGIS  = 0x81F1;
-        public const uint GL_EYE_DISTANCE_TO_LINE_SGIS      = 0x81F2;
-        public const uint GL_OBJECT_DISTANCE_TO_LINE_SGIS   = 0x81F3;
-        public const uint GL_EYE_POINT_SGIS                 = 0x81F4;
-        public const uint GL_OBJECT_POINT_SGIS              = 0x81F5;
-        public const uint GL_EYE_LINE_SGIS                  = 0x81F6;
-        public const uint GL_OBJECT_LINE_SGIS               = 0x81F7;
+        public const uint GL_EYE_DISTANCE_TO_POINT_SGIS                 = 0x81F0;
+        public const uint GL_OBJECT_DISTANCE_TO_POINT_SGIS              = 0x81F1;
+        public const uint GL_EYE_DISTANCE_TO_LINE_SGIS                  = 0x81F2;
+        public const uint GL_OBJECT_DISTANCE_TO_LINE_SGIS               = 0x81F3;
+        public const uint GL_EYE_POINT_SGIS                             = 0x81F4;
+        public const uint GL_OBJECT_POINT_SGIS                          = 0x81F5;
+        public const uint GL_EYE_LINE_SGIS                              = 0x81F6;
+        public const uint GL_OBJECT_LINE_SGIS                           = 0x81F7;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIS_texture_color_mask
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_TEXTURE_COLOR_WRITEMASK_SGIS   = 0x81EF;
+        public const uint GL_TEXTURE_COLOR_WRITEMASK_SGIS               = 0x81EF;
 
         #endregion
 
@@ -5965,112 +5983,112 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_pixel_texture
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_PIXEL_TEX_GEN_SGIX             = 0x8139;
-        public const uint GL_PIXEL_TEX_GEN_MODE_SGIX        = 0x832B;
+        public const uint GL_PIXEL_TEX_GEN_SGIX                         = 0x8139;
+        public const uint GL_PIXEL_TEX_GEN_MODE_SGIX                    = 0x832B;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_clipmap
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_LINEAR_CLIPMAP_LINEAR_SGIX     = 0x8170;
-        public const uint GL_TEXTURE_CLIPMAP_CENTER_SGIX    = 0x8171;
-        public const uint GL_TEXTURE_CLIPMAP_FRAME_SGIX     = 0x8172;
-        public const uint GL_TEXTURE_CLIPMAP_OFFSET_SGIX    = 0x8173;
-        public const uint GL_TEXTURE_CLIPMAP_VIRTUAL_DEPTH_SGIX = 0x8174;
-        public const uint GL_TEXTURE_CLIPMAP_LOD_OFFSET_SGIX = 0x8175;
-        public const uint GL_TEXTURE_CLIPMAP_DEPTH_SGIX     = 0x8176;
-        public const uint GL_MAX_CLIPMAP_DEPTH_SGIX         = 0x8177;
-        public const uint GL_MAX_CLIPMAP_VIRTUAL_DEPTH_SGIX = 0x8178;
-        public const uint GL_NEAREST_CLIPMAP_NEAREST_SGIX   = 0x844D;
-        public const uint GL_NEAREST_CLIPMAP_LINEAR_SGIX    = 0x844E;
-        public const uint GL_LINEAR_CLIPMAP_NEAREST_SGIX    = 0x844F;
+        public const uint GL_LINEAR_CLIPMAP_LINEAR_SGIX                 = 0x8170;
+        public const uint GL_TEXTURE_CLIPMAP_CENTER_SGIX                = 0x8171;
+        public const uint GL_TEXTURE_CLIPMAP_FRAME_SGIX                 = 0x8172;
+        public const uint GL_TEXTURE_CLIPMAP_OFFSET_SGIX                = 0x8173;
+        public const uint GL_TEXTURE_CLIPMAP_VIRTUAL_DEPTH_SGIX         = 0x8174;
+        public const uint GL_TEXTURE_CLIPMAP_LOD_OFFSET_SGIX            = 0x8175;
+        public const uint GL_TEXTURE_CLIPMAP_DEPTH_SGIX                 = 0x8176;
+        public const uint GL_MAX_CLIPMAP_DEPTH_SGIX                     = 0x8177;
+        public const uint GL_MAX_CLIPMAP_VIRTUAL_DEPTH_SGIX             = 0x8178;
+        public const uint GL_NEAREST_CLIPMAP_NEAREST_SGIX               = 0x844D;
+        public const uint GL_NEAREST_CLIPMAP_LINEAR_SGIX                = 0x844E;
+        public const uint GL_LINEAR_CLIPMAP_NEAREST_SGIX                = 0x844F;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_shadow
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_TEXTURE_COMPARE_SGIX           = 0x819A;
-        public const uint GL_TEXTURE_COMPARE_OPERATOR_SGIX  = 0x819B;
-        public const uint GL_TEXTURE_LEQUAL_R_SGIX          = 0x819C;
-        public const uint GL_TEXTURE_GEQUAL_R_SGIX          = 0x819D;
+        public const uint GL_TEXTURE_COMPARE_SGIX                       = 0x819A;
+        public const uint GL_TEXTURE_COMPARE_OPERATOR_SGIX              = 0x819B;
+        public const uint GL_TEXTURE_LEQUAL_R_SGIX                      = 0x819C;
+        public const uint GL_TEXTURE_GEQUAL_R_SGIX                      = 0x819D;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_interlace
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_INTERLACE_SGIX                 = 0x8094;
+        public const uint GL_INTERLACE_SGIX                             = 0x8094;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_pixel_tiles
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_PIXEL_TILE_BEST_ALIGNMENT_SGIX = 0x813E;
-        public const uint GL_PIXEL_TILE_CACHE_INCREMENT_SGIX = 0x813F;
-        public const uint GL_PIXEL_TILE_WIDTH_SGIX          = 0x8140;
-        public const uint GL_PIXEL_TILE_HEIGHT_SGIX         = 0x8141;
-        public const uint GL_PIXEL_TILE_GRID_WIDTH_SGIX     = 0x8142;
-        public const uint GL_PIXEL_TILE_GRID_HEIGHT_SGIX    = 0x8143;
-        public const uint GL_PIXEL_TILE_GRID_DEPTH_SGIX     = 0x8144;
-        public const uint GL_PIXEL_TILE_CACHE_SIZE_SGIX     = 0x8145;
+        public const uint GL_PIXEL_TILE_BEST_ALIGNMENT_SGIX             = 0x813E;
+        public const uint GL_PIXEL_TILE_CACHE_INCREMENT_SGIX            = 0x813F;
+        public const uint GL_PIXEL_TILE_WIDTH_SGIX                      = 0x8140;
+        public const uint GL_PIXEL_TILE_HEIGHT_SGIX                     = 0x8141;
+        public const uint GL_PIXEL_TILE_GRID_WIDTH_SGIX                 = 0x8142;
+        public const uint GL_PIXEL_TILE_GRID_HEIGHT_SGIX                = 0x8143;
+        public const uint GL_PIXEL_TILE_GRID_DEPTH_SGIX                 = 0x8144;
+        public const uint GL_PIXEL_TILE_CACHE_SIZE_SGIX                 = 0x8145;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_texture_select (no constants??? Reuse from GL_SGIS_texture_select)
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_DUAL_ALPHA4_SGIX               = 0x8110;
-        public const uint GL_DUAL_ALPHA8_SGIX               = 0x8111;
-        public const uint GL_DUAL_ALPHA12_SGIX              = 0x8112;
-        public const uint GL_DUAL_ALPHA16_SGIX              = 0x8113;
-        public const uint GL_DUAL_LUMINANCE4_SGIX           = 0x8114;
-        public const uint GL_DUAL_LUMINANCE8_SGIX           = 0x8115;
-        public const uint GL_DUAL_LUMINANCE12_SGIX          = 0x8116;
-        public const uint GL_DUAL_LUMINANCE16_SGIX          = 0x8117;
-        public const uint GL_DUAL_INTENSITY4_SGIX           = 0x8118;
-        public const uint GL_DUAL_INTENSITY8_SGIX           = 0x8119;
-        public const uint GL_DUAL_INTENSITY12_SGIX          = 0x811A;
-        public const uint GL_DUAL_INTENSITY16_SGIX          = 0x811B;
-        public const uint GL_DUAL_LUMINANCE_ALPHA4_SGIX     = 0x811C;
-        public const uint GL_DUAL_LUMINANCE_ALPHA8_SGIX     = 0x811D;
-        public const uint GL_QUAD_ALPHA4_SGIX               = 0x811E;
-        public const uint GL_QUAD_ALPHA8_SGIX               = 0x811F;
-        public const uint GL_QUAD_LUMINANCE4_SGIX           = 0x8120;
-        public const uint GL_QUAD_LUMINANCE8_SGIX           = 0x8121;
-        public const uint GL_QUAD_INTENSITY4_SGIX           = 0x8122;
-        public const uint GL_QUAD_INTENSITY8_SGIX           = 0x8123;
-        public const uint GL_DUAL_TEXTURE_SELECT_SGIX       = 0x8124;
-        public const uint GL_QUAD_TEXTURE_SELECT_SGIX       = 0x8125;
+        public const uint GL_DUAL_ALPHA4_SGIX                           = 0x8110;
+        public const uint GL_DUAL_ALPHA8_SGIX                           = 0x8111;
+        public const uint GL_DUAL_ALPHA12_SGIX                          = 0x8112;
+        public const uint GL_DUAL_ALPHA16_SGIX                          = 0x8113;
+        public const uint GL_DUAL_LUMINANCE4_SGIX                       = 0x8114;
+        public const uint GL_DUAL_LUMINANCE8_SGIX                       = 0x8115;
+        public const uint GL_DUAL_LUMINANCE12_SGIX                      = 0x8116;
+        public const uint GL_DUAL_LUMINANCE16_SGIX                      = 0x8117;
+        public const uint GL_DUAL_INTENSITY4_SGIX                       = 0x8118;
+        public const uint GL_DUAL_INTENSITY8_SGIX                       = 0x8119;
+        public const uint GL_DUAL_INTENSITY12_SGIX                      = 0x811A;
+        public const uint GL_DUAL_INTENSITY16_SGIX                      = 0x811B;
+        public const uint GL_DUAL_LUMINANCE_ALPHA4_SGIX                 = 0x811C;
+        public const uint GL_DUAL_LUMINANCE_ALPHA8_SGIX                 = 0x811D;
+        public const uint GL_QUAD_ALPHA4_SGIX                           = 0x811E;
+        public const uint GL_QUAD_ALPHA8_SGIX                           = 0x811F;
+        public const uint GL_QUAD_LUMINANCE4_SGIX                       = 0x8120;
+        public const uint GL_QUAD_LUMINANCE8_SGIX                       = 0x8121;
+        public const uint GL_QUAD_INTENSITY4_SGIX                       = 0x8122;
+        public const uint GL_QUAD_INTENSITY8_SGIX                       = 0x8123;
+        public const uint GL_DUAL_TEXTURE_SELECT_SGIX                   = 0x8124;
+        public const uint GL_QUAD_TEXTURE_SELECT_SGIX                   = 0x8125;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_sprite
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_SPRITE_SGIX                    = 0x8148;
-        public const uint GL_SPRITE_MODE_SGIX               = 0x8149;
-        public const uint GL_SPRITE_AXIS_SGIX               = 0x814A;
-        public const uint GL_SPRITE_TRANSLATION_SGIX        = 0x814B;
-        public const uint GL_SPRITE_AXIAL_SGIX              = 0x814C;
-        public const uint GL_SPRITE_OBJECT_ALIGNED_SGIX     = 0x814D;
-        public const uint GL_SPRITE_EYE_ALIGNED_SGIX        = 0x814E;
+        public const uint GL_SPRITE_SGIX                                = 0x8148;
+        public const uint GL_SPRITE_MODE_SGIX                           = 0x8149;
+        public const uint GL_SPRITE_AXIS_SGIX                           = 0x814A;
+        public const uint GL_SPRITE_TRANSLATION_SGIX                    = 0x814B;
+        public const uint GL_SPRITE_AXIAL_SGIX                          = 0x814C;
+        public const uint GL_SPRITE_OBJECT_ALIGNED_SGIX                 = 0x814D;
+        public const uint GL_SPRITE_EYE_ALIGNED_SGIX                    = 0x814E;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_texture_multi_buffer
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_TEXTURE_MULTI_BUFFER_HINT_SGIX = 0x812E;
+        public const uint GL_TEXTURE_MULTI_BUFFER_HINT_SGIX             = 0x812E;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_instruments
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_INSTRUMENT_BUFFER_POINTER_SGIX = 0x8180;
-        public const uint GL_INSTRUMENT_MEASUREMENTS_SGIX   = 0x8181;
+        public const uint GL_INSTRUMENT_BUFFER_POINTER_SGIX             = 0x8180;
+        public const uint GL_INSTRUMENT_MEASUREMENTS_SGIX               = 0x8181;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_texture_scale_bias
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_POST_TEXTURE_FILTER_BIAS_SGIX  = 0x8179;
-        public const uint GL_POST_TEXTURE_FILTER_SCALE_SGIX = 0x817A;
-        public const uint GL_POST_TEXTURE_FILTER_BIAS_RANGE_SGIX = 0x817B;
-        public const uint GL_POST_TEXTURE_FILTER_SCALE_RANGE_SGIX = 0x817C;
+        public const uint GL_POST_TEXTURE_FILTER_BIAS_SGIX              = 0x8179;
+        public const uint GL_POST_TEXTURE_FILTER_SCALE_SGIX             = 0x817A;
+        public const uint GL_POST_TEXTURE_FILTER_BIAS_RANGE_SGIX        = 0x817B;
+        public const uint GL_POST_TEXTURE_FILTER_SCALE_RANGE_SGIX       = 0x817C;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_framezoom
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_FRAMEZOOM_SGIX                 = 0x818B;
-        public const uint GL_FRAMEZOOM_FACTOR_SGIX          = 0x818C;
-        public const uint GL_MAX_FRAMEZOOM_FACTOR_SGIX      = 0x818D;
+        public const uint GL_FRAMEZOOM_SGIX                             = 0x818B;
+        public const uint GL_FRAMEZOOM_FACTOR_SGIX                      = 0x818C;
+        public const uint GL_MAX_FRAMEZOOM_FACTOR_SGIX                  = 0x818D;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_tag_sample_buffer (no constants)
@@ -6079,22 +6097,26 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_FfdMaskSGIX
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_TEXTURE_DEFORMATION_BIT_SGIX   = 0x00000001;
-        public const uint GL_GEOMETRY_DEFORMATION_BIT_SGIX  = 0x00000002;
+        public const uint GL_TEXTURE_DEFORMATION_BIT_SGIX               = 0x00000001;
+        public const uint GL_GEOMETRY_DEFORMATION_BIT_SGIX              = 0x00000002;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_polynomial_ffd
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_GEOMETRY_DEFORMATION_SGIX      = 0x8194;
-        public const uint GL_TEXTURE_DEFORMATION_SGIX       = 0x8195;
-        public const uint GL_DEFORMATIONS_MASK_SGIX         = 0x8196;
-        public const uint GL_MAX_DEFORMATION_ORDER_SGIX     = 0x8197;
+        /* reuse
+        public const uint GL_TEXTURE_DEFORMATION_BIT_SGIX               = 0x00000001;
+        public const uint GL_GEOMETRY_DEFORMATION_BIT_SGIX              = 0x00000002;
+        */       
+        public const uint GL_GEOMETRY_DEFORMATION_SGIX                  = 0x8194;
+        public const uint GL_TEXTURE_DEFORMATION_SGIX                   = 0x8195;
+        public const uint GL_DEFORMATIONS_MASK_SGIX                     = 0x8196;
+        public const uint GL_MAX_DEFORMATION_ORDER_SGIX                 = 0x8197;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_reference_plane
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_REFERENCE_PLANE_SGIX           = 0x817D;
-        public const uint GL_REFERENCE_PLANE_EQUATION_SGIX  = 0x817E;
+        public const uint GL_REFERENCE_PLANE_SGIX                       = 0x817D;
+        public const uint GL_REFERENCE_PLANE_EQUATION_SGIX              = 0x817E;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_flush_raster (no constants)
@@ -6103,130 +6125,130 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_depth_texture
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_DEPTH_COMPONENT16_SGIX         = 0x81A5;
-        public const uint GL_DEPTH_COMPONENT24_SGIX         = 0x81A6;
-        public const uint GL_DEPTH_COMPONENT32_SGIX         = 0x81A7;
+        public const uint GL_DEPTH_COMPONENT16_SGIX                     = 0x81A5;
+        public const uint GL_DEPTH_COMPONENT24_SGIX                     = 0x81A6;
+        public const uint GL_DEPTH_COMPONENT32_SGIX                     = 0x81A7;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_fog_offset
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_FOG_OFFSET_SGIX                = 0x8198;
-        public const uint GL_FOG_OFFSET_VALUE_SGIX          = 0x8199;
+        public const uint GL_FOG_OFFSET_SGIX                            = 0x8198;
+        public const uint GL_FOG_OFFSET_VALUE_SGIX                      = 0x8199;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_texture_add_env
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_TEXTURE_ENV_BIAS_SGIX          = 0x80BE;
+        public const uint GL_TEXTURE_ENV_BIAS_SGIX                      = 0x80BE;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_list_priority
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_LIST_PRIORITY_SGIX             = 0x8182;
+        public const uint GL_LIST_PRIORITY_SGIX                         = 0x8182;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_ir_instrument1
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_IR_INSTRUMENT1_SGIX            = 0x817F;
+        public const uint GL_IR_INSTRUMENT1_SGIX                        = 0x817F;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_calligraphic_fragment
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_CALLIGRAPHIC_FRAGMENT_SGIX     = 0x8183;
+        public const uint GL_CALLIGRAPHIC_FRAGMENT_SGIX                 = 0x8183;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_texture_lod_bias
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_TEXTURE_LOD_BIAS_S_SGIX        = 0x818E;
-        public const uint GL_TEXTURE_LOD_BIAS_T_SGIX        = 0x818F;
-        public const uint GL_TEXTURE_LOD_BIAS_R_SGIX        = 0x8190;
+        public const uint GL_TEXTURE_LOD_BIAS_S_SGIX                    = 0x818E;
+        public const uint GL_TEXTURE_LOD_BIAS_T_SGIX                    = 0x818F;
+        public const uint GL_TEXTURE_LOD_BIAS_R_SGIX                    = 0x8190;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_shadow_ambient
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_SHADOW_AMBIENT_SGIX            = 0x80BF;
+        public const uint GL_SHADOW_AMBIENT_SGIX                        = 0x80BF;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_ycrcb
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_YCRCB_422_SGIX                 = 0x81BB;
-        public const uint GL_YCRCB_444_SGIX                 = 0x81BC;
+        public const uint GL_YCRCB_422_SGIX                             = 0x81BB;
+        public const uint GL_YCRCB_444_SGIX                             = 0x81BC;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_fragment_lighting
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_FRAGMENT_LIGHTING_SGIX         = 0x8400;
-        public const uint GL_FRAGMENT_COLOR_MATERIAL_SGIX   = 0x8401;
-        public const uint GL_FRAGMENT_COLOR_MATERIAL_FACE_SGIX = 0x8402;
-        public const uint GL_FRAGMENT_COLOR_MATERIAL_PARAMETER_SGIX = 0x8403;
-        public const uint GL_MAX_FRAGMENT_LIGHTS_SGIX       = 0x8404;
-        public const uint GL_MAX_ACTIVE_LIGHTS_SGIX         = 0x8405;
-        public const uint GL_CURRENT_RASTER_NORMAL_SGIX     = 0x8406;
-        public const uint GL_LIGHT_ENV_MODE_SGIX            = 0x8407;
-        public const uint GL_FRAGMENT_LIGHT_MODEL_LOCAL_VIEWER_SGIX = 0x8408;
-        public const uint GL_FRAGMENT_LIGHT_MODEL_TWO_SIDE_SGIX = 0x8409;
-        public const uint GL_FRAGMENT_LIGHT_MODEL_AMBIENT_SGIX = 0x840A;
+        public const uint GL_FRAGMENT_LIGHTING_SGIX                         = 0x8400;
+        public const uint GL_FRAGMENT_COLOR_MATERIAL_SGIX                   = 0x8401;
+        public const uint GL_FRAGMENT_COLOR_MATERIAL_FACE_SGIX              = 0x8402;
+        public const uint GL_FRAGMENT_COLOR_MATERIAL_PARAMETER_SGIX         = 0x8403;
+        public const uint GL_MAX_FRAGMENT_LIGHTS_SGIX                       = 0x8404;
+        public const uint GL_MAX_ACTIVE_LIGHTS_SGIX                         = 0x8405;
+        public const uint GL_CURRENT_RASTER_NORMAL_SGIX                     = 0x8406;
+        public const uint GL_LIGHT_ENV_MODE_SGIX                            = 0x8407;
+        public const uint GL_FRAGMENT_LIGHT_MODEL_LOCAL_VIEWER_SGIX         = 0x8408;
+        public const uint GL_FRAGMENT_LIGHT_MODEL_TWO_SIDE_SGIX             = 0x8409;
+        public const uint GL_FRAGMENT_LIGHT_MODEL_AMBIENT_SGIX              = 0x840A;
         public const uint GL_FRAGMENT_LIGHT_MODEL_NORMAL_INTERPOLATION_SGIX = 0x840B;
-        public const uint GL_FRAGMENT_LIGHT0_SGIX           = 0x840C;
-        public const uint GL_FRAGMENT_LIGHT1_SGIX           = 0x840D;
-        public const uint GL_FRAGMENT_LIGHT2_SGIX           = 0x840E;
-        public const uint GL_FRAGMENT_LIGHT3_SGIX           = 0x840F;
-        public const uint GL_FRAGMENT_LIGHT4_SGIX           = 0x8410;
-        public const uint GL_FRAGMENT_LIGHT5_SGIX           = 0x8411;
-        public const uint GL_FRAGMENT_LIGHT6_SGIX           = 0x8412;
-        public const uint GL_FRAGMENT_LIGHT7_SGIX           = 0x8413;
+        public const uint GL_FRAGMENT_LIGHT0_SGIX                           = 0x840C;
+        public const uint GL_FRAGMENT_LIGHT1_SGIX                           = 0x840D;
+        public const uint GL_FRAGMENT_LIGHT2_SGIX                           = 0x840E;
+        public const uint GL_FRAGMENT_LIGHT3_SGIX                           = 0x840F;
+        public const uint GL_FRAGMENT_LIGHT4_SGIX                           = 0x8410;
+        public const uint GL_FRAGMENT_LIGHT5_SGIX                           = 0x8411;
+        public const uint GL_FRAGMENT_LIGHT6_SGIX                           = 0x8412;
+        public const uint GL_FRAGMENT_LIGHT7_SGIX                           = 0x8413;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_blend_alpha_minmax
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_ALPHA_MIN_SGIX                 = 0x8320;
-        public const uint GL_ALPHA_MAX_SGIX                 = 0x8321;
+        public const uint GL_ALPHA_MIN_SGIX                             = 0x8320;
+        public const uint GL_ALPHA_MAX_SGIX                             = 0x8321;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_impact_pixel_texture
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_PIXEL_TEX_GEN_Q_CEILING_SGIX   = 0x8184;
-        public const uint GL_PIXEL_TEX_GEN_Q_ROUND_SGIX     = 0x8185;
-        public const uint GL_PIXEL_TEX_GEN_Q_FLOOR_SGIX     = 0x8186;
-        public const uint GL_PIXEL_TEX_GEN_ALPHA_REPLACE_SGIX = 0x8187;
-        public const uint GL_PIXEL_TEX_GEN_ALPHA_NO_REPLACE_SGIX = 0x8188;
-        public const uint GL_PIXEL_TEX_GEN_ALPHA_LS_SGIX    = 0x8189;
-        public const uint GL_PIXEL_TEX_GEN_ALPHA_MS_SGIX    = 0x818A;
+        public const uint GL_PIXEL_TEX_GEN_Q_CEILING_SGIX               = 0x8184;
+        public const uint GL_PIXEL_TEX_GEN_Q_ROUND_SGIX                 = 0x8185;
+        public const uint GL_PIXEL_TEX_GEN_Q_FLOOR_SGIX                 = 0x8186;
+        public const uint GL_PIXEL_TEX_GEN_ALPHA_REPLACE_SGIX           = 0x8187;
+        public const uint GL_PIXEL_TEX_GEN_ALPHA_NO_REPLACE_SGIX        = 0x8188;
+        public const uint GL_PIXEL_TEX_GEN_ALPHA_LS_SGIX                = 0x8189;
+        public const uint GL_PIXEL_TEX_GEN_ALPHA_MS_SGIX                = 0x818A;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_async
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_ASYNC_MARKER_SGIX              = 0x8329;
+        public const uint GL_ASYNC_MARKER_SGIX                          = 0x8329;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_async_pixel
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_ASYNC_TEX_IMAGE_SGIX           = 0x835C;
-        public const uint GL_ASYNC_DRAW_PIXELS_SGIX         = 0x835D;
-        public const uint GL_ASYNC_READ_PIXELS_SGIX         = 0x835E;
-        public const uint GL_MAX_ASYNC_TEX_IMAGE_SGIX       = 0x835F;
-        public const uint GL_MAX_ASYNC_DRAW_PIXELS_SGIX     = 0x8360;
-        public const uint GL_MAX_ASYNC_READ_PIXELS_SGIX     = 0x8361;
+        public const uint GL_ASYNC_TEX_IMAGE_SGIX                       = 0x835C;
+        public const uint GL_ASYNC_DRAW_PIXELS_SGIX                     = 0x835D;
+        public const uint GL_ASYNC_READ_PIXELS_SGIX                     = 0x835E;
+        public const uint GL_MAX_ASYNC_TEX_IMAGE_SGIX                   = 0x835F;
+        public const uint GL_MAX_ASYNC_DRAW_PIXELS_SGIX                 = 0x8360;
+        public const uint GL_MAX_ASYNC_READ_PIXELS_SGIX                 = 0x8361;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_async_histogram
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_ASYNC_HISTOGRAM_SGIX           = 0x832C;
-        public const uint GL_MAX_ASYNC_HISTOGRAM_SGIX       = 0x832D;
+        public const uint GL_ASYNC_HISTOGRAM_SGIX                       = 0x832C;
+        public const uint GL_MAX_ASYNC_HISTOGRAM_SGIX                   = 0x832D;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_fog_scale
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_FOG_SCALE_SGIX                 = 0x81FC;
-        public const uint GL_FOG_SCALE_VALUE_SGIX           = 0x81FD;
+        public const uint GL_FOG_SCALE_SGIX                             = 0x81FC;
+        public const uint GL_FOG_SCALE_VALUE_SGIX                       = 0x81FD;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_subsample
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_PACK_SUBSAMPLE_RATE_SGIX       = 0x85A0;
-        public const uint GL_UNPACK_SUBSAMPLE_RATE_SGIX     = 0x85A1;
-        public const uint GL_PIXEL_SUBSAMPLE_4444_SGIX      = 0x85A2;
-        public const uint GL_PIXEL_SUBSAMPLE_2424_SGIX      = 0x85A3;
-        public const uint GL_PIXEL_SUBSAMPLE_4242_SGIX      = 0x85A4;
+        public const uint GL_PACK_SUBSAMPLE_RATE_SGIX                   = 0x85A0;
+        public const uint GL_UNPACK_SUBSAMPLE_RATE_SGIX                 = 0x85A1;
+        public const uint GL_PIXEL_SUBSAMPLE_4444_SGIX                  = 0x85A2;
+        public const uint GL_PIXEL_SUBSAMPLE_2424_SGIX                  = 0x85A3;
+        public const uint GL_PIXEL_SUBSAMPLE_4242_SGIX                  = 0x85A4;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_ycrcb_subsample (no constants)
@@ -6235,47 +6257,44 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_ycrcba
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_YCRCB_SGIX                     = 0x8318;
-        public const uint GL_YCRCBA_SGIX                    = 0x8319;
+        public const uint GL_YCRCB_SGIX                                 = 0x8318;
+        public const uint GL_YCRCBA_SGIX                                = 0x8319;
 
         ///////////////////////////////////////////////////////////////////////
-        // GL_SGIX_depth_pass_instrument (no constants??? Reuse from GL_SGI_depth_pass_instrument)
+        // GL_SGIX_depth_pass_instrument (no constants)
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_DEPTH_PASS_INSTRUMENT_SGIX             = 0x8310;
-        public const uint GL_DEPTH_PASS_INSTRUMENT_COUNTERS_SGIX    = 0x8311;
-        public const uint GL_DEPTH_PASS_INSTRUMENT_MAX_SGIX         = 0x8312;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_vertex_preclip
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_VERTEX_PRECLIP_SGIX            = 0x83EE;
-        public const uint GL_VERTEX_PRECLIP_HINT_SGIX       = 0x83EF;
+        public const uint GL_VERTEX_PRECLIP_SGIX                        = 0x83EE;
+        public const uint GL_VERTEX_PRECLIP_HINT_SGIX                   = 0x83EF;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_convolution_accuracy
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_CONVOLUTION_HINT_SGIX          = 0x8316;
+        public const uint GL_CONVOLUTION_HINT_SGIX                      = 0x8316;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_resample
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_PACK_RESAMPLE_SGIX             = 0x842C;
-        public const uint GL_UNPACK_RESAMPLE_SGIX           = 0x842D;
-        public const uint GL_RESAMPLE_REPLICATE_SGIX        = 0x842E;
-        public const uint GL_RESAMPLE_ZERO_FILL_SGIX        = 0x842F;
-        public const uint GL_RESAMPLE_DECIMATE_SGIX         = 0x8430;
+        public const uint GL_PACK_RESAMPLE_SGIX                         = 0x842E;
+        public const uint GL_UNPACK_RESAMPLE_SGIX                       = 0x842F;
+        public const uint GL_RESAMPLE_REPLICATE_SGIX                    = 0x8433;
+        public const uint GL_RESAMPLE_ZERO_FILL_SGIX                    = 0x8434;
+        public const uint GL_RESAMPLE_DECIMATE_SGIX                     = 0x8430;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_texture_coordinate_clamp
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_TEXTURE_MAX_CLAMP_S_SGIX       = 0x8369;
-        public const uint GL_TEXTURE_MAX_CLAMP_T_SGIX       = 0x836A;
-        public const uint GL_TEXTURE_MAX_CLAMP_R_SGIX       = 0x836B;
+        public const uint GL_TEXTURE_MAX_CLAMP_S_SGIX                   = 0x8369;
+        public const uint GL_TEXTURE_MAX_CLAMP_T_SGIX                   = 0x836A;
+        public const uint GL_TEXTURE_MAX_CLAMP_R_SGIX                   = 0x836B;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_scalebias_hint
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_SCALEBIAS_HINT_SGIX            = 0x8322;
+        public const uint GL_SCALEBIAS_HINT_SGIX                        = 0x8322;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SGIX_igloo_interface (no constants)
@@ -6294,29 +6313,29 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_SUN_global_alpha
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_GLOBAL_ALPHA_SUN               = 0x81D9;
-        public const uint GL_GLOBAL_ALPHA_FACTOR_SUN        = 0x81DA;
+        public const uint GL_GLOBAL_ALPHA_SUN                           = 0x81D9;
+        public const uint GL_GLOBAL_ALPHA_FACTOR_SUN                    = 0x81DA;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SUN_triangle_list
         ///////////////////////////////////////////////////////////////////////
-        public const uint GL_RESTART_SUN                    = 0x0001;
-        public const uint GL_REPLACE_MIDDLE_SUN             = 0x0002;
-        public const uint GL_REPLACE_OLDEST_SUN             = 0x0003;
-        public const uint GL_TRIANGLE_LIST_SUN              = 0x81D7;
-        public const uint GL_REPLACEMENT_CODE_SUN           = 0x81D8;
-        public const uint GL_REPLACEMENT_CODE_ARRAY_SUN     = 0x85C0;
-        public const uint GL_REPLACEMENT_CODE_ARRAY_TYPE_SUN = 0x85C1;
-        public const uint GL_REPLACEMENT_CODE_ARRAY_STRIDE_SUN = 0x85C2;
-        public const uint GL_REPLACEMENT_CODE_ARRAY_POINTER_SUN = 0x85C3;
-        public const uint GL_R1UI_V3F_SUN                   = 0x85C4;
-        public const uint GL_R1UI_C4UB_V3F_SUN              = 0x85C5;
-        public const uint GL_R1UI_C3F_V3F_SUN               = 0x85C6;
-        public const uint GL_R1UI_N3F_V3F_SUN               = 0x85C7;
-        public const uint GL_R1UI_C4F_N3F_V3F_SUN           = 0x85C8;
-        public const uint GL_R1UI_T2F_V3F_SUN               = 0x85C9;
-        public const uint GL_R1UI_T2F_N3F_V3F_SUN           = 0x85CA;
-        public const uint GL_R1UI_T2F_C4F_N3F_V3F_SUN       = 0x85CB;
+        public const uint GL_RESTART_SUN                                = 0x0001;
+        public const uint GL_REPLACE_MIDDLE_SUN                         = 0x0002;
+        public const uint GL_REPLACE_OLDEST_SUN                         = 0x0003;
+        public const uint GL_TRIANGLE_LIST_SUN                          = 0x81D7;
+        public const uint GL_REPLACEMENT_CODE_SUN                       = 0x81D8;
+        public const uint GL_REPLACEMENT_CODE_ARRAY_SUN                 = 0x85C0;
+        public const uint GL_REPLACEMENT_CODE_ARRAY_TYPE_SUN            = 0x85C1;
+        public const uint GL_REPLACEMENT_CODE_ARRAY_STRIDE_SUN          = 0x85C2;
+        public const uint GL_REPLACEMENT_CODE_ARRAY_POINTER_SUN         = 0x85C3;
+        public const uint GL_R1UI_V3F_SUN                               = 0x85C4;
+        public const uint GL_R1UI_C4UB_V3F_SUN                          = 0x85C5;
+        public const uint GL_R1UI_C3F_V3F_SUN                           = 0x85C6;
+        public const uint GL_R1UI_N3F_V3F_SUN                           = 0x85C7;
+        public const uint GL_R1UI_C4F_N3F_V3F_SUN                       = 0x85C8;
+        public const uint GL_R1UI_T2F_V3F_SUN                           = 0x85C9;
+        public const uint GL_R1UI_T2F_N3F_V3F_SUN                       = 0x85CA;
+        public const uint GL_R1UI_T2F_C4F_N3F_V3F_SUN                   = 0x85CB;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_SUN_vertex (no constants)

@@ -4742,7 +4742,75 @@ namespace OpenGLDotNet
             if (GL.LinkGLEXT("GL_ARB_transform_feedback_overflow_query"))
             {
             }
-            
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_ARB_ES3_2_compatibility
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_ARB_ES3_2_compatibility"))
+            {
+                if (GL.LinkProcGLEXT("glPrimitiveBoundingBoxARB"))
+                {
+                    GL.glPrimitiveBoundingBoxARB = (TglPrimitiveBoundingBoxARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglPrimitiveBoundingBoxARB));
+                }
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_ARB_fragment_shader_interlock (no function entry points)
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_ARB_fragment_shader_interlock"))
+            {
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_ARB_gpu_shader_int64
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_ARB_gpu_shader_int64"))
+            {
+                if (GL.LinkProcGLEXT("glUniform1i64ARB"))
+                {
+                    GL.glUniform1i64ARB = (TglUniform1i64ARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform1i64ARB));
+                }
+
+                if (GL.LinkProcGLEXT("glUniform2i64ARB"))
+                {
+                    GL.glUniform2i64ARB = (TglUniform2i64ARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform2i64ARB));
+                }
+            }
+        // GLAPI void APIENTRY glUniform3i64ARB (GLint location, GLint64 x, GLint64 y, GLint64 z);
+        // GLAPI void APIENTRY glUniform4i64ARB (GLint location, GLint64 x, GLint64 y, GLint64 z, GLint64 w);
+        // GLAPI void APIENTRY glUniform1i64vARB (GLint location, GLsizei count, const GLint64 *value);
+        // GLAPI void APIENTRY glUniform2i64vARB (GLint location, GLsizei count, const GLint64 *value);
+        // GLAPI void APIENTRY glUniform3i64vARB (GLint location, GLsizei count, const GLint64 *value);
+        // GLAPI void APIENTRY glUniform4i64vARB (GLint location, GLsizei count, const GLint64 *value);
+        // GLAPI void APIENTRY glUniform1ui64ARB (GLint location, GLuint64 x);
+        // GLAPI void APIENTRY glUniform2ui64ARB (GLint location, GLuint64 x, GLuint64 y);
+        // GLAPI void APIENTRY glUniform3ui64ARB (GLint location, GLuint64 x, GLuint64 y, GLuint64 z);
+        // GLAPI void APIENTRY glUniform4ui64ARB (GLint location, GLuint64 x, GLuint64 y, GLuint64 z, GLuint64 w);
+        // GLAPI void APIENTRY glUniform1ui64vARB (GLint location, GLsizei count, const GLuint64 *value);
+        // GLAPI void APIENTRY glUniform2ui64vARB (GLint location, GLsizei count, const GLuint64 *value);
+        // GLAPI void APIENTRY glUniform3ui64vARB (GLint location, GLsizei count, const GLuint64 *value);
+        // GLAPI void APIENTRY glUniform4ui64vARB (GLint location, GLsizei count, const GLuint64 *value);
+        // GLAPI void APIENTRY glGetUniformi64vARB (GLuint program, GLint location, GLint64 *params);
+        // GLAPI void APIENTRY glGetUniformui64vARB (GLuint program, GLint location, GLuint64 *params);
+        // GLAPI void APIENTRY glGetnUniformi64vARB (GLuint program, GLint location, GLsizei bufSize, GLint64 *params);
+        // GLAPI void APIENTRY glGetnUniformui64vARB (GLuint program, GLint location, GLsizei bufSize, GLuint64 *params);
+        // GLAPI void APIENTRY glProgramUniform1i64ARB (GLuint program, GLint location, GLint64 x);
+        // GLAPI void APIENTRY glProgramUniform2i64ARB (GLuint program, GLint location, GLint64 x, GLint64 y);
+        // GLAPI void APIENTRY glProgramUniform3i64ARB (GLuint program, GLint location, GLint64 x, GLint64 y, GLint64 z);
+        // GLAPI void APIENTRY glProgramUniform4i64ARB (GLuint program, GLint location, GLint64 x, GLint64 y, GLint64 z, GLint64 w);
+        // GLAPI void APIENTRY glProgramUniform1i64vARB (GLuint program, GLint location, GLsizei count, const GLint64 *value);
+        // GLAPI void APIENTRY glProgramUniform2i64vARB (GLuint program, GLint location, GLsizei count, const GLint64 *value);
+        // GLAPI void APIENTRY glProgramUniform3i64vARB (GLuint program, GLint location, GLsizei count, const GLint64 *value);
+        // GLAPI void APIENTRY glProgramUniform4i64vARB (GLuint program, GLint location, GLsizei count, const GLint64 *value);
+        // GLAPI void APIENTRY glProgramUniform1ui64ARB (GLuint program, GLint location, GLuint64 x);
+        // GLAPI void APIENTRY glProgramUniform2ui64ARB (GLuint program, GLint location, GLuint64 x, GLuint64 y);
+        // GLAPI void APIENTRY glProgramUniform3ui64ARB (GLuint program, GLint location, GLuint64 x, GLuint64 y, GLuint64 z);
+        // GLAPI void APIENTRY glProgramUniform4ui64ARB (GLuint program, GLint location, GLuint64 x, GLuint64 y, GLuint64 z, GLuint64 w);
+        // GLAPI void APIENTRY glProgramUniform1ui64vARB (GLuint program, GLint location, GLsizei count, const GLuint64 *value);
+        // GLAPI void APIENTRY glProgramUniform2ui64vARB (GLuint program, GLint location, GLsizei count, const GLuint64 *value);
+        // GLAPI void APIENTRY glProgramUniform3ui64vARB (GLuint program, GLint location, GLsizei count, const GLuint64 *value);
+        // GLAPI void APIENTRY glProgramUniform4ui64vARB (GLuint program, GLint location, GLsizei count, const GLuint64 *value);
+
             #endregion
 
             ///////////////////////////////////////////////////////////////////////
