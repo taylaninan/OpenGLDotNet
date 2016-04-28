@@ -310,6 +310,183 @@ namespace OpenGLDotNet
         private delegate void TglQueryObjectParameteruiAMD(GLenum target, GLuint id, GLenum pname, GLuint param);
         private static TglQueryObjectParameteruiAMD glQueryObjectParameteruiAMD = null;
 
+        ///////////////////////////////////////////////////////////////////////
+        // GL_AMD_gcn_shader (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_AMD_gpu_shader_int64
+        ///////////////////////////////////////////////////////////////////////
+        // GLAPI void APIENTRY glUniform1i64NV (GLint location, GLint64EXT x);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglUniform1i64NV(GLint location, GLint64 x);
+        private static TglUniform1i64NV glUniform1i64NV = null;
+
+        // GLAPI void APIENTRY glUniform2i64NV (GLint location, GLint64EXT x, GLint64EXT y);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglUniform2i64NV(GLint location, GLint64 x, GLint64 y);
+        private static TglUniform2i64NV glUniform2i64NV = null;
+        
+        // GLAPI void APIENTRY glUniform3i64NV (GLint location, GLint64EXT x, GLint64EXT y, GLint64EXT z);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglUniform3i64NV(GLint location, GLint64 x, GLint64 y, GLint64 z);
+        private static TglUniform3i64NV glUniform3i64NV = null;
+
+        // GLAPI void APIENTRY glUniform4i64NV (GLint location, GLint64EXT x, GLint64EXT y, GLint64EXT z, GLint64EXT w);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglUniform4i64NV(GLint location, GLint64 x, GLint64 y, GLint64 z, GLint64 w);
+        private static TglUniform4i64NV glUniform4i64NV = null;
+
+        // GLAPI void APIENTRY glUniform1i64vNV (GLint location, GLsizei count, const GLint64EXT *value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglUniform1i64vNV(GLint location, GLsizei count, GLint64* value);
+        private static TglUniform1i64vNV glUniform1i64vNV = null;
+
+        // GLAPI void APIENTRY glUniform2i64vNV (GLint location, GLsizei count, const GLint64EXT *value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglUniform2i64vNV(GLint location, GLsizei count, GLint64* value);
+        private static TglUniform2i64vNV glUniform2i64vNV = null;
+
+        // GLAPI void APIENTRY glUniform3i64vNV (GLint location, GLsizei count, const GLint64EXT *value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglUniform3i64vNV(GLint location, GLsizei count, GLint64* value);
+        private static TglUniform3i64vNV glUniform3i64vNV = null;
+
+        // GLAPI void APIENTRY glUniform4i64vNV (GLint location, GLsizei count, const GLint64EXT *value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglUniform4i64vNV(GLint location, GLsizei count, GLint64* value);
+        private static TglUniform4i64vNV glUniform4i64vNV = null;
+
+        // GLAPI void APIENTRY glUniform1ui64NV (GLint location, GLuint64EXT x);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglUniform1ui64NV(GLint location, GLuint64 x);
+        private static TglUniform1ui64NV glUniform1ui64NV = null;
+
+        // GLAPI void APIENTRY glUniform2ui64NV (GLint location, GLuint64EXT x, GLuint64EXT y);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglUniform2ui64NV(GLint location, GLuint64 x, GLuint64 y);
+        private static TglUniform2ui64NV glUniform2ui64NV = null;
+
+        // GLAPI void APIENTRY glUniform3ui64NV (GLint location, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglUniform3ui64NV(GLint location, GLuint64 x, GLuint64 y, GLuint64 z);
+        private static TglUniform3ui64NV glUniform3ui64NV = null;
+        
+        // GLAPI void APIENTRY glUniform4ui64NV (GLint location, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z, GLuint64EXT w);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglUniform4ui64NV(GLint location, GLuint64 x, GLuint64 y, GLuint64 z, GLuint64 w);
+        private static TglUniform4ui64NV glUniform4ui64NV = null;
+        
+        // GLAPI void APIENTRY glUniform1ui64vNV (GLint location, GLsizei count, const GLuint64EXT *value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglUniform1ui64vNV(GLint location, GLsizei count, GLuint64* value);
+        private static TglUniform1ui64vNV glUniform1ui64vNV = null;
+
+        // GLAPI void APIENTRY glUniform2ui64vNV (GLint location, GLsizei count, const GLuint64EXT *value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglUniform2ui64vNV(GLint location, GLsizei count, GLuint64* value);
+        private static TglUniform2ui64vNV glUniform2ui64vNV = null;
+        
+        // GLAPI void APIENTRY glUniform3ui64vNV (GLint location, GLsizei count, const GLuint64EXT *value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglUniform3ui64vNV(GLint location, GLsizei count, GLuint64* value);
+        private static TglUniform3ui64vNV glUniform3ui64vNV = null;
+
+        // GLAPI void APIENTRY glUniform4ui64vNV (GLint location, GLsizei count, const GLuint64EXT *value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglUniform4ui64vNV(GLint location, GLsizei count, GLuint64* value);
+        private static TglUniform4ui64vNV glUniform4ui64vNV = null;
+        
+        // GLAPI void APIENTRY glGetUniformi64vNV (GLuint program, GLint location, GLint64EXT *params);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglGetUniformi64vNV(GLuint program, GLint location, GLint64* parameters);
+        private static TglGetUniformi64vNV glGetUniformi64vNV = null;
+        
+        // GLAPI void APIENTRY glGetUniformui64vNV (GLuint program, GLint location, GLuint64EXT *params);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglGetUniformui64vNV(GLuint program, GLint location, GLuint64* parameters);
+        private static TglGetUniformui64vNV glGetUniformui64vNV = null;
+        
+        // GLAPI void APIENTRY glProgramUniform1i64NV (GLuint program, GLint location, GLint64EXT x);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglProgramUniform1i64NV(GLuint program, GLint location, GLint64 x);
+        private static TglProgramUniform1i64NV glProgramUniform1i64NV = null;
+        
+        // GLAPI void APIENTRY glProgramUniform2i64NV (GLuint program, GLint location, GLint64EXT x, GLint64EXT y);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglProgramUniform2i64NV(GLuint program, GLint location, GLint64 x, GLint64 y);
+        private static TglProgramUniform2i64NV glProgramUniform2i64NV = null;
+        
+        // GLAPI void APIENTRY glProgramUniform3i64NV (GLuint program, GLint location, GLint64EXT x, GLint64EXT y, GLint64EXT z);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglProgramUniform3i64NV(GLuint program, GLint location, GLint64 x, GLint64 y, GLint64 z);
+        private static TglProgramUniform3i64NV glProgramUniform3i64NV = null;
+
+        // GLAPI void APIENTRY glProgramUniform4i64NV (GLuint program, GLint location, GLint64EXT x, GLint64EXT y, GLint64EXT z, GLint64EXT w);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglProgramUniform4i64NV(GLuint program, GLint location, GLint64 x, GLint64 y, GLint64 z, GLint64 w);
+        private static TglProgramUniform4i64NV glProgramUniform4i64NV = null;
+
+        // GLAPI void APIENTRY glProgramUniform1i64vNV (GLuint program, GLint location, GLsizei count, const GLint64EXT *value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglProgramUniform1i64vNV(GLuint program, GLint location, GLsizei count, GLint64* value);
+        private static TglProgramUniform1i64vNV glProgramUniform1i64vNV = null;
+
+        // GLAPI void APIENTRY glProgramUniform2i64vNV (GLuint program, GLint location, GLsizei count, const GLint64EXT *value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglProgramUniform2i64vNV(GLuint program, GLint location, GLsizei count, GLint64* value);
+        private static TglProgramUniform2i64vNV glProgramUniform2i64vNV = null;
+        
+        // GLAPI void APIENTRY glProgramUniform3i64vNV (GLuint program, GLint location, GLsizei count, const GLint64EXT *value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglProgramUniform3i64vNV(GLuint program, GLint location, GLsizei count, GLint64* value);
+        private static TglProgramUniform3i64vNV glProgramUniform3i64vNV = null;
+        
+        // GLAPI void APIENTRY glProgramUniform4i64vNV (GLuint program, GLint location, GLsizei count, const GLint64EXT *value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglProgramUniform4i64vNV(GLuint program, GLint location, GLsizei count, GLint64* value);
+        private static TglProgramUniform4i64vNV glProgramUniform4i64vNV = null;
+        
+        // GLAPI void APIENTRY glProgramUniform1ui64NV (GLuint program, GLint location, GLuint64EXT x);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglProgramUniform1ui64NV(GLuint program, GLint location, GLuint64 x);
+        private static TglProgramUniform1ui64NV glProgramUniform1ui64NV = null;
+        
+        // GLAPI void APIENTRY glProgramUniform2ui64NV (GLuint program, GLint location, GLuint64EXT x, GLuint64EXT y);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglProgramUniform2ui64NV(GLuint program, GLint location, GLuint64 x, GLuint64 y);
+        private static TglProgramUniform2ui64NV glProgramUniform2ui64NV = null;
+        
+        // GLAPI void APIENTRY glProgramUniform3ui64NV (GLuint program, GLint location, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglProgramUniform3ui64NV(GLuint program, GLint location, GLuint64 x, GLuint64 y, GLuint64 z);
+        private static TglProgramUniform3ui64NV glProgramUniform3ui64NV = null;
+        
+        // GLAPI void APIENTRY glProgramUniform4ui64NV (GLuint program, GLint location, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z, GLuint64EXT w);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglProgramUniform4ui64NV(GLuint program, GLint location, GLuint64 x, GLuint64 y, GLuint64 z, GLuint64 w);
+        private static TglProgramUniform4ui64NV glProgramUniform4ui64NV = null;
+        
+        // GLAPI void APIENTRY glProgramUniform1ui64vNV (GLuint program, GLint location, GLsizei count, const GLuint64EXT *value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglProgramUniform1ui64vNV(GLuint program, GLint location, GLsizei count, GLuint64* value);
+        private static TglProgramUniform1ui64vNV glProgramUniform1ui64vNV = null;
+
+        // GLAPI void APIENTRY glProgramUniform2ui64vNV (GLuint program, GLint location, GLsizei count, const GLuint64EXT *value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglProgramUniform2ui64vNV(GLuint program, GLint location, GLsizei count, GLuint64* value);
+        private static TglProgramUniform2ui64vNV glProgramUniform2ui64vNV = null;
+
+        // GLAPI void APIENTRY glProgramUniform3ui64vNV (GLuint program, GLint location, GLsizei count, const GLuint64EXT *value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglProgramUniform3ui64vNV(GLuint program, GLint location, GLsizei count, GLuint64* value);
+        private static TglProgramUniform3ui64vNV glProgramUniform3ui64vNV = null;
+        
+        // GLAPI void APIENTRY glProgramUniform4ui64vNV (GLuint program, GLint location, GLsizei count, const GLuint64EXT *value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglProgramUniform4ui64vNV(GLuint program, GLint location, GLsizei count, GLuint64* value);
+        private static TglProgramUniform4ui64vNV glProgramUniform4ui64vNV = null;
+
         #endregion
 
         ///////////////////////////////////////////////////////////////////////
@@ -3079,6 +3256,64 @@ namespace OpenGLDotNet
         [UnmanagedFunctionPointer(CallingConvention.StdCall)]
         private unsafe delegate void TglProgramUniform4ui64vARB(GLuint program, GLint location, GLsizei count, GLuint64* value);
         private static TglProgramUniform4ui64vARB glProgramUniform4ui64vARB = null;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_parallel_shader_compile
+        ///////////////////////////////////////////////////////////////////////
+        // GLAPI void APIENTRY glMaxShaderCompilerThreadsARB (GLuint count);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglMaxShaderCompilerThreadsARB(GLuint count);
+        private static TglMaxShaderCompilerThreadsARB glMaxShaderCompilerThreadsARB = null;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_post_depth_coverage (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_sample_locations
+        ///////////////////////////////////////////////////////////////////////
+        // GLAPI void APIENTRY glFramebufferSampleLocationsfvARB (GLenum target, GLuint start, GLsizei count, const GLfloat *v);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglFramebufferSampleLocationsfvARB(GLenum target, GLuint start, GLsizei count, GLfloat* v);
+        private static TglFramebufferSampleLocationsfvARB glFramebufferSampleLocationsfvARB = null;
+
+        // GLAPI void APIENTRY glNamedFramebufferSampleLocationsfvARB (GLuint framebuffer, GLuint start, GLsizei count, const GLfloat *v);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglNamedFramebufferSampleLocationsfvARB(GLuint framebuffer, GLuint start, GLsizei count, GLfloat* v);
+        private static TglNamedFramebufferSampleLocationsfvARB glNamedFramebufferSampleLocationsfvARB = null;
+
+        // GLAPI void APIENTRY glEvaluateDepthValuesARB (void);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglEvaluateDepthValuesARB();
+        private static TglEvaluateDepthValuesARB glEvaluateDepthValuesARB = null;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_shader_atomic_counter_ops (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_shader_ballot (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_shader_clock (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_shader_viewport_layer_array (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_sparse_texture2 (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_sparse_texture_clamp (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_texture_filter_minmax (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
 
         #endregion
 
@@ -6635,6 +6870,19 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_KHR_texture_compression_astc_sliced_3d (no function entry points)
         ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_KHR_blend_equation_advanced
+        ///////////////////////////////////////////////////////////////////////
+        // GLAPI void APIENTRY glBlendBarrierKHR (void);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglBlendBarrierKHR();
+        private static TglBlendBarrierKHR glBlendBarrierKHR = null;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_KHR_blend_equation_advanced_coherent (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
         #endregion
 
         ///////////////////////////////////////////////////////////////////////
@@ -8351,11 +8599,6 @@ namespace OpenGLDotNet
         private unsafe delegate void TglUniformui64vNV(GLint location, GLsizei count, GLuint64* value);
         private static TglUniformui64vNV glUniformui64vNV = null;
 
-        // GLAPI void APIENTRY glGetUniformui64vNV (GLuint program, GLint location, GLuint64EXT *params);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private unsafe delegate void TglGetUniformui64vNV(GLuint program, GLint location, GLuint64* parameters);
-        private static TglGetUniformui64vNV glGetUniformui64vNV = null;
-
         // GLAPI void APIENTRY glProgramUniformui64NV (GLuint program, GLint location, GLuint64EXT value);
         [UnmanagedFunctionPointer(CallingConvention.StdCall)]
         private delegate void TglProgramUniformui64NV(GLuint program, GLint location, GLuint64 value);
@@ -8451,172 +8694,8 @@ namespace OpenGLDotNet
         private static TglGetProgramSubroutineParameteruivNV glGetProgramSubroutineParameteruivNV = null;
 
         ///////////////////////////////////////////////////////////////////////
-        // GL_NV_gpu_shader5
+        // GL_NV_gpu_shader5 (no function entry points)
         ///////////////////////////////////////////////////////////////////////
-        // GLAPI void APIENTRY glUniform1i64NV (GLint location, GLint64EXT x);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private delegate void TglUniform1i64NV(GLint location, GLint64 x);
-        private static TglUniform1i64NV glUniform1i64NV = null;
-
-        // GLAPI void APIENTRY glUniform2i64NV (GLint location, GLint64EXT x, GLint64EXT y);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private delegate void TglUniform2i64NV(GLint location, GLint64 x, GLint64 y);
-        private static TglUniform2i64NV glUniform2i64NV = null;
-
-        // GLAPI void APIENTRY glUniform3i64NV (GLint location, GLint64EXT x, GLint64EXT y, GLint64EXT z);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private delegate void TglUniform3i64NV(GLint location, GLint64 x, GLint64 y, GLint64 z);
-        private static TglUniform3i64NV glUniform3i64NV = null;
-
-        // GLAPI void APIENTRY glUniform4i64NV (GLint location, GLint64EXT x, GLint64EXT y, GLint64EXT z, GLint64EXT w);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private delegate void TglUniform4i64NV(GLint location, GLint64 x, GLint64 y, GLint64 z, GLint64 w);
-        private static TglUniform4i64NV glUniform4i64NV = null;
-
-        // GLAPI void APIENTRY glUniform1i64vNV (GLint location, GLsizei count, const GLint64EXT *value);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private unsafe delegate void TglUniform1i64vNV(GLint location, GLsizei count, GLint64* value);
-        private static TglUniform1i64vNV glUniform1i64vNV = null;
-
-        // GLAPI void APIENTRY glUniform2i64vNV (GLint location, GLsizei count, const GLint64EXT *value);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private unsafe delegate void TglUniform2i64vNV(GLint location, GLsizei count, GLint64* value);
-        private static TglUniform2i64vNV glUniform2i64vNV = null;
-
-        // GLAPI void APIENTRY glUniform3i64vNV (GLint location, GLsizei count, const GLint64EXT *value);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private unsafe delegate void TglUniform3i64vNV(GLint location, GLsizei count, GLint64* value);
-        private static TglUniform3i64vNV glUniform3i64vNV = null;
-
-        // GLAPI void APIENTRY glUniform4i64vNV (GLint location, GLsizei count, const GLint64EXT *value);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private unsafe delegate void TglUniform4i64vNV(GLint location, GLsizei count, GLint64* value);
-        private static TglUniform4i64vNV glUniform4i64vNV = null;
-
-        // GLAPI void APIENTRY glUniform1ui64NV (GLint location, GLuint64EXT x);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private delegate void TglUniform1ui64NV(GLint location, GLuint64 x);
-        private static TglUniform1ui64NV glUniform1ui64NV = null;
-
-        // GLAPI void APIENTRY glUniform2ui64NV (GLint location, GLuint64EXT x, GLuint64EXT y);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private delegate void TglUniform2ui64NV(GLint location, GLuint64 x, GLuint64 y);
-        private static TglUniform2ui64NV glUniform2ui64NV = null;
-
-        // GLAPI void APIENTRY glUniform3ui64NV (GLint location, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private delegate void TglUniform3ui64NV(GLint location, GLuint64 x, GLuint64 y, GLuint64 z);
-        private static TglUniform3ui64NV glUniform3ui64NV = null;
-
-        // GLAPI void APIENTRY glUniform4ui64NV (GLint location, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z, GLuint64EXT w);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private delegate void TglUniform4ui64NV(GLint location, GLuint64 x, GLuint64 y, GLuint64 z, GLuint64 w);
-        private static TglUniform4ui64NV glUniform4ui64NV = null;
-
-        // GLAPI void APIENTRY glUniform1ui64vNV (GLint location, GLsizei count, const GLuint64EXT *value);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private unsafe delegate void TglUniform1ui64vNV(GLint location, GLsizei count, GLuint64* value);
-        private static TglUniform1ui64vNV glUniform1ui64vNV = null;
-
-        // GLAPI void APIENTRY glUniform2ui64vNV (GLint location, GLsizei count, const GLuint64EXT *value);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private unsafe delegate void TglUniform2ui64vNV(GLint location, GLsizei count, GLuint64* value);
-        private static TglUniform2ui64vNV glUniform2ui64vNV = null;
-
-        // GLAPI void APIENTRY glUniform3ui64vNV (GLint location, GLsizei count, const GLuint64EXT *value);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private unsafe delegate void TglUniform3ui64vNV(GLint location, GLsizei count, GLuint64* value);
-        private static TglUniform3ui64vNV glUniform3ui64vNV = null;
-
-        // GLAPI void APIENTRY glUniform4ui64vNV (GLint location, GLsizei count, const GLuint64EXT *value);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private unsafe delegate void TglUniform4ui64vNV(GLint location, GLsizei count, GLuint64* value);
-        private static TglUniform4ui64vNV glUniform4ui64vNV = null;
-
-        // GLAPI void APIENTRY glGetUniformi64vNV (GLuint program, GLint location, GLint64EXT *params);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private unsafe delegate void TglGetUniformi64vNV(GLuint program, GLint location, GLint64* parameters);
-        private static TglGetUniformi64vNV glGetUniformi64vNV = null;
-
-        // GLAPI void APIENTRY glProgramUniform1i64NV (GLuint program, GLint location, GLint64EXT x);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private delegate void TglProgramUniform1i64NV(GLuint program, GLint location, GLint64 x);
-        private static TglProgramUniform1i64NV glProgramUniform1i64NV = null;
-
-        // GLAPI void APIENTRY glProgramUniform2i64NV (GLuint program, GLint location, GLint64EXT x, GLint64EXT y);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private delegate void TglProgramUniform2i64NV(GLuint program, GLint location, GLint64 x, GLint64 y);
-        private static TglProgramUniform2i64NV glProgramUniform2i64NV = null;
-
-        // GLAPI void APIENTRY glProgramUniform3i64NV (GLuint program, GLint location, GLint64EXT x, GLint64EXT y, GLint64EXT z);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private delegate void TglProgramUniform3i64NV(GLuint program, GLint location, GLint64 x, GLint64 y, GLint64 z);
-        private static TglProgramUniform3i64NV glProgramUniform3i64NV = null;
-
-        // GLAPI void APIENTRY glProgramUniform4i64NV (GLuint program, GLint location, GLint64EXT x, GLint64EXT y, GLint64EXT z, GLint64EXT w);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private delegate void TglProgramUniform4i64NV(GLuint program, GLint location, GLint64 x, GLint64 y, GLint64 z, GLint64 w);
-        private static TglProgramUniform4i64NV glProgramUniform4i64NV = null;
-
-        // GLAPI void APIENTRY glProgramUniform1i64vNV (GLuint program, GLint location, GLsizei count, const GLint64EXT *value);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private unsafe delegate void TglProgramUniform1i64vNV(GLuint program, GLint location, GLsizei count, GLint64* value);
-        private static TglProgramUniform1i64vNV glProgramUniform1i64vNV = null;
-
-        // GLAPI void APIENTRY glProgramUniform2i64vNV (GLuint program, GLint location, GLsizei count, const GLint64EXT *value);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private unsafe delegate void TglProgramUniform2i64vNV(GLuint program, GLint location, GLsizei count, GLint64* value);
-        private static TglProgramUniform2i64vNV glProgramUniform2i64vNV = null;
-
-        // GLAPI void APIENTRY glProgramUniform3i64vNV (GLuint program, GLint location, GLsizei count, const GLint64EXT *value);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private unsafe delegate void TglProgramUniform3i64vNV(GLuint program, GLint location, GLsizei count, GLint64* value);
-        private static TglProgramUniform3i64vNV glProgramUniform3i64vNV = null;
-
-        // GLAPI void APIENTRY glProgramUniform4i64vNV (GLuint program, GLint location, GLsizei count, const GLint64EXT *value);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private unsafe delegate void TglProgramUniform4i64vNV(GLuint program, GLint location, GLsizei count, GLint64* value);
-        private static TglProgramUniform4i64vNV glProgramUniform4i64vNV = null;
-
-        // GLAPI void APIENTRY glProgramUniform1ui64NV (GLuint program, GLint location, GLuint64EXT x);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private delegate void TglProgramUniform1ui64NV(GLuint program, GLint location, GLuint64 x);
-        private static TglProgramUniform1ui64NV glProgramUniform1ui64NV = null;
-
-        // GLAPI void APIENTRY glProgramUniform2ui64NV (GLuint program, GLint location, GLuint64EXT x, GLuint64EXT y);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private delegate void TglProgramUniform2ui64NV(GLuint program, GLint location, GLuint64 x, GLuint64 y);
-        private static TglProgramUniform2ui64NV glProgramUniform2ui64NV = null;
-
-        // GLAPI void APIENTRY glProgramUniform3ui64NV (GLuint program, GLint location, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private delegate void TglProgramUniform3ui64NV(GLuint program, GLint location, GLuint64 x, GLuint64 y, GLuint64 z);
-        private static TglProgramUniform3ui64NV glProgramUniform3ui64NV = null;
-
-        // GLAPI void APIENTRY glProgramUniform4ui64NV (GLuint program, GLint location, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z, GLuint64EXT w);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private delegate void TglProgramUniform4ui64NV(GLuint program, GLint location, GLuint64 x, GLuint64 y, GLuint64 z, GLuint64 w);
-        private static TglProgramUniform4ui64NV glProgramUniform4ui64NV = null;
-
-        // GLAPI void APIENTRY glProgramUniform1ui64vNV (GLuint program, GLint location, GLsizei count, const GLuint64EXT *value);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private unsafe delegate void TglProgramUniform1ui64vNV(GLuint program, GLint location, GLsizei count, GLuint64* value);
-        private static TglProgramUniform1ui64vNV glProgramUniform1ui64vNV = null;
-
-        // GLAPI void APIENTRY glProgramUniform2ui64vNV (GLuint program, GLint location, GLsizei count, const GLuint64EXT *value);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private unsafe delegate void TglProgramUniform2ui64vNV(GLuint program, GLint location, GLsizei count, GLuint64* value);
-        private static TglProgramUniform2ui64vNV glProgramUniform2ui64vNV = null;
-
-        // GLAPI void APIENTRY glProgramUniform3ui64vNV (GLuint program, GLint location, GLsizei count, const GLuint64EXT *value);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private unsafe delegate void TglProgramUniform3ui64vNV(GLuint program, GLint location, GLsizei count, GLuint64* value);
-        private static TglProgramUniform3ui64vNV glProgramUniform3ui64vNV = null;
-
-        // GLAPI void APIENTRY glProgramUniform4ui64vNV (GLuint program, GLint location, GLsizei count, const GLuint64EXT *value);
-        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
-        private unsafe delegate void TglProgramUniform4ui64vNV(GLuint program, GLint location, GLsizei count, GLuint64* value);
-        private static TglProgramUniform4ui64vNV glProgramUniform4ui64vNV = null;
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_shader_buffer_store (no function entry point)

@@ -511,6 +511,373 @@ namespace OpenGLDotNet
             }
         }
 
+        ///////////////////////////////////////////////////////////////////////
+        // GL_AMD_gcn_shader (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_AMD_gpu_shader_int64
+        ///////////////////////////////////////////////////////////////////////
+        // GLAPI void APIENTRY glUniform1i64NV (GLint location, GLint64EXT x);
+        public static void Uniform1i64NV(GLint location, GLint64 x)
+        {
+            if (glUniform1i64NV != null)
+            {
+                glUniform1i64NV(location, x);
+            }
+        }
+
+        // GLAPI void APIENTRY glUniform2i64NV (GLint location, GLint64EXT x, GLint64EXT y);
+        public static void Uniform2i64NV(GLint location, GLint64 x, GLint64 y)
+        {
+            if (glUniform2i64NV != null)
+            {
+                glUniform2i64NV(location, x, y);
+            }
+        }
+
+        // GLAPI void APIENTRY glUniform3i64NV (GLint location, GLint64EXT x, GLint64EXT y, GLint64EXT z);
+        public static void Uniform3i64NV(GLint location, GLint64 x, GLint64 y, GLint64 z)
+        {
+            if (glUniform3i64NV != null)
+            {
+                glUniform3i64NV(location, x, y, z);
+            }
+        }
+
+        // GLAPI void APIENTRY glUniform4i64NV (GLint location, GLint64EXT x, GLint64EXT y, GLint64EXT z, GLint64EXT w);
+        public static void Uniform4i64NV(GLint location, GLint64 x, GLint64 y, GLint64 z, GLint64 w)
+        {
+            if (glUniform4i64NV != null)
+            {
+                glUniform4i64NV(location, x, y, z, w);
+            }
+        }
+
+        // GLAPI void APIENTRY glUniform1i64vNV (GLint location, GLsizei count, const GLint64EXT *value);
+        public unsafe static void Uniform1i64vNV(GLint location, GLsizei count, GLint64[] value)
+        {
+            if (glUniform1i64vNV != null)
+            {
+                fixed (GLint64* ptr_value = value)
+                {
+                    glUniform1i64vNV(location, count, ptr_value);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glUniform2i64vNV (GLint location, GLsizei count, const GLint64EXT *value);
+        public unsafe static void Uniform2i64vNV(GLint location, GLsizei count, GLint64[] value)
+        {
+            if (glUniform2i64vNV != null)
+            {
+                fixed (GLint64* ptr_value = value)
+                {
+                    glUniform2i64vNV(location, count, ptr_value);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glUniform3i64vNV (GLint location, GLsizei count, const GLint64EXT *value);
+        public unsafe static void Uniform3i64vNV(GLint location, GLsizei count, GLint64[] value)
+        {
+            if (glUniform3i64vNV != null)
+            {
+                fixed (GLint64* ptr_value = value)
+                {
+                    glUniform3i64vNV(location, count, ptr_value);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glUniform4i64vNV (GLint location, GLsizei count, const GLint64EXT *value);
+        public unsafe static void Uniform4i64vNV(GLint location, GLsizei count, GLint64[] value)
+        {
+            if (glUniform4i64vNV != null)
+            {
+                fixed (GLint64* ptr_value = value)
+                {
+                    glUniform4i64vNV(location, count, ptr_value);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glUniform1ui64NV (GLint location, GLuint64EXT x);
+        public static void Uniform1ui64NV(GLint location, GLuint64 x)
+        {
+            if (glUniform1ui64NV != null)
+            {
+                glUniform1ui64NV(location, x);
+            }
+        }
+
+        // GLAPI void APIENTRY glUniform2ui64NV (GLint location, GLuint64EXT x, GLuint64EXT y);
+        public static void Uniform2ui64NV(GLint location, GLuint64 x, GLuint64 y)
+        {
+            if (glUniform2ui64NV != null)
+            {
+                glUniform2ui64NV(location, x, y);
+            }
+        }
+
+        // GLAPI void APIENTRY glUniform3ui64NV (GLint location, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z);
+        public static void Uniform3ui64NV(GLint location, GLuint64 x, GLuint64 y, GLuint64 z)
+        {
+            if (glUniform3ui64NV != null)
+            {
+                glUniform3ui64NV(location, x, y, z);
+            }
+        }
+
+        // GLAPI void APIENTRY glUniform4ui64NV (GLint location, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z, GLuint64EXT w);
+        public static void Uniform4ui64NV(GLint location, GLuint64 x, GLuint64 y, GLuint64 z, GLuint64 w)
+        {
+            if (glUniform4ui64NV != null)
+            {
+                glUniform4ui64NV(location, x, y, z, w);
+            }
+        }
+
+        // GLAPI void APIENTRY glUniform1ui64vNV (GLint location, GLsizei count, const GLuint64EXT *value);
+        public unsafe static void Uniform1ui64vNV(GLint location, GLsizei count, GLuint64[] value)
+        {
+            if (glUniform1ui64vNV != null)
+            {
+                fixed (GLuint64* ptr_value = value)
+                {
+                    glUniform1ui64vNV(location, count, ptr_value);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glUniform2ui64vNV (GLint location, GLsizei count, const GLuint64EXT *value);
+        public unsafe static void Uniform2ui64vNV(GLint location, GLsizei count, GLuint64[] value)
+        {
+            if (glUniform2ui64vNV != null)
+            {
+                fixed (GLuint64* ptr_value = value)
+                {
+                    glUniform2ui64vNV(location, count, ptr_value);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glUniform3ui64vNV (GLint location, GLsizei count, const GLuint64EXT *value);
+        public unsafe static void Uniform3ui64vNV(GLint location, GLsizei count, GLuint64[] value)
+        {
+            if (glUniform3ui64vNV != null)
+            {
+                fixed (GLuint64* ptr_value = value)
+                {
+                    glUniform3ui64vNV(location, count, ptr_value);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glUniform4ui64vNV (GLint location, GLsizei count, const GLuint64EXT *value);
+        public unsafe static void Uniform4ui64vNV(GLint location, GLsizei count, GLuint64[] value)
+        {
+            if (glUniform4ui64vNV != null)
+            {
+                fixed (GLuint64* ptr_value = value)
+                {
+                    glUniform4ui64vNV(location, count, ptr_value);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glGetUniformi64vNV (GLuint program, GLint location, GLint64EXT *params);
+        public unsafe static void GetUniformi64vNV(GLuint program, GLint location, GLint64[] parameters)
+        {
+            if (glGetUniformi64vNV != null)
+            {
+                fixed (GLint64* ptr_parameters = parameters)
+                {
+                    glGetUniformi64vNV(program, location, ptr_parameters);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glGetUniformui64vNV (GLuint program, GLint location, GLuint64EXT *params);
+        public unsafe static void GetUniformui64vNV(GLuint program, GLint location, GLuint64[] parameters)
+        {
+            if (glGetUniformui64vNV != null)
+            {
+                fixed (GLuint64* ptr_parameters = parameters)
+                {
+                    glGetUniformui64vNV(program, location, ptr_parameters);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glProgramUniform1i64NV (GLuint program, GLint location, GLint64EXT x);
+        public static void ProgramUniform1i64NV(GLuint program, GLint location, GLint64 x)
+        {
+            if (glProgramUniform1i64NV != null)
+            {
+                glProgramUniform1i64NV(program, location, x);
+            }
+        }
+
+        // GLAPI void APIENTRY glProgramUniform2i64NV (GLuint program, GLint location, GLint64EXT x, GLint64EXT y);
+        public static void ProgramUniform2i64NV(GLuint program, GLint location, GLint64 x, GLint64 y)
+        {
+            if (glProgramUniform2i64NV != null)
+            {
+                glProgramUniform2i64NV(program, location, x, y);
+            }
+        }
+
+        // GLAPI void APIENTRY glProgramUniform3i64NV (GLuint program, GLint location, GLint64EXT x, GLint64EXT y, GLint64EXT z);
+        public static void ProgramUniform3i64NV(GLuint program, GLint location, GLint64 x, GLint64 y, GLint64 z)
+        {
+            if (glProgramUniform3i64NV != null)
+            {
+                glProgramUniform3i64NV(program, location, x, y, z);
+            }
+        }
+
+        // GLAPI void APIENTRY glProgramUniform4i64NV (GLuint program, GLint location, GLint64EXT x, GLint64EXT y, GLint64EXT z, GLint64EXT w);
+        public static void ProgramUniform4i64NV(GLuint program, GLint location, GLint64 x, GLint64 y, GLint64 z, GLint64 w)
+        {
+            if (glProgramUniform4i64NV != null)
+            {
+                glProgramUniform4i64NV(program, location, x, y, z, w);
+            }
+        }
+
+        // GLAPI void APIENTRY glProgramUniform1i64vNV (GLuint program, GLint location, GLsizei count, const GLint64EXT *value);
+        public unsafe static void ProgramUniform1i64vNV(GLuint program, GLint location, GLsizei count, GLint64[] value)
+        {
+            if (glProgramUniform1i64vNV != null)
+            {
+                fixed (GLint64* ptr_value = value)
+                {
+                    glProgramUniform1i64vNV(program, location, count, ptr_value);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glProgramUniform2i64vNV (GLuint program, GLint location, GLsizei count, const GLint64EXT *value);
+        public unsafe static void ProgramUniform2i64vNV(GLuint program, GLint location, GLsizei count, GLint64[] value)
+        {
+            if (glProgramUniform2i64vNV != null)
+            {
+                fixed (GLint64* ptr_value = value)
+                {
+                    glProgramUniform2i64vNV(program, location, count, ptr_value);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glProgramUniform3i64vNV (GLuint program, GLint location, GLsizei count, const GLint64EXT *value);
+        public unsafe static void ProgramUniform3i64vNV(GLuint program, GLint location, GLsizei count, GLint64[] value)
+        {
+            if (glProgramUniform3i64vNV != null)
+            {
+                fixed (GLint64* ptr_value = value)
+                {
+                    glProgramUniform3i64vNV(program, location, count, ptr_value);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glProgramUniform4i64vNV (GLuint program, GLint location, GLsizei count, const GLint64EXT *value);
+        public unsafe static void ProgramUniform4i64vNV(GLuint program, GLint location, GLsizei count, GLint64[] value)
+        {
+            if (glProgramUniform4i64vNV != null)
+            {
+                fixed (GLint64* ptr_value = value)
+                {
+                    glProgramUniform4i64vNV(program, location, count, ptr_value);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glProgramUniform1ui64NV (GLuint program, GLint location, GLuint64EXT x);
+        public static void ProgramUniform1ui64NV(GLuint program, GLint location, GLuint64 x)
+        {
+            if (glProgramUniform1ui64NV != null)
+            {
+                glProgramUniform1ui64NV(program, location, x);
+            }
+        }
+
+        // GLAPI void APIENTRY glProgramUniform2ui64NV (GLuint program, GLint location, GLuint64EXT x, GLuint64EXT y);
+        public static void ProgramUniform2ui64NV(GLuint program, GLint location, GLuint64 x, GLuint64 y)
+        {
+            if (glProgramUniform2ui64NV != null)
+            {
+                glProgramUniform2ui64NV(program, location, x, y);
+            }
+        }
+
+        // GLAPI void APIENTRY glProgramUniform3ui64NV (GLuint program, GLint location, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z);
+        public static void ProgramUniform3ui64NV(GLuint program, GLint location, GLuint64 x, GLuint64 y, GLuint64 z)
+        {
+            if (glProgramUniform3ui64NV != null)
+            {
+                glProgramUniform3ui64NV(program, location, x, y, z);
+            }
+        }
+
+        // GLAPI void APIENTRY glProgramUniform4ui64NV (GLuint program, GLint location, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z, GLuint64EXT w);
+        public static void ProgramUniform4ui64NV(GLuint program, GLint location, GLuint64 x, GLuint64 y, GLuint64 z, GLuint64 w)
+        {
+            if (glProgramUniform4ui64NV != null)
+            {
+                glProgramUniform4ui64NV(program, location, x, y, z, w);
+            }
+        }
+
+        // GLAPI void APIENTRY glProgramUniform1ui64vNV (GLuint program, GLint location, GLsizei count, const GLuint64EXT *value);
+        public unsafe static void ProgramUniform1ui64vNV(GLuint program, GLint location, GLsizei count, GLuint64[] value)
+        {
+            if (glProgramUniform1ui64vNV != null)
+            {
+                fixed (GLuint64* ptr_value = value)
+                {
+                    glProgramUniform1ui64vNV(program, location, count, ptr_value);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glProgramUniform2ui64vNV (GLuint program, GLint location, GLsizei count, const GLuint64EXT *value);
+        public unsafe static void ProgramUniform2ui64vNV(GLuint program, GLint location, GLsizei count, GLuint64[] value)
+        {
+            if (glProgramUniform2ui64vNV != null)
+            {
+                fixed (GLuint64* ptr_value = value)
+                {
+                    glProgramUniform2ui64vNV(program, location, count, ptr_value);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glProgramUniform3ui64vNV (GLuint program, GLint location, GLsizei count, const GLuint64EXT *value);
+        public unsafe static void ProgramUniform3ui64vNV(GLuint program, GLint location, GLsizei count, GLuint64[] value)
+        {
+            if (glProgramUniform3ui64vNV != null)
+            {
+                fixed (GLuint64* ptr_value = value)
+                {
+                    glProgramUniform3ui64vNV(program, location, count, ptr_value);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glProgramUniform4ui64vNV (GLuint program, GLint location, GLsizei count, const GLuint64EXT *value);
+        public unsafe static void ProgramUniform4ui64vNV(GLuint program, GLint location, GLsizei count, GLuint64[] value)
+        {
+            if (glProgramUniform4ui64vNV != null)
+            {
+                fixed (GLuint64* ptr_value = value)
+                {
+                    glProgramUniform4ui64vNV(program, location, count, ptr_value);
+                }
+            }
+        }
+
         #endregion
 
         ///////////////////////////////////////////////////////////////////////
@@ -4945,6 +5312,473 @@ namespace OpenGLDotNet
 
         ///////////////////////////////////////////////////////////////////////
         // GL_ARB_fragment_shader_interlock (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_gpu_shader_int64
+        ///////////////////////////////////////////////////////////////////////
+        // GLAPI void APIENTRY glUniform1i64ARB (GLint location, GLint64 x);
+        public static void Uniform1i64ARB(GLint location, GLint64 x)
+        {
+            if (glUniform1i64ARB != null)
+            {
+                glUniform1i64ARB(location, x);
+            }
+        }
+
+        // GLAPI void APIENTRY glUniform2i64ARB (GLint location, GLint64 x, GLint64 y);
+        public static void Uniform2i64ARB(GLint location, GLint64 x, GLint64 y)
+        {
+            if (glUniform2i64ARB != null)
+            {
+                glUniform2i64ARB(location, x, y);
+            }
+        }
+
+        // GLAPI void APIENTRY glUniform3i64ARB (GLint location, GLint64 x, GLint64 y, GLint64 z);
+        public static void Uniform3i64ARB(GLint location, GLint64 x, GLint64 y, GLint64 z)
+        {
+            if (glUniform3i64ARB != null)
+            {
+                glUniform3i64ARB(location, x, y, z);
+            }
+        }
+
+        // GLAPI void APIENTRY glUniform4i64ARB (GLint location, GLint64 x, GLint64 y, GLint64 z, GLint64 w);
+        public static void Uniform4i64ARB(GLint location, GLint64 x, GLint64 y, GLint64 z, GLint64 w)
+        {
+            if (glUniform4i64ARB != null)
+            {
+                glUniform4i64ARB(location, x, y, z, w);
+            }
+        }
+
+        // GLAPI void APIENTRY glUniform1i64vARB (GLint location, GLsizei count, const GLint64 *value);
+        public unsafe static void Uniform1i64vARB(GLint location, GLsizei count, GLint64[] value)
+        {
+            if (glUniform1i64vARB != null)
+            {
+                fixed (GLint64* ptr_value = value)
+                {
+                    glUniform1i64vARB(location, count, ptr_value);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glUniform2i64vARB (GLint location, GLsizei count, const GLint64 *value);
+        public unsafe static void Uniform2i64vARB(GLint location, GLsizei count, GLint64[] value)
+        {
+            if (glUniform2i64vARB != null)
+            {
+                fixed (GLint64* ptr_value = value)
+                {
+                    glUniform2i64vARB(location, count, ptr_value);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glUniform3i64vARB (GLint location, GLsizei count, const GLint64 *value);
+        public unsafe static void Uniform3i64vARB(GLint location, GLsizei count, GLint64[] value)
+        {
+            if (glUniform3i64vARB != null)
+            {
+                fixed (GLint64* ptr_value = value)
+                {
+                    glUniform3i64vARB(location, count, ptr_value);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glUniform4i64vARB (GLint location, GLsizei count, const GLint64 *value);
+        public unsafe static void Uniform4i64vARB(GLint location, GLsizei count, GLint64[] value)
+        {
+            if (glUniform4i64vARB != null)
+            {
+                fixed (GLint64* ptr_value = value)
+                {
+                    glUniform4i64vARB(location, count, ptr_value);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glUniform1ui64ARB (GLint location, GLuint64 x);
+        public static void Uniform1ui64ARB(GLint location, GLuint64 x)
+        {
+            if (glUniform1ui64ARB != null)
+            {
+                glUniform1ui64ARB(location, x);
+            }
+        }
+
+        // GLAPI void APIENTRY glUniform2ui64ARB (GLint location, GLuint64 x, GLuint64 y);
+        public static void Uniform2ui64ARB(GLint location, GLuint64 x, GLuint64 y)
+        {
+            if (glUniform2ui64ARB != null)
+            {
+                glUniform2ui64ARB(location, x, y);
+            }
+        }
+
+        // GLAPI void APIENTRY glUniform3ui64ARB (GLint location, GLuint64 x, GLuint64 y, GLuint64 z);
+        public static void Uniform3ui64ARB(GLint location, GLuint64 x, GLuint64 y, GLuint64 z)
+        {
+            if (glUniform3ui64ARB != null)
+            {
+                glUniform3ui64ARB(location, x, y, z);
+            }
+        }
+
+        // GLAPI void APIENTRY glUniform4ui64ARB (GLint location, GLuint64 x, GLuint64 y, GLuint64 z, GLuint64 w);
+        public static void Uniform4ui64ARB(GLint location, GLuint64 x, GLuint64 y, GLuint64 z, GLuint64 w)
+        {
+            if (glUniform4ui64ARB != null)
+            {
+                glUniform4ui64ARB(location, x, y, z, w);
+            }
+        }
+
+        // GLAPI void APIENTRY glUniform1ui64vARB (GLint location, GLsizei count, const GLuint64 *value);
+        public unsafe static void Uniform1ui64vARB(GLint location, GLsizei count, GLuint64[] value)
+        {
+            if (glUniform1ui64vARB != null)
+            {
+                fixed (GLuint64* ptr_value = value)
+                {
+                    glUniform1ui64vARB(location, count, ptr_value);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glUniform2ui64vARB (GLint location, GLsizei count, const GLuint64 *value);
+        public unsafe static void Uniform2ui64vARB(GLint location, GLsizei count, GLuint64[] value)
+        {
+            if (glUniform2ui64vARB != null)
+            {
+                fixed (GLuint64* ptr_value = value)
+                {
+                    glUniform2ui64vARB(location, count, ptr_value);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glUniform3ui64vARB (GLint location, GLsizei count, const GLuint64 *value);
+        public unsafe static void Uniform3ui64vARB(GLint location, GLsizei count, GLuint64[] value)
+        {
+            if (glUniform3ui64vARB != null)
+            {
+                fixed (GLuint64* ptr_value = value)
+                {
+                    glUniform3ui64vARB(location, count, ptr_value);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glUniform4ui64vARB (GLint location, GLsizei count, const GLuint64 *value);
+        public unsafe static void Uniform4ui64vARB(GLint location, GLsizei count, GLuint64[] value)
+        {
+            if (glUniform4ui64vARB != null)
+            {
+                fixed (GLuint64* ptr_value = value)
+                {
+                    glUniform4ui64vARB(location, count, ptr_value);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glGetUniformi64vARB (GLuint program, GLint location, GLint64 *params);
+        public unsafe static void GetUniformi64vARB(GLuint program, GLint location, GLint64[] parameters)
+        {
+            if (glGetUniformi64vARB != null)
+            {
+                fixed (GLint64* ptr_parameters = parameters)
+                {
+                    glGetUniformi64vARB(program, location, ptr_parameters);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glGetUniformui64vARB (GLuint program, GLint location, GLuint64 *params);
+        public unsafe static void GetUniformui64vARB(GLuint program, GLint location, GLuint64[] parameters)
+        {
+            if (glGetUniformui64vARB != null)
+            {
+                fixed (GLuint64* ptr_parameters = parameters)
+                {
+                    glGetUniformui64vARB(program, location, ptr_parameters);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glGetnUniformi64vARB (GLuint program, GLint location, GLsizei bufSize, GLint64 *params);
+        public unsafe static void GetnUniformi64vARB(GLuint program, GLint location, GLsizei bufSize, GLint64[] parameters)
+        {
+            if (glGetnUniformi64vARB != null)
+            {
+                fixed (GLint64* ptr_parameters = parameters)
+                {
+                    glGetnUniformi64vARB(program, location, bufSize, ptr_parameters);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glGetnUniformui64vARB (GLuint program, GLint location, GLsizei bufSize, GLuint64 *params);
+        public unsafe static void GetnUniformui64vARB(GLuint program, GLint location, GLsizei bufSize, GLuint64[] parameters)
+        {
+            if (glGetnUniformui64vARB != null)
+            {
+                fixed (GLuint64* ptr_parameters = parameters)
+                {
+                    glGetnUniformui64vARB(program, location, bufSize, ptr_parameters);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glProgramUniform1i64ARB (GLuint program, GLint location, GLint64 x);
+        public static void ProgramUniform1i64ARB(GLuint program, GLint location, GLint64 x)
+        {
+            if (glProgramUniform1i64ARB != null)
+            {
+                glProgramUniform1i64ARB(program, location, x);
+            }
+        }
+
+        // GLAPI void APIENTRY glProgramUniform2i64ARB (GLuint program, GLint location, GLint64 x, GLint64 y);
+        public static void ProgramUniform2i64ARB(GLuint program, GLint location, GLint64 x, GLint64 y)
+        {
+            if (glProgramUniform2i64ARB != null)
+            {
+                glProgramUniform2i64ARB(program, location, x, y);
+            }
+        }
+
+        // GLAPI void APIENTRY glProgramUniform3i64ARB (GLuint program, GLint location, GLint64 x, GLint64 y, GLint64 z);
+        public static void ProgramUniform3i64ARB(GLuint program, GLint location, GLint64 x, GLint64 y, GLint64 z)
+        {
+            if (glProgramUniform3i64ARB != null)
+            {
+                glProgramUniform3i64ARB(program, location, x, y, z);
+            }
+        }
+
+        // GLAPI void APIENTRY glProgramUniform4i64ARB (GLuint program, GLint location, GLint64 x, GLint64 y, GLint64 z, GLint64 w);
+        public static void ProgramUniform4i64ARB(GLuint program, GLint location, GLint64 x, GLint64 y, GLint64 z, GLint64 w)
+        {
+            if (glProgramUniform4i64ARB != null)
+            {
+                glProgramUniform4i64ARB(program, location, x, y, z, w);
+            }
+        }
+
+        // GLAPI void APIENTRY glProgramUniform1i64vARB (GLuint program, GLint location, GLsizei count, const GLint64 *value);
+        public unsafe static void ProgramUniform1i64vARB(GLuint program, GLint location, GLsizei count, GLint64[] value)
+        {
+            if (glProgramUniform1i64vARB != null)
+            {
+                fixed (GLint64* ptr_value = value)
+                {
+                    glProgramUniform1i64vARB(program, location, count, ptr_value);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glProgramUniform2i64vARB (GLuint program, GLint location, GLsizei count, const GLint64 *value);
+        public unsafe static void ProgramUniform2i64vARB(GLuint program, GLint location, GLsizei count, GLint64[] value)
+        {
+            if (glProgramUniform2i64vARB != null)
+            {
+                fixed (GLint64* ptr_value = value)
+                {
+                    glProgramUniform2i64vARB(program, location, count, ptr_value);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glProgramUniform3i64vARB (GLuint program, GLint location, GLsizei count, const GLint64 *value);
+        public unsafe static void ProgramUniform3i64vARB(GLuint program, GLint location, GLsizei count, GLint64[] value)
+        {
+            if (glProgramUniform3i64vARB != null)
+            {
+                fixed (GLint64* ptr_value = value)
+                {
+                    glProgramUniform3i64vARB(program, location, count, ptr_value);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glProgramUniform4i64vARB (GLuint program, GLint location, GLsizei count, const GLint64 *value);
+        public unsafe static void ProgramUniform4i64vARB(GLuint program, GLint location, GLsizei count, GLint64[] value)
+        {
+            if (glProgramUniform4i64vARB != null)
+            {
+                fixed (GLint64* ptr_value = value)
+                {
+                    glProgramUniform4i64vARB(program, location, count, ptr_value);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glProgramUniform1ui64ARB (GLuint program, GLint location, GLuint64 x);
+        public static void ProgramUniform1ui64ARB(GLuint program, GLint location, GLuint64 x)
+        {
+            if (glProgramUniform1ui64ARB != null)
+            {
+                glProgramUniform1ui64ARB(program, location, x);
+            }
+        }
+
+        // GLAPI void APIENTRY glProgramUniform2ui64ARB (GLuint program, GLint location, GLuint64 x, GLuint64 y);
+        public static void ProgramUniform2ui64ARB(GLuint program, GLint location, GLuint64 x, GLuint64 y)
+        {
+            if (glProgramUniform2ui64ARB != null)
+            {
+                glProgramUniform2ui64ARB(program, location, x, y);
+            }
+        }
+
+        // GLAPI void APIENTRY glProgramUniform3ui64ARB (GLuint program, GLint location, GLuint64 x, GLuint64 y, GLuint64 z);
+        public static void ProgramUniform3ui64ARB(GLuint program, GLint location, GLuint64 x, GLuint64 y, GLuint64 z)
+        {
+            if (glProgramUniform3ui64ARB != null)
+            {
+                glProgramUniform3ui64ARB(program, location, x, y, z);
+            }
+        }
+
+        // GLAPI void APIENTRY glProgramUniform4ui64ARB (GLuint program, GLint location, GLuint64 x, GLuint64 y, GLuint64 z, GLuint64 w);
+        public static void ProgramUniform4ui64ARB(GLuint program, GLint location, GLuint64 x, GLuint64 y, GLuint64 z, GLuint64 w)
+        {
+            if (glProgramUniform4ui64ARB != null)
+            {
+                glProgramUniform4ui64ARB(program, location, x, y, z, w);
+            }
+        }
+
+        // GLAPI void APIENTRY glProgramUniform1ui64vARB (GLuint program, GLint location, GLsizei count, const GLuint64 *value);
+        public unsafe static void ProgramUniform1ui64vARB(GLuint program, GLint location, GLsizei count, GLuint64[] value)
+        {
+            if (glProgramUniform1ui64vARB != null)
+            {
+                fixed (GLuint64* ptr_value = value)
+                {
+                    glProgramUniform1ui64vARB(program, location, count, ptr_value);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glProgramUniform2ui64vARB (GLuint program, GLint location, GLsizei count, const GLuint64 *value);
+        public unsafe static void ProgramUniform2ui64vARB(GLuint program, GLint location, GLsizei count, GLuint64[] value)
+        {
+            if (glProgramUniform2ui64vARB != null)
+            {
+                fixed (GLuint64* ptr_value = value)
+                {
+                    glProgramUniform2ui64vARB(program, location, count, ptr_value);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glProgramUniform3ui64vARB (GLuint program, GLint location, GLsizei count, const GLuint64 *value);
+        public unsafe static void ProgramUniform3ui64vARB(GLuint program, GLint location, GLsizei count, GLuint64[] value)
+        {
+            if (glProgramUniform3ui64vARB != null)
+            {
+                fixed (GLuint64* ptr_value = value)
+                {
+                    glProgramUniform3ui64vARB(program, location, count, ptr_value);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glProgramUniform4ui64vARB (GLuint program, GLint location, GLsizei count, const GLuint64 *value);
+        public unsafe static void ProgramUniform4ui64vARB(GLuint program, GLint location, GLsizei count, GLuint64[] value)
+        {
+            if (glProgramUniform4ui64vARB != null)
+            {
+                fixed (GLuint64* ptr_value = value)
+                {
+                    glProgramUniform4ui64vARB(program, location, count, ptr_value);
+                }
+            }
+        }
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_parallel_shader_compile
+        ///////////////////////////////////////////////////////////////////////
+        // GLAPI void APIENTRY glMaxShaderCompilerThreadsARB (GLuint count);
+        public static void MaxShaderCompilerThreadsARB(GLuint count)
+        {
+            if (glMaxShaderCompilerThreadsARB != null)
+            {
+                glMaxShaderCompilerThreadsARB(count);
+            }
+        }
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_post_depth_coverage (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_sample_locations
+        ///////////////////////////////////////////////////////////////////////
+        // GLAPI void APIENTRY glFramebufferSampleLocationsfvARB (GLenum target, GLuint start, GLsizei count, const GLfloat *v);
+        public unsafe static void FramebufferSampleLocationsfvARB(GLenum target, GLuint start, GLsizei count, GLfloat[] v)
+        {
+            if (glFramebufferSampleLocationsfvARB != null)
+            {
+                fixed (GLfloat* ptr_v = v)
+                {
+                    glFramebufferSampleLocationsfvARB(target, start, count, ptr_v);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glNamedFramebufferSampleLocationsfvARB (GLuint framebuffer, GLuint start, GLsizei count, const GLfloat *v);
+        public unsafe static void NamedFramebufferSampleLocationsfvARB(GLuint framebuffer, GLuint start, GLsizei count, GLfloat[] v)
+        {
+            if (glNamedFramebufferSampleLocationsfvARB != null)
+            {
+                fixed (GLfloat* ptr_v = v)
+                {
+                    glNamedFramebufferSampleLocationsfvARB(framebuffer, start, count, ptr_v);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glEvaluateDepthValuesARB (void);
+        public static void EvaluateDepthValuesARB()
+        {
+            if (glEvaluateDepthValuesARB != null)
+            {
+                glEvaluateDepthValuesARB();
+            }
+        }
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_shader_atomic_counter_ops (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_shader_ballot (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_shader_clock (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_shader_viewport_layer_array (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_sparse_texture2 (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_sparse_texture_clamp (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_ARB_texture_filter_minmax (no function entry points)
         ///////////////////////////////////////////////////////////////////////
 
         #endregion
@@ -11819,6 +12653,22 @@ namespace OpenGLDotNet
         // GL_KHR_texture_compression_astc_sliced_3d (no function entry points)
         ///////////////////////////////////////////////////////////////////////
 
+        ///////////////////////////////////////////////////////////////////////
+        // GL_KHR_blend_equation_advanced
+        ///////////////////////////////////////////////////////////////////////
+        // GLAPI void APIENTRY glBlendBarrierKHR (void);
+        public static void BlendBarrierKHR()
+        {
+            if (glBlendBarrierKHR != null)
+            {
+                glBlendBarrierKHR();
+            }
+        }
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_KHR_blend_equation_advanced_coherent (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
         #endregion
 
         ///////////////////////////////////////////////////////////////////////
@@ -15292,18 +16142,6 @@ namespace OpenGLDotNet
             }
         }
 
-        // GLAPI void APIENTRY glGetUniformui64vNV (GLuint program, GLint location, GLuint64EXT *params);
-        public unsafe static void GetUniformui64vNV(GLuint program, GLint location, GLuint64[] parameters)
-        {
-            if (glGetUniformui64vNV != null)
-            {
-                fixed (GLuint64* ptr_parameters = parameters)
-                {
-                    glGetUniformui64vNV(program, location, ptr_parameters);
-                }
-            }
-        }
-
         // GLAPI void APIENTRY glProgramUniformui64NV (GLuint program, GLint location, GLuint64EXT value);
         public static void ProgramUniformui64NV(GLuint program, GLint location, GLuint64 value)
         {
@@ -15479,355 +16317,8 @@ namespace OpenGLDotNet
         }
 
         ///////////////////////////////////////////////////////////////////////
-        // GL_NV_gpu_shader5
+        // GL_NV_gpu_shader5 (no function entry points)
         ///////////////////////////////////////////////////////////////////////
-        // GLAPI void APIENTRY glUniform1i64NV (GLint location, GLint64EXT x);
-        public static void Uniform1i64NV(GLint location, GLint64 x)
-        {
-            if (glUniform1i64NV != null)
-            {
-                glUniform1i64NV(location, x);
-            }
-        }
-
-        // GLAPI void APIENTRY glUniform2i64NV (GLint location, GLint64EXT x, GLint64EXT y);
-        public static void Uniform2i64NV(GLint location, GLint64 x, GLint64 y)
-        {
-            if (glUniform2i64NV != null)
-            {
-                glUniform2i64NV(location, x, y);
-            }
-        }
-
-        // GLAPI void APIENTRY glUniform3i64NV (GLint location, GLint64EXT x, GLint64EXT y, GLint64EXT z);
-        public static void Uniform3i64NV(GLint location, GLint64 x, GLint64 y, GLint64 z)
-        {
-            if (glUniform3i64NV != null)
-            {
-                glUniform3i64NV(location, x, y, z);
-            }
-        }
-
-        // GLAPI void APIENTRY glUniform4i64NV (GLint location, GLint64EXT x, GLint64EXT y, GLint64EXT z, GLint64EXT w);
-        public static void Uniform4i64NV(GLint location, GLint64 x, GLint64 y, GLint64 z, GLint64 w)
-        {
-            if (glUniform4i64NV != null)
-            {
-                glUniform4i64NV(location, x, y, z, w);
-            }
-        }
-
-        // GLAPI void APIENTRY glUniform1i64vNV (GLint location, GLsizei count, const GLint64EXT *value);
-        public unsafe static void Uniform1i64vNV(GLint location, GLsizei count, GLint64[] value)
-        {
-            if (glUniform1i64vNV != null)
-            {
-                fixed (GLint64* ptr_value = value)
-                {
-                    glUniform1i64vNV(location, count, ptr_value);
-                }
-            }
-        }
-
-        // GLAPI void APIENTRY glUniform2i64vNV (GLint location, GLsizei count, const GLint64EXT *value);
-        public unsafe static void Uniform2i64vNV(GLint location, GLsizei count, GLint64[] value)
-        {
-            if (glUniform2i64vNV != null)
-            {
-                fixed (GLint64* ptr_value = value)
-                {
-                    glUniform2i64vNV(location, count, ptr_value);
-                }
-            }
-        }
-
-        // GLAPI void APIENTRY glUniform3i64vNV (GLint location, GLsizei count, const GLint64EXT *value);
-        public unsafe static void Uniform3i64vNV(GLint location, GLsizei count, GLint64[] value)
-        {
-            if (glUniform3i64vNV != null)
-            {
-                fixed (GLint64* ptr_value = value)
-                {
-                    glUniform3i64vNV(location, count, ptr_value);
-                }
-            }
-        }
-
-        // GLAPI void APIENTRY glUniform4i64vNV (GLint location, GLsizei count, const GLint64EXT *value);
-        public unsafe static void Uniform4i64vNV(GLint location, GLsizei count, GLint64[] value)
-        {
-            if (glUniform4i64vNV != null)
-            {
-                fixed (GLint64* ptr_value = value)
-                {
-                    glUniform4i64vNV(location, count, ptr_value);
-                }
-            }
-        }
-
-        // GLAPI void APIENTRY glUniform1ui64NV (GLint location, GLuint64EXT x);
-        public static void Uniform1ui64NV(GLint location, GLuint64 x)
-        {
-            if (glUniform1ui64NV != null)
-            {
-                glUniform1ui64NV(location, x);
-            }
-        }
-
-        // GLAPI void APIENTRY glUniform2ui64NV (GLint location, GLuint64EXT x, GLuint64EXT y);
-        public static void Uniform2ui64NV(GLint location, GLuint64 x, GLuint64 y)
-        {
-            if (glUniform2ui64NV != null)
-            {
-                glUniform2ui64NV(location, x, y);
-            }
-        }
-
-        // GLAPI void APIENTRY glUniform3ui64NV (GLint location, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z);
-        public static void Uniform3ui64NV(GLint location, GLuint64 x, GLuint64 y, GLuint64 z)
-        {
-            if (glUniform3ui64NV != null)
-            {
-                glUniform3ui64NV(location, x, y, z);
-            }
-        }
-
-        // GLAPI void APIENTRY glUniform4ui64NV (GLint location, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z, GLuint64EXT w);
-        public static void Uniform4ui64NV(GLint location, GLuint64 x, GLuint64 y, GLuint64 z, GLuint64 w)
-        {
-            if (glUniform4ui64NV != null)
-            {
-                glUniform4ui64NV(location, x, y, z, w);
-            }
-        }
-
-        // GLAPI void APIENTRY glUniform1ui64vNV (GLint location, GLsizei count, const GLuint64EXT *value);
-        public unsafe static void Uniform1ui64vNV(GLint location, GLsizei count, GLuint64[] value)
-        {
-            if (glUniform1ui64vNV != null)
-            {
-                fixed (GLuint64* ptr_value = value)
-                {
-                    glUniform1ui64vNV(location, count, ptr_value);
-                }
-            }
-        }
-
-        // GLAPI void APIENTRY glUniform2ui64vNV (GLint location, GLsizei count, const GLuint64EXT *value);
-        public unsafe static void Uniform2ui64vNV(GLint location, GLsizei count, GLuint64[] value)
-        {
-            if (glUniform2ui64vNV != null)
-            {
-                fixed (GLuint64* ptr_value = value)
-                {
-                    glUniform2ui64vNV(location, count, ptr_value);
-                }
-            }
-        }
-
-        // GLAPI void APIENTRY glUniform3ui64vNV (GLint location, GLsizei count, const GLuint64EXT *value);
-        public unsafe static void Uniform3ui64vNV(GLint location, GLsizei count, GLuint64[] value)
-        {
-            if (glUniform3ui64vNV != null)
-            {
-                fixed (GLuint64* ptr_value = value)
-                {
-                    glUniform3ui64vNV(location, count, ptr_value);
-                }
-            }
-        }
-
-        // GLAPI void APIENTRY glUniform4ui64vNV (GLint location, GLsizei count, const GLuint64EXT *value);
-        public unsafe static void Uniform4ui64vNV(GLint location, GLsizei count, GLuint64[] value)
-        {
-            if (glUniform4ui64vNV != null)
-            {
-                fixed (GLuint64* ptr_value = value)
-                {
-                    glUniform4ui64vNV(location, count, ptr_value);
-                }
-            }
-        }
-
-        // GLAPI void APIENTRY glGetUniformi64vNV (GLuint program, GLint location, GLint64EXT *params);
-        public unsafe static void GetUniformi64vNV(GLuint program, GLint location, GLint64[] parameters)
-        {
-            if (glGetUniformi64vNV != null)
-            {
-                fixed (GLint64* ptr_parameters = parameters)
-                {
-                    glGetUniformi64vNV(program, location, ptr_parameters);
-                }
-            }
-        }
-
-        // GLAPI void APIENTRY glProgramUniform1i64NV (GLuint program, GLint location, GLint64EXT x);
-        public static void ProgramUniform1i64NV(GLuint program, GLint location, GLint64 x)
-        {
-            if (glProgramUniform1i64NV != null)
-            {
-                glProgramUniform1i64NV(program, location, x);
-            }
-        }
-
-        // GLAPI void APIENTRY glProgramUniform2i64NV (GLuint program, GLint location, GLint64EXT x, GLint64EXT y);
-        public static void ProgramUniform2i64NV(GLuint program, GLint location, GLint64 x, GLint64 y)
-        {
-            if (glProgramUniform2i64NV != null)
-            {
-                glProgramUniform2i64NV(program, location, x, y);
-            }
-        }
-
-        // GLAPI void APIENTRY glProgramUniform3i64NV (GLuint program, GLint location, GLint64EXT x, GLint64EXT y, GLint64EXT z);
-        public static void ProgramUniform3i64NV(GLuint program, GLint location, GLint64 x, GLint64 y, GLint64 z)
-        {
-            if (glProgramUniform3i64NV != null)
-            {
-                glProgramUniform3i64NV(program, location, x, y, z);
-            }
-        }
-
-        // GLAPI void APIENTRY glProgramUniform4i64NV (GLuint program, GLint location, GLint64EXT x, GLint64EXT y, GLint64EXT z, GLint64EXT w);
-        public static void ProgramUniform4i64NV(GLuint program, GLint location, GLint64 x, GLint64 y, GLint64 z, GLint64 w)
-        {
-            if (glProgramUniform4i64NV != null)
-            {
-                glProgramUniform4i64NV(program, location, x, y, z, w);
-            }
-        }
-
-        // GLAPI void APIENTRY glProgramUniform1i64vNV (GLuint program, GLint location, GLsizei count, const GLint64EXT *value);
-        public unsafe static void ProgramUniform1i64vNV(GLuint program, GLint location, GLsizei count, GLint64[] value)
-        {
-            if (glProgramUniform1i64vNV != null)
-            {
-                fixed (GLint64* ptr_value = value)
-                {
-                    glProgramUniform1i64vNV(program, location, count, ptr_value);
-                }
-            }
-        }
-
-        // GLAPI void APIENTRY glProgramUniform2i64vNV (GLuint program, GLint location, GLsizei count, const GLint64EXT *value);
-        public unsafe static void ProgramUniform2i64vNV(GLuint program, GLint location, GLsizei count, GLint64[] value)
-        {
-            if (glProgramUniform2i64vNV != null)
-            {
-                fixed (GLint64* ptr_value = value)
-                {
-                    glProgramUniform2i64vNV(program, location, count, ptr_value);
-                }
-            }
-        }
-
-        // GLAPI void APIENTRY glProgramUniform3i64vNV (GLuint program, GLint location, GLsizei count, const GLint64EXT *value);
-        public unsafe static void ProgramUniform3i64vNV(GLuint program, GLint location, GLsizei count, GLint64[] value)
-        {
-            if (glProgramUniform3i64vNV != null)
-            {
-                fixed (GLint64* ptr_value = value)
-                {
-                    glProgramUniform3i64vNV(program, location, count, ptr_value);
-                }
-            }
-        }
-
-        // GLAPI void APIENTRY glProgramUniform4i64vNV (GLuint program, GLint location, GLsizei count, const GLint64EXT *value);
-        public unsafe static void ProgramUniform4i64vNV(GLuint program, GLint location, GLsizei count, GLint64[] value)
-        {
-            if (glProgramUniform4i64vNV != null)
-            {
-                fixed (GLint64* ptr_value = value)
-                {
-                    glProgramUniform4i64vNV(program, location, count, ptr_value);
-                }
-            }
-        }
-
-        // GLAPI void APIENTRY glProgramUniform1ui64NV (GLuint program, GLint location, GLuint64EXT x);
-        public static void ProgramUniform1ui64NV(GLuint program, GLint location, GLuint64 x)
-        {
-            if (glProgramUniform1ui64NV != null)
-            {
-                glProgramUniform1ui64NV(program, location, x);
-            }
-        }
-
-        // GLAPI void APIENTRY glProgramUniform2ui64NV (GLuint program, GLint location, GLuint64EXT x, GLuint64EXT y);
-        public static void ProgramUniform2ui64NV(GLuint program, GLint location, GLuint64 x, GLuint64 y)
-        {
-            if (glProgramUniform2ui64NV != null)
-            {
-                glProgramUniform2ui64NV(program, location, x, y);
-            }
-        }
-
-        // GLAPI void APIENTRY glProgramUniform3ui64NV (GLuint program, GLint location, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z);
-        public static void ProgramUniform3ui64NV(GLuint program, GLint location, GLuint64 x, GLuint64 y, GLuint64 z)
-        {
-            if (glProgramUniform3ui64NV != null)
-            {
-                glProgramUniform3ui64NV(program, location, x, y, z);
-            }
-        }
-
-        // GLAPI void APIENTRY glProgramUniform4ui64NV (GLuint program, GLint location, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z, GLuint64EXT w);
-        public static void ProgramUniform4ui64NV(GLuint program, GLint location, GLuint64 x, GLuint64 y, GLuint z, GLuint w)
-        {
-            if (glProgramUniform4ui64NV != null)
-            {
-                glProgramUniform4ui64NV(program, location, x, y, z, w);
-            }
-        }
-
-        // GLAPI void APIENTRY glProgramUniform1ui64vNV (GLuint program, GLint location, GLsizei count, const GLuint64EXT *value);
-        public unsafe static void ProgramUniform1ui64vNV(GLuint program, GLint location, GLsizei count, GLuint64[] value)
-        {
-            if (glProgramUniform1ui64vNV != null)
-            {
-                fixed (GLuint64* ptr_value = value)
-                {
-                    glProgramUniform1ui64vNV(program, location, count, ptr_value);
-                }
-            }
-        }
-
-        // GLAPI void APIENTRY glProgramUniform2ui64vNV (GLuint program, GLint location, GLsizei count, const GLuint64EXT *value);
-        public unsafe static void ProgramUniform2ui64vNV(GLuint program, GLint location, GLsizei count, GLuint64[] value)
-        {
-            if (glProgramUniform2ui64vNV != null)
-            {
-                fixed (GLuint64* ptr_value = value)
-                {
-                    glProgramUniform2ui64vNV(program, location, count, ptr_value);
-                }
-            }
-        }
-
-        // GLAPI void APIENTRY glProgramUniform3ui64vNV (GLuint program, GLint location, GLsizei count, const GLuint64EXT *value);
-        public unsafe static void ProgramUniform3ui64vNV(GLuint program, GLint location, GLsizei count, GLuint64[] value)
-        {
-            if (glProgramUniform3ui64vNV != null)
-            {
-                fixed (GLuint64* ptr_value = value)
-                {
-                    glProgramUniform3ui64vNV(program, location, count, ptr_value);
-                }
-            }
-        }
-
-        // GLAPI void APIENTRY glProgramUniform4ui64vNV (GLuint program, GLint location, GLsizei count, const GLuint64EXT *value);
-        public unsafe static void ProgramUniform4ui64vNV(GLuint program, GLint location, GLsizei count, GLuint64[] value)
-        {
-            if (glProgramUniform4ui64vNV != null)
-            {
-                fixed (GLuint64* ptr_value = value)
-                {
-                    glProgramUniform4ui64vNV(program, location, count, ptr_value);
-                }
-            }
-        }
 
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_shader_buffer_store (no function entry point)

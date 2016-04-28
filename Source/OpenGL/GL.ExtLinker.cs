@@ -363,6 +363,189 @@ namespace OpenGLDotNet
                 }
             }
 
+            ///////////////////////////////////////////////////////////////////////
+            // GL_AMD_gcn_shader (no function entry points)
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_AMD_gcn_shader"))
+            {
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_AMD_gpu_shader_int64
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_AMD_gpu_shader_int64"))
+            {
+                if (GL.LinkProcGLEXT("glUniform1i64NV"))
+                {
+                    GL.glUniform1i64NV = (TglUniform1i64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform1i64NV));
+                }
+
+                if (GL.LinkProcGLEXT("glUniform2i64NV"))
+                {
+                    GL.glUniform2i64NV = (TglUniform2i64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform2i64NV));
+                }
+
+                if (GL.LinkProcGLEXT("glUniform3i64NV"))
+                {
+                    GL.glUniform3i64NV = (TglUniform3i64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform3i64NV));
+                }
+
+                if (GL.LinkProcGLEXT("glUniform4i64NV"))
+                {
+                    GL.glUniform4i64NV = (TglUniform4i64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform4i64NV));
+                }
+
+                if (GL.LinkProcGLEXT("glUniform1i64vNV"))
+                {
+                    GL.glUniform1i64vNV = (TglUniform1i64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform1i64vNV));
+                }
+
+                if (GL.LinkProcGLEXT("glUniform2i64vNV"))
+                {
+                    GL.glUniform2i64vNV = (TglUniform2i64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform2i64vNV));
+                }
+
+                if (GL.LinkProcGLEXT("glUniform3i64vNV"))
+                {
+                    GL.glUniform3i64vNV = (TglUniform3i64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform3i64vNV));
+                }
+
+                if (GL.LinkProcGLEXT("glUniform4i64vNV"))
+                {
+                    GL.glUniform4i64vNV = (TglUniform4i64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform4i64vNV));
+                }
+
+                if (GL.LinkProcGLEXT("glUniform1ui64NV"))
+                {
+                    GL.glUniform1ui64NV = (TglUniform1ui64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform1ui64NV));
+                }
+
+                if (GL.LinkProcGLEXT("glUniform2ui64NV"))
+                {
+                    GL.glUniform2ui64NV = (TglUniform2ui64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform2ui64NV));
+                }
+
+                if (GL.LinkProcGLEXT("glUniform3ui64NV"))
+                {
+                    GL.glUniform3ui64NV = (TglUniform3ui64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform3ui64NV));
+                }
+
+                if (GL.LinkProcGLEXT("glUniform4ui64NV"))
+                {
+                    GL.glUniform4ui64NV = (TglUniform4ui64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform4ui64NV));
+                }
+
+                if (GL.LinkProcGLEXT("glUniform1ui64vNV"))
+                {
+                    GL.glUniform1ui64vNV = (TglUniform1ui64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform1ui64vNV));
+                }
+
+                if (GL.LinkProcGLEXT("glUniform2ui64vNV"))
+                {
+                    GL.glUniform2ui64vNV = (TglUniform2ui64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform2ui64vNV));
+                }
+
+                if (GL.LinkProcGLEXT("glUniform3ui64vNV"))
+                {
+                    GL.glUniform3ui64vNV = (TglUniform3ui64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform3ui64vNV));
+                }
+
+                if (GL.LinkProcGLEXT("glUniform4ui64vNV"))
+                {
+                    GL.glUniform4ui64vNV = (TglUniform4ui64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform4ui64vNV));
+                }
+
+                if (GL.LinkProcGLEXT("glGetUniformi64vNV"))
+                {
+                    GL.glGetUniformi64vNV = (TglGetUniformi64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglGetUniformi64vNV));
+                }
+
+                if (GL.LinkProcGLEXT("glGetUniformui64vNV"))
+                {
+                    GL.glGetUniformui64vNV = (TglGetUniformui64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglGetUniformui64vNV));
+                }
+
+                if (GL.LinkProcGLEXT("glProgramUniform1i64NV"))
+                {
+                    GL.glProgramUniform1i64NV = (TglProgramUniform1i64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform1i64NV));
+                }
+
+                if (GL.LinkProcGLEXT("glProgramUniform2i64NV"))
+                {
+                    GL.glProgramUniform2i64NV = (TglProgramUniform2i64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform2i64NV));
+                }
+
+                if (GL.LinkProcGLEXT("glProgramUniform3i64NV"))
+                {
+                    GL.glProgramUniform3i64NV = (TglProgramUniform3i64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform3i64NV));
+                }
+
+                if (GL.LinkProcGLEXT("glProgramUniform4i64NV"))
+                {
+                    GL.glProgramUniform4i64NV = (TglProgramUniform4i64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform4i64NV));
+                }
+
+                if (GL.LinkProcGLEXT("glProgramUniform1i64vNV"))
+                {
+                    GL.glProgramUniform1i64vNV = (TglProgramUniform1i64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform1i64vNV));
+                }
+
+                if (GL.LinkProcGLEXT("glProgramUniform2i64vNV"))
+                {
+                    GL.glProgramUniform2i64vNV = (TglProgramUniform2i64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform2i64vNV));
+                }
+
+                if (GL.LinkProcGLEXT("glProgramUniform3i64vNV"))
+                {
+                    GL.glProgramUniform3i64vNV = (TglProgramUniform3i64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform3i64vNV));
+                }
+
+                if (GL.LinkProcGLEXT("glProgramUniform4i64vNV"))
+                {
+                    GL.glProgramUniform4i64vNV = (TglProgramUniform4i64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform4i64vNV));
+                }
+
+                if (GL.LinkProcGLEXT("glProgramUniform1ui64NV"))
+                {
+                    GL.glProgramUniform1ui64NV = (TglProgramUniform1ui64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform1ui64NV));
+                }
+
+                if (GL.LinkProcGLEXT("glProgramUniform2ui64NV"))
+                {
+                    GL.glProgramUniform2ui64NV = (TglProgramUniform2ui64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform2ui64NV));
+                }
+
+                if (GL.LinkProcGLEXT("glProgramUniform3ui64NV"))
+                {
+                    GL.glProgramUniform3ui64NV = (TglProgramUniform3ui64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform3ui64NV));
+                }
+
+                if (GL.LinkProcGLEXT("glProgramUniform4ui64NV"))
+                {
+                    GL.glProgramUniform4ui64NV = (TglProgramUniform4ui64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform4ui64NV));
+                }
+
+                if (GL.LinkProcGLEXT("glProgramUniform1ui64vNV"))
+                {
+                    GL.glProgramUniform1ui64vNV = (TglProgramUniform1ui64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform1ui64vNV));
+                }
+
+                if (GL.LinkProcGLEXT("glProgramUniform2ui64vNV"))
+                {
+                    GL.glProgramUniform2ui64vNV = (TglProgramUniform2ui64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform2ui64vNV));
+                }
+
+                if (GL.LinkProcGLEXT("glProgramUniform3ui64vNV"))
+                {
+                    GL.glProgramUniform3ui64vNV = (TglProgramUniform3ui64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform3ui64vNV));
+                }
+
+                if (GL.LinkProcGLEXT("glProgramUniform4ui64vNV"))
+                {
+                    GL.glProgramUniform4ui64vNV = (TglProgramUniform4ui64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform4ui64vNV));
+                }
+            }
+
             #endregion
 
             ///////////////////////////////////////////////////////////////////////
@@ -4775,41 +4958,265 @@ namespace OpenGLDotNet
                 {
                     GL.glUniform2i64ARB = (TglUniform2i64ARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform2i64ARB));
                 }
+
+                if (GL.LinkProcGLEXT("glUniform3i64ARB"))
+                {
+                    GL.glUniform3i64ARB = (TglUniform3i64ARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform3i64ARB));
+                }
+
+                if (GL.LinkProcGLEXT("glUniform4i64ARB"))
+                {
+                    GL.glUniform4i64ARB = (TglUniform4i64ARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform4i64ARB));
+                }
+
+                if (GL.LinkProcGLEXT("glUniform1i64vARB"))
+                {
+                    GL.glUniform1i64vARB = (TglUniform1i64vARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform1i64vARB));
+                }
+
+                if (GL.LinkProcGLEXT("glUniform2i64vARB"))
+                {
+                    GL.glUniform2i64vARB = (TglUniform2i64vARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform2i64vARB));
+                }
+
+                if (GL.LinkProcGLEXT("glUniform3i64vARB"))
+                {
+                    GL.glUniform3i64vARB = (TglUniform3i64vARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform3i64vARB));
+                }
+
+                if (GL.LinkProcGLEXT("glUniform4i64vARB"))
+                {
+                    GL.glUniform4i64vARB = (TglUniform4i64vARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform4i64vARB));
+                }
+
+                if (GL.LinkProcGLEXT("glUniform1ui64ARB"))
+                {
+                    GL.glUniform1ui64ARB = (TglUniform1ui64ARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform1ui64ARB));
+                }
+
+                if (GL.LinkProcGLEXT("glUniform2ui64ARB"))
+                {
+                    GL.glUniform2ui64ARB = (TglUniform2ui64ARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform2ui64ARB));
+                }
+
+                if (GL.LinkProcGLEXT("glUniform3ui64ARB"))
+                {
+                    GL.glUniform3ui64ARB = (TglUniform3ui64ARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform3ui64ARB));
+                }
+
+                if (GL.LinkProcGLEXT("glUniform4ui64ARB"))
+                {
+                    GL.glUniform4ui64ARB = (TglUniform4ui64ARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform4ui64ARB));
+                }
+
+                if (GL.LinkProcGLEXT("glUniform1ui64vARB"))
+                {
+                    GL.glUniform1ui64vARB = (TglUniform1ui64vARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform1ui64vARB));
+                }
+
+                if (GL.LinkProcGLEXT("glUniform2ui64vARB"))
+                {
+                    GL.glUniform2ui64vARB = (TglUniform2ui64vARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform2ui64vARB));
+                }
+
+                if (GL.LinkProcGLEXT("glUniform3ui64vARB"))
+                {
+                    GL.glUniform3ui64vARB = (TglUniform3ui64vARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform3ui64vARB));
+                }
+
+                if (GL.LinkProcGLEXT("glUniform4ui64vARB"))
+                {
+                    GL.glUniform4ui64vARB = (TglUniform4ui64vARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform4ui64vARB));
+                }
+
+                if (GL.LinkProcGLEXT("glGetUniformi64vARB"))
+                {
+                    GL.glGetUniformi64vARB = (TglGetUniformi64vARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglGetUniformi64vARB));
+                }
+
+                if (GL.LinkProcGLEXT("glGetUniformui64vARB"))
+                {
+                    GL.glGetUniformui64vARB = (TglGetUniformui64vARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglGetUniformui64vARB));
+                }
+
+                if (GL.LinkProcGLEXT("glGetnUniformi64vARB"))
+                {
+                    GL.glGetnUniformi64vARB = (TglGetnUniformi64vARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglGetnUniformi64vARB));
+                }
+
+                if (GL.LinkProcGLEXT("glGetnUniformui64vARB"))
+                {
+                    GL.glGetnUniformui64vARB = (TglGetnUniformui64vARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglGetnUniformui64vARB));
+                }
+
+                if (GL.LinkProcGLEXT("glProgramUniform1i64ARB"))
+                {
+                    GL.glProgramUniform1i64ARB = (TglProgramUniform1i64ARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform1i64ARB));
+                }
+
+                if (GL.LinkProcGLEXT("glProgramUniform2i64ARB"))
+                {
+                    GL.glProgramUniform2i64ARB = (TglProgramUniform2i64ARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform2i64ARB));
+                }
+
+                if (GL.LinkProcGLEXT("glProgramUniform3i64ARB"))
+                {
+                    GL.glProgramUniform3i64ARB = (TglProgramUniform3i64ARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform3i64ARB));
+                }
+
+                if (GL.LinkProcGLEXT("glProgramUniform4i64ARB"))
+                {
+                    GL.glProgramUniform4i64ARB = (TglProgramUniform4i64ARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform4i64ARB));
+                }
+
+                if (GL.LinkProcGLEXT("glProgramUniform1i64vARB"))
+                {
+                    GL.glProgramUniform1i64vARB = (TglProgramUniform1i64vARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform1i64vARB));
+                }
+
+                if (GL.LinkProcGLEXT("glProgramUniform2i64vARB"))
+                {
+                    GL.glProgramUniform2i64vARB = (TglProgramUniform2i64vARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform2i64vARB));
+                }
+
+                if (GL.LinkProcGLEXT("glProgramUniform3i64vARB"))
+                {
+                    GL.glProgramUniform3i64vARB = (TglProgramUniform3i64vARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform3i64vARB));
+                }
+
+                if (GL.LinkProcGLEXT("glProgramUniform4i64vARB"))
+                {
+                    GL.glProgramUniform4i64vARB = (TglProgramUniform4i64vARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform4i64vARB));
+                }
+
+                if (GL.LinkProcGLEXT("glProgramUniform1ui64ARB"))
+                {
+                    GL.glProgramUniform1ui64ARB = (TglProgramUniform1ui64ARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform1ui64ARB));
+                }
+
+                if (GL.LinkProcGLEXT("glProgramUniform2ui64ARB"))
+                {
+                    GL.glProgramUniform2ui64ARB = (TglProgramUniform2ui64ARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform2ui64ARB));
+                }
+
+                if (GL.LinkProcGLEXT("glProgramUniform3ui64ARB"))
+                {
+                    GL.glProgramUniform3ui64ARB = (TglProgramUniform3ui64ARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform3ui64ARB));
+                }
+
+                if (GL.LinkProcGLEXT("glProgramUniform4ui64ARB"))
+                {
+                    GL.glProgramUniform4ui64ARB = (TglProgramUniform4ui64ARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform4ui64ARB));
+                }
+
+                if (GL.LinkProcGLEXT("glProgramUniform1ui64vARB"))
+                {
+                    GL.glProgramUniform1ui64vARB = (TglProgramUniform1ui64vARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform1ui64vARB));
+                }
+
+                if (GL.LinkProcGLEXT("glProgramUniform2ui64vARB"))
+                {
+                    GL.glProgramUniform2ui64vARB = (TglProgramUniform2ui64vARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform2ui64vARB));
+                }
+
+                if (GL.LinkProcGLEXT("glProgramUniform3ui64vARB"))
+                {
+                    GL.glProgramUniform3ui64vARB = (TglProgramUniform3ui64vARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform3ui64vARB));
+                }
+
+                if (GL.LinkProcGLEXT("glProgramUniform4ui64vARB"))
+                {
+                    GL.glProgramUniform4ui64vARB = (TglProgramUniform4ui64vARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform4ui64vARB));
+                }
             }
-        // GLAPI void APIENTRY glUniform3i64ARB (GLint location, GLint64 x, GLint64 y, GLint64 z);
-        // GLAPI void APIENTRY glUniform4i64ARB (GLint location, GLint64 x, GLint64 y, GLint64 z, GLint64 w);
-        // GLAPI void APIENTRY glUniform1i64vARB (GLint location, GLsizei count, const GLint64 *value);
-        // GLAPI void APIENTRY glUniform2i64vARB (GLint location, GLsizei count, const GLint64 *value);
-        // GLAPI void APIENTRY glUniform3i64vARB (GLint location, GLsizei count, const GLint64 *value);
-        // GLAPI void APIENTRY glUniform4i64vARB (GLint location, GLsizei count, const GLint64 *value);
-        // GLAPI void APIENTRY glUniform1ui64ARB (GLint location, GLuint64 x);
-        // GLAPI void APIENTRY glUniform2ui64ARB (GLint location, GLuint64 x, GLuint64 y);
-        // GLAPI void APIENTRY glUniform3ui64ARB (GLint location, GLuint64 x, GLuint64 y, GLuint64 z);
-        // GLAPI void APIENTRY glUniform4ui64ARB (GLint location, GLuint64 x, GLuint64 y, GLuint64 z, GLuint64 w);
-        // GLAPI void APIENTRY glUniform1ui64vARB (GLint location, GLsizei count, const GLuint64 *value);
-        // GLAPI void APIENTRY glUniform2ui64vARB (GLint location, GLsizei count, const GLuint64 *value);
-        // GLAPI void APIENTRY glUniform3ui64vARB (GLint location, GLsizei count, const GLuint64 *value);
-        // GLAPI void APIENTRY glUniform4ui64vARB (GLint location, GLsizei count, const GLuint64 *value);
-        // GLAPI void APIENTRY glGetUniformi64vARB (GLuint program, GLint location, GLint64 *params);
-        // GLAPI void APIENTRY glGetUniformui64vARB (GLuint program, GLint location, GLuint64 *params);
-        // GLAPI void APIENTRY glGetnUniformi64vARB (GLuint program, GLint location, GLsizei bufSize, GLint64 *params);
-        // GLAPI void APIENTRY glGetnUniformui64vARB (GLuint program, GLint location, GLsizei bufSize, GLuint64 *params);
-        // GLAPI void APIENTRY glProgramUniform1i64ARB (GLuint program, GLint location, GLint64 x);
-        // GLAPI void APIENTRY glProgramUniform2i64ARB (GLuint program, GLint location, GLint64 x, GLint64 y);
-        // GLAPI void APIENTRY glProgramUniform3i64ARB (GLuint program, GLint location, GLint64 x, GLint64 y, GLint64 z);
-        // GLAPI void APIENTRY glProgramUniform4i64ARB (GLuint program, GLint location, GLint64 x, GLint64 y, GLint64 z, GLint64 w);
-        // GLAPI void APIENTRY glProgramUniform1i64vARB (GLuint program, GLint location, GLsizei count, const GLint64 *value);
-        // GLAPI void APIENTRY glProgramUniform2i64vARB (GLuint program, GLint location, GLsizei count, const GLint64 *value);
-        // GLAPI void APIENTRY glProgramUniform3i64vARB (GLuint program, GLint location, GLsizei count, const GLint64 *value);
-        // GLAPI void APIENTRY glProgramUniform4i64vARB (GLuint program, GLint location, GLsizei count, const GLint64 *value);
-        // GLAPI void APIENTRY glProgramUniform1ui64ARB (GLuint program, GLint location, GLuint64 x);
-        // GLAPI void APIENTRY glProgramUniform2ui64ARB (GLuint program, GLint location, GLuint64 x, GLuint64 y);
-        // GLAPI void APIENTRY glProgramUniform3ui64ARB (GLuint program, GLint location, GLuint64 x, GLuint64 y, GLuint64 z);
-        // GLAPI void APIENTRY glProgramUniform4ui64ARB (GLuint program, GLint location, GLuint64 x, GLuint64 y, GLuint64 z, GLuint64 w);
-        // GLAPI void APIENTRY glProgramUniform1ui64vARB (GLuint program, GLint location, GLsizei count, const GLuint64 *value);
-        // GLAPI void APIENTRY glProgramUniform2ui64vARB (GLuint program, GLint location, GLsizei count, const GLuint64 *value);
-        // GLAPI void APIENTRY glProgramUniform3ui64vARB (GLuint program, GLint location, GLsizei count, const GLuint64 *value);
-        // GLAPI void APIENTRY glProgramUniform4ui64vARB (GLuint program, GLint location, GLsizei count, const GLuint64 *value);
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_ARB_parallel_shader_compile
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_ARB_parallel_shader_compile"))
+            {
+                if (GL.LinkProcGLEXT("glMaxShaderCompilerThreadsARB"))
+                {
+                    GL.glMaxShaderCompilerThreadsARB = (TglMaxShaderCompilerThreadsARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglMaxShaderCompilerThreadsARB));
+                }
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_ARB_post_depth_coverage (no function entry points)
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_ARB_post_depth_coverage"))
+            {
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_ARB_sample_locations
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_ARB_sample_locations"))
+            {
+                if (GL.LinkProcGLEXT("glFramebufferSampleLocationsfvARB"))
+                {
+                    GL.glFramebufferSampleLocationsfvARB = (TglFramebufferSampleLocationsfvARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglFramebufferSampleLocationsfvARB));
+                }
+
+                if (GL.LinkProcGLEXT("glNamedFramebufferSampleLocationsfvARB"))
+                {
+                    GL.glNamedFramebufferSampleLocationsfvARB = (TglNamedFramebufferSampleLocationsfvARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglNamedFramebufferSampleLocationsfvARB));
+                }
+
+                if (GL.LinkProcGLEXT("glEvaluateDepthValuesARB"))
+                {
+                    GL.glEvaluateDepthValuesARB = (TglEvaluateDepthValuesARB)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglEvaluateDepthValuesARB));
+                }
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_ARB_shader_atomic_counter_ops (no function entry points)
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_ARB_shader_atomic_counter_ops"))
+            {
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_ARB_shader_ballot (no function entry points)
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_ARB_shader_ballot"))
+            {
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_ARB_shader_clock (no function entry points)
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_ARB_shader_clock"))
+            {
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_ARB_shader_viewport_layer_array (no function entry points)
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_ARB_shader_viewport_layer_array"))
+            {
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_ARB_sparse_texture2 (no function entry points)
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_ARB_sparse_texture2"))
+            {
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_ARB_sparse_texture_clamp (no function entry points)
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_ARB_sparse_texture_clamp"))
+            {
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_ARB_texture_filter_minmax (no function entry points)
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_ARB_texture_filter_minmax"))
+            {
+            }
 
             #endregion
 
@@ -8844,6 +9251,24 @@ namespace OpenGLDotNet
             {
             }
 
+            ///////////////////////////////////////////////////////////////////////
+            // GL_KHR_blend_equation_advanced
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_KHR_blend_equation_advanced"))
+            {
+                if (GL.LinkProcGLEXT("glBlendBarrierKHR"))
+                {
+                    GL.glBlendBarrierKHR = (TglBlendBarrierKHR)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglBlendBarrierKHR));
+                }
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_KHR_blend_equation_advanced_coherent (no function entry points)
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_KHR_blend_equation_advanced_coherent"))
+            {
+            }
+
             #endregion
 
             ///////////////////////////////////////////////////////////////////////
@@ -10739,11 +11164,6 @@ namespace OpenGLDotNet
                     GL.glUniformui64vNV = (TglUniformui64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniformui64vNV));
                 }
 
-                if (GL.LinkProcGLEXT("glGetUniformui64vNV"))
-                {
-                    GL.glGetUniformui64vNV = (TglGetUniformui64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglGetUniformui64vNV));
-                }
-
                 if (GL.LinkProcGLEXT("glProgramUniformui64NV"))
                 {
                     GL.glProgramUniformui64NV = (TglProgramUniformui64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniformui64NV));
@@ -10849,174 +11269,10 @@ namespace OpenGLDotNet
             }
 
             ///////////////////////////////////////////////////////////////////////
-            // GL_NV_gpu_shader5
+            // GL_NV_gpu_shader5 (no function entry points)
             ///////////////////////////////////////////////////////////////////////
             if (GL.LinkGLEXT("GL_NV_gpu_shader5"))
             {
-                if (GL.LinkProcGLEXT("glUniform1i64NV"))
-                {
-                    GL.glUniform1i64NV = (TglUniform1i64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform1i64NV));
-                }
-
-                if (GL.LinkProcGLEXT("glUniform2i64NV"))
-                {
-                    GL.glUniform2i64NV = (TglUniform2i64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform2i64NV));
-                }
-
-                if (GL.LinkProcGLEXT("glUniform3i64NV"))
-                {
-                    GL.glUniform3i64NV = (TglUniform3i64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform3i64NV));
-                }
-
-                if (GL.LinkProcGLEXT("glUniform4i64NV"))
-                {
-                    GL.glUniform4i64NV = (TglUniform4i64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform4i64NV));
-                }
-
-                if (GL.LinkProcGLEXT("glUniform1i64vNV"))
-                {
-                    GL.glUniform1i64vNV = (TglUniform1i64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform1i64vNV));
-                }
-
-                if (GL.LinkProcGLEXT("glUniform2i64vNV"))
-                {
-                    GL.glUniform2i64vNV = (TglUniform2i64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform2i64vNV));
-                }
-
-                if (GL.LinkProcGLEXT("glUniform3i64vNV"))
-                {
-                    GL.glUniform3i64vNV = (TglUniform3i64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform3i64vNV));
-                }
-
-                if (GL.LinkProcGLEXT("glUniform4i64vNV"))
-                {
-                    GL.glUniform4i64vNV = (TglUniform4i64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform4i64vNV));
-                }
-
-                if (GL.LinkProcGLEXT("glUniform1ui64NV"))
-                {
-                    GL.glUniform1ui64NV = (TglUniform1ui64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform1ui64NV));
-                }
-
-                if (GL.LinkProcGLEXT("glUniform2ui64NV"))
-                {
-                    GL.glUniform2ui64NV = (TglUniform2ui64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform2ui64NV));
-                }
-
-                if (GL.LinkProcGLEXT("glUniform3ui64NV"))
-                {
-                    GL.glUniform3ui64NV = (TglUniform3ui64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform3ui64NV));
-                }
-
-                if (GL.LinkProcGLEXT("glUniform4ui64NV"))
-                {
-                    GL.glUniform4ui64NV = (TglUniform4ui64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform4ui64NV));
-                }
-
-                if (GL.LinkProcGLEXT("glUniform1ui64vNV"))
-                {
-                    GL.glUniform1ui64vNV = (TglUniform1ui64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform1ui64vNV));
-                }
-
-                if (GL.LinkProcGLEXT("glUniform2ui64vNV"))
-                {
-                    GL.glUniform2ui64vNV = (TglUniform2ui64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform2ui64vNV));
-                }
-
-                if (GL.LinkProcGLEXT("glUniform3ui64vNV"))
-                {
-                    GL.glUniform3ui64vNV = (TglUniform3ui64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform3ui64vNV));
-                }
-
-                if (GL.LinkProcGLEXT("glUniform4ui64vNV"))
-                {
-                    GL.glUniform4ui64vNV = (TglUniform4ui64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglUniform4ui64vNV));
-                }
-
-                if (GL.LinkProcGLEXT("glGetUniformi64vNV"))
-                {
-                    GL.glGetUniformi64vNV = (TglGetUniformi64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglGetUniformi64vNV));
-                }
-
-                if (GL.LinkProcGLEXT("glProgramUniform1i64NV"))
-                {
-                    GL.glProgramUniform1i64NV = (TglProgramUniform1i64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform1i64NV));
-                }
-
-                if (GL.LinkProcGLEXT("glProgramUniform2i64NV"))
-                {
-                    GL.glProgramUniform2i64NV = (TglProgramUniform2i64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform2i64NV));
-                }
-
-                if (GL.LinkProcGLEXT("glProgramUniform3i64NV"))
-                {
-                    GL.glProgramUniform3i64NV = (TglProgramUniform3i64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform3i64NV));
-                }
-
-                if (GL.LinkProcGLEXT("glProgramUniform4i64NV"))
-                {
-                    GL.glProgramUniform4i64NV = (TglProgramUniform4i64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform4i64NV));
-                }
-
-                if (GL.LinkProcGLEXT("glProgramUniform1i64vNV"))
-                {
-                    GL.glProgramUniform1i64vNV = (TglProgramUniform1i64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform1i64vNV));
-                }
-
-                if (GL.LinkProcGLEXT("glProgramUniform2i64vNV"))
-                {
-                    GL.glProgramUniform2i64vNV = (TglProgramUniform2i64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform2i64vNV));
-                }
-
-                if (GL.LinkProcGLEXT("glProgramUniform3i64vNV"))
-                {
-                    GL.glProgramUniform3i64vNV = (TglProgramUniform3i64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform3i64vNV));
-                }
-
-                if (GL.LinkProcGLEXT("glProgramUniform4i64vNV"))
-                {
-                    GL.glProgramUniform4i64vNV = (TglProgramUniform4i64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform4i64vNV));
-                }
-
-                if (GL.LinkProcGLEXT("glProgramUniform1ui64NV"))
-                {
-                    GL.glProgramUniform1ui64NV = (TglProgramUniform1ui64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform1ui64NV));
-                }
-
-                if (GL.LinkProcGLEXT("glProgramUniform2ui64NV"))
-                {
-                    GL.glProgramUniform2ui64NV = (TglProgramUniform2ui64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform2ui64NV));
-                }
-
-                if (GL.LinkProcGLEXT("glProgramUniform3ui64NV"))
-                {
-                    GL.glProgramUniform3ui64NV = (TglProgramUniform3ui64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform3ui64NV));
-                }
-
-                if (GL.LinkProcGLEXT("glProgramUniform4ui64NV"))
-                {
-                    GL.glProgramUniform4ui64NV = (TglProgramUniform4ui64NV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform4ui64NV));
-                }
-
-                if (GL.LinkProcGLEXT("glProgramUniform1ui64vNV"))
-                {
-                    GL.glProgramUniform1ui64vNV = (TglProgramUniform1ui64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform1ui64vNV));
-                }
-
-                if (GL.LinkProcGLEXT("glProgramUniform2ui64vNV"))
-                {
-                    GL.glProgramUniform2ui64vNV = (TglProgramUniform2ui64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform2ui64vNV));
-                }
-
-                if (GL.LinkProcGLEXT("glProgramUniform3ui64vNV"))
-                {
-                    GL.glProgramUniform3ui64vNV = (TglProgramUniform3ui64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform3ui64vNV));
-                }
-
-                if (GL.LinkProcGLEXT("glProgramUniform4ui64vNV"))
-                {
-                    GL.glProgramUniform4ui64vNV = (TglProgramUniform4ui64vNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglProgramUniform4ui64vNV));
-                }
             }
 
             ///////////////////////////////////////////////////////////////////////
