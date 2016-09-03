@@ -284,24 +284,24 @@ namespace OpenGLDemos
             ILUT.Init();
             ILUT.Renderer(ILUT.ILUT_OPENGL);
 
-            if (!IL.Load(IL.IL_PCX, @".\data\env\unit6_bk.pcx"))
+            if (!IL.Load(IL.IL_PCX, @".\data\unit6_bk.pcx"))
             {
                 Console.WriteLine("Texture loading failed!");
             }
             else
             {
-                if (!IL.LoadPal(@".\data\pics\colormap.pcx"))
+                if (!IL.LoadPal(@".\data\colormap.pcx"))
                 {
                     Console.WriteLine("Palette loading failed!");
                 }
 
                 // Convert & Save
                 IL.ConvertImage(IL.IL_RGBA, IL.IL_UNSIGNED_BYTE);
-                IL.Save(IL.IL_TGA, @".\unit6_bk.tga");
+                IL.Save(IL.IL_TGA, @".\data\unit6_bk.tga");
 
                 // Reload
-                IL.Load(IL.IL_TGA, @".\unit6_bk.tga");
-                IL.Save(IL.IL_PNG, @".\unit6_bk.png");
+                IL.Load(IL.IL_TGA, @".\data\unit6_bk.tga");
+                IL.Save(IL.IL_PNG, @".\data\unit6_bk.png");
                 
                 // Convert again before showing
                 IL.ConvertImage(IL.IL_RGBA, IL.IL_UNSIGNED_BYTE);
