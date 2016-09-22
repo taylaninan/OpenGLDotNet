@@ -38,6 +38,12 @@
     <StartupObject>OpenGLDemos.OpenGLDemos</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NAudio">
+      <HintPath>D:\Development\Windows\Projects\Quake2DotNet\bin\Release\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.WindowsMediaFormat">
+      <HintPath>D:\Development\Windows\Projects\Quake2DotNet\bin\Release\NAudio.WindowsMediaFormat.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,12 +53,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\OpenGLDemos.AssemblyInfo.cs" />
-    <Compile Include="Source\Demos\GLDemo04.cs" />
-    <Compile Include="Source\Demos\GLDemo03.cs" />
-    <Compile Include="Source\Demos\GLDemo01.cs" />
-    <Compile Include="Source\Demos\GLDemo02.cs" />
+    <Compile Include="Source\Demos\Quake2ConsoleDemo\Q2CommandManager.cs" />
+    <Compile Include="Source\Demos\Quake2ConsoleDemo\Q2ConsoleManager.cs" />
+    <Compile Include="Source\Demos\Quake2ConsoleDemo\Q2ConsoleVarManager.cs" />
+    <Compile Include="Source\Demos\Quake2ConsoleDemo\Q2ConsoleMain.cs" />
+    <Compile Include="Source\Demos\Quake2ConsoleDemo\Q2TextureManager.cs" />
+    <Compile Include="Source\Demos\SimpleDemos\GLDemo04.cs" />
+    <Compile Include="Source\Demos\SimpleDemos\GLDemo03.cs" />
+    <Compile Include="Source\Demos\SimpleDemos\GLDemo01.cs" />
+    <Compile Include="Source\Demos\SimpleDemos\GLDemo02.cs" />
     <Compile Include="Source\Demos\GLDemoMain.cs" />
-    <Compile Include="Source\Demos\CPUGLInfo.cs" />
+    <Compile Include="Source\Demos\SimpleDemos\CPUGLInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="OpenGLDotNet.csproj">
@@ -60,6 +71,7 @@
       <Name>OpenGLDotNet</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

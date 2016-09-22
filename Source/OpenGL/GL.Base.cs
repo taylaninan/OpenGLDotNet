@@ -1084,6 +1084,18 @@ namespace OpenGLDotNet
             
             LogFile.Close();
         }
+
+        public static string[] LogDumpToString()
+        {
+            string[] dummy = new string[Log.Count];
+
+            for (int counter = 0; counter < Log.Count; counter++)
+            {
+                dummy[counter] = Log[counter];
+            }
+
+            return dummy;
+        }
     }
 
     public static partial class GL

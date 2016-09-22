@@ -17578,7 +17578,7 @@ namespace OpenGLDotNet
 		}
 		
 		// GLAPI void APIENTRY glMultiDrawElementsIndirectBindlessCountNV (GLenum mode, GLenum type, const void *indirect, GLsizei drawCount, GLsizei maxDrawCount, GLsizei stride, GLint vertexBufferCount);
-		public static void MultiDrawElementsIndirectBindlessCountNV(GLenum mode, GLenum type, IntPtr indirect, GLsizei drawCount, GLsizei maxDrawCount, GLsizei stride, GLint vertexBufferCount)
+		public unsafe static void MultiDrawElementsIndirectBindlessCountNV(GLenum mode, GLenum type, IntPtr indirect, GLsizei drawCount, GLsizei maxDrawCount, GLsizei stride, GLint vertexBufferCount)
 		{
 			if (glMultiDrawElementsIndirectBindlessCountNV != null)
 			{

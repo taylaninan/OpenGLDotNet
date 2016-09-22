@@ -244,7 +244,7 @@ namespace OpenGLDemos
             FG.InitDisplayMode(FG.GLUT_RGBA | FG.GLUT_DOUBLE | FG.GLUT_DEPTH);
             FG.InitWindowPosition(25, 25);
             FG.InitWindowSize(1024, 768);
-            FG.InitContextVersion(4, 4);
+            FG.InitContextVersion(4, 5);
             FG.InitContextFlags((int)FG.GLUT_FORWARD_COMPATIBLE);
             FG.InitContextProfile((int)FG.GLUT_COMPATIBILITY_PROFILE);
             int hWindow = FG.CreateWindow("Demo #03: FreeGlut Test");
