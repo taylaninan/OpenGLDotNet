@@ -487,6 +487,10 @@ namespace OpenGLDotNet
         private unsafe delegate void TglProgramUniform4ui64vNV(GLuint program, GLint location, GLsizei count, GLuint64* value);
         private static TglProgramUniform4ui64vNV glProgramUniform4ui64vNV = null;
 
+		///////////////////////////////////////////////////////////////////////
+		// GL_AMD_transform_feedback4 (no function entry points)
+		///////////////////////////////////////////////////////////////////////
+		
         #endregion
 
         ///////////////////////////////////////////////////////////////////////
@@ -6545,6 +6549,38 @@ namespace OpenGLDotNet
         private delegate void TglDrawTransformFeedbackEXT(GLenum mode, GLuint id);
         private static TglDrawTransformFeedbackEXT glDrawTransformFeedbackEXT = null;
 
+		///////////////////////////////////////////////////////////////////////
+		// GL_EXT_polygon_offset_clamp
+		///////////////////////////////////////////////////////////////////////
+		// GLAPI void APIENTRY glPolygonOffsetClampEXT (GLfloat factor, GLfloat units, GLfloat clamp);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+		private delegate void TglPolygonOffsetClampEXT(GLfloat factor, GLfloat units, GLfloat clamp);
+		private static TglPolygonOffsetClampEXT glPolygonOffsetClampEXT = null;
+		
+		///////////////////////////////////////////////////////////////////////
+		// GL_EXT_post_depth_coverage (no function entry points)
+		///////////////////////////////////////////////////////////////////////
+		
+		///////////////////////////////////////////////////////////////////////
+		// GL_EXT_raster_multisample
+		///////////////////////////////////////////////////////////////////////
+		// GLAPI void APIENTRY glRasterSamplesEXT (GLuint samples, GLboolean fixedsamplelocations);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+		private delegate void TglRasterSamplesEXT(GLuint samples, GLboolean fixedsamplelocations);
+		private static TglRasterSamplesEXT glRasterSamplesEXT = null;
+		
+		///////////////////////////////////////////////////////////////////////
+		// GL_EXT_shader_image_load_formatted (no function entry points)
+		///////////////////////////////////////////////////////////////////////
+		
+        ///////////////////////////////////////////////////////////////////////
+        // GL_EXT_sparse_texture2 (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+		// GL_EXT_texture_filter_minmax	(no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+		
         #endregion
 
         ///////////////////////////////////////////////////////////////////////
@@ -6692,6 +6728,14 @@ namespace OpenGLDotNet
         // GL_IBM_texture_mirrored_repeat (no function entry points)
         ///////////////////////////////////////////////////////////////////////
 
+		///////////////////////////////////////////////////////////////////////
+		// GL_IBM_static_data
+		///////////////////////////////////////////////////////////////////////
+		// GLAPI void APIENTRY glFlushStaticDataIBM (GLenum target);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+		private delegate void TglFlushStaticDataIBM(GLenum target);
+		private static TglFlushStaticDataIBM glFlushStaticDataIBM = null;
+		
         #endregion
 
         ///////////////////////////////////////////////////////////////////////
@@ -6822,6 +6866,14 @@ namespace OpenGLDotNet
         private unsafe delegate void TglGetPerfQueryInfoINTEL(GLuint queryId, GLuint queryNameLength, GLchar* queryName, GLuint* dataSize, GLuint* noCounters, GLuint* noInstances, GLuint* capsMask);
         private static TglGetPerfQueryInfoINTEL glGetPerfQueryInfoINTEL = null;
 
+		///////////////////////////////////////////////////////////////////////
+		// GL_INTEL_framebuffer_CMAA
+		///////////////////////////////////////////////////////////////////////
+		// GLAPI void APIENTRY glApplyFramebufferAttachmentCMAAINTEL (void);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+		private delegate void TglApplyFramebufferAttachmentCMAAINTEL();
+		private static TglApplyFramebufferAttachmentCMAAINTEL glApplyFramebufferAttachmentCMAAINTEL = null;
+		
         #endregion
 
         ///////////////////////////////////////////////////////////////////////
@@ -9274,6 +9326,19 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_NV_gpu_program_fp64 (no function entry points)
         ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+		// GL_NV_bindless_multi_draw_indirect_count
+        ///////////////////////////////////////////////////////////////////////
+		// GLAPI void APIENTRY glMultiDrawArraysIndirectBindlessCountNV (GLenum mode, const void *indirect, GLsizei drawCount, GLsizei maxDrawCount, GLsizei stride, GLint vertexBufferCount);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+		private unsafe delegate void TglMultiDrawArraysIndirectBindlessCountNV(GLenum mode, void* indirect, GLsizei drawCount, GLsizei maxDrawCount, GLsizei stride, GLint vertexBufferCount);
+		private static TglMultiDrawArraysIndirectBindlessCountNV glMultiDrawArraysIndirectBindlessCountNV = null;
+		
+		// GLAPI void APIENTRY glMultiDrawElementsIndirectBindlessCountNV (GLenum mode, GLenum type, const void *indirect, GLsizei drawCount, GLsizei maxDrawCount, GLsizei stride, GLint vertexBufferCount);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+		private unsafe delegate void TglMultiDrawElementsIndirectBindlessCountNV(GLenum mode, GLenum type, void* indirect, GLsizei drawCount, GLsizei maxDrawCount, GLsizei stride, GLint vertexBufferCount);
+		private static TglMultiDrawElementsIndirectBindlessCountNV glMultiDrawElementsIndirectBindlessCountNV = null;
 
         #endregion
 

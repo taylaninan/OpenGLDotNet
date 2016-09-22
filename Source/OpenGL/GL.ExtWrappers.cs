@@ -515,7 +515,7 @@ namespace OpenGLDotNet
         // GL_AMD_gcn_shader (no function entry points)
         ///////////////////////////////////////////////////////////////////////
 
-        ///////////////////////////////////////////////////////////////////////
+		///////////////////////////////////////////////////////////////////////
         // GL_AMD_gpu_shader_int64
         ///////////////////////////////////////////////////////////////////////
         // GLAPI void APIENTRY glUniform1i64NV (GLint location, GLint64EXT x);
@@ -877,6 +877,10 @@ namespace OpenGLDotNet
                 }
             }
         }
+
+		///////////////////////////////////////////////////////////////////////
+		// GL_AMD_transform_feedback4 (no function entry points)
+		///////////////////////////////////////////////////////////////////////
 
         #endregion
 
@@ -12053,6 +12057,46 @@ namespace OpenGLDotNet
             }
         }
 
+		///////////////////////////////////////////////////////////////////////
+		// GL_EXT_polygon_offset_clamp
+		///////////////////////////////////////////////////////////////////////
+		// GLAPI void APIENTRY glPolygonOffsetClampEXT (GLfloat factor, GLfloat units, GLfloat clamp);
+		public static void PolygonOffsetClampEXT(GLfloat factor, GLfloat units, GLfloat clamp)
+		{
+			if (glPolygonOffsetClampEXT != null)
+			{
+				glPolygonOffsetClampEXT(factor, units, clamp);
+			}
+		}
+			
+		///////////////////////////////////////////////////////////////////////
+		// GL_EXT_post_depth_coverage (no function entry points)
+		///////////////////////////////////////////////////////////////////////
+		
+		///////////////////////////////////////////////////////////////////////
+		// GL_EXT_raster_multisample
+		///////////////////////////////////////////////////////////////////////
+		// GLAPI void APIENTRY glRasterSamplesEXT (GLuint samples, GLboolean fixedsamplelocations);
+		public static void RasterSamplesEXT (GLuint samples, GLboolean fixedsamplelocations)
+		{
+			if (glRasterSamplesEXT != null)
+			{
+				glRasterSamplesEXT(samples, fixedsamplelocations);
+			}
+		}
+
+		///////////////////////////////////////////////////////////////////////
+		// GL_EXT_shader_image_load_formatted (no function entry points)
+		///////////////////////////////////////////////////////////////////////
+		
+		///////////////////////////////////////////////////////////////////////
+		// GL_EXT_sparse_texture2 (no function entry points)
+		///////////////////////////////////////////////////////////////////////
+
+		///////////////////////////////////////////////////////////////////////
+		// GL_EXT_texture_filter_minmax	(no function entry points)
+		///////////////////////////////////////////////////////////////////////
+		
         #endregion
 
         ///////////////////////////////////////////////////////////////////////
@@ -12325,6 +12369,18 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // GL_IBM_texture_mirrored_repeat (no function entry points)
         ///////////////////////////////////////////////////////////////////////
+
+		///////////////////////////////////////////////////////////////////////
+		// GL_IBM_static_data
+		///////////////////////////////////////////////////////////////////////
+		// GLAPI void APIENTRY glFlushStaticDataIBM (GLenum target);
+		public static void FlushStaticDataIBM(GLenum target)
+		{
+			if (glFlushStaticDataIBM != null)
+			{
+				glFlushStaticDataIBM(target);
+			}
+		}
 
         #endregion
 
@@ -12604,6 +12660,17 @@ namespace OpenGLDotNet
             }
         }
 
+		///////////////////////////////////////////////////////////////////////
+		// GL_INTEL_framebuffer_CMAA
+		///////////////////////////////////////////////////////////////////////
+		public static void ApplyFramebufferAttachmentCMAAINTEL()
+		{
+			if (glApplyFramebufferAttachmentCMAAINTEL != null)
+			{
+				glApplyFramebufferAttachmentCMAAINTEL();
+			}
+		}
+		
         #endregion
 
         ///////////////////////////////////////////////////////////////////////
@@ -17498,6 +17565,27 @@ namespace OpenGLDotNet
         // GL_NV_gpu_program_fp64 (no function entry points)
         ///////////////////////////////////////////////////////////////////////
 
+        ///////////////////////////////////////////////////////////////////////
+		// GL_NV_bindless_multi_draw_indirect_count
+        ///////////////////////////////////////////////////////////////////////
+		// GLAPI void APIENTRY glMultiDrawArraysIndirectBindlessCountNV (GLenum mode, const void *indirect, GLsizei drawCount, GLsizei maxDrawCount, GLsizei stride, GLint vertexBufferCount);
+		public unsafe static void MultiDrawArraysIndirectBindlessCountNV(GLenum mode, IntPtr indirect, GLsizei drawCount, GLsizei maxDrawCount, GLsizei stride, GLint vertexBufferCount)
+		{
+			if (glMultiDrawArraysIndirectBindlessCountNV != null)
+			{
+				glMultiDrawArraysIndirectBindlessCountNV(mode, indirect.ToPointer(), drawCount, maxDrawCount, stride, vertexBufferCount);
+			}
+		}
+		
+		// GLAPI void APIENTRY glMultiDrawElementsIndirectBindlessCountNV (GLenum mode, GLenum type, const void *indirect, GLsizei drawCount, GLsizei maxDrawCount, GLsizei stride, GLint vertexBufferCount);
+		public static void MultiDrawElementsIndirectBindlessCountNV(GLenum mode, GLenum type, IntPtr indirect, GLsizei drawCount, GLsizei maxDrawCount, GLsizei stride, GLint vertexBufferCount)
+		{
+			if (glMultiDrawElementsIndirectBindlessCountNV != null)
+			{
+				glMultiDrawElementsIndirectBindlessCountNV(mode, type, indirect.ToPointer(), drawCount, maxDrawCount, stride, vertexBufferCount);
+			}
+		}
+		
         #endregion
 
         ///////////////////////////////////////////////////////////////////////

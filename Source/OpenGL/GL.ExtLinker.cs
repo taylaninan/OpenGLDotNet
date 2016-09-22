@@ -546,6 +546,13 @@ namespace OpenGLDotNet
                 }
             }
 
+			///////////////////////////////////////////////////////////////////////
+			// GL_AMD_transform_feedback4 (no function entry points)
+			///////////////////////////////////////////////////////////////////////
+			if (GL.LinkGLEXT("GL_AMD_transform_feedback4"))
+			{
+			}		
+			
             #endregion
 
             ///////////////////////////////////////////////////////////////////////
@@ -8805,6 +8812,56 @@ namespace OpenGLDotNet
                 }
             }
 
+			///////////////////////////////////////////////////////////////////////
+			// GL_EXT_polygon_offset_clamp
+			///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_EXT_polygon_offset_clamp"))
+            {
+                if (GL.LinkProcGLEXT("glPolygonOffsetClampEXT"))
+                {
+                    GL.glPolygonOffsetClampEXT = (TglPolygonOffsetClampEXT)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglPolygonOffsetClampEXT));
+                }
+			}
+			
+			///////////////////////////////////////////////////////////////////////
+			// GL_EXT_post_depth_coverage (no function entry points)
+			///////////////////////////////////////////////////////////////////////
+			if (GL.LinkGLEXT("GL_EXT_post_depth_coverage"))
+			{
+			}
+			
+			///////////////////////////////////////////////////////////////////////
+			// GL_EXT_raster_multisample
+			///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_EXT_raster_multisample"))
+            {
+                if (GL.LinkProcGLEXT("glRasterSamplesEXT"))
+                {
+                    GL.glRasterSamplesEXT = (TglRasterSamplesEXT)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglRasterSamplesEXT));
+                }
+			}
+
+			///////////////////////////////////////////////////////////////////////
+			// GL_EXT_shader_image_load_formatted (no function entry points)
+			///////////////////////////////////////////////////////////////////////
+			if (GL.LinkGLEXT("GL_EXT_shader_image_load_formatted"))
+			{
+			}
+			
+			///////////////////////////////////////////////////////////////////////
+			// GL_EXT_sparse_texture2 (no function entry points)
+			///////////////////////////////////////////////////////////////////////
+			if (GL.LinkGLEXT("GL_EXT_sparse_texture2"))
+			{
+			}
+
+			///////////////////////////////////////////////////////////////////////
+			// GL_EXT_texture_filter_minmax	(no function entry points)
+			///////////////////////////////////////////////////////////////////////
+			if (GL.LinkGLEXT("GL_EXT_texture_filter_minmax"))
+			{
+			}
+			
             #endregion
 
             ///////////////////////////////////////////////////////////////////////
@@ -8985,6 +9042,17 @@ namespace OpenGLDotNet
             {
             }
 
+			///////////////////////////////////////////////////////////////////////
+			// GL_IBM_static_data
+			///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_IBM_static_data"))
+            {
+                if (GL.LinkProcGLEXT("glFlushStaticDataIBM"))
+                {
+                    GL.glFlushStaticDataIBM = (TglFlushStaticDataIBM)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglFlushStaticDataIBM));
+                }
+            }
+			
             #endregion
 
             ///////////////////////////////////////////////////////////////////////
@@ -9139,6 +9207,17 @@ namespace OpenGLDotNet
                 }
             }
 
+			///////////////////////////////////////////////////////////////////////
+			// GL_INTEL_framebuffer_CMAA
+			///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_INTEL_framebuffer_CMAA"))
+            {
+                if (GL.LinkProcGLEXT("glApplyFramebufferAttachmentCMAAINTEL"))
+                {
+                    GL.glApplyFramebufferAttachmentCMAAINTEL = (TglApplyFramebufferAttachmentCMAAINTEL)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglApplyFramebufferAttachmentCMAAINTEL));
+                }
+			}
+			
             #endregion
 
             ///////////////////////////////////////////////////////////////////////
@@ -11909,6 +11988,22 @@ namespace OpenGLDotNet
             if (GL.LinkGLEXT("GL_NV_gpu_program_fp64"))
             {
             }
+
+			///////////////////////////////////////////////////////////////////////
+			// GL_NV_bindless_multi_draw_indirect_count
+			///////////////////////////////////////////////////////////////////////
+			if (GL.LinkGLEXT("GL_NV_bindless_multi_draw_indirect_count"))
+			{
+                if (GL.LinkProcGLEXT("glMultiDrawArraysIndirectBindlessCountNV"))
+                {
+                    GL.glMultiDrawArraysIndirectBindlessCountNV = (TglMultiDrawArraysIndirectBindlessCountNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglMultiDrawArraysIndirectBindlessCountNV));
+                }
+
+                if (GL.LinkProcGLEXT("glMultiDrawElementsIndirectBindlessCountNV"))
+                {
+                    GL.glMultiDrawElementsIndirectBindlessCountNV = (TglMultiDrawElementsIndirectBindlessCountNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglMultiDrawElementsIndirectBindlessCountNV));
+                }
+			}
 
             #endregion
 
