@@ -22,7 +22,6 @@ namespace Quake2DotNet
                 int hWindow = FG.CreateWindow("Quake 2 - OpenGL Console Demo");
 
                 // Setup OpenGL window and OpenGL itself
-                //GLConfig.Init(2, 1, ConsoleVarManager.GetValueToString("VersionLong"), 0, 0, ConsoleVarManager.GetValueToUShort("ScreenWidth"), ConsoleVarManager.GetValueToUShort("ScreenHeight"));
                 GL.Init(true);
 
                 // Init DevIL -> Developers Image Libary

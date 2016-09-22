@@ -11,7 +11,7 @@ namespace Quake2DotNet
     {
         public string Name;
         public string Value;
-        public uint Flags;
+        public uint   Flags;
     }
 
     public static class ConsoleVarManager
@@ -25,8 +25,8 @@ namespace Quake2DotNet
             Create("VersionShort", "v0.1 alpha", 0);
             Create("ScreenWidth", "1024", 0);
             Create("ScreenHeight", "768", 0);
-            Create("ConsoleBackground", "pics/conback2.jpg", 0);
-            Create("ConsoleCharacters", "pics/conchars.png", 0);
+            Create("ConsoleBackground", "conback2.jpg", 0);
+            Create("ConsoleCharacters", "conchars.png", 0);
 
             Random RandomTrack = new Random();
             int TrackNumber = RandomTrack.Next(1, 10);

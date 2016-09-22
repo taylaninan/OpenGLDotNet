@@ -354,7 +354,7 @@ namespace Quake2DotNet
             }
             else
             {
-                string ImageFileName = @"data\pics\" + parameters[0];
+                string ImageFileName = @"data\" + parameters[0];
 
                 if (File.Exists(ImageFileName))
                 {
