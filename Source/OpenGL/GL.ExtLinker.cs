@@ -12005,6 +12005,260 @@ namespace OpenGLDotNet
                 }
 			}
 
+			///////////////////////////////////////////////////////////////////////
+			// GL_NV_command_list
+			///////////////////////////////////////////////////////////////////////
+			if (GL.LinkGLEXT("GL_NV_command_list"))
+			{
+                if (GL.LinkProcGLEXT("glCreateStatesNV"))
+                {
+                    GL.glCreateStatesNV = (TglCreateStatesNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglCreateStatesNV));
+                }
+
+                if (GL.LinkProcGLEXT("glDeleteStatesNV"))
+                {
+                    GL.glDeleteStatesNV = (TglDeleteStatesNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglDeleteStatesNV));
+                }
+
+                if (GL.LinkProcGLEXT("glIsStateNV"))
+                {
+                    GL.glIsStateNV = (TglIsStateNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglIsStateNV));
+                }
+
+                if (GL.LinkProcGLEXT("glStateCaptureNV"))
+                {
+                    GL.glStateCaptureNV = (TglStateCaptureNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglStateCaptureNV));
+                }
+
+                if (GL.LinkProcGLEXT("glGetCommandHeaderNV"))
+                {
+                    GL.glGetCommandHeaderNV = (TglGetCommandHeaderNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglGetCommandHeaderNV));
+                }
+
+                if (GL.LinkProcGLEXT("glGetStageIndexNV"))
+                {
+                    GL.glGetStageIndexNV = (TglGetStageIndexNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglGetStageIndexNV));
+                }
+
+                if (GL.LinkProcGLEXT("glDrawCommandsNV"))
+                {
+                    GL.glDrawCommandsNV = (TglDrawCommandsNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglDrawCommandsNV));
+                }
+
+                if (GL.LinkProcGLEXT("glDrawCommandsAddressNV"))
+                {
+                    GL.glDrawCommandsAddressNV = (TglDrawCommandsAddressNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglDrawCommandsAddressNV));
+                }
+
+                if (GL.LinkProcGLEXT("glDrawCommandsStatesNV"))
+                {
+                    GL.glDrawCommandsStatesNV = (TglDrawCommandsStatesNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglDrawCommandsStatesNV));
+                }
+
+                if (GL.LinkProcGLEXT("glDrawCommandsStatesAddressNV"))
+                {
+                    GL.glDrawCommandsStatesAddressNV = (TglDrawCommandsStatesAddressNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglDrawCommandsStatesAddressNV));
+                }
+
+                if (GL.LinkProcGLEXT("glCreateCommandListsNV"))
+                {
+                    GL.glCreateCommandListsNV = (TglCreateCommandListsNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglCreateCommandListsNV));
+                }
+
+                if (GL.LinkProcGLEXT("glDeleteCommandListsNV"))
+                {
+                    GL.glDeleteCommandListsNV = (TglDeleteCommandListsNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglDeleteCommandListsNV));
+                }
+
+                if (GL.LinkProcGLEXT("glIsCommandListNV"))
+                {
+                    GL.glIsCommandListNV = (TglIsCommandListNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglIsCommandListNV));
+                }
+
+                if (GL.LinkProcGLEXT("glListDrawCommandsStatesClientNV"))
+                {
+                    GL.glListDrawCommandsStatesClientNV = (TglListDrawCommandsStatesClientNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglListDrawCommandsStatesClientNV));
+                }
+
+                if (GL.LinkProcGLEXT("glCommandListSegmentsNV"))
+                {
+                    GL.glCommandListSegmentsNV = (TglCommandListSegmentsNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglCommandListSegmentsNV));
+                }
+
+                if (GL.LinkProcGLEXT("glCompileCommandListNV"))
+                {
+                    GL.glCompileCommandListNV = (TglCompileCommandListNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglCompileCommandListNV));
+                }
+
+                if (GL.LinkProcGLEXT("glCallCommandListNV"))
+                {
+                    GL.glCallCommandListNV = (TglCallCommandListNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglCallCommandListNV));
+                }
+			}
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_NV_conservative_raster
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_NV_conservative_raster"))
+            {
+                if (GL.LinkProcGLEXT("glSubpixelPrecisionBiasNV"))
+                {
+                    GL.glSubpixelPrecisionBiasNV = (TglSubpixelPrecisionBiasNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglSubpixelPrecisionBiasNV));
+                }
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_NV_conservative_raster_dilate
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_NV_conservative_raster_dilate"))
+            {
+                if (GL.LinkProcGLEXT("glConservativeRasterParameterfNV"))
+                {
+                    GL.glConservativeRasterParameterfNV = (TglConservativeRasterParameterfNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglConservativeRasterParameterfNV));
+                }
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_NV_fill_rectangle (no function entry points)
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_NV_fill_rectangle"))
+            {
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_NV_fragment_coverage_to_color
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_NV_fragment_coverage_to_color"))
+            {
+                if (GL.LinkProcGLEXT("glFragmentCoverageColorNV"))
+                {
+                    GL.glFragmentCoverageColorNV = (TglFragmentCoverageColorNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglFragmentCoverageColorNV));
+                }
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_NV_fragment_shader_interlock (no function entry points)
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_NV_fragment_shader_interlock"))
+            {
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_NV_framebuffer_mixed_samples
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_NV_framebuffer_mixed_samples"))
+            {
+                if (GL.LinkProcGLEXT("glCoverageModulationTableNV"))
+                {
+                    GL.glCoverageModulationTableNV = (TglCoverageModulationTableNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglCoverageModulationTableNV));
+                }
+
+                if (GL.LinkProcGLEXT("glGetCoverageModulationTableNV"))
+                {
+                    GL.glGetCoverageModulationTableNV = (TglGetCoverageModulationTableNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglGetCoverageModulationTableNV));
+                }
+
+                if (GL.LinkProcGLEXT("glCoverageModulationNV"))
+                {
+                    GL.glCoverageModulationNV = (TglCoverageModulationNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglCoverageModulationNV));
+                }
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_NV_geometry_shader_passthrough (no function entry points)
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_NV_geometry_shader_passthrough"))
+            {
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_NV_internalformat_sample_query
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_NV_internalformat_sample_query"))
+            {
+                if (GL.LinkProcGLEXT("glGetInternalformatSampleivNV"))
+                {
+                    GL.glGetInternalformatSampleivNV = (TglGetInternalformatSampleivNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglGetInternalformatSampleivNV));
+                }
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_NV_path_rendering_shared_edge (no function entry points)
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_NV_path_rendering_shared_edge"))
+            {
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_NV_sample_locations
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_NV_sample_locations"))
+            {
+                if (GL.LinkProcGLEXT("glFramebufferSampleLocationsfvNV"))
+                {
+                    GL.glFramebufferSampleLocationsfvNV = (TglFramebufferSampleLocationsfvNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglFramebufferSampleLocationsfvNV));
+                }
+
+                if (GL.LinkProcGLEXT("glNamedFramebufferSampleLocationsfvNV"))
+                {
+                    GL.glNamedFramebufferSampleLocationsfvNV = (TglNamedFramebufferSampleLocationsfvNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglNamedFramebufferSampleLocationsfvNV));
+                }
+
+                if (GL.LinkProcGLEXT("glResolveDepthValuesNV"))
+                {
+                    GL.glResolveDepthValuesNV = (TglResolveDepthValuesNV)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglResolveDepthValuesNV));
+                }
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_NV_sample_mask_override_coverage (no function entry points)
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_NV_sample_mask_override_coverage"))
+            {
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_NV_shader_atomic_fp16_vector (no function entry points)
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_NV_shader_atomic_fp16_vector"))
+            {
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_NV_shader_atomic_int64 (no function entry points)
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_NV_shader_atomic_int64"))
+            {
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_NV_shader_thread_group (no function entry points)
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_NV_shader_thread_group"))
+            {
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_NV_shader_thread_shuffle (no function entry points)
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_NV_shader_thread_shuffle"))
+            {
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_NV_uniform_buffer_unified_memory (no function entry points)
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_NV_uniform_buffer_unified_memory"))
+            {
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_NV_viewport_array2 (no function entry points)
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_NV_viewport_array2"))
+            {
+            }
+
             #endregion
 
             ///////////////////////////////////////////////////////////////////////
@@ -12767,6 +13021,30 @@ namespace OpenGLDotNet
             // GL_OML_resample (no function entry points)
             ///////////////////////////////////////////////////////////////////////
             if (GL.LinkGLEXT("GL_OML_resample"))
+            {
+            }
+
+            #endregion
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_OVR_xxx FUNCTIONS
+            ///////////////////////////////////////////////////////////////////////
+            #region GL_OVR_xxx FUNCTIONS...
+            ///////////////////////////////////////////////////////////////////////
+            // GL_OVR_multiview
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_OVR_multiview"))
+            {
+                if (GL.LinkProcGLEXT("glFramebufferTextureMultiviewOVR"))
+                {
+                    GL.glFramebufferTextureMultiviewOVR = (TglFramebufferTextureMultiviewOVR)Marshal.GetDelegateForFunctionPointer((IntPtr)GL.glFuncAddr, typeof(TglFramebufferTextureMultiviewOVR));
+                }
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // GL_OVR_multiview2 (no function entry points)
+            ///////////////////////////////////////////////////////////////////////
+            if (GL.LinkGLEXT("GL_OVR_multiview2"))
             {
             }
 

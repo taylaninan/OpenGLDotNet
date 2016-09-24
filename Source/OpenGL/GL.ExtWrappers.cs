@@ -17586,6 +17586,404 @@ namespace OpenGLDotNet
 			}
 		}
 		
+		///////////////////////////////////////////////////////////////////////
+		// GL_NV_command_list
+		///////////////////////////////////////////////////////////////////////
+		// GLAPI void APIENTRY glCreateStatesNV (GLsizei n, GLuint *states);
+		public unsafe static void CreateStatesNV(GLsizei n, GLuint[] states)
+		{
+			if (glCreateStatesNV != null)
+			{
+				fixed (GLuint* ptr_states = states)
+				{
+                    glCreateStatesNV(n, ptr_states);
+				}
+			}
+		}
+		
+		// GLAPI void APIENTRY glDeleteStatesNV (GLsizei n, const GLuint *states);
+		public unsafe static void DeleteStatesNV(GLsizei n, GLuint[] states)
+        {
+            if (glDeleteStatesNV != null)
+            {
+                fixed (GLuint* ptr_states = states)
+                {
+                    glDeleteStatesNV(n, ptr_states);
+                }
+            }
+        }
+
+		// GLAPI GLboolean APIENTRY glIsStateNV (GLuint state);
+        public static GLboolean IsStateNV(GLuint state)
+        {
+            if (glIsStateNV != null)
+            {
+                return glIsStateNV(state);
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+		// GLAPI void APIENTRY glStateCaptureNV (GLuint state, GLenum mode);
+        public static void StateCaptureNV(GLuint state, GLenum mode)
+        {
+            if (glStateCaptureNV != null)
+            {
+                glStateCaptureNV(state, mode);
+            }
+        }
+
+        // GLAPI GLuint APIENTRY glGetCommandHeaderNV (GLenum tokenID, GLuint size);
+        public static GLuint GetCommandHeaderNV(GLenum tokenID, GLuint size)
+        {
+            if (glGetCommandHeaderNV != null)
+            {
+                return glGetCommandHeaderNV(tokenID, size);
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        // GLAPI GLushort APIENTRY glGetStageIndexNV (GLenum shadertype);
+        public static GLushort GetStageIndexNV (GLenum shadertype)
+        {
+            if (glGetStageIndexNV != null)
+            {
+                return glGetStageIndexNV(shadertype);
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        // GLAPI void APIENTRY glDrawCommandsNV (GLenum primitiveMode, GLuint buffer, const GLintptr *indirects, const GLsizei *sizes, GLuint count);
+        public unsafe static void DrawCommandsNV(GLenum primitiveMode, GLuint buffer, GLintptr[] indirects, GLsizei[] sizes, GLuint count)
+        {
+            if (glDrawCommandsNV != null)
+            {
+                fixed (GLintptr* ptr_indirects = indirects)
+                {
+                    fixed (GLsizei* ptr_sizes = sizes)
+                    {
+                        glDrawCommandsNV(primitiveMode, buffer, ptr_indirects, ptr_sizes, count);
+                    }
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glDrawCommandsAddressNV (GLenum primitiveMode, const GLuint64 *indirects, const GLsizei *sizes, GLuint count);
+        public unsafe static void DrawCommandsAddressNV(GLenum primitiveMode, GLuint64[] indirects, GLsizei[] sizes, GLuint count)
+        {
+            if (glDrawCommandsAddressNV != null)
+            {
+                fixed (GLuint64* ptr_indirects = indirects)
+                {
+                    fixed (GLsizei* ptr_sizes = sizes)
+                    {
+                        glDrawCommandsAddressNV(primitiveMode, ptr_indirects, ptr_sizes, count);
+                    }
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glDrawCommandsStatesNV (GLuint buffer, const GLintptr *indirects, const GLsizei *sizes, const GLuint *states, const GLuint *fbos, GLuint count);
+        public unsafe static void DrawCommandsStatesNV(GLuint buffer, GLintptr[] indirects, GLsizei[] sizes, GLuint[] states, GLuint[] fbos, GLuint count)
+        {
+            if (glDrawCommandsStatesNV != null)
+            {
+                fixed (GLintptr* ptr_indirects = indirects)
+                {
+                    fixed (GLsizei* ptr_sizes = sizes)
+                    {
+                        fixed (GLuint* ptr_states = states)
+                        {
+                            fixed (GLuint* ptr_fbos = fbos)
+                            {
+                                glDrawCommandsStatesNV(buffer, ptr_indirects, ptr_sizes, ptr_states, ptr_fbos, count);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glDrawCommandsStatesAddressNV (const GLuint64 *indirects, const GLsizei *sizes, const GLuint *states, const GLuint *fbos, GLuint count);
+        public unsafe static void DrawCommandsStatesAddressNV(GLuint64[] indirects, GLsizei[] sizes, GLuint[] states, GLuint[] fbos, GLuint count)
+        {
+            if (glDrawCommandsStatesAddressNV != null)
+            {
+                fixed (GLuint64* ptr_indirects = indirects)
+                {
+                    fixed (GLsizei* ptr_sizes = sizes)
+                    {
+                        fixed (GLuint* ptr_states = states)
+                        {
+                            fixed (GLuint* ptr_fbos = fbos)
+                            {
+                                glDrawCommandsStatesAddressNV(ptr_indirects, ptr_sizes, ptr_states, ptr_fbos, count);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glCreateCommandListsNV (GLsizei n, GLuint *lists);
+        public unsafe static void CreateCommandListsNV(GLsizei n, GLuint[] lists)
+        {
+            if (glCreateCommandListsNV != null)
+            {
+                fixed (GLuint* ptr_lists = lists)
+                {
+                    glCreateCommandListsNV(n, ptr_lists);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glDeleteCommandListsNV (GLsizei n, const GLuint *lists);
+        public unsafe static void DeleteCommandListsNV(GLsizei n, GLuint[] lists)
+        {
+            if (glDeleteCommandListsNV != null)
+            {
+                fixed (GLuint* ptr_lists = lists)
+                {
+                    glDeleteCommandListsNV(n, ptr_lists);
+                }
+            }
+        }
+
+        // GLAPI GLboolean APIENTRY glIsCommandListNV (GLuint list);
+        public static GLboolean IsCommandListNV (GLuint list)
+        {
+            if (glIsCommandListNV != null)
+            {
+                return glIsCommandListNV(list);
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        // GLAPI void APIENTRY glListDrawCommandsStatesClientNV (GLuint list, GLuint segment, const void **indirects, const GLsizei *sizes, const GLuint *states, const GLuint *fbos, GLuint count);
+        public unsafe static void ListDrawCommandsStatesClientNV(GLuint list, GLuint segment, IntPtr[] indirects, GLsizei[] sizes, GLuint[] states, GLuint[] fbos, GLuint count)
+        {
+            if (glListDrawCommandsStatesClientNV != null)
+            {
+                fixed (IntPtr* ptr_indirects = indirects)
+                {
+                    fixed (GLsizei* ptr_sizes = sizes)
+                    {
+                        fixed (GLuint* ptr_states = states)
+                        {
+                            fixed (GLuint* ptr_fbos = fbos)
+                            {
+                                glListDrawCommandsStatesClientNV(list, segment, (void**)ptr_indirects, ptr_sizes, ptr_states, ptr_fbos, count);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glCommandListSegmentsNV (GLuint list, GLuint segments);
+        public static void CommandListSegmentsNV(GLuint list, GLuint segments)
+        {
+            if (glCommandListSegmentsNV != null)
+            {
+                glCommandListSegmentsNV(list, segments);
+            }
+        }
+
+        // GLAPI void APIENTRY glCompileCommandListNV (GLuint list);
+        public static void CompileCommandListNV(GLuint list)
+        {
+            if (glCompileCommandListNV != null)
+            {
+                glCompileCommandListNV(list);
+            }
+        }
+
+        // GLAPI void APIENTRY glCallCommandListNV (GLuint list);
+        public static void CallCommandListNV(GLuint list)
+        {
+            if (glCallCommandListNV != null)
+            {
+                glCallCommandListNV(list);
+            }
+        }
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_conservative_raster
+        ///////////////////////////////////////////////////////////////////////
+        // GLAPI void APIENTRY glSubpixelPrecisionBiasNV (GLuint xbits, GLuint ybits);
+        public static void SubpixelPrecisionBiasNV(GLuint xbits, GLuint ybits)
+        {
+            if (glSubpixelPrecisionBiasNV != null)
+            {
+                glSubpixelPrecisionBiasNV(xbits, ybits);
+            }
+        }
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_conservative_raster_dilate
+        ///////////////////////////////////////////////////////////////////////
+        // GLAPI void APIENTRY glConservativeRasterParameterfNV (GLenum pname, GLfloat value);
+        public static void ConservativeRasterParameterfNV(GLenum pname, GLfloat value)
+        {
+            if (glConservativeRasterParameterfNV != null)
+            {
+                glConservativeRasterParameterfNV(pname, value);
+            }
+        }
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_fill_rectangle (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_fragment_coverage_to_color
+        ///////////////////////////////////////////////////////////////////////
+        // GLAPI void APIENTRY glFragmentCoverageColorNV (GLuint color);
+        public static void FragmentCoverageColorNV(GLuint color)
+        {
+            if (glFragmentCoverageColorNV != null)
+            {
+                glFragmentCoverageColorNV(color);
+            }
+        }
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_fragment_shader_interlock (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_framebuffer_mixed_samples
+        ///////////////////////////////////////////////////////////////////////
+        // GLAPI void APIENTRY glCoverageModulationTableNV(GLsizei n, const GLfloat* v);
+        public unsafe static void CoverageModulationTableNV(GLsizei n, GLfloat[] v)
+        {
+            if (glCoverageModulationTableNV != null)
+            {
+                fixed (GLfloat* ptr_v = v)
+                {
+                    glCoverageModulationTableNV(n, ptr_v);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glGetCoverageModulationTableNV(GLsizei bufsize, GLfloat* v);
+        public unsafe static void GetCoverageModulationTableNV(GLsizei bufsize, GLfloat[] v)
+        {
+            if (glGetCoverageModulationTableNV != null)
+            {
+                fixed (GLfloat* ptr_v = v)
+                {
+                    glGetCoverageModulationTableNV(bufsize, ptr_v);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glCoverageModulationNV(GLenum components);
+        public static void CoverageModulationNV(GLenum components)
+        {
+            if (glCoverageModulationNV != null)
+            {
+                glCoverageModulationNV(components);
+            }
+        }
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_geometry_shader_passthrough (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_internalformat_sample_query
+        ///////////////////////////////////////////////////////////////////////
+        // GLAPI void APIENTRY glGetInternalformatSampleivNV (GLenum target, GLenum internalformat, GLsizei samples, GLenum pname, GLsizei bufSize, GLint *params);
+        public unsafe static void GetInternalformatSampleivNV(GLenum target, GLenum internalformat, GLsizei samples, GLenum pname, GLsizei bufSize, GLint[] parameters)
+        {
+            if (glGetInternalformatSampleivNV != null)
+            {
+                fixed (GLint* ptr_parameters = parameters)
+                {
+                    glGetInternalformatSampleivNV(target, internalformat, samples, pname, bufSize, ptr_parameters);
+                }
+            }
+        }
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_path_rendering_shared_edge (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_sample_locations
+        ///////////////////////////////////////////////////////////////////////
+        // GLAPI void APIENTRY glFramebufferSampleLocationsfvNV(GLenum target, GLuint start, GLsizei count, const GLfloat* v);
+        public unsafe static void FramebufferSampleLocationsfvNV(GLenum target, GLuint start, GLsizei count, GLfloat[] v)
+        {
+            if (glFramebufferSampleLocationsfvNV != null)
+            {
+                fixed (GLfloat* ptr_v = v)
+                {
+                    glFramebufferSampleLocationsfvNV(target, start, count, ptr_v);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glNamedFramebufferSampleLocationsfvNV(GLuint framebuffer, GLuint start, GLsizei count, const GLfloat* v);
+        public unsafe static void NamedFramebufferSampleLocationsfvNV(GLuint framebuffer, GLuint start, GLsizei count, GLfloat[] v)
+        {
+            if (glNamedFramebufferSampleLocationsfvNV != null)
+            {
+                fixed (GLfloat* ptr_v = v)
+                {
+                    glNamedFramebufferSampleLocationsfvNV(framebuffer, start, count, ptr_v);
+                }
+            }
+        }
+
+        // GLAPI void APIENTRY glResolveDepthValuesNV(void);
+        public static void ResolveDepthValuesNV()
+        {
+            if (glResolveDepthValuesNV != null)
+            {
+                glResolveDepthValuesNV();
+            }
+        }
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_sample_mask_override_coverage (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_shader_atomic_fp16_vector (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_shader_atomic_int64 (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_shader_thread_group (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_shader_thread_shuffle (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_uniform_buffer_unified_memory (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_viewport_array2 (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
         #endregion
 
         ///////////////////////////////////////////////////////////////////////
@@ -19061,6 +19459,28 @@ namespace OpenGLDotNet
 
         ///////////////////////////////////////////////////////////////////////
         // GL_OML_resample (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        #endregion
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_OVR_xxx FUNCTIONS
+        ///////////////////////////////////////////////////////////////////////
+        #region GL_OVR_xxx FUNCTIONS...
+        ///////////////////////////////////////////////////////////////////////
+        // GL_OVR_multiview
+        ///////////////////////////////////////////////////////////////////////
+        // GLAPI void APIENTRY glFramebufferTextureMultiviewOVR(GLenum target, GLenum attachment, GLuint texture, GLint level, GLint baseViewIndex, GLsizei numViews);
+        public static void FramebufferTextureMultiviewOVR(GLenum target, GLenum attachment, GLuint texture, GLint level, GLint baseViewIndex, GLsizei numViews)
+        {
+            if (glFramebufferTextureMultiviewOVR != null)
+            {
+                glFramebufferTextureMultiviewOVR(target, attachment, texture, level, baseViewIndex, numViews);
+            }
+        }
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_OVR_multiview2 (no function entry points)
         ///////////////////////////////////////////////////////////////////////
 
         #endregion

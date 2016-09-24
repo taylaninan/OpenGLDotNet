@@ -9340,6 +9340,205 @@ namespace OpenGLDotNet
 		private unsafe delegate void TglMultiDrawElementsIndirectBindlessCountNV(GLenum mode, GLenum type, void* indirect, GLsizei drawCount, GLsizei maxDrawCount, GLsizei stride, GLint vertexBufferCount);
 		private static TglMultiDrawElementsIndirectBindlessCountNV glMultiDrawElementsIndirectBindlessCountNV = null;
 
+		///////////////////////////////////////////////////////////////////////
+		// GL_NV_command_list
+		///////////////////////////////////////////////////////////////////////
+		// GLAPI void APIENTRY glCreateStatesNV (GLsizei n, GLuint *states);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+		private unsafe delegate void TglCreateStatesNV(GLsizei n, GLuint* states);
+		private static TglCreateStatesNV glCreateStatesNV = null;
+		
+		// GLAPI void APIENTRY glDeleteStatesNV (GLsizei n, const GLuint *states);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+		private unsafe delegate void TglDeleteStatesNV(GLsizei n, GLuint* states);
+		private static TglDeleteStatesNV glDeleteStatesNV = null;
+		
+		// GLAPI GLboolean APIENTRY glIsStateNV (GLuint state);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+		private delegate GLboolean TglIsStateNV(GLuint state);
+		private static TglIsStateNV glIsStateNV = null;
+		
+		// GLAPI void APIENTRY glStateCaptureNV (GLuint state, GLenum mode);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+		private delegate void TglStateCaptureNV(GLuint state, GLenum mode);
+		private static TglStateCaptureNV glStateCaptureNV = null;
+		
+		// GLAPI GLuint APIENTRY glGetCommandHeaderNV (GLenum tokenID, GLuint size);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+		private delegate GLuint TglGetCommandHeaderNV(GLenum tokenID, GLuint size);
+		private static TglGetCommandHeaderNV glGetCommandHeaderNV = null;
+		
+		// GLAPI GLushort APIENTRY glGetStageIndexNV (GLenum shadertype);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+		private delegate GLushort TglGetStageIndexNV(GLenum shadertype);
+		private static TglGetStageIndexNV glGetStageIndexNV = null;
+		
+		// GLAPI void APIENTRY glDrawCommandsNV (GLenum primitiveMode, GLuint buffer, const GLintptr *indirects, const GLsizei *sizes, GLuint count);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+		private unsafe delegate void TglDrawCommandsNV(GLenum primitiveMode, GLuint buffer, GLintptr* indirects, GLsizei* sizes, GLuint count);
+		private static TglDrawCommandsNV glDrawCommandsNV = null;
+		
+		// GLAPI void APIENTRY glDrawCommandsAddressNV (GLenum primitiveMode, const GLuint64 *indirects, const GLsizei *sizes, GLuint count);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+		private unsafe delegate void TglDrawCommandsAddressNV(GLenum primitiveMode, GLuint64* indirects, GLsizei* sizes, GLuint count);
+		private static TglDrawCommandsAddressNV glDrawCommandsAddressNV = null;
+		
+		// GLAPI void APIENTRY glDrawCommandsStatesNV (GLuint buffer, const GLintptr *indirects, const GLsizei *sizes, const GLuint *states, const GLuint *fbos, GLuint count);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+		private unsafe delegate void TglDrawCommandsStatesNV(GLuint buffer, GLintptr* indirects, GLsizei* sizes, GLuint* states, GLuint* fbos, GLuint count);
+		private static TglDrawCommandsStatesNV glDrawCommandsStatesNV = null;
+		
+		// GLAPI void APIENTRY glDrawCommandsStatesAddressNV (const GLuint64 *indirects, const GLsizei *sizes, const GLuint *states, const GLuint *fbos, GLuint count);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+		private unsafe delegate void TglDrawCommandsStatesAddressNV(GLuint64* indirects, GLsizei* sizes, GLuint* states, GLuint* fbos, GLuint count);
+		private static TglDrawCommandsStatesAddressNV glDrawCommandsStatesAddressNV = null;
+		
+		// GLAPI void APIENTRY glCreateCommandListsNV (GLsizei n, GLuint *lists);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+		private unsafe delegate void TglCreateCommandListsNV(GLsizei n, GLuint* lists);
+		private static TglCreateCommandListsNV glCreateCommandListsNV = null;
+		
+		// GLAPI void APIENTRY glDeleteCommandListsNV (GLsizei n, const GLuint *lists);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+		private unsafe delegate void TglDeleteCommandListsNV (GLsizei n, GLuint* lists);
+		private static TglDeleteCommandListsNV glDeleteCommandListsNV = null;
+		
+		// GLAPI GLboolean APIENTRY glIsCommandListNV (GLuint list);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+		private delegate GLboolean TglIsCommandListNV(GLuint list);
+		private static TglIsCommandListNV glIsCommandListNV = null;
+		
+		// GLAPI void APIENTRY glListDrawCommandsStatesClientNV (GLuint list, GLuint segment, const void **indirects, const GLsizei *sizes, const GLuint *states, const GLuint *fbos, GLuint count);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+		private unsafe delegate void TglListDrawCommandsStatesClientNV (GLuint list, GLuint segment, void** indirects, GLsizei* sizes, GLuint* states, GLuint* fbos, GLuint count);
+		private static TglListDrawCommandsStatesClientNV glListDrawCommandsStatesClientNV = null;
+
+		// GLAPI void APIENTRY glCommandListSegmentsNV (GLuint list, GLuint segments);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+		private delegate void TglCommandListSegmentsNV(GLuint list, GLuint segments);
+		private static TglCommandListSegmentsNV glCommandListSegmentsNV = null;
+
+		// GLAPI void APIENTRY glCompileCommandListNV (GLuint list);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+		private delegate void TglCompileCommandListNV(GLuint list);
+		private static TglCompileCommandListNV glCompileCommandListNV = null;
+		
+		// GLAPI void APIENTRY glCallCommandListNV (GLuint list);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+		private delegate void TglCallCommandListNV(GLuint list);
+		private static TglCallCommandListNV glCallCommandListNV = null;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_conservative_raster
+        ///////////////////////////////////////////////////////////////////////
+        // GLAPI void APIENTRY glSubpixelPrecisionBiasNV (GLuint xbits, GLuint ybits);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglSubpixelPrecisionBiasNV(GLuint xbits, GLuint ybits);
+        private static TglSubpixelPrecisionBiasNV glSubpixelPrecisionBiasNV = null;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_conservative_raster_dilate
+        ///////////////////////////////////////////////////////////////////////
+        // GLAPI void APIENTRY glConservativeRasterParameterfNV (GLenum pname, GLfloat value);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglConservativeRasterParameterfNV(GLenum pname, GLfloat value);
+        private static TglConservativeRasterParameterfNV glConservativeRasterParameterfNV = null;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_fill_rectangle (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_fragment_coverage_to_color
+        ///////////////////////////////////////////////////////////////////////
+        // GLAPI void APIENTRY glFragmentCoverageColorNV (GLuint color);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglFragmentCoverageColorNV(GLuint color);
+        private static TglFragmentCoverageColorNV glFragmentCoverageColorNV = null;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_fragment_shader_interlock (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_framebuffer_mixed_samples
+        ///////////////////////////////////////////////////////////////////////
+        // GLAPI void APIENTRY glCoverageModulationTableNV(GLsizei n, const GLfloat* v);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglCoverageModulationTableNV(GLsizei n, GLfloat* v);
+        private static TglCoverageModulationTableNV glCoverageModulationTableNV = null;
+
+        // GLAPI void APIENTRY glGetCoverageModulationTableNV(GLsizei bufsize, GLfloat* v);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglGetCoverageModulationTableNV(GLsizei bufsize, GLfloat* v);
+        private static TglGetCoverageModulationTableNV glGetCoverageModulationTableNV = null;
+
+        // GLAPI void APIENTRY glCoverageModulationNV(GLenum components);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglCoverageModulationNV(GLenum components);
+        private static TglCoverageModulationNV glCoverageModulationNV = null;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_geometry_shader_passthrough (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_internalformat_sample_query
+        ///////////////////////////////////////////////////////////////////////
+        // GLAPI void APIENTRY glGetInternalformatSampleivNV (GLenum target, GLenum internalformat, GLsizei samples, GLenum pname, GLsizei bufSize, GLint *params);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglGetInternalformatSampleivNV(GLenum target, GLenum internalformat, GLsizei samples, GLenum pname, GLsizei bufSize, GLint* parameters);
+        private static TglGetInternalformatSampleivNV glGetInternalformatSampleivNV = null;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_path_rendering_shared_edge (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_sample_locations
+        ///////////////////////////////////////////////////////////////////////
+        // GLAPI void APIENTRY glFramebufferSampleLocationsfvNV(GLenum target, GLuint start, GLsizei count, const GLfloat* v);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglFramebufferSampleLocationsfvNV(GLenum target, GLuint start, GLsizei count, GLfloat* v);
+        private static TglFramebufferSampleLocationsfvNV glFramebufferSampleLocationsfvNV = null;
+
+        // GLAPI void APIENTRY glNamedFramebufferSampleLocationsfvNV(GLuint framebuffer, GLuint start, GLsizei count, const GLfloat* v);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private unsafe delegate void TglNamedFramebufferSampleLocationsfvNV(GLuint framebuffer, GLuint start, GLsizei count, GLfloat* v);
+        private static TglNamedFramebufferSampleLocationsfvNV glNamedFramebufferSampleLocationsfvNV = null;
+
+        // GLAPI void APIENTRY glResolveDepthValuesNV(void);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglResolveDepthValuesNV();
+        private static TglResolveDepthValuesNV glResolveDepthValuesNV = null;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_sample_mask_override_coverage (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_shader_atomic_fp16_vector (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_shader_atomic_int64 (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_shader_thread_group (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_shader_thread_shuffle (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_uniform_buffer_unified_memory (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_NV_viewport_array2 (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
         #endregion
 
         ///////////////////////////////////////////////////////////////////////
@@ -10070,6 +10269,24 @@ namespace OpenGLDotNet
 
         ///////////////////////////////////////////////////////////////////////
         // GL_OML_resample (no function entry points)
+        ///////////////////////////////////////////////////////////////////////
+
+        #endregion
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_OVR_xxx FUNCTIONS
+        ///////////////////////////////////////////////////////////////////////
+        #region GL_OVR_xxx FUNCTIONS...
+        ///////////////////////////////////////////////////////////////////////
+        // GL_OVR_multiview
+        ///////////////////////////////////////////////////////////////////////
+        // GLAPI void APIENTRY glFramebufferTextureMultiviewOVR(GLenum target, GLenum attachment, GLuint texture, GLint level, GLint baseViewIndex, GLsizei numViews);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        private delegate void TglFramebufferTextureMultiviewOVR(GLenum target, GLenum attachment, GLuint texture, GLint level, GLint baseViewIndex, GLsizei numViews);
+        private static TglFramebufferTextureMultiviewOVR glFramebufferTextureMultiviewOVR = null;
+
+        ///////////////////////////////////////////////////////////////////////
+        // GL_OVR_multiview2 (no function entry points)
         ///////////////////////////////////////////////////////////////////////
 
         #endregion
