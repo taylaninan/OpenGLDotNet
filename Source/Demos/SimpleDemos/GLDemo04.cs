@@ -265,6 +265,7 @@ namespace OpenGLDemos
             ulong FinishTime = CPUInfo.ReadTSC();
             double Interval = Math.Round((double)(FinishTime - StartTime) / (double)(CPUInfo.CPUSpeed * 1000000), 3);
             double fps = Math.Round(1 / Interval, 3);
+            Console.WriteLine("[FRAME_INFO] {0} fps", fps);
             //Console.WriteLine("[FRAME_INFO] {0} ms", Interval);
         }
 
@@ -321,12 +322,22 @@ namespace OpenGLDemos
 
             SetupGL();
 
-            GLUT.KeyboardFunc(Keyboard);
-            GLUT.MouseFunc(Mouse);
-            GLUT.IdleFunc(Idle);
-            GLUT.ReshapeFunc(Reshape);
-            GLUT.MotionFunc(Motion);
-            GLUT.DisplayFunc(Display);
+            // Normally we can pass the functions directly to GLUT or FREEGLUT, but then stupid GC collects them unpredictably.
+            // So, when we declare them as variables, and pass variables to the GLUT or FREEGLUT, there is no problem. 
+            // Stupid GC doesn't collect them.
+            GLUT.TCALLBACKglutKeyboardProc KeyboardProc = Keyboard;
+            GLUT.TCALLBACKglutMouseProc MouseProc = Mouse;
+            GLUT.TCALLBACKglutIdleProc IdleProc = Idle;
+            GLUT.TCALLBACKglutReshapeProc ReshapeProc = Reshape;
+            GLUT.TCALLBACKglutMotionProc MotionProc = Motion;
+            GLUT.TCALLBACKglutDisplayProc DisplayProc = Display;
+                 
+            GLUT.KeyboardFunc(KeyboardProc);
+            GLUT.MouseFunc(MouseProc);
+            GLUT.IdleFunc(IdleProc);
+            GLUT.ReshapeFunc(ReshapeProc);
+            GLUT.MotionFunc(MotionProc);
+            GLUT.DisplayFunc(DisplayProc);
 
             GLUT.MainLoop();
         }

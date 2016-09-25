@@ -50,7 +50,8 @@ namespace Quake2DotNet
                 CommandManager.Init();
 
                 // Normally we can pass the functions directly to GLUT or FREEGLUT, but then stupid GC collects them unpredictably.
-                // So, when we declare them as variables, and pass variables to the GLUT or FREEGLUT, there is no problem. Stupid GC doesn't collect them.
+                // So, when we declare them as variables, and pass variables to the GLUT or FREEGLUT, there is no problem. 
+                // Stupid GC doesn't collect them.
                 FG.TCALLBACKglutIdleProc IdleProc = Idle;
                 FG.TCALLBACKglutKeyboardProc KeyboardProc = Keyboard;
                 FG.TCALLBACKglutDisplayProc DisplayProc = Display;

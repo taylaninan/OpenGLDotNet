@@ -251,12 +251,22 @@ namespace OpenGLDemos
 
             GL.Init(true);
 
-            FG.KeyboardFunc(Keyboard);
-            FG.MouseFunc(Mouse);
-            FG.IdleFunc(Idle);
-            FG.ReshapeFunc(Reshape);
-            FG.MotionFunc(Motion);
-            FG.DisplayFunc(Display);
+            // Normally we can pass the functions directly to GLUT or FREEGLUT, but then stupid GC collects them unpredictably.
+            // So, when we declare them as variables, and pass variables to the GLUT or FREEGLUT, there is no problem. 
+            // Stupid GC doesn't collect them.
+            FG.TCALLBACKglutKeyboardProc KeyboardProc = Keyboard;
+            FG.TCALLBACKglutMouseProc MouseProc = Mouse;
+            FG.TCALLBACKglutIdleProc IdleProc = Idle;
+            FG.TCALLBACKglutReshapeProc ReshapeProc = Reshape;
+            FG.TCALLBACKglutMotionProc MotionProc = Motion;
+            FG.TCALLBACKglutDisplayProc DisplayProc = Display;
+
+            FG.KeyboardFunc(KeyboardProc);
+            FG.MouseFunc(MouseProc);
+            FG.IdleFunc(IdleProc);
+            FG.ReshapeFunc(ReshapeProc);
+            FG.MotionFunc(MotionProc);
+            FG.DisplayFunc(DisplayProc);
 
             SetupGL();
 
