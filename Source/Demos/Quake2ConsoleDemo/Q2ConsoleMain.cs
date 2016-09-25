@@ -48,6 +48,7 @@ namespace Quake2DotNet
             {
                 // We don't want to Init and Add commands each time ScreenSize changes
                 CommandManager.Init();
+                CommandManager.ExecuteCommand("help");
 
                 // Normally we can pass the functions directly to GLUT or FREEGLUT, but then stupid GC collects them unpredictably.
                 // So, when we declare them as variables, and pass variables to the GLUT or FREEGLUT, there is no problem. 

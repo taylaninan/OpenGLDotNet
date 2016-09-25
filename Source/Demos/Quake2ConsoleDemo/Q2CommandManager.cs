@@ -39,10 +39,11 @@ namespace Quake2DotNet
 
             // Required for audio out and the MP3 stream
             waveOutDevice = new WaveOut();
-            audioFileReader = new AudioFileReader(@"Music\" + ConsoleVarManager.GetValueToString("MusicTrack"));
 
-            waveOutDevice.Init(audioFileReader);
-            waveOutDevice.Play();
+            //audioFileReader = new AudioFileReader(@"Music\" + ConsoleVarManager.GetValueToString("MusicTrack"));
+            //waveOutDevice.Init(audioFileReader);
+
+            //waveOutDevice.Play();
         }
 
         private static void AddCommand(string CommandName, byte ArgumentCount, string CommandHelp, TCALLBACKCommandProc CommandProc)
