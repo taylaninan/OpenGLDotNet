@@ -58,10 +58,10 @@
     <Compile Include="Source\Demos\Quake2ConsoleDemo\Q2ConsoleVarManager.cs" />
     <Compile Include="Source\Demos\Quake2ConsoleDemo\Q2ConsoleMain.cs" />
     <Compile Include="Source\Demos\Quake2ConsoleDemo\Q2TextureManager.cs" />
-    <Compile Include="Source\Demos\SimpleDemos\GLDemo05.cs" />
-    <Compile Include="Source\Demos\SimpleDemos\GLDemo04.cs" />
+    <Compile Include="Source\Demos\SimpleDemos\GLDemo01.cs" />
     <Compile Include="Source\Demos\SimpleDemos\GLDemo02.cs" />
     <Compile Include="Source\Demos\SimpleDemos\GLDemo03.cs" />
+    <Compile Include="Source\Demos\SimpleDemos\GLDemo04.cs" />
     <Compile Include="Source\Demos\GLDemoMain.cs" />
     <Compile Include="Source\Demos\SimpleDemos\CPUGLInfo.cs" />
   </ItemGroup>

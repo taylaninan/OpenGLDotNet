@@ -1,3 +1,16 @@
+// ----------------------------------------------------------------------------
+// FILE		: cpuinfo.cs
+// VERSION	: 1.1.0
+// COMMENT	: Defines functionality for displaying detailed information about the
+//            computer CPU. Makes use of "assembler.dll", which is written in "C"
+//            and "Assembler commands" (source code included).
+// WEB      : http://www.taylaninan.com/opengl-dotnet
+// AUTHOR   : TAYLAN INAN
+// E-MAIL   : info@taylaninan.com
+// DATE     : 2014-2016
+// LICENSE  : FREE FOR EDUCATIONAL, PERSONAL AND COMMERCIAL USAGE
+// ----------------------------------------------------------------------------
+
 using System;
 using System.Runtime.InteropServices;
 using System.Collections.Generic;

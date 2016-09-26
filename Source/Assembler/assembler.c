@@ -1,3 +1,15 @@
+// ----------------------------------------------------------------------------
+// FILE		: assembler.c
+// VERSION	: 1.1.0
+// COMMENT	: All assembler routines are written in this file and imported and 
+//            used by the CSharp functions later.
+// WEB      : http://www.taylaninan.com/opengl-dotnet
+// AUTHOR   : TAYLAN INAN
+// E-MAIL   : info@taylaninan.com
+// DATE     : 2014-2016
+// LICENSE  : FREE FOR EDUCATIONAL, PERSONAL AND COMMERCIAL USAGE
+// ----------------------------------------------------------------------------
+
 typedef unsigned int uint32;
 
 uint32 _eax = 0;

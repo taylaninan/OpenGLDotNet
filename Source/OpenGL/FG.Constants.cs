@@ -1,4 +1,15 @@
-﻿using System;
+﻿// ----------------------------------------------------------------------------
+// FILE		: fg.constants.cs
+// VERSION	: 1.1.0
+// COMMENT	: FREEGLUT library constants.
+// WEB      : http://www.taylaninan.com/opengl-dotnet
+// AUTHOR   : TAYLAN INAN
+// E-MAIL   : info@taylaninan.com
+// DATE     : 2014-2016
+// LICENSE  : FREE FOR EDUCATIONAL, PERSONAL AND COMMERCIAL USAGE
+// ----------------------------------------------------------------------------
+
+using System;
 
 namespace OpenGLDotNet
 {

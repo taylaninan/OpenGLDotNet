@@ -1,4 +1,17 @@
-﻿using System;
+﻿// ----------------------------------------------------------------------------
+// FILE		: q2commandmanager.cs
+// VERSION	: 1.1.0
+// COMMENT	: This file is part of Quake 2 Console Demo. The Q2CommandManager
+//			  allows of adding and executing console commands. Try writing "help"
+//            on console to list available commands and explanations.
+// WEB      : http://www.taylaninan.com/opengl-dotnet
+// AUTHOR   : TAYLAN INAN
+// E-MAIL   : info@taylaninan.com
+// DATE     : 2014-2016
+// LICENSE  : FREE FOR EDUCATIONAL, PERSONAL AND COMMERCIAL USAGE
+// ----------------------------------------------------------------------------
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using OpenGLDotNet;
@@ -164,7 +177,7 @@ namespace Quake2DotNet
             string vendor = GL.GetString(GL.GL_VENDOR).Trim();
             string version = GL.GetString(GL.GL_VERSION).Trim();
             string renderer = GL.GetString(GL.GL_RENDERER).Trim();
-            string shader = GL.GetString(GL.GL_SHADING_LANGUAGE_VERSION);
+            string shader = GL.GetString(GL.GL_SHADING_LANGUAGE_VERSION).Trim();
 
             ConsoleManager.WriteLine("OpenGL information...");
             ConsoleManager.WriteLine("================================================================================");

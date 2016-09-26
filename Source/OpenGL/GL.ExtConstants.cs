@@ -1,3 +1,14 @@
+// ----------------------------------------------------------------------------
+// FILE		: gl.extconstants.cs
+// VERSION	: 1.1.0
+// COMMENT	: OpenGL Extensions constants.
+// WEB      : http://www.taylaninan.com/opengl-dotnet
+// AUTHOR   : TAYLAN INAN
+// E-MAIL   : info@taylaninan.com
+// DATE     : 2014-2016
+// LICENSE  : FREE FOR EDUCATIONAL, PERSONAL AND COMMERCIAL USAGE
+// ----------------------------------------------------------------------------
+
 using System;
 
 namespace OpenGLDotNet

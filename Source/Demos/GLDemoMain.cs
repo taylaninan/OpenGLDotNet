@@ -1,4 +1,16 @@
-﻿using System;
+﻿// ----------------------------------------------------------------------------
+// FILE		: gldemomain.cs
+// VERSION	: 1.1.0
+// COMMENT	: This file displays the main menu of OpenGL demos and starts the
+//            correct demo
+// WEB      : http://www.taylaninan.com/opengl-dotnet
+// AUTHOR   : TAYLAN INAN
+// E-MAIL   : info@taylaninan.com
+// DATE     : 2014-2016
+// LICENSE  : FREE FOR EDUCATIONAL, PERSONAL AND COMMERCIAL USAGE
+// ----------------------------------------------------------------------------
+
+using System;
 using Quake2DotNet;
 
 namespace OpenGLDemos
@@ -8,7 +20,7 @@ namespace OpenGLDemos
         public static void Main(string[] args)
         {
             // First, setup the console window
-            Console.Title = "OpenGLDotNet v1.1.0";
+            Console.Title = "OpenGLDotNet v1.1.0 Demos";
 
             Console.WriteLine(" 1.) Quake 2 OpenGL Console Demo");
             Console.WriteLine(" 2.) OpenGL Demo #01 - Orientation");

@@ -1,4 +1,15 @@
-﻿using System;
+﻿// ----------------------------------------------------------------------------
+// FILE		: gl.base.cs
+// VERSION	: 1.1.0
+// COMMENT	: OpenGL initting, configuration and extension loading and management
+//            base functions
+// AUTHOR   : TAYLAN INAN
+// E-MAIL   : info@taylaninan.com
+// DATE     : 2014-2016
+// LICENSE  : FREE FOR EDUCATIONAL, PERSONAL AND COMMERCIAL USE
+// ----------------------------------------------------------------------------
+
+using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.IO;
@@ -120,634 +131,634 @@ namespace OpenGLDotNet
         // Extensions supported by this C# OpenGL Wrapper project. "true" means that the extension is supported.
         private static SortedDictionary<string, bool> ExtensionsLIB = new SortedDictionary<string, bool>()
         {   
-            {"GL_3DFX_multisample", true},
-            {"GL_3DFX_tbuffer", true},
-            {"GL_3DFX_texture_compression_FXT1", true},
-            {"GL_AMD_blend_minmax_factor", true},
-            {"GL_AMD_conservative_depth", true},
-            {"GL_AMD_debug_output", true},
-            {"GL_AMD_depth_clamp_separate", true},
-            {"GL_AMD_draw_buffers_blend", true},
-            {"GL_AMD_gcn_shader", true},
-            {"GL_AMD_gpu_shader_int64", true},
-            {"GL_AMD_interleaved_elements", true},
-            {"GL_AMD_multi_draw_indirect", true},
-            {"GL_AMD_name_gen_delete", true},
-            {"GL_AMD_occlusion_query_event", true},
-            {"GL_AMD_performance_monitor", true},
-            {"GL_AMD_pinned_memory", true},
-            {"GL_AMD_query_buffer_object", true},
-            {"GL_AMD_sample_positions", true},
-            {"GL_AMD_seamless_cubemap_per_texture", true},
-            {"GL_AMD_shader_atomic_counter_ops", true},
-            {"GL_AMD_shader_stencil_export", true},
-            {"GL_AMD_shader_trinary_minmax", true},
-            {"GL_AMD_sparse_texture", true},
-            {"GL_AMD_stencil_operation_extended", true},
-            {"GL_AMD_texture_cube_map_array", false},               // ATI/AMD GPUs report to support this; no internet search results; similar to GL_ARB_texture_cube_map_array
-            {"GL_AMD_texture_texture4", true},
-            {"GL_AMD_transform_feedback3_lines_triangles", true},
-            {"GL_AMD_transform_feedback4", true},
-            {"GL_AMD_vertex_shader_layer", true},
-            {"GL_AMD_vertex_shader_tessellator", true},
-            {"GL_AMD_vertex_shader_viewport_index", true},
-            {"GL_AMDX_debug_output", true},                         // ATI/AMD GPUs report to support this; only renated to GL_AMD_debug_output
-            {"GL_AMDX_vertex_shader_tessellator", true},            // ATI/AMD GPUs report to support this; only renamed to GL_AMD_vertex_shader_tessellator
-            {"GL_APPLE_aux_depth_stencil", true},
-            {"GL_APPLE_client_storage", true},
-            {"GL_APPLE_element_array", true},
-            {"GL_APPLE_fence", true},
-            {"GL_APPLE_float_pixels", true},
-            {"GL_APPLE_flush_buffer_range", true},
-            {"GL_APPLE_object_purgeable", true},
-            {"GL_APPLE_rgb_422", true},
-            {"GL_APPLE_row_bytes", true},
-            {"GL_APPLE_specular_vector", true},
-            {"GL_APPLE_texture_range", true},
-            {"GL_APPLE_transform_hint", true},
-            {"GL_APPLE_vertex_array_object", true},
-            {"GL_APPLE_vertex_array_range", true},
-            {"GL_APPLE_vertex_program_evaluators", true},
-            {"GL_APPLE_ycbcr_422", true},
-            {"GL_ARB_arrays_of_arrays", true},
-            {"GL_ARB_base_instance", true},
-            {"GL_ARB_bindless_texture", true},
-            {"GL_ARB_blend_func_extended", true},
-            {"GL_ARB_buffer_storage", true},
-            {"GL_ARB_cl_event", true},
-            {"GL_ARB_clear_buffer_object", true},
-            {"GL_ARB_clear_texture", true},
-            {"GL_ARB_clip_control", true},
-            {"GL_ARB_color_buffer_float", true},
-            {"GL_ARB_compatibility", true},
-            {"GL_ARB_compressed_texture_pixel_storage", true},
-            {"GL_ARB_compute_shader", true},
-            {"GL_ARB_compute_variable_group_size", true},
-            {"GL_ARB_conditional_render_inverted", true},
-            {"GL_ARB_conservative_depth", true},
-            {"GL_ARB_copy_buffer", true},
-            {"GL_ARB_copy_image", true},
-            {"GL_ARB_cull_distance", true},
-            {"GL_ARB_debug_output", true},
-            {"GL_ARB_depth_buffer_float", true},
-            {"GL_ARB_depth_clamp", true},
-            {"GL_ARB_depth_texture", true},
-            {"GL_ARB_derivative_control", true},
-            {"GL_ARB_direct_state_access", true},
-            {"GL_ARB_draw_buffers", true},
-            {"GL_ARB_draw_buffers_blend", true},
-            {"GL_ARB_draw_elements_base_vertex", true},
-            {"GL_ARB_draw_indirect", true},
-            {"GL_ARB_draw_instanced", true},
-            {"GL_ARB_enhanced_layouts", true},                     // http://www.opengl.org/registry/specs/ARB/enhanced_layouts.txt
-            {"GL_ARB_ES2_compatibility", true},
-            {"GL_ARB_ES3_compatibility", true},
-            {"GL_ARB_ES3_1_compatibility", true},
-            {"GL_ARB_ES3_2_compatibility", true},
-            {"GL_ARB_explicit_attrib_location", true},
-            {"GL_ARB_explicit_uniform_location", true},
-            {"GL_ARB_fragment_coord_conventions", true},
-            {"GL_ARB_fragment_layer_viewport", true},
-            {"GL_ARB_fragment_program", true},
-            {"GL_ARB_fragment_program_shadow", true},
-            {"GL_ARB_fragment_shader", true},
-            {"GL_ARB_fragment_shader_interlock", true},
-            {"GL_ARB_framebuffer_no_attachments", true},
-            {"GL_ARB_framebuffer_object", true},
-            {"GL_ARB_framebuffer_sRGB", true},
-            {"GL_ARB_geometry_shader4", true},
-            {"GL_ARB_get_program_binary", true},
-            {"GL_ARB_get_texture_sub_image", true},
-            {"GL_ARB_gpu_shader_fp64", true},
-            {"GL_ARB_gpu_shader_int64", true},
-            {"GL_ARB_gpu_shader5", true},
-            {"GL_ARB_half_float_pixel", true},
-            {"GL_ARB_half_float_vertex", true},
-            {"GL_ARB_imaging", true},
-            {"GL_ARB_indirect_parameters", true},
-            {"GL_ARB_instanced_arrays", true},
-            {"GL_ARB_internalformat_query", true},
-            {"GL_ARB_internalformat_query2", true},
-            {"GL_ARB_invalidate_subdata", true},
-            {"GL_ARB_map_buffer_alignment", true},
-            {"GL_ARB_map_buffer_range", true},
-            {"GL_ARB_matrix_palette", true},
-            {"GL_ARB_multi_bind", true},
-            {"GL_ARB_multi_draw_indirect", true},
-            {"GL_ARB_multisample", true},
-            {"GL_ARB_multitexture", true},
-            {"GL_ARB_occlusion_query", true},
-            {"GL_ARB_occlusion_query2", true},
-            {"GL_ARB_parallel_shader_compile", true},
-            {"GL_ARB_pipeline_statistics_query", true},
-            {"GL_ARB_pixel_buffer_object", true},
-            {"GL_ARB_point_parameters", true},
-            {"GL_ARB_point_sprite", true},
-            {"GL_ARB_post_depth_coverage", true},
-            {"GL_ARB_program_interface_query", true},
-            {"GL_ARB_provoking_vertex", true},
-            {"GL_ARB_query_buffer_object", true},
-            {"GL_ARB_robust_buffer_access_behavior", true},
-            {"GL_ARB_robustness", true},
-            {"GL_ARB_robustness_isolation", true},
-            {"GL_ARB_sample_locations", true},
-            {"GL_ARB_sample_shading", true},
-            {"GL_ARB_sampler_objects", true},
-            {"GL_ARB_seamless_cube_map", true},
-            {"GL_ARB_seamless_cubemap_per_texture", true},
-            {"GL_ARB_separate_shader_objects", true},
-            {"GL_ARB_shader_atomic_counter_ops", true},
-            {"GL_ARB_shader_atomic_counters", true},
-            {"GL_ARB_shader_ballot", true},
-            {"GL_ARB_shader_bit_encoding", true},
-            {"GL_ARB_shader_clock", true},
-            {"GL_ARB_shader_draw_parameters", true},
-            {"GL_ARB_shader_group_vote", true},
-            {"GL_ARB_shader_image_load_store", true},
-            {"GL_ARB_shader_image_size", true},
-            {"GL_ARB_shader_objects", true},
-            {"GL_ARB_shader_precision", true},
-            {"GL_ARB_shader_stencil_export", true},
-            {"GL_ARB_shader_storage_buffer_object", true},
-            {"GL_ARB_shader_subroutine", true},
-            {"GL_ARB_shader_texture_image_samples", true},
-            {"GL_ARB_shader_texture_lod", true},
-            {"GL_ARB_shader_viewport_layer_array", true},
-            {"GL_ARB_shading_language_100", true},
-            {"GL_ARB_shading_language_420pack", true},
-            {"GL_ARB_shading_language_include", true},
-            {"GL_ARB_shading_language_packing", true},
-            {"GL_ARB_shadow", true},
-            {"GL_ARB_shadow_ambient", true},
-            {"GL_ARB_sparse_buffer", true},
-            {"GL_ARB_sparse_texture", true},
-            {"GL_ARB_sparse_texture2", true},
-            {"GL_ARB_sparse_texture_clamp", true},
-            {"GL_ARB_stencil_texturing", true},
-            {"GL_ARB_sync", true},
-            {"GL_ARB_tessellation_shader", true},
-            {"GL_ARB_texture_barrier", true},
-            {"GL_ARB_texture_border_clamp", true},
-            {"GL_ARB_texture_buffer_object", true},
-            {"GL_ARB_texture_buffer_object_rgb32", true},
-            {"GL_ARB_texture_buffer_range", true},
-            {"GL_ARB_texture_compression", true},
-            {"GL_ARB_texture_compression_bptc", true},
-            {"GL_ARB_texture_compression_rgtc", true},
-            {"GL_ARB_texture_cube_map", true},
-            {"GL_ARB_texture_cube_map_array", true},
-            {"GL_ARB_texture_env_add", true},
-            {"GL_ARB_texture_env_combine", true},
-            {"GL_ARB_texture_env_crossbar", true},
-            {"GL_ARB_texture_env_dot3", true},
-            {"GL_ARB_texture_filter_minmax", true},
-            {"GL_ARB_texture_float", true},
-            {"GL_ARB_texture_gather", true},
-            {"GL_ARB_texture_mirror_clamp_to_edge", true},
-            {"GL_ARB_texture_mirrored_repeat", true},
-            {"GL_ARB_texture_multisample", true},
-            {"GL_ARB_texture_non_power_of_two", true},
-            {"GL_ARB_texture_query_levels", true},
-            {"GL_ARB_texture_query_lod", true},
-            {"GL_ARB_texture_rectangle", true},
-            {"GL_ARB_texture_rg", true},
-            {"GL_ARB_texture_rgb10_a2ui", true},
-            {"GL_ARB_texture_snorm", false},                        // ATI/AMD GPUs report to support this; similar to GL_EXT_texture_snorm
-            {"GL_ARB_texture_stencil8", true},                     
-            {"GL_ARB_texture_storage", true},
-            {"GL_ARB_texture_storage_multisample", true},
-            {"GL_ARB_texture_swizzle", true},
-            {"GL_ARB_texture_view", true},
-            {"GL_ARB_timer_query", true},
-            {"GL_ARB_transform_feedback_instanced", true},
-            {"GL_ARB_transform_feedback_overflow_query", true},
-            {"GL_ARB_transform_feedback2", true},
-            {"GL_ARB_transform_feedback3", true},
-            {"GL_ARB_transpose_matrix", true},
-            {"GL_ARB_uniform_buffer_object", true},
-            {"GL_ARB_vertex_array_bgra", true},
-            {"GL_ARB_vertex_array_object", true},
-            {"GL_ARB_vertex_attrib_64bit", true},
-            {"GL_ARB_vertex_attrib_binding", true},
-            {"GL_ARB_vertex_blend", true},
-            {"GL_ARB_vertex_buffer_object", true},
-            {"GL_ARB_vertex_program", true},
-            {"GL_ARB_vertex_shader", true},
-            {"GL_ARB_vertex_type_10f_11f_11f_rev", true},          
-            {"GL_ARB_vertex_type_2_10_10_10_rev", true},
-            {"GL_ARB_viewport_array", true},
-            {"GL_ARB_window_pos", true},
-            {"GL_ATI_draw_buffers", true},
-            {"GL_ATI_element_array", true},
-            {"GL_ATI_envmap_bumpmap", true},
-            {"GL_ATI_fragment_shader", true},
-            {"GL_ATI_map_object_buffer", true},
-            {"GL_ATI_meminfo", true},
-            {"GL_ATI_pixel_format_float", true},
-            {"GL_ATI_pn_triangles", true},
-            {"GL_ATI_separate_stencil", true},
-            {"GL_ATI_text_fragment_shader", true},
-            {"GL_ATI_texture_compression_3dc", true},              // ATI/AMD GPUs report to support this; undocumented; http://sourceforge.net/p/glew/patches/2/
-            {"GL_ATI_texture_env_combine3", true},
-            {"GL_ATI_texture_float", true},
-            {"GL_ATI_texture_mirror_once", true},
-            {"GL_ATI_vertex_array_object", true},
-            {"GL_ATI_vertex_attrib_array_object", true},
-            {"GL_ATI_vertex_streams", true},
-            {"GL_EXT_422_pixels", true},
-            {"GL_EXT_abgr", true},
-            {"GL_EXT_bgra", true},
-            {"GL_EXT_bindable_uniform", true},
-            {"GL_EXT_blend_color", true},
-            {"GL_EXT_blend_equation_separate", true},
-            {"GL_EXT_blend_func_separate", true},
-            {"GL_EXT_blend_logic_op", true},
-            {"GL_EXT_blend_minmax", true},
-            {"GL_EXT_blend_subtract", true},
-            {"GL_EXT_Cg_shader", true},                             // NVIDIA GPUs report to support this; http://developer.download.nvidia.com/opengl/specs/GL_EXT_Cg_shader.txt
-            {"GL_EXT_clip_volume_hint", true},
-            {"GL_EXT_cmyka", true},
-            {"GL_EXT_color_subtable", true},
-            {"GL_EXT_compiled_vertex_array", true},
-            {"GL_EXT_convolution", true},
-            {"GL_EXT_coordinate_frame", true},
-            {"GL_EXT_copy_buffer", false},                          // ATI/AMD GPUs report to support this; no internet search results; undocumented
-            {"GL_EXT_copy_texture", true},
-            {"GL_EXT_cull_vertex", true},
-            {"GL_EXT_debug_label", true},
-            {"GL_EXT_debug_marker", true},
-            {"GL_EXT_depth_bounds_test", true},
-            {"GL_EXT_direct_state_access", true},
-            {"GL_EXT_draw_buffers2", true},
-            {"GL_EXT_draw_instanced", true},
-            {"GL_EXT_draw_range_elements", true},
-            {"GL_EXT_fog_coord", true},
-            {"GL_EXT_framebuffer_blit", true},
-            {"GL_EXT_framebuffer_multisample", true},
-            {"GL_EXT_framebuffer_multisample_blit_scaled", true},
-            {"GL_EXT_framebuffer_object", true},
-            {"GL_EXT_framebuffer_sRGB", true},
-            {"GL_EXT_geometry_shader4", true},
-            {"GL_EXT_gpu_program_parameters", true},
-            {"GL_EXT_gpu_shader4", true},
-            {"GL_EXT_histogram", true},
-            {"GL_EXT_import_sync_object", false},                   // NVIDIA GPUs report to support this; no internet search results; undocumented
-            {"GL_EXT_index_array_formats", true},
-            {"GL_EXT_index_func", true},
-            {"GL_EXT_index_material", true},
-            {"GL_EXT_index_texture", true},
-            {"GL_EXT_light_texture", true},
-            {"GL_EXT_misc_attribute", true},
-            {"GL_EXT_multi_draw_arrays", true},
-            {"GL_EXT_multisample", true},
-            {"GL_EXT_packed_depth_stencil", true},
-            {"GL_EXT_packed_float", true},
-            {"GL_EXT_packed_pixels", true},
-            {"GL_EXT_paletted_texture", true},
-            {"GL_EXT_pixel_buffer_object", true},
-            {"GL_EXT_pixel_transform", true},
-            {"GL_EXT_pixel_transform_color_table", true},
-            {"GL_EXT_point_parameters", true},
-            {"GL_EXT_polygon_offset", true},
-            {"GL_EXT_polygon_offset_clamp", true},
-            {"GL_EXT_post_depth_coverage", true},
-            {"GL_EXT_provoking_vertex", true},
-            {"GL_EXT_raster_multisample", true},
-            {"GL_EXT_rescale_normal", true},
-            {"GL_EXT_secondary_color", true},
-            {"GL_EXT_separate_shader_objects", true},
-            {"GL_EXT_separate_specular_color", true},
-            {"GL_EXT_shader_image_load_formatted", true},
-            {"GL_EXT_shader_image_load_store", true},
-            {"GL_EXT_shader_integer_mix", true},
-            {"GL_EXT_shadow_funcs", true},
-            {"GL_EXT_shared_texture_palette", true},
-            {"GL_EXT_sparse_texture2", true},
-            {"GL_EXT_stencil_clear_tag", true},
-            {"GL_EXT_stencil_two_side", true},
-            {"GL_EXT_stencil_wrap", true},
-            {"GL_EXT_subtexture", true},
-            {"GL_EXT_texgen_reflection", false},                    // ATI/AMD GPUs report to support this; no internet search results; undocumented; similar to GL_NV_texgen_reflection
-            {"GL_EXT_texture", true},
-            {"GL_EXT_texture_array", true},
-            {"GL_EXT_texture_buffer_object", true},
-            {"GL_EXT_texture_compression_dxt1", true},
-            {"GL_EXT_texture_compression_latc", true},
-            {"GL_EXT_texture_compression_rgtc", true},
-            {"GL_EXT_texture_compression_s3tc", true},
-            {"GL_EXT_texture_cube_map", true},
-            {"GL_EXT_texture_edge_clamp", true},                    // ATI/AMD/NVIDIA GPUs report to support this; http://developer.download.nvidia.com/opengl/specs/GL_EXT_texture_edge_clamp.txt
-            {"GL_EXT_texture_env_add", true},
-            {"GL_EXT_texture_env_combine", true},
-            {"GL_EXT_texture_env_dot3", true},
-            {"GL_EXT_texture_filter_anisotropic", true},
-            {"GL_EXT_texture_filter_minmax", true},
-            {"GL_EXT_texture_format_BGRA8888", true},
-            {"GL_EXT_texture_integer", true},
-            {"GL_EXT_texture_lod", false},                          // ATI/AMD/NVIDIA GPUs report to support this; no internet search results; undocumented; similar to GL_SGIS_texture_lod
-            {"GL_EXT_texture_lod_bias", true},
-            {"GL_EXT_texture_mirror_clamp", true},
-            {"GL_EXT_texture_object", true},
-            {"GL_EXT_texture_perturb_normal", true},
-            {"GL_EXT_texture_rectangle", true},                     // ATI/AMD GPUs report to support this; https://developer.apple.com/opengl/extensions/ext_texture_rectangle.html
-            {"GL_EXT_texture_shared_exponent", true},
-            {"GL_EXT_texture_snorm", true},
-            {"GL_EXT_texture_sRGB", true},
-            {"GL_EXT_texture_sRGB_decode", true},
-            {"GL_EXT_texture_storage", true},                       // ATI/AMD/NVIDIA GPUs report to support this; http://www.khronos.org/registry/gles/extensions/EXT/EXT_texture_storage.txt
-            {"GL_EXT_texture_swizzle", true},
-            {"GL_EXT_texture_type_2_10_10_10_REV", true},
-            {"GL_EXT_texture3D", true},
-            {"GL_EXT_timer_query", true},
-            {"GL_EXT_transform_feedback", true},
-            {"GL_EXT_transform_feedback2", true},                   // NVIDIA GPUs report to support this; http://developer.download.nvidia.com/opengl/specs/GL_EXT_transform_feedback2.txt
-            {"GL_EXT_vertex_array", true},
-            {"GL_EXT_vertex_array_bgra", true},
-            {"GL_EXT_vertex_attrib_64bit", true},
-            {"GL_EXT_vertex_shader", true},
-            {"GL_EXT_vertex_weighting", true},
-            {"GL_EXT_x11_sync_object", true},
-            {"GL_EXTX_framebuffer_mixed_formats", false},           // NVIDIA GPUs report to support this; no internet search results; undocumented
-            {"GL_FfdMaskSGIX", true},
-            {"GL_GREMEDY_frame_terminator", true},
-            {"GL_GREMEDY_string_marker", true},
-            {"GL_HP_convolution_border_modes", true},
-            {"GL_HP_image_transform", true},
-            {"GL_HP_occlusion_test", true},
-            {"GL_HP_texture_lighting", true},
-            {"GL_IBM_cull_vertex", true},
-            {"GL_IBM_multimode_draw_arrays", true},
-            {"GL_IBM_rasterpos_clip", true},
-            {"GL_IBM_static_data", true},
-            {"GL_IBM_texture_mirrored_repeat", true},
-            {"GL_IBM_vertex_array_lists", true},
-            {"GL_INGR_blend_func_separate", true},
-            {"GL_INGR_color_clamp", true},
-            {"GL_INGR_interlace_read", true},
-            {"GL_INGR_palette_buffer", true},
-            {"GL_INTEL_fragment_shader_ordering", true},
-            {"GL_INTEL_framebuffer_CMAA", true},
-            {"GL_INTEL_map_texture", true},
-            {"GL_INTEL_parallel_arrays", true},
-            {"GL_INTEL_performance_query", true},
-            {"GL_KHR_blend_equation_advanced", true},
-            {"GL_KHR_blend_equation_advanced_coherent", true},
-            {"GL_KHR_context_flush_control", true},
-            {"GL_KHR_debug", true},
-            {"GL_KHR_no_error", true},
-            {"GL_KHR_robust_buffer_access_behavior", true},
-            {"GL_KHR_robustness", true},
-            {"GL_KHR_texture_compression_astc_hdr", true},
-            {"GL_KHR_texture_compression_astc_ldr", true},
-            {"GL_KHR_texture_compression_astc_sliced_3d", true},
-            {"GL_KTX_buffer_region", true},                         // AMD/ATI/NVIDIA GPUs report to support this; Definitions taken from GLEW v1.10.0 source code
-            {"GL_MESA_pack_invert", true},
-            {"GL_MESA_resize_buffers", true},
-            {"GL_MESA_window_pos", true},
-            {"GL_MESA_ycbcr_texture", true},
-            {"GL_MESAX_texture_stack", true},
-            {"GL_NV_bindless_multi_draw_indirect", true},
-            {"GL_NV_bindless_multi_draw_indirect_count", true},
-            {"GL_NV_bindless_texture", true},
-            {"GL_NV_blend_equation_advanced", true},
-            {"GL_NV_blend_equation_advanced_coherent", true},
-            {"GL_NV_blend_square", true},
-            {"GL_NV_command_list", true},
-            {"GL_NV_compute_program5", true},
-            {"GL_NV_conditional_render", true},
-            {"GL_NV_conservative_raster", true},
-            {"GL_NV_conservative_raster_dilate", true},
-            {"GL_NV_copy_depth_to_color", true},
-            {"GL_NV_copy_image", true},
-            {"GL_NV_deep_texture3D", true},
-            {"GL_NV_depth_buffer_float", true},
-            {"GL_NV_depth_clamp", true},
-            {"GL_NV_draw_texture", true},
-            {"GL_NV_ES1_1_compatibility", false},                   // NVIDIA GPUs report to support this; no internet search results; undocumented
-            {"GL_NV_evaluators", true},
-            {"GL_NV_explicit_multisample", true},
-            {"GL_NV_fbo_color_attachments", true},
-            {"GL_NV_fence", true},
-            {"GL_NV_fill_rectangle", true},
-            {"GL_NV_float_buffer", true},
-            {"GL_NV_fog_distance", true},
-            {"GL_NV_fragment_coverage_to_color", true},
-            {"GL_NV_fragment_program", true},
-            {"GL_NV_fragment_program2", true},
-            {"GL_NV_fragment_program4", true},
-            {"GL_NV_fragment_program_option", true},
-            {"GL_NV_fragment_shader_interlock", true},
-            {"GL_NV_framebuffer_mixed_samples", true},
-            {"GL_NV_framebuffer_multisample_coverage", true},
-            {"GL_NV_geometry_program4", true},
-            {"GL_NV_geometry_shader4", true},
-            {"GL_NV_geometry_shader_passthrough", true},
-            {"GL_NV_gpu_program_fp64", true},                       // NVIDIA GPUs report to support this; Definitions taken from GLEW 1.10.0 source code
-            {"GL_NV_gpu_program4", true},
-            {"GL_NV_gpu_program4_1", false},                        // NVIDIA GPUs report to support this; no internet search results; undocumented;
-            {"GL_NV_gpu_program5", true},
-            {"GL_NV_gpu_program5_mem_extended", true},
-            {"GL_NV_gpu_shader5", true},
-            {"GL_NV_half_float", true},
-            {"GL_NV_internalformat_sample_query", true},
-            {"GL_NV_light_max_exponent", true},
-            {"GL_NV_multisample_coverage", true},
-            {"GL_NV_multisample_filter_hint", true},
-            {"GL_NV_occlusion_query", true},
-            {"GL_NV_packed_depth_stencil", true},
-            {"GL_NV_parameter_buffer_object", true},
-            {"GL_NV_parameter_buffer_object2", true},
-            {"GL_NV_path_rendering", true},
-            {"GL_NV_path_rendering_shared_edge", true},
-            {"GL_NV_pixel_data_range", true},
-            {"GL_NV_point_sprite", true},
-            {"GL_NV_present_video", true},
-            {"GL_NV_primitive_restart", true},
-            {"GL_NV_register_combiners", true},
-            {"GL_NV_register_combiners2", true},
-            {"GL_NV_sample_locations", true},
-            {"GL_NV_sample_mask_override_coverage", true},
-            {"GL_NV_shader_atomic_counters", true}, 
-            {"GL_NV_shader_atomic_float", true},
-            {"GL_NV_shader_atomic_fp16_vector", true},
-            {"GL_NV_shader_atomic_int64", true},
-            {"GL_NV_shader_buffer_load", true},
-            {"GL_NV_shader_buffer_store", true},
-            {"GL_NV_shader_storage_buffer_object", true},
-            {"GL_NV_shader_thread_group", true},
-            {"GL_NV_shader_thread_shuffle", true},
-            {"GL_NV_tessellation_program5", true},
-            {"GL_NV_texgen_emboss", true},
-            {"GL_NV_texgen_reflection", true},
-            {"GL_NV_texture_barrier", true},
-            {"GL_NV_texture_compression_vtc", true},
-            {"GL_NV_texture_env_combine4", true},
-            {"GL_NV_texture_expand_normal", true},
-            {"GL_NV_texture_multisample", true},
-            {"GL_NV_texture_rectangle", true},  
-            {"GL_NV_texture_shader", true},
-            {"GL_NV_texture_shader2", true},
-            {"GL_NV_texture_shader3", true},
-            {"GL_NV_transform_feedback", true},
-            {"GL_NV_transform_feedback2", true},
-            {"GL_NV_uniform_buffer_unified_memory", true},
-            {"GL_NV_vdpau_interop", true},
-            {"GL_NV_vertex_array_range", true},
-            {"GL_NV_vertex_array_range2", true},
-            {"GL_NV_vertex_attrib_integer_64bit", true},
-            {"GL_NV_vertex_buffer_unified_memory", true},
-            {"GL_NV_vertex_program", true},
-            {"GL_NV_vertex_program1_1", true},
-            {"GL_NV_vertex_program2", true},
-            {"GL_NV_vertex_program2_option", true},
-            {"GL_NV_vertex_program3", true},
-            {"GL_NV_vertex_program4", true},
-            {"GL_NV_video_capture", true},
-            {"GL_NV_viewport_array2", true},
-            {"GL_NVX_conditional_render", true},
-            {"GL_NVX_gpu_memory_info", true},
-            {"GL_OES_byte_coordinates", true},
-            {"GL_OES_compressed_paletted_texture", true},
-            {"GL_OES_fixed_point", true},
-            {"GL_OES_query_matrix", true},
-            {"GL_OES_read_format", true},
-            {"GL_OES_single_precision", true},
-            {"GL_OML_interlace", true},
-            {"GL_OML_resample", true},
-            {"GL_OML_subsample", true},
-            {"GL_OVR_multiview", true},
-            {"GL_OVR_multiview2", true},
-            {"GL_PGI_misc_hints", true},
-            {"GL_PGI_vertex_hints", true},
-            {"GL_REND_screen_coordinates", true},
-            {"GL_S3_s3tc", true},
-            {"GL_SGI_color_matrix", true},
-            {"GL_SGI_color_table", true},
-            {"GL_SGI_depth_pass_instrument", true},
-            {"GL_SGI_texture_color_table", true},
-            {"GL_SGIS_detail_texture", true},
-            {"GL_SGIS_fog_function", true},
-            {"GL_SGIS_generate_mipmap", true},
-            {"GL_SGIS_multisample", true},
-            {"GL_SGIS_pixel_texture", true},
-            {"GL_SGIS_point_line_texgen", true},
-            {"GL_SGIS_point_parameters", true},
-            {"GL_SGIS_sharpen_texture", true},
-            {"GL_SGIS_texture4D", true},
-            {"GL_SGIS_texture_border_clamp", true},
-            {"GL_SGIS_texture_color_mask", true},
-            {"GL_SGIS_texture_edge_clamp", true},
-            {"GL_SGIS_texture_filter4", true},
-            {"GL_SGIS_texture_lod", true},
-            {"GL_SGIS_texture_select", true},
-            {"GL_SGIX_async", true},
-            {"GL_SGIX_async_histogram", true},
-            {"GL_SGIX_async_pixel", true},
-            {"GL_SGIX_blend_alpha_minmax", true},
-            {"GL_SGIX_calligraphic_fragment", true},
-            {"GL_SGIX_clipmap", true},
-            {"GL_SGIX_convolution_accuracy", true},
-            {"GL_SGIX_depth_pass_instrument", true},
-            {"GL_SGIX_depth_texture", true},
-            {"GL_SGIX_flush_raster", true},
-            {"GL_SGIX_fog_offset", true},
-            {"GL_SGIX_fog_scale", true},
-            {"GL_SGIX_fragment_lighting", true},
-            {"GL_SGIX_framezoom", true},
-            {"GL_SGIX_igloo_interface", true},
-            {"GL_SGIX_impact_pixel_texture", true},
-            {"GL_SGIX_instruments", true},
-            {"GL_SGIX_interlace", true},
-            {"GL_SGIX_ir_instrument1", true},
-            {"GL_SGIX_list_priority", true},
-            {"GL_SGIX_pixel_texture", true},
-            {"GL_SGIX_pixel_tiles", true},
-            {"GL_SGIX_polynomial_ffd", true},
-            {"GL_SGIX_reference_plane", true},
-            {"GL_SGIX_resample", true},
-            {"GL_SGIX_scalebias_hint", true},
-            {"GL_SGIX_shadow", true},
-            {"GL_SGIX_shadow_ambient", true},
-            {"GL_SGIX_sprite", true},
-            {"GL_SGIX_subsample", true},
-            {"GL_SGIX_tag_sample_buffer", true},
-            {"GL_SGIX_texture_add_env", true},
-            {"GL_SGIX_texture_coordinate_clamp", true},
-            {"GL_SGIX_texture_lod_bias", true},
-            {"GL_SGIX_texture_multi_buffer", true},
-            {"GL_SGIX_texture_scale_bias", true},
-            {"GL_SGIX_texture_select", true},
-            {"GL_SGIX_vertex_preclip", true},
-            {"GL_SGIX_ycrcb", true},
-            {"GL_SGIX_ycrcb_subsample", true},
-            {"GL_SGIX_ycrcba", true},
-            {"GL_SUN_convolution_border_modes", true},
-            {"GL_SUN_global_alpha", true},
-            {"GL_SUN_mesh_array", true},
-            {"GL_SUN_multi_draw_arrays", true},
-            {"GL_SUN_slice_accum", true},
-            {"GL_SUN_triangle_list", true},
-            {"GL_SUN_vertex", true},
-            {"GL_SUNX_constant_data", true},
-            {"GL_WIN_phong_shading", true},
-            {"GL_WIN_specular_fog", true},
-            {"GL_WIN_swap_hint", true},                            
-            {"WGL_3DFX_multisample", true},
-            {"WGL_3DL_stereo_control", true},
-            {"WGL_AMD_gpu_association", true},
-            {"WGL_AMDX_gpu_association", false},                    // ATI/AMD GPUs report to support this
-            {"WGL_ARB_buffer_region", true},
-            {"WGL_ARB_context_flush_control", true},                        
-            {"WGL_ARB_create_context", true},
-            {"WGL_ARB_create_context_profile", true},       
-            {"WGL_ARB_create_context_robustness", true},           
-            {"WGL_ARB_extensions_string", true},                    
-            {"WGL_ARB_framebuffer_sRGB", true},
-            {"WGL_ARB_make_current_read", true},
-            {"WGL_ARB_multisample", true},
-            {"WGL_ARB_pbuffer", true},
-            {"WGL_ARB_pixel_format", true},
-            {"WGL_ARB_pixel_format_float", true},
-            {"WGL_ARB_render_texture", true},
-            {"WGL_ARB_robustness_application_isolation", true},
-            {"WGL_ARB_robustness_share_group_isolation", true},
-            {"WGL_ATI_pixel_format_float", true},
-            {"WGL_ATI_render_texture_rectangle", false},            // ATI/AMD GPUs report to support this
-            {"WGL_EXT_create_context_es_profile", true },
-            {"WGL_EXT_create_context_es2_profile",true},
-            {"WGL_EXT_depth_float", true},
-            {"WGL_EXT_display_color_table", true},
-            {"WGL_EXT_extensions_string", true},
-            {"WGL_EXT_framebuffer_sRGB", true},
-            {"WGL_EXT_make_current_read", true},
-            {"WGL_EXT_multisample", true},
-            {"WGL_EXT_pbuffer", true},
-            {"WGL_EXT_pixel_format", true},
-            {"WGL_EXT_pixel_format_packed_float", true},
-            {"WGL_EXT_swap_control", true},
-            {"WGL_EXT_swap_control_tear", true},
-            {"WGL_I3D_digital_video_control", true},
-            {"WGL_I3D_gamma", true},
-            {"WGL_I3D_genlock", true},
-            {"WGL_I3D_image_buffer", true},
-            {"WGL_I3D_swap_frame_lock", true},
-            {"WGL_I3D_swap_frame_usage", true},
-            {"WGL_NV_copy_image", true},
-            {"WGL_NV_delay_before_swap", true},
-            {"WGL_NV_DX_interop", true},                           
-            {"WGL_NV_DX_interop2", true},                          
-            {"WGL_NV_float_buffer", true},                         
-            {"WGL_NV_gpu_affinity", false},                         // TODO: SKIPPED FOR NOW!!!
-            {"WGL_NV_multisample_coverage", true},                 
-            {"WGL_NV_present_video", true},                        
-            {"WGL_NV_render_depth_texture", true},                 
-            {"WGL_NV_render_texture_rectangle", true},             
-            {"WGL_NV_swap_group", true},                           
-            {"WGL_NV_vertex_array_range", true},                   
-            {"WGL_NV_video_capture", true},                        
-            {"WGL_NV_video_output", true},                         
-            {"WGL_NVX_DX_interop", false},                          // NVIDIA GPUs report to support this
-            {"WGL_OML_sync_control", true}                         
+            {"GL_3DFX_multisample", true},							// Added: 2014
+            {"GL_3DFX_tbuffer", true},								// Added: 2014
+            {"GL_3DFX_texture_compression_FXT1", true},				// Added: 2014
+            {"GL_AMD_blend_minmax_factor", true},					// Added: 2014
+            {"GL_AMD_conservative_depth", true},					// Added: 2014
+            {"GL_AMD_debug_output", true},							// Added: 2014
+            {"GL_AMD_depth_clamp_separate", true},					// Added: 2014
+            {"GL_AMD_draw_buffers_blend", true},					// Added: 2014
+            {"GL_AMD_gcn_shader", true},							// Added: 2016
+            {"GL_AMD_gpu_shader_int64", true},						// Added: 2016
+            {"GL_AMD_interleaved_elements", true},					// Added: 2014
+            {"GL_AMD_multi_draw_indirect", true},					// Added: 2014
+            {"GL_AMD_name_gen_delete", true},						// Added: 2014
+            {"GL_AMD_occlusion_query_event", true},					// Added: 2014
+            {"GL_AMD_performance_monitor", true},					// Added: 2014
+            {"GL_AMD_pinned_memory", true},							// Added: 2014
+            {"GL_AMD_query_buffer_object", true},					// Added: 2014
+            {"GL_AMD_sample_positions", true},						// Added: 2014
+            {"GL_AMD_seamless_cubemap_per_texture", true},			// Added: 2014
+            {"GL_AMD_shader_atomic_counter_ops", true},				// Added: 2014
+            {"GL_AMD_shader_stencil_export", true},					// Added: 2014
+            {"GL_AMD_shader_trinary_minmax", true},					// Added: 2014
+            {"GL_AMD_sparse_texture", true},						// Added: 2014
+            {"GL_AMD_stencil_operation_extended", true},			// Added: 2014
+            {"GL_AMD_texture_cube_map_array", false},     			// Added: 2014 // ATI/AMD GPUs report to support this; no internet search results; similar to GL_ARB_texture_cube_map_array
+            {"GL_AMD_texture_texture4", true},						// Added: 2014 
+            {"GL_AMD_transform_feedback3_lines_triangles", true},	// Added: 2014 
+            {"GL_AMD_transform_feedback4", true},					// Added: 2016 
+            {"GL_AMD_vertex_shader_layer", true},					// Added: 2014 
+            {"GL_AMD_vertex_shader_tessellator", true},				// Added: 2014 
+            {"GL_AMD_vertex_shader_viewport_index", true},			// Added: 2014 
+            {"GL_AMDX_debug_output", true},                         // Added: 2014 // ATI/AMD GPUs report to support this; only renated to GL_AMD_debug_output
+            {"GL_AMDX_vertex_shader_tessellator", true},            // Added: 2014 // ATI/AMD GPUs report to support this; only renamed to GL_AMD_vertex_shader_tessellator
+            {"GL_APPLE_aux_depth_stencil", true},					// Added: 2014 
+            {"GL_APPLE_client_storage", true},						// Added: 2014 
+            {"GL_APPLE_element_array", true},						// Added: 2014 
+            {"GL_APPLE_fence", true},								// Added: 2014 
+            {"GL_APPLE_float_pixels", true},						// Added: 2014 
+            {"GL_APPLE_flush_buffer_range", true},					// Added: 2014 
+            {"GL_APPLE_object_purgeable", true},					// Added: 2014 
+            {"GL_APPLE_rgb_422", true},								// Added: 2014 
+            {"GL_APPLE_row_bytes", true},							// Added: 2014 
+            {"GL_APPLE_specular_vector", true},						// Added: 2014 
+            {"GL_APPLE_texture_range", true},						// Added: 2014 
+            {"GL_APPLE_transform_hint", true},						// Added: 2014 
+            {"GL_APPLE_vertex_array_object", true},					// Added: 2014 
+            {"GL_APPLE_vertex_array_range", true},					// Added: 2014 
+            {"GL_APPLE_vertex_program_evaluators", true},			// Added: 2014 
+            {"GL_APPLE_ycbcr_422", true},							// Added: 2014 
+            {"GL_ARB_arrays_of_arrays", true},						// Added: 2014 
+            {"GL_ARB_base_instance", true},							// Added: 2014 
+            {"GL_ARB_bindless_texture", true},						// Added: 2014 
+            {"GL_ARB_blend_func_extended", true},					// Added: 2014 
+            {"GL_ARB_buffer_storage", true},						// Added: 2014 
+            {"GL_ARB_cl_event", true},								// Added: 2014 
+            {"GL_ARB_clear_buffer_object", true},					// Added: 2014 
+            {"GL_ARB_clear_texture", true},							// Added: 2014 
+            {"GL_ARB_clip_control", true},							// Added: 2014 
+            {"GL_ARB_color_buffer_float", true},					// Added: 2014 
+            {"GL_ARB_compatibility", true},							// Added: 2014 
+            {"GL_ARB_compressed_texture_pixel_storage", true},		// Added: 2014 
+            {"GL_ARB_compute_shader", true},						// Added: 2014 
+            {"GL_ARB_compute_variable_group_size", true},			// Added: 2014 
+            {"GL_ARB_conditional_render_inverted", true},			// Added: 2014 
+            {"GL_ARB_conservative_depth", true},					// Added: 2014 
+            {"GL_ARB_copy_buffer", true},							// Added: 2014 
+            {"GL_ARB_copy_image", true},							// Added: 2014 
+            {"GL_ARB_cull_distance", true},							// Added: 2014 
+            {"GL_ARB_debug_output", true},							// Added: 2014 
+            {"GL_ARB_depth_buffer_float", true},					// Added: 2014 
+            {"GL_ARB_depth_clamp", true},							// Added: 2014 
+            {"GL_ARB_depth_texture", true},							// Added: 2014 
+            {"GL_ARB_derivative_control", true},					// Added: 2014 
+            {"GL_ARB_direct_state_access", true},					// Added: 2014 
+            {"GL_ARB_draw_buffers", true},							// Added: 2014 
+            {"GL_ARB_draw_buffers_blend", true},					// Added: 2014 
+            {"GL_ARB_draw_elements_base_vertex", true},				// Added: 2014 
+            {"GL_ARB_draw_indirect", true},							// Added: 2014 
+            {"GL_ARB_draw_instanced", true},						// Added: 2014 
+            {"GL_ARB_enhanced_layouts", true},                     	// Added: 2014
+            {"GL_ARB_ES2_compatibility", true},						// Added: 2014 
+            {"GL_ARB_ES3_compatibility", true},						// Added: 2014 
+            {"GL_ARB_ES3_1_compatibility", true},					// Added: 2014 
+            {"GL_ARB_ES3_2_compatibility", true},					// Added: 2016
+            {"GL_ARB_explicit_attrib_location", true},				// Added: 2014 
+            {"GL_ARB_explicit_uniform_location", true},				// Added: 2014 
+            {"GL_ARB_fragment_coord_conventions", true},			// Added: 2014 
+            {"GL_ARB_fragment_layer_viewport", true},				// Added: 2014 
+            {"GL_ARB_fragment_program", true},						// Added: 2014 
+            {"GL_ARB_fragment_program_shadow", true},				// Added: 2014 
+            {"GL_ARB_fragment_shader", true},						// Added: 2014 
+            {"GL_ARB_fragment_shader_interlock", true},				// Added: 2016 
+            {"GL_ARB_framebuffer_no_attachments", true},			// Added: 2014 
+            {"GL_ARB_framebuffer_object", true},					// Added: 2014 
+            {"GL_ARB_framebuffer_sRGB", true},						// Added: 2014 
+            {"GL_ARB_geometry_shader4", true},						// Added: 2014 
+            {"GL_ARB_get_program_binary", true},					// Added: 2014 
+            {"GL_ARB_get_texture_sub_image", true},					// Added: 2014 
+            {"GL_ARB_gpu_shader_fp64", true},						// Added: 2014 
+            {"GL_ARB_gpu_shader_int64", true},						// Added: 2016
+            {"GL_ARB_gpu_shader5", true},							// Added: 2014 
+            {"GL_ARB_half_float_pixel", true},						// Added: 2014 
+            {"GL_ARB_half_float_vertex", true},						// Added: 2014 
+            {"GL_ARB_imaging", true},								// Added: 2014 
+            {"GL_ARB_indirect_parameters", true},					// Added: 2014 
+            {"GL_ARB_instanced_arrays", true},						// Added: 2014 
+            {"GL_ARB_internalformat_query", true},					// Added: 2014 
+            {"GL_ARB_internalformat_query2", true},					// Added: 2014 
+            {"GL_ARB_invalidate_subdata", true},					// Added: 2014 
+            {"GL_ARB_map_buffer_alignment", true},					// Added: 2014 
+            {"GL_ARB_map_buffer_range", true},						// Added: 2014 
+            {"GL_ARB_matrix_palette", true},						// Added: 2014 
+            {"GL_ARB_multi_bind", true},							// Added: 2014 
+            {"GL_ARB_multi_draw_indirect", true},					// Added: 2014 
+            {"GL_ARB_multisample", true},							// Added: 2014 
+            {"GL_ARB_multitexture", true},							// Added: 2014 
+            {"GL_ARB_occlusion_query", true},						// Added: 2014 
+            {"GL_ARB_occlusion_query2", true},						// Added: 2014 
+            {"GL_ARB_parallel_shader_compile", true},				// Added: 2016 
+            {"GL_ARB_pipeline_statistics_query", true},				// Added: 2014 
+            {"GL_ARB_pixel_buffer_object", true},					// Added: 2014 
+            {"GL_ARB_point_parameters", true},						// Added: 2014 
+            {"GL_ARB_point_sprite", true},							// Added: 2014 
+            {"GL_ARB_post_depth_coverage", true},					// Added: 2016 
+            {"GL_ARB_program_interface_query", true},				// Added: 2014 
+            {"GL_ARB_provoking_vertex", true},						// Added: 2014 
+            {"GL_ARB_query_buffer_object", true},					// Added: 2014 
+            {"GL_ARB_robust_buffer_access_behavior", true},			// Added: 2014 
+            {"GL_ARB_robustness", true},							// Added: 2014 
+            {"GL_ARB_robustness_isolation", true},					// Added: 2014 
+            {"GL_ARB_sample_locations", true},						// Added: 2016 
+            {"GL_ARB_sample_shading", true},						// Added: 2014 
+            {"GL_ARB_sampler_objects", true},						// Added: 2014 
+            {"GL_ARB_seamless_cube_map", true},						// Added: 2014 
+            {"GL_ARB_seamless_cubemap_per_texture", true},			// Added: 2014 
+            {"GL_ARB_separate_shader_objects", true},				// Added: 2014 
+            {"GL_ARB_shader_atomic_counter_ops", true},				// Added: 2016 
+            {"GL_ARB_shader_atomic_counters", true},				// Added: 2014 
+            {"GL_ARB_shader_ballot", true},							// Added: 2016 
+            {"GL_ARB_shader_bit_encoding", true},					// Added: 2014 
+            {"GL_ARB_shader_clock", true},							// Added: 2016 
+            {"GL_ARB_shader_draw_parameters", true},				// Added: 2014 
+            {"GL_ARB_shader_group_vote", true},						// Added: 2014 
+            {"GL_ARB_shader_image_load_store", true},				// Added: 2014 
+            {"GL_ARB_shader_image_size", true},						// Added: 2014 
+            {"GL_ARB_shader_objects", true},						// Added: 2014 
+            {"GL_ARB_shader_precision", true},						// Added: 2014 
+            {"GL_ARB_shader_stencil_export", true},					// Added: 2014 
+            {"GL_ARB_shader_storage_buffer_object", true},			// Added: 2014 
+            {"GL_ARB_shader_subroutine", true},						// Added: 2014 
+            {"GL_ARB_shader_texture_image_samples", true},			// Added: 2014 
+            {"GL_ARB_shader_texture_lod", true},					// Added: 2014 
+            {"GL_ARB_shader_viewport_layer_array", true},			// Added: 2016
+            {"GL_ARB_shading_language_100", true},					// Added: 2014 
+            {"GL_ARB_shading_language_420pack", true},				// Added: 2014 
+            {"GL_ARB_shading_language_include", true},				// Added: 2014 
+            {"GL_ARB_shading_language_packing", true},				// Added: 2014 
+            {"GL_ARB_shadow", true},								// Added: 2014 
+            {"GL_ARB_shadow_ambient", true},						// Added: 2014 
+            {"GL_ARB_sparse_buffer", true},							// Added: 2016
+            {"GL_ARB_sparse_texture", true},						// Added: 2014 
+            {"GL_ARB_sparse_texture2", true},						// Added: 2016 
+            {"GL_ARB_sparse_texture_clamp", true},					// Added: 2016 
+            {"GL_ARB_stencil_texturing", true},						// Added: 2014 
+            {"GL_ARB_sync", true},									// Added: 2014 
+            {"GL_ARB_tessellation_shader", true},					// Added: 2014 
+            {"GL_ARB_texture_barrier", true},						// Added: 2016 
+            {"GL_ARB_texture_border_clamp", true},					// Added: 2014 
+            {"GL_ARB_texture_buffer_object", true},					// Added: 2014 
+            {"GL_ARB_texture_buffer_object_rgb32", true},			// Added: 2014 
+            {"GL_ARB_texture_buffer_range", true},					// Added: 2014 
+            {"GL_ARB_texture_compression", true},					// Added: 2014 
+            {"GL_ARB_texture_compression_bptc", true},				// Added: 2014 
+            {"GL_ARB_texture_compression_rgtc", true},				// Added: 2014 
+            {"GL_ARB_texture_cube_map", true},						// Added: 2014 
+            {"GL_ARB_texture_cube_map_array", true},				// Added: 2014 
+            {"GL_ARB_texture_env_add", true},						// Added: 2014 
+            {"GL_ARB_texture_env_combine", true},					// Added: 2014 
+            {"GL_ARB_texture_env_crossbar", true},					// Added: 2014 
+            {"GL_ARB_texture_env_dot3", true},						// Added: 2014 
+            {"GL_ARB_texture_filter_minmax", true},					// Added: 2016 
+            {"GL_ARB_texture_float", true},							// Added: 2014 
+            {"GL_ARB_texture_gather", true},						// Added: 2014 
+            {"GL_ARB_texture_mirror_clamp_to_edge", true},			// Added: 2014 
+            {"GL_ARB_texture_mirrored_repeat", true},				// Added: 2014 
+            {"GL_ARB_texture_multisample", true},					// Added: 2014 
+            {"GL_ARB_texture_non_power_of_two", true},				// Added: 2014 
+            {"GL_ARB_texture_query_levels", true},					// Added: 2014 
+            {"GL_ARB_texture_query_lod", true},						// Added: 2014 
+            {"GL_ARB_texture_rectangle", true},						// Added: 2014 
+            {"GL_ARB_texture_rg", true},							// Added: 2014 
+            {"GL_ARB_texture_rgb10_a2ui", true},					// Added: 2014 
+            {"GL_ARB_texture_snorm", false},                        // Added: 2014 // ATI/AMD GPUs report to support this; similar to GL_EXT_texture_snorm
+            {"GL_ARB_texture_stencil8", true},                     	// Added: 2014 
+            {"GL_ARB_texture_storage", true},						// Added: 2014 
+            {"GL_ARB_texture_storage_multisample", true},			// Added: 2014 
+            {"GL_ARB_texture_swizzle", true},						// Added: 2014 
+            {"GL_ARB_texture_view", true},							// Added: 2014 
+            {"GL_ARB_timer_query", true},							// Added: 2014 
+            {"GL_ARB_transform_feedback_instanced", true},			// Added: 2014 
+            {"GL_ARB_transform_feedback_overflow_query", true},		// Added: 2016 
+            {"GL_ARB_transform_feedback2", true},					// Added: 2014 
+            {"GL_ARB_transform_feedback3", true},					// Added: 2014 
+            {"GL_ARB_transpose_matrix", true},						// Added: 2014 
+            {"GL_ARB_uniform_buffer_object", true},					// Added: 2014 
+            {"GL_ARB_vertex_array_bgra", true},						// Added: 2014 
+            {"GL_ARB_vertex_array_object", true},					// Added: 2014 
+            {"GL_ARB_vertex_attrib_64bit", true},					// Added: 2014 
+            {"GL_ARB_vertex_attrib_binding", true},					// Added: 2014 
+            {"GL_ARB_vertex_blend", true},							// Added: 2014 
+            {"GL_ARB_vertex_buffer_object", true},					// Added: 2014 
+            {"GL_ARB_vertex_program", true},						// Added: 2014 
+            {"GL_ARB_vertex_shader", true},							// Added: 2014 
+            {"GL_ARB_vertex_type_10f_11f_11f_rev", true},          	// Added: 2014 
+            {"GL_ARB_vertex_type_2_10_10_10_rev", true},			// Added: 2014 
+            {"GL_ARB_viewport_array", true},						// Added: 2014 
+            {"GL_ARB_window_pos", true},							// Added: 2014 
+            {"GL_ATI_draw_buffers", true},							// Added: 2014 
+            {"GL_ATI_element_array", true},							// Added: 2014 
+            {"GL_ATI_envmap_bumpmap", true},						// Added: 2014 
+            {"GL_ATI_fragment_shader", true},						// Added: 2014 
+            {"GL_ATI_map_object_buffer", true},						// Added: 2014 
+            {"GL_ATI_meminfo", true},								// Added: 2014 
+            {"GL_ATI_pixel_format_float", true},					// Added: 2014 
+            {"GL_ATI_pn_triangles", true},							// Added: 2014 
+            {"GL_ATI_separate_stencil", true},						// Added: 2014 
+            {"GL_ATI_text_fragment_shader", true},					// Added: 2014 
+            {"GL_ATI_texture_compression_3dc", true},              	// Added: 2014 // ATI/AMD GPUs report to support this; undocumented; http://sourceforge.net/p/glew/patches/2/
+            {"GL_ATI_texture_env_combine3", true},					// Added: 2014 
+            {"GL_ATI_texture_float", true},							// Added: 2014 
+            {"GL_ATI_texture_mirror_once", true},					// Added: 2014 
+            {"GL_ATI_vertex_array_object", true},					// Added: 2014 
+            {"GL_ATI_vertex_attrib_array_object", true},			// Added: 2014 
+            {"GL_ATI_vertex_streams", true},						// Added: 2014 
+            {"GL_EXT_422_pixels", true},							// Added: 2014 
+            {"GL_EXT_abgr", true},									// Added: 2014 
+            {"GL_EXT_bgra", true},									// Added: 2014 
+            {"GL_EXT_bindable_uniform", true},						// Added: 2014 
+            {"GL_EXT_blend_color", true},							// Added: 2014 
+            {"GL_EXT_blend_equation_separate", true},				// Added: 2014 
+            {"GL_EXT_blend_func_separate", true},					// Added: 2014 
+            {"GL_EXT_blend_logic_op", true},						// Added: 2014 
+            {"GL_EXT_blend_minmax", true},							// Added: 2014 
+            {"GL_EXT_blend_subtract", true},						// Added: 2014 
+            {"GL_EXT_Cg_shader", true},                             // Added: 2014 // NVIDIA GPUs report to support this; http://developer.download.nvidia.com/opengl/specs/GL_EXT_Cg_shader.txt
+            {"GL_EXT_clip_volume_hint", true},						// Added: 2014 
+            {"GL_EXT_cmyka", true},									// Added: 2014 
+            {"GL_EXT_color_subtable", true},						// Added: 2014 
+            {"GL_EXT_compiled_vertex_array", true},					// Added: 2014 
+            {"GL_EXT_convolution", true},							// Added: 2014 
+            {"GL_EXT_coordinate_frame", true},						// Added: 2014 
+            {"GL_EXT_copy_buffer", false},                          // Added: 2014 // ATI/AMD GPUs report to support this; no internet search results; undocumented
+            {"GL_EXT_copy_texture", true},							// Added: 2014 
+            {"GL_EXT_cull_vertex", true},							// Added: 2014 
+            {"GL_EXT_debug_label", true},							// Added: 2014 
+            {"GL_EXT_debug_marker", true},							// Added: 2014 
+            {"GL_EXT_depth_bounds_test", true},						// Added: 2014 
+            {"GL_EXT_direct_state_access", true},					// Added: 2014 
+            {"GL_EXT_draw_buffers2", true},							// Added: 2014 
+            {"GL_EXT_draw_instanced", true},						// Added: 2014 
+            {"GL_EXT_draw_range_elements", true},					// Added: 2014 
+            {"GL_EXT_fog_coord", true},								// Added: 2014 
+            {"GL_EXT_framebuffer_blit", true},						// Added: 2014 
+            {"GL_EXT_framebuffer_multisample", true},				// Added: 2014 
+            {"GL_EXT_framebuffer_multisample_blit_scaled", true},	// Added: 2014 
+            {"GL_EXT_framebuffer_object", true},					// Added: 2014 
+            {"GL_EXT_framebuffer_sRGB", true},						// Added: 2014 
+            {"GL_EXT_geometry_shader4", true},						// Added: 2014 
+            {"GL_EXT_gpu_program_parameters", true},				// Added: 2014 
+            {"GL_EXT_gpu_shader4", true},							// Added: 2014 
+            {"GL_EXT_histogram", true},								// Added: 2014 
+            {"GL_EXT_import_sync_object", false},                   // Added: 2014 // NVIDIA GPUs report to support this; no internet search results; undocumented
+            {"GL_EXT_index_array_formats", true},					// Added: 2014 
+            {"GL_EXT_index_func", true},							// Added: 2014 
+            {"GL_EXT_index_material", true},						// Added: 2014 
+            {"GL_EXT_index_texture", true},							// Added: 2014 
+            {"GL_EXT_light_texture", true},							// Added: 2014 
+            {"GL_EXT_misc_attribute", true},						// Added: 2014 
+            {"GL_EXT_multi_draw_arrays", true},						// Added: 2014 
+            {"GL_EXT_multisample", true},							// Added: 2014 
+            {"GL_EXT_packed_depth_stencil", true},					// Added: 2014 
+            {"GL_EXT_packed_float", true},							// Added: 2014 
+            {"GL_EXT_packed_pixels", true},							// Added: 2014 
+            {"GL_EXT_paletted_texture", true},						// Added: 2014 
+            {"GL_EXT_pixel_buffer_object", true},					// Added: 2014 
+            {"GL_EXT_pixel_transform", true},						// Added: 2014 
+            {"GL_EXT_pixel_transform_color_table", true},			// Added: 2014 
+            {"GL_EXT_point_parameters", true},						// Added: 2014 
+            {"GL_EXT_polygon_offset", true},						// Added: 2014 
+            {"GL_EXT_polygon_offset_clamp", true},					// Added: 2016
+            {"GL_EXT_post_depth_coverage", true},					// Added: 2016 
+            {"GL_EXT_provoking_vertex", true},						// Added: 2014 
+            {"GL_EXT_raster_multisample", true},					// Added: 2016 
+            {"GL_EXT_rescale_normal", true},						// Added: 2014 
+            {"GL_EXT_secondary_color", true},						// Added: 2014 
+            {"GL_EXT_separate_shader_objects", true},				// Added: 2014 
+            {"GL_EXT_separate_specular_color", true},				// Added: 2014 
+            {"GL_EXT_shader_image_load_formatted", true},			// Added: 2016 
+            {"GL_EXT_shader_image_load_store", true},				// Added: 2014 
+            {"GL_EXT_shader_integer_mix", true},					// Added: 2014 
+            {"GL_EXT_shadow_funcs", true},							// Added: 2014 
+            {"GL_EXT_shared_texture_palette", true},				// Added: 2014 
+            {"GL_EXT_sparse_texture2", true},						// Added: 2016 
+            {"GL_EXT_stencil_clear_tag", true},						// Added: 2014 
+            {"GL_EXT_stencil_two_side", true},						// Added: 2014 
+            {"GL_EXT_stencil_wrap", true},							// Added: 2014 
+            {"GL_EXT_subtexture", true},							// Added: 2014 
+            {"GL_EXT_texgen_reflection", false},                    // Added: 2014 // ATI/AMD GPUs report to support this; no internet search results; undocumented; similar to GL_NV_texgen_reflection
+            {"GL_EXT_texture", true},								// Added: 2014 
+            {"GL_EXT_texture_array", true},							// Added: 2014 
+            {"GL_EXT_texture_buffer_object", true},					// Added: 2014 
+            {"GL_EXT_texture_compression_dxt1", true},				// Added: 2014 
+            {"GL_EXT_texture_compression_latc", true},				// Added: 2014 
+            {"GL_EXT_texture_compression_rgtc", true},				// Added: 2014 
+            {"GL_EXT_texture_compression_s3tc", true},				// Added: 2014 
+            {"GL_EXT_texture_cube_map", true},						// Added: 2014 
+            {"GL_EXT_texture_edge_clamp", true},                    // Added: 2014 // ATI/AMD/NVIDIA GPUs report to support this; http://developer.download.nvidia.com/opengl/specs/GL_EXT_texture_edge_clamp.txt
+            {"GL_EXT_texture_env_add", true},						// Added: 2014 
+            {"GL_EXT_texture_env_combine", true},					// Added: 2014 
+            {"GL_EXT_texture_env_dot3", true},						// Added: 2014 
+            {"GL_EXT_texture_filter_anisotropic", true},			// Added: 2014 
+            {"GL_EXT_texture_filter_minmax", true},					// Added: 2016 
+            {"GL_EXT_texture_format_BGRA8888", true},				// Added: 2014 
+            {"GL_EXT_texture_integer", true},						// Added: 2014 
+            {"GL_EXT_texture_lod", false},                          // Added: 2014 // ATI/AMD/NVIDIA GPUs report to support this; no internet search results; undocumented; similar to GL_SGIS_texture_lod
+            {"GL_EXT_texture_lod_bias", true},						// Added: 2014 
+            {"GL_EXT_texture_mirror_clamp", true},					// Added: 2014 
+            {"GL_EXT_texture_object", true},						// Added: 2014 
+            {"GL_EXT_texture_perturb_normal", true},				// Added: 2014 
+            {"GL_EXT_texture_rectangle", true},                     // Added: 2014 // ATI/AMD GPUs report to support this; https://developer.apple.com/opengl/extensions/ext_texture_rectangle.html
+            {"GL_EXT_texture_shared_exponent", true},				// Added: 2014 
+            {"GL_EXT_texture_snorm", true},							// Added: 2014 
+            {"GL_EXT_texture_sRGB", true},							// Added: 2014 
+            {"GL_EXT_texture_sRGB_decode", true},					// Added: 2014 
+            {"GL_EXT_texture_storage", true},                       // Added: 2014 // ATI/AMD/NVIDIA GPUs report to support this; http://www.khronos.org/registry/gles/extensions/EXT/EXT_texture_storage.txt
+            {"GL_EXT_texture_swizzle", true},						// Added: 2014 
+            {"GL_EXT_texture_type_2_10_10_10_REV", true},			// Added: 2014 
+            {"GL_EXT_texture3D", true},								// Added: 2014 
+            {"GL_EXT_timer_query", true},							// Added: 2014 
+            {"GL_EXT_transform_feedback", true},					// Added: 2014 
+            {"GL_EXT_transform_feedback2", true},                   // Added: 2014 // NVIDIA GPUs report to support this; http://developer.download.nvidia.com/opengl/specs/GL_EXT_transform_feedback2.txt
+            {"GL_EXT_vertex_array", true},							// Added: 2014 
+            {"GL_EXT_vertex_array_bgra", true},						// Added: 2014 
+            {"GL_EXT_vertex_attrib_64bit", true},					// Added: 2014 
+            {"GL_EXT_vertex_shader", true},							// Added: 2014 
+            {"GL_EXT_vertex_weighting", true},						// Added: 2014 
+            {"GL_EXT_x11_sync_object", true},						// Added: 2014 
+            {"GL_EXTX_framebuffer_mixed_formats", false},           // Added: 2014 // NVIDIA GPUs report to support this; no internet search results; undocumented
+            {"GL_FfdMaskSGIX", true},								// Added: 2014 
+            {"GL_GREMEDY_frame_terminator", true},					// Added: 2014 
+            {"GL_GREMEDY_string_marker", true},						// Added: 2014 
+            {"GL_HP_convolution_border_modes", true},				// Added: 2014 
+            {"GL_HP_image_transform", true},						// Added: 2014 
+            {"GL_HP_occlusion_test", true},							// Added: 2014 
+            {"GL_HP_texture_lighting", true},						// Added: 2014 
+            {"GL_IBM_cull_vertex", true},							// Added: 2014 
+            {"GL_IBM_multimode_draw_arrays", true},					// Added: 2014 
+            {"GL_IBM_rasterpos_clip", true},						// Added: 2014 
+            {"GL_IBM_static_data", true},							// Added: 2016 
+            {"GL_IBM_texture_mirrored_repeat", true},				// Added: 2014 
+            {"GL_IBM_vertex_array_lists", true},					// Added: 2014 
+            {"GL_INGR_blend_func_separate", true},					// Added: 2014 
+            {"GL_INGR_color_clamp", true},							// Added: 2014 
+            {"GL_INGR_interlace_read", true},						// Added: 2014 
+            {"GL_INGR_palette_buffer", true},						// Added: 2014 
+            {"GL_INTEL_fragment_shader_ordering", true},			// Added: 2014 
+            {"GL_INTEL_framebuffer_CMAA", true},					// Added: 2016 
+            {"GL_INTEL_map_texture", true},							// Added: 2014 
+            {"GL_INTEL_parallel_arrays", true},						// Added: 2014 
+            {"GL_INTEL_performance_query", true},					// Added: 2014 
+            {"GL_KHR_blend_equation_advanced", true},				// Added: 2016 
+            {"GL_KHR_blend_equation_advanced_coherent", true},		// Added: 2016 
+            {"GL_KHR_context_flush_control", true},					// Added: 2016 
+            {"GL_KHR_debug", true},									// Added: 2014 
+            {"GL_KHR_no_error", true},								// Added: 2016 
+            {"GL_KHR_robust_buffer_access_behavior", true},			// Added: 2016 
+            {"GL_KHR_robustness", true},							// Added: 2016 
+            {"GL_KHR_texture_compression_astc_hdr", true},			// Added: 2014 
+            {"GL_KHR_texture_compression_astc_ldr", true},			// Added: 2014 
+            {"GL_KHR_texture_compression_astc_sliced_3d", true},	// Added: 2016 
+            {"GL_KTX_buffer_region", true},                         // Added: 2014 // AMD/ATI/NVIDIA GPUs report to support this; Definitions taken from GLEW v1.10.0 source code
+            {"GL_MESA_pack_invert", true},							// Added: 2014 
+            {"GL_MESA_resize_buffers", true},						// Added: 2014 
+            {"GL_MESA_window_pos", true},							// Added: 2014 
+            {"GL_MESA_ycbcr_texture", true},						// Added: 2014 
+            {"GL_MESAX_texture_stack", true},						// Added: 2014 
+            {"GL_NV_bindless_multi_draw_indirect", true},			// Added: 2014 
+            {"GL_NV_bindless_multi_draw_indirect_count", true},		// Added: 2016 
+            {"GL_NV_bindless_texture", true},						// Added: 2014 
+            {"GL_NV_blend_equation_advanced", true},				// Added: 2014 
+            {"GL_NV_blend_equation_advanced_coherent", true},		// Added: 2014 
+            {"GL_NV_blend_square", true},							// Added: 2014 
+            {"GL_NV_command_list", true},							// Added: 2016 
+            {"GL_NV_compute_program5", true},						// Added: 2014 
+            {"GL_NV_conditional_render", true},						// Added: 2014 
+            {"GL_NV_conservative_raster", true},					// Added: 2016 
+            {"GL_NV_conservative_raster_dilate", true},				// Added: 2016 
+            {"GL_NV_copy_depth_to_color", true},					// Added: 2014 
+            {"GL_NV_copy_image", true},								// Added: 2014 
+            {"GL_NV_deep_texture3D", true},							// Added: 2014 
+            {"GL_NV_depth_buffer_float", true},						// Added: 2014 
+            {"GL_NV_depth_clamp", true},							// Added: 2014 
+            {"GL_NV_draw_texture", true},							// Added: 2014 
+            {"GL_NV_ES1_1_compatibility", false},                   // Added: 2014 // NVIDIA GPUs report to support this; no internet search results; undocumented
+            {"GL_NV_evaluators", true},								// Added: 2014 
+            {"GL_NV_explicit_multisample", true},					// Added: 2014 
+            {"GL_NV_fbo_color_attachments", true},					// Added: 2014 
+            {"GL_NV_fence", true},									// Added: 2014 
+            {"GL_NV_fill_rectangle", true},							// Added: 2016 
+            {"GL_NV_float_buffer", true},							// Added: 2014 
+            {"GL_NV_fog_distance", true},							// Added: 2014 
+            {"GL_NV_fragment_coverage_to_color", true},				// Added: 2016 
+            {"GL_NV_fragment_program", true},						// Added: 2014 
+            {"GL_NV_fragment_program2", true},						// Added: 2014 
+            {"GL_NV_fragment_program4", true},						// Added: 2014 
+            {"GL_NV_fragment_program_option", true},				// Added: 2014 
+            {"GL_NV_fragment_shader_interlock", true},				// Added: 2016 
+            {"GL_NV_framebuffer_mixed_samples", true},				// Added: 2016 
+            {"GL_NV_framebuffer_multisample_coverage", true},		// Added: 2014 
+            {"GL_NV_geometry_program4", true},						// Added: 2014 
+            {"GL_NV_geometry_shader4", true},						// Added: 2014 
+            {"GL_NV_geometry_shader_passthrough", true},			// Added: 2016 
+            {"GL_NV_gpu_program_fp64", true},                       // Added: 2014 // NVIDIA GPUs report to support this; Definitions taken from GLEW 1.10.0 source code
+            {"GL_NV_gpu_program4", true},							// Added: 2014 
+            {"GL_NV_gpu_program4_1", false},                        // Added: 2014 // NVIDIA GPUs report to support this; no internet search results; undocumented;
+            {"GL_NV_gpu_program5", true},							// Added: 2014 
+            {"GL_NV_gpu_program5_mem_extended", true},				// Added: 2014 
+            {"GL_NV_gpu_shader5", true},							// Added: 2014 
+            {"GL_NV_half_float", true},								// Added: 2014 
+            {"GL_NV_internalformat_sample_query", true},			// Added: 2016 
+            {"GL_NV_light_max_exponent", true},						// Added: 2014 
+            {"GL_NV_multisample_coverage", true},					// Added: 2014 
+            {"GL_NV_multisample_filter_hint", true},				// Added: 2014 
+            {"GL_NV_occlusion_query", true},						// Added: 2014 
+            {"GL_NV_packed_depth_stencil", true},					// Added: 2014 
+            {"GL_NV_parameter_buffer_object", true},				// Added: 2014 
+            {"GL_NV_parameter_buffer_object2", true},				// Added: 2014 
+            {"GL_NV_path_rendering", true},							// Added: 2014 
+            {"GL_NV_path_rendering_shared_edge", true},				// Added: 2016 
+            {"GL_NV_pixel_data_range", true},						// Added: 2014 
+            {"GL_NV_point_sprite", true},							// Added: 2014 
+            {"GL_NV_present_video", true},							// Added: 2014 
+            {"GL_NV_primitive_restart", true},						// Added: 2014 
+            {"GL_NV_register_combiners", true},						// Added: 2014 
+            {"GL_NV_register_combiners2", true},					// Added: 2014 
+            {"GL_NV_sample_locations", true},						// Added: 2016 
+            {"GL_NV_sample_mask_override_coverage", true},			// Added: 2016 
+            {"GL_NV_shader_atomic_counters", true}, 				// Added: 2014 
+            {"GL_NV_shader_atomic_float", true},					// Added: 2014 
+            {"GL_NV_shader_atomic_fp16_vector", true},				// Added: 2016 
+            {"GL_NV_shader_atomic_int64", true},					// Added: 2016 
+            {"GL_NV_shader_buffer_load", true},						// Added: 2014 
+            {"GL_NV_shader_buffer_store", true},					// Added: 2014 
+            {"GL_NV_shader_storage_buffer_object", true},			// Added: 2014 
+            {"GL_NV_shader_thread_group", true},					// Added: 2016 
+            {"GL_NV_shader_thread_shuffle", true},					// Added: 2016 
+            {"GL_NV_tessellation_program5", true},					// Added: 2014 
+            {"GL_NV_texgen_emboss", true},							// Added: 2014 
+            {"GL_NV_texgen_reflection", true},						// Added: 2014 
+            {"GL_NV_texture_barrier", true},						// Added: 2014 
+            {"GL_NV_texture_compression_vtc", true},				// Added: 2014 
+            {"GL_NV_texture_env_combine4", true},					// Added: 2014 
+            {"GL_NV_texture_expand_normal", true},					// Added: 2014 
+            {"GL_NV_texture_multisample", true},					// Added: 2014 
+            {"GL_NV_texture_rectangle", true},  					// Added: 2014 
+            {"GL_NV_texture_shader", true},							// Added: 2014 
+            {"GL_NV_texture_shader2", true},						// Added: 2014 
+            {"GL_NV_texture_shader3", true},						// Added: 2014 
+            {"GL_NV_transform_feedback", true},						// Added: 2014 
+            {"GL_NV_transform_feedback2", true},					// Added: 2014 
+            {"GL_NV_uniform_buffer_unified_memory", true},			// Added: 2016 
+            {"GL_NV_vdpau_interop", true},							// Added: 2014 
+            {"GL_NV_vertex_array_range", true},						// Added: 2014 
+            {"GL_NV_vertex_array_range2", true},					// Added: 2014 
+            {"GL_NV_vertex_attrib_integer_64bit", true},			// Added: 2014 
+            {"GL_NV_vertex_buffer_unified_memory", true},			// Added: 2014 
+            {"GL_NV_vertex_program", true},							// Added: 2014 
+            {"GL_NV_vertex_program1_1", true},						// Added: 2014 
+            {"GL_NV_vertex_program2", true},						// Added: 2014 
+            {"GL_NV_vertex_program2_option", true},					// Added: 2014 
+            {"GL_NV_vertex_program3", true},						// Added: 2014 
+            {"GL_NV_vertex_program4", true},						// Added: 2014 
+            {"GL_NV_video_capture", true},							// Added: 2014 
+            {"GL_NV_viewport_array2", true},						// Added: 2016 
+            {"GL_NVX_conditional_render", true},					// Added: 2014 
+            {"GL_NVX_gpu_memory_info", true},						// Added: 2014 
+            {"GL_OES_byte_coordinates", true},						// Added: 2014 
+            {"GL_OES_compressed_paletted_texture", true},			// Added: 2014 
+            {"GL_OES_fixed_point", true},							// Added: 2014 
+            {"GL_OES_query_matrix", true},							// Added: 2014 
+            {"GL_OES_read_format", true},							// Added: 2014 
+            {"GL_OES_single_precision", true},						// Added: 2014 
+            {"GL_OML_interlace", true},								// Added: 2014 
+            {"GL_OML_resample", true},								// Added: 2014 
+            {"GL_OML_subsample", true},								// Added: 2014 
+            {"GL_OVR_multiview", true},								// Added: 2016 
+            {"GL_OVR_multiview2", true},							// Added: 2016 
+            {"GL_PGI_misc_hints", true},							// Added: 2014 
+            {"GL_PGI_vertex_hints", true},							// Added: 2014 
+            {"GL_REND_screen_coordinates", true},					// Added: 2014 
+            {"GL_S3_s3tc", true},									// Added: 2014 
+            {"GL_SGI_color_matrix", true},							// Added: 2014 
+            {"GL_SGI_color_table", true},							// Added: 2014 
+            {"GL_SGI_depth_pass_instrument", true},					// Added: 2014 
+            {"GL_SGI_texture_color_table", true},					// Added: 2014 
+            {"GL_SGIS_detail_texture", true},						// Added: 2014 
+            {"GL_SGIS_fog_function", true},							// Added: 2014 
+            {"GL_SGIS_generate_mipmap", true},						// Added: 2014 
+            {"GL_SGIS_multisample", true},							// Added: 2014 
+            {"GL_SGIS_pixel_texture", true},						// Added: 2014 
+            {"GL_SGIS_point_line_texgen", true},					// Added: 2014 
+            {"GL_SGIS_point_parameters", true},						// Added: 2014 
+            {"GL_SGIS_sharpen_texture", true},						// Added: 2014 
+            {"GL_SGIS_texture4D", true},							// Added: 2014 
+            {"GL_SGIS_texture_border_clamp", true},					// Added: 2014 
+            {"GL_SGIS_texture_color_mask", true},					// Added: 2014 
+            {"GL_SGIS_texture_edge_clamp", true},					// Added: 2014 
+            {"GL_SGIS_texture_filter4", true},						// Added: 2014 
+            {"GL_SGIS_texture_lod", true},							// Added: 2014 
+            {"GL_SGIS_texture_select", true},						// Added: 2014 
+            {"GL_SGIX_async", true},								// Added: 2014 
+            {"GL_SGIX_async_histogram", true},						// Added: 2014 
+            {"GL_SGIX_async_pixel", true},							// Added: 2014 
+            {"GL_SGIX_blend_alpha_minmax", true},					// Added: 2014 
+            {"GL_SGIX_calligraphic_fragment", true},				// Added: 2014 
+            {"GL_SGIX_clipmap", true},								// Added: 2014 
+            {"GL_SGIX_convolution_accuracy", true},					// Added: 2014 
+            {"GL_SGIX_depth_pass_instrument", true},				// Added: 2014 
+            {"GL_SGIX_depth_texture", true},						// Added: 2014 
+            {"GL_SGIX_flush_raster", true},							// Added: 2014 
+            {"GL_SGIX_fog_offset", true},							// Added: 2014 
+            {"GL_SGIX_fog_scale", true},							// Added: 2014 
+            {"GL_SGIX_fragment_lighting", true},					// Added: 2014 
+            {"GL_SGIX_framezoom", true},							// Added: 2014 
+            {"GL_SGIX_igloo_interface", true},						// Added: 2014 
+            {"GL_SGIX_impact_pixel_texture", true},					// Added: 2014 
+            {"GL_SGIX_instruments", true},							// Added: 2014 
+            {"GL_SGIX_interlace", true},							// Added: 2014 
+            {"GL_SGIX_ir_instrument1", true},						// Added: 2014 
+            {"GL_SGIX_list_priority", true},						// Added: 2014 
+            {"GL_SGIX_pixel_texture", true},						// Added: 2014 
+            {"GL_SGIX_pixel_tiles", true},							// Added: 2014 
+            {"GL_SGIX_polynomial_ffd", true},						// Added: 2014 
+            {"GL_SGIX_reference_plane", true},						// Added: 2014 
+            {"GL_SGIX_resample", true},								// Added: 2014 
+            {"GL_SGIX_scalebias_hint", true},						// Added: 2014 
+            {"GL_SGIX_shadow", true},								// Added: 2014 
+            {"GL_SGIX_shadow_ambient", true},						// Added: 2014 
+            {"GL_SGIX_sprite", true},								// Added: 2014 
+            {"GL_SGIX_subsample", true},							// Added: 2014 
+            {"GL_SGIX_tag_sample_buffer", true},					// Added: 2014 
+            {"GL_SGIX_texture_add_env", true},						// Added: 2014 
+            {"GL_SGIX_texture_coordinate_clamp", true},				// Added: 2014 
+            {"GL_SGIX_texture_lod_bias", true},						// Added: 2014 
+            {"GL_SGIX_texture_multi_buffer", true},					// Added: 2014 
+            {"GL_SGIX_texture_scale_bias", true},					// Added: 2014 
+            {"GL_SGIX_texture_select", true},						// Added: 2014 
+            {"GL_SGIX_vertex_preclip", true},						// Added: 2014 
+            {"GL_SGIX_ycrcb", true},								// Added: 2014 
+            {"GL_SGIX_ycrcb_subsample", true},						// Added: 2014 
+            {"GL_SGIX_ycrcba", true},								// Added: 2014 
+            {"GL_SUN_convolution_border_modes", true},				// Added: 2014 
+            {"GL_SUN_global_alpha", true},							// Added: 2014
+            {"GL_SUN_mesh_array", true},							// Added: 2014 
+            {"GL_SUN_multi_draw_arrays", true},						// Added: 2014 
+            {"GL_SUN_slice_accum", true},							// Added: 2014 
+            {"GL_SUN_triangle_list", true},							// Added: 2014 
+            {"GL_SUN_vertex", true},								// Added: 2014 
+            {"GL_SUNX_constant_data", true},						// Added: 2014 
+            {"GL_WIN_phong_shading", true},							// Added: 2014 
+            {"GL_WIN_specular_fog", true},							// Added: 2014 
+            {"GL_WIN_swap_hint", true},                            	// Added: 2014 
+            {"WGL_3DFX_multisample", true},							// Added: 2014 
+            {"WGL_3DL_stereo_control", true},						// Added: 2014 
+            {"WGL_AMD_gpu_association", true},						// Added: 2014 
+            {"WGL_AMDX_gpu_association", false},                    // Added: 2014 // ATI/AMD GPUs report to support this
+            {"WGL_ARB_buffer_region", true},						// Added: 2014 
+            {"WGL_ARB_context_flush_control", true},				// Added: 2014                         
+            {"WGL_ARB_create_context", true},						// Added: 2014 
+            {"WGL_ARB_create_context_profile", true},       		// Added: 2014 
+            {"WGL_ARB_create_context_robustness", true},           	// Added: 2014 
+            {"WGL_ARB_extensions_string", true},                    // Added: 2014 
+            {"WGL_ARB_framebuffer_sRGB", true},						// Added: 2014 
+            {"WGL_ARB_make_current_read", true},					// Added: 2014 
+            {"WGL_ARB_multisample", true},							// Added: 2014 
+            {"WGL_ARB_pbuffer", true},								// Added: 2014 
+            {"WGL_ARB_pixel_format", true},							// Added: 2014 
+            {"WGL_ARB_pixel_format_float", true},					// Added: 2014 
+            {"WGL_ARB_render_texture", true},						// Added: 2014 
+            {"WGL_ARB_robustness_application_isolation", true},		// Added: 2014 
+            {"WGL_ARB_robustness_share_group_isolation", true},		// Added: 2014 
+            {"WGL_ATI_pixel_format_float", true},					// Added: 2014 
+            {"WGL_ATI_render_texture_rectangle", false},            // Added: 2014 // ATI/AMD GPUs report to support this
+            {"WGL_EXT_create_context_es_profile", true },			// Added: 2014 
+            {"WGL_EXT_create_context_es2_profile",true},			// Added: 2014 
+            {"WGL_EXT_depth_float", true},							// Added: 2014 
+            {"WGL_EXT_display_color_table", true},					// Added: 2014 
+            {"WGL_EXT_extensions_string", true},					// Added: 2014 
+            {"WGL_EXT_framebuffer_sRGB", true},						// Added: 2014 
+            {"WGL_EXT_make_current_read", true},					// Added: 2014 
+            {"WGL_EXT_multisample", true},							// Added: 2014 
+            {"WGL_EXT_pbuffer", true},								// Added: 2014 
+            {"WGL_EXT_pixel_format", true},							// Added: 2014 
+            {"WGL_EXT_pixel_format_packed_float", true},			// Added: 2014 
+            {"WGL_EXT_swap_control", true},							// Added: 2014 
+            {"WGL_EXT_swap_control_tear", true},					// Added: 2014 
+            {"WGL_I3D_digital_video_control", true},				// Added: 2014 
+            {"WGL_I3D_gamma", true},								// Added: 2014 
+            {"WGL_I3D_genlock", true},								// Added: 2014 
+            {"WGL_I3D_image_buffer", true},							// Added: 2014 
+            {"WGL_I3D_swap_frame_lock", true},						// Added: 2014 
+            {"WGL_I3D_swap_frame_usage", true},						// Added: 2014 
+            {"WGL_NV_copy_image", true},							// Added: 2014 
+            {"WGL_NV_delay_before_swap", true},						// Added: 2014 
+            {"WGL_NV_DX_interop", true},                           	// Added: 2014 
+            {"WGL_NV_DX_interop2", true},                          	// Added: 2014 
+            {"WGL_NV_float_buffer", true},                         	// Added: 2014 
+            {"WGL_NV_gpu_affinity", false},                         // Added: 2014 // TODO: SKIPPED FOR NOW!!!
+            {"WGL_NV_multisample_coverage", true},                 	// Added: 2014 
+            {"WGL_NV_present_video", true},                        	// Added: 2014 
+            {"WGL_NV_render_depth_texture", true},                 	// Added: 2014 
+            {"WGL_NV_render_texture_rectangle", true},             	// Added: 2014 
+            {"WGL_NV_swap_group", true},                           	// Added: 2014 
+            {"WGL_NV_vertex_array_range", true},                   	// Added: 2014 
+            {"WGL_NV_video_capture", true},                        	// Added: 2014 
+            {"WGL_NV_video_output", true},                         	// Added: 2014 
+            {"WGL_NVX_DX_interop", false},                          // Added: 2014 // NVIDIA GPUs report to support this
+            {"WGL_OML_sync_control", true}                         	// Added: 2014 
         };
 
         ///////////////////////////////////////////////////////////////////////

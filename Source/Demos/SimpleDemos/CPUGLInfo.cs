@@ -1,4 +1,17 @@
-﻿using System;
+﻿// ----------------------------------------------------------------------------
+// FILE		: cpuglinfo.cs
+// VERSION	: 1.1.0
+// COMMENT	: This file displays cpu and opengl information of the running system
+//            in a very detailed way. At the same time writes a text file containing
+//            the information showed.
+// WEB      : http://www.taylaninan.com/opengl-dotnet
+// AUTHOR   : TAYLAN INAN
+// E-MAIL   : info@taylaninan.com
+// DATE     : 2014-2016
+// LICENSE  : FREE FOR EDUCATIONAL, PERSONAL AND COMMERCIAL USAGE
+// ----------------------------------------------------------------------------
+
+using System;
 using OpenGLDotNet;
 
 namespace OpenGLDemos

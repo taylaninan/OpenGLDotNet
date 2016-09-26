@@ -1,4 +1,17 @@
-﻿using System;
+﻿// ----------------------------------------------------------------------------
+// FILE		: q2consolevarmanager.cs
+// VERSION	: 1.1.0
+// COMMENT	: This file is part of Quake 2 Console Demo. The Q2ConsoleVarManager
+//            (Quake 2 Console Variable Manager) actually holds (creates, reads
+//            and changes) the internal variables used by Quake 2 Console.
+// WEB      : http://www.taylaninan.com/opengl-dotnet
+// AUTHOR   : TAYLAN INAN
+// E-MAIL   : info@taylaninan.com
+// DATE     : 2014-2016
+// LICENSE  : FREE FOR EDUCATIONAL, PERSONAL AND COMMERCIAL USAGE
+// ----------------------------------------------------------------------------
+
+using System;
 using System.Collections.Generic;
 using Common;
 
@@ -20,7 +33,7 @@ namespace Quake2DotNet
 
         public static void Init()
         {
-            Create("Quake2DotNetInit", "true", 0);
+            Create("Quake2DotNetInit", "true", 0);					// When TRUE, Quake 2 Console MUST be initiated.
             Create("VersionLong", "Quake2DotNet v0.1 alpha", 0);
             Create("VersionShort", "v0.1 alpha", 0);
             Create("ScreenWidth", "1024", 0);

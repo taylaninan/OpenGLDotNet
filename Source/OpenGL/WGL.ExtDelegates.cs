@@ -1,4 +1,15 @@
-﻿using System;
+﻿// ----------------------------------------------------------------------------
+// FILE		: wgl.extdelegates.cs
+// VERSION	: 1.1.0
+// COMMENT	: "Windows" specific OpenGL Extension low level delegates and functions
+// WEB      : http://www.taylaninan.com/opengl-dotnet
+// AUTHOR   : TAYLAN INAN
+// E-MAIL   : info@taylaninan.com
+// DATE     : 2014-2016
+// LICENSE  : FREE FOR EDUCATIONAL, PERSONAL AND COMMERCIAL USAGE
+// ----------------------------------------------------------------------------
+
+using System;
 using System.Runtime.InteropServices;
 
 using GLboolean = System.Boolean;

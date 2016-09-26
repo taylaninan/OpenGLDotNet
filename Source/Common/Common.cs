@@ -1,4 +1,15 @@
-﻿using System;
+﻿// ----------------------------------------------------------------------------
+// FILE		: common.cs
+// VERSION	: 1.1.0
+// COMMENT	: Common/Shared functions for Web and Desktop application development          
+// WEB      : http://www.taylaninan.com/opengl-dotnet
+// AUTHOR   : TAYLAN INAN
+// E-MAIL   : info@taylaninan.com
+// DATE     : 2014-2016
+// LICENSE  : FREE FOR EDUCATIONAL, PERSONAL AND COMMERCIAL USAGE
+// ----------------------------------------------------------------------------
+
+using System;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Security.Cryptography;

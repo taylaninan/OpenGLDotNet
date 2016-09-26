@@ -1,4 +1,16 @@
-﻿using System;
+﻿// ----------------------------------------------------------------------------
+// FILE		: q2consolemain.cs
+// VERSION	: 1.1.0
+// COMMENT	: This file is part of Quake 2 Console Demo. The Q2ConsoleMain is the
+//			  main file, which initializes OpenGL and starts the console demo.
+// WEB      : http://www.taylaninan.com/opengl-dotnet
+// AUTHOR   : TAYLAN INAN
+// E-MAIL   : info@taylaninan.com
+// DATE     : 2014-2016
+// LICENSE  : FREE FOR EDUCATIONAL, PERSONAL AND COMMERCIAL USAGE
+// ----------------------------------------------------------------------------
+
+using System;
 using OpenGLDotNet;
 
 namespace Quake2DotNet

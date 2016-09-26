@@ -1,4 +1,16 @@
-﻿using System;
+﻿// ----------------------------------------------------------------------------
+// FILE		: ilu.wrappers.cs
+// VERSION	: 1.1.0
+// COMMENT	: Image Library Utility (ILU). This "imported header" (from C/C++) 
+//            defines wrappers for low level delegates and functions.
+// WEB      : http://www.taylaninan.com/opengl-dotnet
+// AUTHOR   : TAYLAN INAN
+// E-MAIL   : info@taylaninan.com
+// DATE     : 2014-2016
+// LICENSE  : FREE FOR EDUCATIONAL, PERSONAL AND COMMERCIAL USAGE
+// ----------------------------------------------------------------------------
+
+using System;
 using System.Runtime.InteropServices;
 
 using ILenum = System.UInt32;

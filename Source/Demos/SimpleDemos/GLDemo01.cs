@@ -1,9 +1,7 @@
 ﻿// ----------------------------------------------------------------------------
-// FILE		: gldemo02.cs
+// FILE		: gldemo01.cs
 // VERSION	: 1.1.0
-// COMMENT	: This demo displays 5 different objects on the screen using GLUT
-//            library. The objects can be switched with keys from 1 to 5 and
-//			  also can be rotated.
+// COMMENT	: This demo displays a simple pyramid on screen and rotates it.
 // WEB      : http://www.taylaninan.com/opengl-dotnet
 // AUTHOR   : TAYLAN INAN
 // E-MAIL   : info@taylaninan.com
@@ -16,34 +14,35 @@ using OpenGLDotNet;
 
 namespace OpenGLDemos
 {
-    // Demo #02: Simple objects
-    public static class OpenGLDemo02
+    // Demo #01: Orientation
+    public static class OpenGLDemo01
     {
         private static bool RotateAroundX = false;
         private static bool RotateAroundY = false;
-        private static bool RotateAroundZ = true;
+        private static bool RotateAroundZ = false;
 
         private static float SpinAroundX = 0;
         private static float SpinAroundY = 0;
         private static float SpinAroundZ = 0;
-        private static float SpinIncrement = 1.0f;
-
-        private enum ObjectNames : byte
-        {
-            Teapot = 1,
-            Cube = 2,
-            Sphere = 3,
-            Torus = 4,
-            Cone = 5
-        }
-
-        private static ObjectNames DrawObject = ObjectNames.Teapot;
+        private static float SpinIncrement = 0.5f;
 
         public static void Keyboard(byte key, int x, int y)
         {
             Console.WriteLine("[KEYBOARD] key={0}, x={1}, y={2}", key, x, y);
 
-            if (key == 81 || key == 113)                 // 'Q' key presseda
+            if (key == 82 || key == 114)                // 'R' key pressed
+            {
+                RotateAroundX = false;
+                RotateAroundY = false;
+                RotateAroundZ = false;
+
+                SpinAroundX = 0;
+                SpinAroundY = 0;
+                SpinAroundZ = 0;
+                SpinIncrement = 0.5f;
+            }
+
+            if (key == 81 || key == 113)                // 'Q' key pressed
             {
                 SpinIncrement += 0.25f;
                 Console.WriteLine("[SPIN] {0}", SpinIncrement);
@@ -58,12 +57,6 @@ namespace OpenGLDemos
             if (key == 70 || key == 102)                // 'F' key pressed
             {
                 GLUT.FullScreen();
-            }
-
-            if (key >= 49 && key <= 53)                 // '1','2','3','4','5' key pressed
-            {
-                key -= 48;
-                DrawObject = (ObjectNames)key;
             }
 
             if (key == 65 || key == 97)                 // 'A' key pressed
@@ -90,7 +83,7 @@ namespace OpenGLDemos
             if (key == 87 || key == 119)                // 'W' key pressed
             {
                 GL.MatrixMode(GL.GL_PROJECTION);
-                GL.Translatef(0.0f, +1.0f, 0.0f);
+                GL.Translatef(0.0f, 1.0f, 0.0f);
                 GL.MatrixMode(GL.GL_MODELVIEW);
             }
 
@@ -148,7 +141,7 @@ namespace OpenGLDemos
                     SpinAroundY -= 360;
                 }
             }
-
+            
             if (RotateAroundZ)
             {
                 SpinAroundZ += SpinIncrement;
@@ -166,29 +159,20 @@ namespace OpenGLDemos
 
         public static void Reshape(int width, int height)
         {
-            float ratio = 0;
-            float ortho = 30;
-
             Console.WriteLine("[RESHAPE] {0}x{1}", width, height);
 
             GL.Viewport(0, 0, width, height);
+            
             GL.MatrixMode(GL.GL_PROJECTION);
             GL.LoadIdentity();
 
-            if (width >= height)
-            {
-                ratio = (float)width / (float)height;
-                GL.Ortho(-ortho * ratio, ortho * ratio, -ortho, ortho, -ortho, ortho);
-            }
-            else
-            {
-                ratio = (float)height / (float)width;
-                GL.Ortho(-ortho, ortho, -ortho * ratio, ortho * ratio, -ortho, ortho);
-            }
+            //GL.Rotatef(-90.0f, 1.0f, 0.0f, 0.0f);   // Put Z-Axis Up
+            //GL.Rotatef(180.0f, 0.0f, 0.0f, 1.0f);   // Put Y-Axis Forward
 
+            GLU.Perspective(90.0, (double)width / (double)height, 1.0, 4096.0);
+            
             GL.MatrixMode(GL.GL_MODELVIEW);
             GL.LoadIdentity();
-
         }
 
         public static void Motion(int x, int y)
@@ -199,48 +183,58 @@ namespace OpenGLDemos
         public static void SetupGL()
         {
             GL.ClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+            
+            
             GL.Color3f(1.0f, 1.0f, 1.0f);
             GL.ShadeModel(GL.GL_FLAT);
+            
+            GL.Hint(GL.GL_PERSPECTIVE_CORRECTION_HINT, GL.GL_NICEST);
+            
+            GL.Disable(GL.GL_DITHER);
         }
 
         public static void Display()
         {
             ulong StartTime = CPUInfo.ReadTSC();
 
-            GL.Clear(GL.GL_COLOR_BUFFER_BIT);
-            GL.PushMatrix();
+            GL.DepthFunc(GL.GL_LEQUAL);
+            GL.Enable(GL.GL_DEPTH_TEST);
+
+            GL.Clear(GL.GL_COLOR_BUFFER_BIT | GL.GL_DEPTH_BUFFER_BIT);
+
+            GL.MatrixMode(GL.GL_MODELVIEW);
+            GL.LoadIdentity();
+
+            GLU.LookAt(0, 0, +2, 0, 0, -1, 0, 1, 0);
 
             GL.Rotatef(SpinAroundX, 1.0f, 0.0f, 0.0f);
             GL.Rotatef(SpinAroundY, 0.0f, 1.0f, 0.0f);
             GL.Rotatef(SpinAroundZ, 0.0f, 0.0f, 1.0f);
 
-            switch (DrawObject)
-            {
-                case ObjectNames.Teapot:
-                    GLUT.WireTeapot(15.0);
-                    break;
-                case ObjectNames.Cube:
-                    GLUT.WireCube(15.0);
-                    break;
-                case ObjectNames.Sphere:
-                    GLUT.WireSphere(15.0, 25, 25);
-                    break;
-                case ObjectNames.Torus:
-                    GLUT.WireTorus(7.5, 15.0, 25, 25);
-                    break;
-                case ObjectNames.Cone:
-                    GLUT.WireCone(15.0, 15.0, 25, 25);
-                    break;
-            }
+            GL.Begin(GL.GL_LINES);
+            GL.Color3f(1.0f, 0.0f, 0.0f);
+            GL.Vertex3f(0.0f, 0.0f, 0.0f); GL.Vertex3f(1.0f, 00.0f, 00.0f);      // X-Axis; Red
+            GL.Color3f(0.0f, 0.0f, 1.0f);
+            GL.Vertex3f(0.0f, 0.0f, 0.0f); GL.Vertex3f(00.0f, 1.0f, 00.0f);      // Y-Axis; Blue           
+            GL.Color3f(1.0f, 1.0f, 1.0f);
+            GL.Vertex3f(0.0f, 0.0f, 0.0f); GL.Vertex3f(00.0f, 00.0f, 1.0f);      // Z-Axis; White
+            GL.End();
 
-            GL.PopMatrix();
+            GL.Begin(GL.GL_TRIANGLES);
+            GL.Color3f(1.0f, 0.0f, 0.0f);
+            GL.Vertex3f(1.0f, 0.0f, 0.0f);
+            GL.Color3f(0.0f, 0.0f, 1.0f);
+            GL.Vertex3f(0.0f, 1.0f, 0.0f);
+            GL.Color3f(1.0f, 1.0f, 1.0f);
+            GL.Vertex3f(0.0f, 0.0f, 1.0f);
+            GL.End();
 
             GLUT.SwapBuffers();
 
             ulong FinishTime = CPUInfo.ReadTSC();
-            double Interval = Math.Round((double)(FinishTime - StartTime) / (double)(CPUInfo.CPUSpeed * 1000000), 5);
-            double fps = Math.Round(1 / Interval, 5);
-            Console.WriteLine("[FRAME_INFO] {0} fps", fps);
+            double Interval = Math.Round((double)(FinishTime - StartTime) / (double)(CPUInfo.CPUSpeed * 1000000), 3);
+            double fps      = Math.Round(1/Interval, 3);
+            //Console.WriteLine("[FRAME_INFO] {0} ms", Interval);
         }
 
         public static void Main(string[] args)
@@ -249,7 +243,7 @@ namespace OpenGLDemos
             Console.Title = "OpenGLDotNet v1.1.0";
 
             // After that, setup OpenGL window and OpenGL itself
-            GLConfig.Init(0, 0, "Demo #02 - Simple Objects", 25, 25, 1024, 768);
+            GLConfig.Init(0, 0, "Demo #01 - Orientation", 25, 25, 1024, 768);
             GL.Init(true);
 
             // Normally we can pass the functions directly to GLUT or FREEGLUT, but then stupid GC collects them unpredictably.
@@ -274,4 +268,3 @@ namespace OpenGLDemos
         }
     }
 }
-

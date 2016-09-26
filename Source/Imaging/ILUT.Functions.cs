@@ -1,4 +1,17 @@
-﻿using System;
+﻿// ----------------------------------------------------------------------------
+// FILE		: ilut.functions.cs
+// VERSION	: 1.1.0
+// COMMENT	: Image Library Utility Toolkit(ILUT). This "imported header" (from C/C++) 
+//            defines and imports low level C/C++ delegates and functions as close to
+//            C/C++.
+// WEB      : http://www.taylaninan.com/opengl-dotnet
+// AUTHOR   : TAYLAN INAN
+// E-MAIL   : info@taylaninan.com
+// DATE     : 2014-2016
+// LICENSE  : FREE FOR EDUCATIONAL, PERSONAL AND COMMERCIAL USAGE
+// ----------------------------------------------------------------------------
+
+using System;
 using System.Runtime.InteropServices;
 
 using ILenum = System.UInt32;

@@ -1,10 +1,23 @@
-﻿using System;
+﻿// ----------------------------------------------------------------------------
+// FILE		: gldemo03.cs
+// VERSION	: 1.1.0
+// COMMENT	: This demo displays 5 different objects on the screen using FREEGLUT
+//            library. The objects can be switched with keys from 1 to 5 and
+//			  also can be rotated.
+// WEB      : http://www.taylaninan.com/opengl-dotnet
+// AUTHOR   : TAYLAN INAN
+// E-MAIL   : info@taylaninan.com
+// DATE     : 2014-2016
+// LICENSE  : FREE FOR EDUCATIONAL, PERSONAL AND COMMERCIAL USAGE
+// ----------------------------------------------------------------------------
+
+using System;
 using OpenGLDotNet;
 
 namespace OpenGLDemos
 {
-    // Demo #02: Simple objects
-    public static class OpenGLDemo02
+    // Demo #03: FreeGlutTest
+    public static class OpenGLDemo03
     {
         private static bool RotateAroundX = false;
         private static bool RotateAroundY = false;
@@ -44,7 +57,7 @@ namespace OpenGLDemos
 
             if (key == 70 || key == 102)                // 'F' key pressed
             {
-                GLUT.FullScreen();
+                FG.FullScreenToggle();
             }
 
             if (key >= 49 && key <= 53)                 // '1','2','3','4','5' key pressed
@@ -87,12 +100,12 @@ namespace OpenGLDemos
                 RotateAroundY = false;
                 RotateAroundZ = false;
 
-                GLUT.KeyboardFunc(null);
-                GLUT.MouseFunc(null);
-                GLUT.IdleFunc(null);
-                GLUT.ReshapeFunc(null);
-                GLUT.MotionFunc(null);
-                GLUT.DestroyWindow(GLUT.GetWindow());
+                FG.KeyboardFunc(null);
+                FG.MouseFunc(null);
+                FG.IdleFunc(null);
+                FG.ReshapeFunc(null);
+                FG.MotionFunc(null);
+                FG.DestroyWindow(FG.GetWindow());
             }
         }
 
@@ -204,25 +217,25 @@ namespace OpenGLDemos
             switch (DrawObject)
             {
                 case ObjectNames.Teapot:
-                    GLUT.WireTeapot(15.0);
+                    FG.WireTeapot(15.0);
                     break;
                 case ObjectNames.Cube:
-                    GLUT.WireCube(15.0);
+                    FG.WireCube(15.0);
                     break;
                 case ObjectNames.Sphere:
-                    GLUT.WireSphere(15.0, 25, 25);
+                    FG.WireSphere(15.0, 25, 25);
                     break;
                 case ObjectNames.Torus:
-                    GLUT.WireTorus(7.5, 15.0, 25, 25);
+                    FG.WireTorus(7.5, 15.0, 25, 25);
                     break;
                 case ObjectNames.Cone:
-                    GLUT.WireCone(15.0, 15.0, 25, 25);
+                    FG.WireCone(15.0, 15.0, 25, 25);
                     break;
             }
 
             GL.PopMatrix();
 
-            GLUT.SwapBuffers();
+            FG.SwapBuffers();
 
             ulong FinishTime = CPUInfo.ReadTSC();
             double Interval = Math.Round((double)(FinishTime - StartTime) / (double)(CPUInfo.CPUSpeed * 1000000), 3);
@@ -235,30 +248,43 @@ namespace OpenGLDemos
             // First, setup the console window
             Console.Title = "OpenGLDotNet v1.1.0";
 
-            // After that, setup OpenGL window and OpenGL itself
-            GLConfig.Init(0, 0, "Demo #02 - Simple Objects", 25, 25, 1024, 768);
+            uint glLib = 0;
+
+            glLib = Windows.LoadLibrary("opengl32.dll");
+            int[] argc = new int[1]; argc[0] = 0; string[] argv = null;
+            FG.Init(argc, argv);
+
+            FG.InitDisplayMode(FG.GLUT_RGBA | FG.GLUT_DOUBLE | FG.GLUT_DEPTH);
+            FG.InitWindowPosition(25, 25);
+            FG.InitWindowSize(1024, 768);
+            FG.InitContextVersion(4, 5);
+            FG.InitContextFlags((int)FG.GLUT_FORWARD_COMPATIBLE);
+            FG.InitContextProfile((int)FG.GLUT_COMPATIBILITY_PROFILE);
+            int hWindow = FG.CreateWindow("Demo #03: FreeGlut Test");
+
             GL.Init(true);
 
             // Normally we can pass the functions directly to GLUT or FREEGLUT, but then stupid GC collects them unpredictably.
             // So, when we declare them as variables, and pass variables to the GLUT or FREEGLUT, there is no problem. 
             // Stupid GC doesn't collect them.
-            GLUT.TCALLBACKglutKeyboardProc KeyboardProc = Keyboard;
-            GLUT.TCALLBACKglutMouseProc MouseProc = Mouse;
-            GLUT.TCALLBACKglutIdleProc IdleProc = Idle;
-            GLUT.TCALLBACKglutReshapeProc ReshapeProc = Reshape;
-            GLUT.TCALLBACKglutMotionProc MotionProc = Motion;
-            GLUT.TCALLBACKglutDisplayProc DisplayProc = Display;
+            FG.TCALLBACKglutKeyboardProc KeyboardProc = Keyboard;
+            FG.TCALLBACKglutMouseProc MouseProc = Mouse;
+            FG.TCALLBACKglutIdleProc IdleProc = Idle;
+            FG.TCALLBACKglutReshapeProc ReshapeProc = Reshape;
+            FG.TCALLBACKglutMotionProc MotionProc = Motion;
+            FG.TCALLBACKglutDisplayProc DisplayProc = Display;
 
-            GLUT.KeyboardFunc(KeyboardProc);
-            GLUT.MouseFunc(MouseProc);
-            GLUT.IdleFunc(IdleProc);
-            GLUT.ReshapeFunc(ReshapeProc);
-            GLUT.MotionFunc(MotionProc);
-            GLUT.DisplayFunc(DisplayProc);
+            FG.KeyboardFunc(KeyboardProc);
+            FG.MouseFunc(MouseProc);
+            FG.IdleFunc(IdleProc);
+            FG.ReshapeFunc(ReshapeProc);
+            FG.MotionFunc(MotionProc);
+            FG.DisplayFunc(DisplayProc);
 
             SetupGL();
-            GLUT.MainLoop();
+
+            FG.SetOption(FG.GLUT_ACTION_ON_WINDOW_CLOSE, (int)FG.GLUT_ACTION_GLUTMAINLOOP_RETURNS);
+            FG.MainLoop();
         }
     }
 }
-

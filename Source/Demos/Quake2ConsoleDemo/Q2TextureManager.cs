@@ -1,4 +1,18 @@
-﻿using System;
+﻿// ----------------------------------------------------------------------------
+// FILE		: q2texturemanager.cs
+// VERSION	: 1.1.0
+// COMMENT	: This file is part of Quake 2 Console Demo. The Q2TextureManager
+//            provides FilePath normalization, Texture reading from disk, holding
+//            the textures in the computer memory and uploading them to the GPU
+//            services.
+// WEB      : http://www.taylaninan.com/opengl-dotnet
+// AUTHOR   : TAYLAN INAN
+// E-MAIL   : info@taylaninan.com
+// DATE     : 2014-2016
+// LICENSE  : FREE FOR EDUCATIONAL, PERSONAL AND COMMERCIAL USAGE
+// ----------------------------------------------------------------------------
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using OpenGLDotNet;

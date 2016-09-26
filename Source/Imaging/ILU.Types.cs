@@ -1,4 +1,16 @@
-﻿using System;
+﻿// ----------------------------------------------------------------------------
+// FILE		: ilu.types.cs
+// VERSION	: 1.1.0
+// COMMENT	: Image Library Utility (ILU). This "imported header" (from C/C++) 
+//            defines required types for use with ILU.
+// WEB      : http://www.taylaninan.com/opengl-dotnet
+// AUTHOR   : TAYLAN INAN
+// E-MAIL   : info@taylaninan.com
+// DATE     : 2014-2016
+// LICENSE  : FREE FOR EDUCATIONAL, PERSONAL AND COMMERCIAL USAGE
+// ----------------------------------------------------------------------------
+
+using System;
 using System.Runtime.InteropServices;
 
 using ILenum = System.UInt32;
