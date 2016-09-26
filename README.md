@@ -3,9 +3,9 @@
 
 OpenGL DotNet is a set of libraries and wrappers especially written for C# in order to make 3D OpenGL programming much easier. It is a base consisting of several libraries; on top of these libraries you can build your own 3D game engine and/or make much simpler 3D demos.
 
-OpenGL DotNet supports OpenGL version up to 4.5 (latest version as of March 2016), and over 550+ OpenGL extensions.
+OpenGL DotNet supports OpenGL version up to 4.5 (latest version as of March 2016), and over 605+ OpenGL extensions.
 
-OpenGL DotNet consists of several C# classes, C# libraries and C# wrappers for existing projects written in C/C++. It is completely written from scratch in over 2 months with OpenGL in mind with extensive research and painfully attention given to the details. As far as I know it is the first C# project for OpenGL, which supports over 550+ extensions. Technically you can write Battle Field 4 (or 5) with that much features in C#, but the C#’s performance can suffer compared to pure C/C++ implementations. The main goal of this project is to help you get started quickly with OpenGL programming with a feature-rich, robust, clean framework.
+OpenGL DotNet consists of several C# classes, C# libraries and C# wrappers for existing projects written in C/C++. It is completely written from scratch in over 3 months with OpenGL in mind with extensive research and painfully attention given to the details. As far as I know it is the first C# project for OpenGL, which supports over 605+ extensions. Technically you can write Battle Field 4 (or 5) with that much features in C#, but the C#’s performance can suffer compared to pure C/C++ implementations. The main goal of this project is to help you get started quickly with OpenGL programming with a feature-rich, robust, clean framework.
 
 # Overview
 The following classes/libraries/wrappers can be found in OpenGLDotNet namespace:
