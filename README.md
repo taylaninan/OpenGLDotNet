@@ -30,7 +30,7 @@ Imaging/ILU & ILUT	:	ILU is (I)mage (L)ibrary Utility and ILUT is (I)mage (L)ibr
 
 # Version History
 v1.1.0
-This is the second public release of OpenGLDotNet, which is updated to support OpenGL v4.5 with over 610+ extensions as of April 2016.
+This is the second public release of OpenGLDotNet, which is updated to support OpenGL v4.5 with over 610+ extensions as of April 2016. Also some new demos (like Quake 2 Console demo and others) have been added to the release.
 
 v1.0.0 
 This is the initial public release of OpenGLDotNet, which supports up to OpenGL v4.4 with over 550+ extensions as of March 2014.
