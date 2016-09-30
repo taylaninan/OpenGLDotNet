@@ -5,7 +5,7 @@ OpenGL DotNet is a set of libraries and wrappers especially written for C# in or
 
 OpenGL DotNet supports OpenGL version up to 4.5 (latest version as of March 2016), and over 605+ OpenGL extensions.
 
-OpenGL DotNet consists of several C# classes, C# libraries and C# wrappers for existing projects written in C/C++. It is completely written from scratch in over 3 months with OpenGL in mind with extensive research and painfully attention given to the details. As far as I know it is the first C# project for OpenGL, which supports over 605+ extensions. Technically you can write Battle Field 4 (or 5) with that much features in C#, but the C#’s performance can suffer compared to pure C/C++ implementations. The main goal of this project is to help you get started quickly with OpenGL programming with a feature-rich, robust, clean framework.
+OpenGL DotNet consists of several C# classes, C# libraries and C# wrappers for existing projects written in C/C++. It is completely written from scratch in over 3 months with OpenGL in mind with extensive research and painfully attention given to the details. As far as I know it is the first C# project for OpenGL, which supports over 610+ extensions. Technically you can write Battle Field 4 (or 5) with that much features in C#, but the C#’s performance can suffer compared to pure C/C++ implementations. The main goal of this project is to help you get started quickly with OpenGL programming with a feature-rich, robust, clean framework.
 
 # Overview
 The following classes/libraries/wrappers can be found in OpenGLDotNet namespace:
@@ -27,3 +27,10 @@ Platform/CPUInfo	:	Is a class with the aim of giving detailed CPU Information (P
 Imaging/DevIL	:	Is the main imaging DLL written in C/C++ for speed. DevIL is a acronym for “Developer's Image Library”. The original project website can be found [here](http://openil.sourceforge.net/). It allows loading and saving of a lot different picture/image types and uploading them as textures to the OpenGL.
  
 Imaging/ILU & ILUT	:	ILU is (I)mage (L)ibrary Utility and ILUT is (I)mage (L)ibrary (U)tility (T)oolkit of DevIL, the Developer's Image Library.
+
+# Version History
+v1.1.0
+This is the second public release of OpenGLDotNet, which is updated to support OpenGL v4.5 with over 610+ extensions as of April 2016.
+
+v1.0.0 
+This is the initial public release of OpenGLDotNet, which supports up to OpenGL v4.4 with over 550+ extensions as of March 2014.
