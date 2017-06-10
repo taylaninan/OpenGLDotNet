@@ -165,7 +165,7 @@ namespace OpenGLDemos
 
             // Then, write all Log information
             GLConfig.LogWriteToConsole();
-            GLConfig.LogWriteToFile("opengl_info_v110.txt");
+            GLConfig.LogWriteToFile("opengl_info_v110.log");
 
             Console.WriteLine();
             Console.WriteLine("                            _____ PRESS ANY KEY _____");

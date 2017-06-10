@@ -50,41 +50,49 @@ namespace OpenGLDotNet
         ///////////////////////////////////////////////////////////////////////
         // glGetIntegerv
         [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        [System.Security.SuppressUnmanagedCodeSecurity()]
         private unsafe delegate void TglGetIntegerv(uint pname, [MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.I4)] int[] parameters);
         private static TglGetIntegerv glGetIntegerv = null;
 
         // glGetString
         [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        [System.Security.SuppressUnmanagedCodeSecurity()]
         private unsafe delegate byte* TglGetString(uint name);
         private static TglGetString glGetString = null;
 
         // glGetStringi
         [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        [System.Security.SuppressUnmanagedCodeSecurity()]
         private unsafe delegate byte* TglGetStringi(uint name, uint index);
         private static TglGetStringi glGetStringi = null;
 
         // wglGetProcAddress
         [UnmanagedFunctionPointer(CallingConvention.StdCall, CharSet = CharSet.Ansi)]
+        [System.Security.SuppressUnmanagedCodeSecurity()]
         private delegate IntPtr TwglGetProcAddress(string procname);
         private static TwglGetProcAddress wglGetProcAddress = null;
 
         // wglGetCurrentDC
         [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        [System.Security.SuppressUnmanagedCodeSecurity()]
         private delegate IntPtr TwglGetCurrentDC();
         private static TwglGetCurrentDC wglGetCurrentDC = null;
 
         // wglMakeCurrent
         [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        [System.Security.SuppressUnmanagedCodeSecurity()]
         private delegate bool TwglMakeCurrent(IntPtr hdc, IntPtr hglrc);
         private static TwglMakeCurrent wglMakeCurrent = null;
 
         // wglGetExtensionsStringARB
         [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        [System.Security.SuppressUnmanagedCodeSecurity()]
         private unsafe delegate byte* TwglGetExtensionsStringARB(IntPtr hDC);
         private static TwglGetExtensionsStringARB wglGetExtensionsStringARB = null;
 
         // wglCreateContextAttribsARB
         [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        [System.Security.SuppressUnmanagedCodeSecurity()]
         private unsafe delegate IntPtr TwglCreateContextAttribsARB(IntPtr hDC, IntPtr hShareContext, [MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.I4)] int[] attribList);
         private static TwglCreateContextAttribsARB wglCreateContextAttribsARB = null;
 

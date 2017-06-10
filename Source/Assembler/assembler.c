@@ -10,14 +10,14 @@
 // LICENSE  : FREE FOR EDUCATIONAL, PERSONAL AND COMMERCIAL USAGE
 // ----------------------------------------------------------------------------
 
-typedef unsigned int uint32;
+#include "types.h"
 
 uint32 _eax = 0;
 uint32 _ebx = 0;
 uint32 _ecx = 0;
 uint32 _edx = 0;
 
-__declspec(dllexport) void __stdcall _cpuid (uint32 function)
+__declspec(dllexport) void __stdcall _cpuid(uint32 function)
 {
 	__asm
 	{
@@ -32,7 +32,7 @@ __declspec(dllexport) void __stdcall _cpuid (uint32 function)
 	};
 }
 
-__declspec(dllexport) void __stdcall _rdtsc ()
+__declspec(dllexport) void __stdcall _rdtsc()
 {
 	__asm
 	{
