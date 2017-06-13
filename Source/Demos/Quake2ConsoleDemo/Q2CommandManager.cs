@@ -1,13 +1,13 @@
 ﻿// ----------------------------------------------------------------------------
 // FILE		: q2commandmanager.cs
-// VERSION	: 1.1.0
+// VERSION	: 1.1.1
 // COMMENT	: This file is part of Quake 2 Console Demo. The Q2CommandManager
 //			  allows of adding and executing console commands. Try writing "help"
 //            on console to list available commands and explanations.
 // WEB      : http://www.taylaninan.com/opengl-dotnet
 // AUTHOR   : TAYLAN INAN
 // E-MAIL   : info@taylaninan.com
-// DATE     : 2014-2016
+// DATE     : 2014-2017
 // LICENSE  : FREE FOR EDUCATIONAL, PERSONAL AND COMMERCIAL USAGE
 // ----------------------------------------------------------------------------
 
@@ -262,6 +262,39 @@ namespace Quake2DotNet
             ConsoleManager.WriteLine("Feature X2APIC      : " + CPUInfo.flagX2APIC);
             ConsoleManager.WriteLine("Feature XSAVE       : " + CPUInfo.flagXSAVE);
             ConsoleManager.WriteLine("Feature XTPR        : " + CPUInfo.flagXTPR);
+            ConsoleManager.WriteLine();
+            ConsoleManager.WriteLine("Feature FSGSBASE    : " + CPUInfo.flagFSGSBASE);
+            ConsoleManager.WriteLine("Feature TSC_ADJUST  : " + CPUInfo.flagTSC_ADJUST);
+            ConsoleManager.WriteLine("Feature SGX         : " + CPUInfo.flagSGX);
+            ConsoleManager.WriteLine("Feature BMI1        : " + CPUInfo.flagBMI1);
+            ConsoleManager.WriteLine("Feature HLE         : " + CPUInfo.flagHLE);
+            ConsoleManager.WriteLine("Feature AVX2        : " + CPUInfo.flagAVX2);
+            ConsoleManager.WriteLine("Feature FPDP        : " + CPUInfo.flagFPDP);
+            ConsoleManager.WriteLine("Feature SMEP        : " + CPUInfo.flagSMEP);
+            ConsoleManager.WriteLine("Feature BMI2        : " + CPUInfo.flagBMI2);
+            ConsoleManager.WriteLine("Feature ERMS        : " + CPUInfo.flagERMS);
+            ConsoleManager.WriteLine("Feature INVPCID     : " + CPUInfo.flagINVPCID);
+            ConsoleManager.WriteLine("Feature RTM         : " + CPUInfo.flagRTM);
+            ConsoleManager.WriteLine("Feature PQM         : " + CPUInfo.flagPQM);
+            ConsoleManager.WriteLine("Feature FPCSDS      : " + CPUInfo.flagFPCSDS);
+            ConsoleManager.WriteLine("Feature MPX         : " + CPUInfo.flagMPX);
+            ConsoleManager.WriteLine("Feature PQE         : " + CPUInfo.flagPQE);
+            ConsoleManager.WriteLine("Feature AVX512F     : " + CPUInfo.flagAVX512F);
+            ConsoleManager.WriteLine("Feature AVX512DQ    : " + CPUInfo.flagAVX512DQ);
+            ConsoleManager.WriteLine("Feature RDSEED      : " + CPUInfo.flagRDSEED);
+            ConsoleManager.WriteLine("Feature ADX         : " + CPUInfo.flagADX);
+            ConsoleManager.WriteLine("Feature SMAP        : " + CPUInfo.flagSMAP);
+            ConsoleManager.WriteLine("Feature AVX512IFMA  : " + CPUInfo.flagAVX512IFMA);
+            ConsoleManager.WriteLine("Feature PCOMMIT     : " + CPUInfo.flagPCOMMIT);
+            ConsoleManager.WriteLine("Feature CLFLUSHOPT  : " + CPUInfo.flagCLFLUSHOPT);
+            ConsoleManager.WriteLine("Feature CLWB        : " + CPUInfo.flagCLWB);
+            ConsoleManager.WriteLine("Feature PT          : " + CPUInfo.flagPT);
+            ConsoleManager.WriteLine("Feature AVX512PF    : " + CPUInfo.flagAVX512PF);
+            ConsoleManager.WriteLine("Feature AVX512ER    : " + CPUInfo.flagAVX512ER);
+            ConsoleManager.WriteLine("Feature AVX512CD    : " + CPUInfo.flagAVX512CD);
+            ConsoleManager.WriteLine("Feature SHA         : " + CPUInfo.flagSHA);
+            ConsoleManager.WriteLine("Feature AVX512BW    : " + CPUInfo.flagAVX512BW);
+            ConsoleManager.WriteLine("Feature AVX512VL    : " + CPUInfo.flagAVX512VL);
             ConsoleManager.WriteLine();
 
             if (CPUInfo.VendorCompany == CPUInfo.VendorCompanies.AMD)

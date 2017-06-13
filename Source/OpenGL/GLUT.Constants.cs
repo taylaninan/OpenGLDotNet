@@ -1,11 +1,11 @@
 ﻿// ----------------------------------------------------------------------------
 // FILE		: glut.constants.cs
-// VERSION	: 1.1.0
+// VERSION	: 1.1.1
 // COMMENT	: OpenGL Utility Toolkit (GLUT) library constants.
 // WEB      : http://www.taylaninan.com/opengl-dotnet
 // AUTHOR   : TAYLAN INAN
 // E-MAIL   : info@taylaninan.com
-// DATE     : 2014-2016
+// DATE     : 2014-2017
 // LICENSE  : FREE FOR EDUCATIONAL, PERSONAL AND COMMERCIAL USAGE
 // ----------------------------------------------------------------------------
 

@@ -1,13 +1,13 @@
 // ----------------------------------------------------------------------------
 // FILE		: cpuinfo.cs
-// VERSION	: 1.1.0
+// VERSION	: 1.1.1
 // COMMENT	: Defines functionality for displaying detailed information about the
 //            computer CPU. Makes use of "assembler.dll", which is written in "C"
 //            and "Assembler commands" (source code included).
 // WEB      : http://www.taylaninan.com/opengl-dotnet
 // AUTHOR   : TAYLAN INAN
 // E-MAIL   : info@taylaninan.com
-// DATE     : 2014-2016
+// DATE     : 2014-2017
 // LICENSE  : FREE FOR EDUCATIONAL, PERSONAL AND COMMERCIAL USAGE
 // ----------------------------------------------------------------------------
 
@@ -22,16 +22,27 @@ namespace OpenGLDotNet
     public static class CPUInfo
     {
         [DllImport("assembler.dll", CallingConvention = CallingConvention.StdCall, EntryPoint="_cpuid")]
+        [System.Security.SuppressUnmanagedCodeSecurity()]
         private static extern void __cpuid(uint function);
+
         [DllImport("assembler.dll", CallingConvention = CallingConvention.StdCall, EntryPoint = "_rdtsc")]
+        [System.Security.SuppressUnmanagedCodeSecurity()]
         private static extern void __rdtsc();
+
         [DllImport("assembler.dll", CallingConvention = CallingConvention.StdCall, EntryPoint = "_reg_eax")]
+        [System.Security.SuppressUnmanagedCodeSecurity()]
         private static extern uint __reg_eax();
+
         [DllImport("assembler.dll", CallingConvention = CallingConvention.StdCall, EntryPoint = "_reg_ebx")]
+        [System.Security.SuppressUnmanagedCodeSecurity()]
         private static extern uint __reg_ebx();
+
         [DllImport("assembler.dll", CallingConvention = CallingConvention.StdCall, EntryPoint = "_reg_ecx")]
+        [System.Security.SuppressUnmanagedCodeSecurity()]
         private static extern uint __reg_ecx();
+		
         [DllImport("assembler.dll", CallingConvention = CallingConvention.StdCall, EntryPoint = "_reg_edx")]
+        [System.Security.SuppressUnmanagedCodeSecurity()]
         private static extern uint __reg_edx();
 
         public enum VendorCompanies : byte
@@ -52,7 +63,7 @@ namespace OpenGLDotNet
         }
 
         // Returned in CPUID(1).EDX
-        private enum IntelFeatureFlags1 : uint
+        private enum StandardFlags1_EDX : uint
         {
             FPU = ValueX.Bits.Bit00,			        // Bit 00 = Floating point on chip
             VME = ValueX.Bits.Bit01,			        // Bit 01 = Virtual Mode Extension
@@ -89,7 +100,7 @@ namespace OpenGLDotNet
         }
 
         // Returned by CPUID(1).ECX
-        private enum IntelFeatureFlags2 : uint
+        private enum StandardFlags1_ECX : uint
         {
             SSE3 = ValueX.Bits.Bit00,                   // Bit 00 = SSE3
             PCLMULQDQ = ValueX.Bits.Bit01,              // Bit 01 = PCLMULQDQ Support
@@ -120,11 +131,48 @@ namespace OpenGLDotNet
             XSAVE = ValueX.Bits.Bit26,                  // Bit 26 = XSAVE/XSTOR States
             OSXSAVE = ValueX.Bits.Bit27,                // Bit 27 = OS-Enabled Extended State Management
             AVX = ValueX.Bits.Bit28,                    // Bit 28 = Advanced Vector Extensions
-            F16C = ValueX.Bits.Bit29                    // Bit 29 = Half-Precision Convert
-            // Bit 30 = Reserved
-            // Bit 31 = Not Used
+            F16C = ValueX.Bits.Bit29,                   // Bit 29 = Half-Precision Convert
+            RDRAND = ValueX.Bits.Bit30,					// Bit 30 = Read Random Number
+            HV = ValueX.Bits.Bit31						// Bit 31 = HyperVisor Present (and intercepting this bit, to advertise its presence)
         }
 
+		// Returned by CPUID(7).EBX; Information taken from http://sandpile.org/x86/cpuid.htm
+        private enum StandardFlags7_EBX : uint
+        {
+			FSGSBASE   = ValueX.Bits.Bit00,
+			TSC_ADJUST = ValueX.Bits.Bit01,
+			SGX        = ValueX.Bits.Bit02,
+			BMI1       = ValueX.Bits.Bit03,
+			HLE        = ValueX.Bits.Bit04,
+			AVX2       = ValueX.Bits.Bit05,
+			FPDP       = ValueX.Bits.Bit06,
+			SMEP       = ValueX.Bits.Bit07,
+			BMI2       = ValueX.Bits.Bit08,
+			ERMS       = ValueX.Bits.Bit09,
+			INVPCID    = ValueX.Bits.Bit10,
+			RTM	       = ValueX.Bits.Bit11,
+			PQM        = ValueX.Bits.Bit12,
+			FPCSDS     = ValueX.Bits.Bit13,
+			MPX        = ValueX.Bits.Bit14,
+			PQE        = ValueX.Bits.Bit15,
+			AVX512F    = ValueX.Bits.Bit16,
+			AVX512DQ   = ValueX.Bits.Bit17,
+			RDSEED     = ValueX.Bits.Bit18,
+			ADX        = ValueX.Bits.Bit19,
+			SMAP       = ValueX.Bits.Bit20,
+			AVX512IFMA = ValueX.Bits.Bit21,
+			PCOMMIT    = ValueX.Bits.Bit22,
+			CLFLUSHOPT = ValueX.Bits.Bit23,
+			CLWB       = ValueX.Bits.Bit24,
+			PT         = ValueX.Bits.Bit25,
+			AVX512PF   = ValueX.Bits.Bit26,
+			AVX512ER   = ValueX.Bits.Bit27,
+			AVX512CD   = ValueX.Bits.Bit28,
+			SHA        = ValueX.Bits.Bit29,
+			AVX512BW   = ValueX.Bits.Bit30,
+			AVX512VL   = ValueX.Bits.Bit31
+		}
+		
         // Returned in CPUID(0x80000001).EDX (Intel)
         private enum IntelExtendedFeatureFlags1 : uint
         {
@@ -223,102 +271,138 @@ namespace OpenGLDotNet
         }
 
         private static Dictionary<byte, string> IntelCacheDefinitions = new Dictionary<byte, string>() 
-        { 
-            {0x00, "Null Descriptor, this byte contains no information"},
-            {0x01, "Instruction TLB: 4-KB Pages, 4-way set associative, 32 entries"},
-            {0x02, "Instruction TLB: 4-MB Pages, fully associative, 2 entries"},
-            {0x03, "Data TLB: 4-KB Pages, 4-way set associative, 64 entries"},
-            {0x04, "Data TLB: 4-MB Pages, 4-way set associative, 8 entries"},
-            {0x05, "Data TLB: 4-MB Pages, 4-way set associative, 32 entries"},
-            {0x06, "1st-level instruction cache: 8-KB, 4-way set associative, 32-byte line size"},
-            {0x08, "1st-level instruction cache: 16-KB, 4-way set associative, 32-byte line size"},
-            {0x09, "1st-level Instruction Cache: 32-KB, 4-way set associative, 64-byte line size"},
-            {0x0A, "1st-level data cache: 8-KB, 2-way set associative, 32-byte line size"},
-            {0x0B, "Instruction TLB: 4-MB pages, 4-way set associative, 4 entries"},
-            {0x0C, "1st-level data cache: 16-KB, 4-way set associative, 32-byte line size"},
-            {0x0D, "1st-level Data Cache: 16-KB, 4-way set associative, 64-byte line size, ECC"},
-            {0x0E, "1st-level Data Cache: 24-KB, 6-way set associative, 64-byte line size, ECC"},
-            {0x21, "2nd-level cache: 256-KB, 8-way set associative, 64-byte line size"},
-            {0x22, "3rd-level cache: 512-KB, 4-way set associative, sectored cache, 64-byte line size"},
-            {0x23, "3rd-level cache: 1-MB, 8-way set associative, sectored cache, 64-byte line size"},
-            {0x25, "3rd-level cache: 2-MB, 8-way set associative, sectored cache, 64-byte line size"},
-            {0x29, "3rd-level cache: 4-MB, 8-way set associative, sectored cache, 64-byte line size"},
-            {0x2C, "1st-level data cache: 32-KB, 8-way set associative, 64-byte line size"},
-            {0x30, "1st-level instruction cache: 32-KB, 8-way set associative, 64-byte line size"},
-            {0x40, "No 2nd-level cache or, if processor contains a valid 2nd-level cache, no 3rd-level cache"},
-            {0x41, "2nd-level cache: 128-KB, 4-way set associative, 32-byte line size"},
-            {0x42, "2nd-level cache: 256-KB, 4-way set associative, 32-byte line size"},
-            {0x43, "2nd-level cache: 512-KB, 4-way set associative, 32-byte line size"},
-            {0x44, "2nd-level cache: 1-MB, 4-way set associative, 32-byte line size"},
-            {0x45, "2nd-level cache: 2-MB, 4-way set associative, 32-byte line size"},
-            {0x46, "3rd-level cache: 4-MB, 4-way set associative, 64-byte line size"},
-            {0x47, "3rd-level cache: 8-MB, 8-way set associative, 64-byte line size"},
-            {0x48, "2nd-level cache: 3-MB, 12-way set associative, 64-byte line size, unified on-die"},
-            {0x49, "2nd-level cache: 4-MB, 16-way set associative, 64-byte line size"},
-            {0x4A, "3rd-level cache: 6-MB, 12-way set associative, 64-byte line size"},
-            {0x4B, "3rd-level cache: 8-MB, 16-way set associative, 64-byte line size"},
-            {0x4C, "3rd-level cache: 12-MB, 12-way set associative, 64-byte line size"},
-            {0x4D, "3rd-level cache: 16-MB, 16-way set associative, 64-byte line size"},
-            {0x4E, "2nd-level cache: 6-MB, 24-way set associative, 64-byte line size"},
-            {0x4F, "Instruction TLB: 4-KB pages, 32 entries"},
-            {0x50, "Instruction TLB: 4-KB, 2-MB or 4-MB pages, fully associative, 64 entries"},
-            {0x51, "Instruction TLB: 4-KB, 2-MB or 4-MB pages, fully associative, 128 entries"},
-            {0x52, "Instruction TLB: 4-KB, 2-MB or 4-MB pages, fully associative, 256 entries"},
-            {0x55, "Instruction TLB: 2-MB or 4-MB pages, fully associative, 7 entries"},
-            {0x56, "L1 Data TLB: 4-MB pages, 4-way set associative, 16 entries"},
-            {0x57, "L1 Data TLB: 4-KB pages, 4-way set associative, 16 entries"},
-            {0x59, "Data TLB: 4-KB pages, fully associative, 16 entries"},
-            {0x5A, "Data TLB: 2-MB or 4-MB pages, 4-way associative, 32 entries"},
-            {0x5B, "Data TLB: 4-KB or 4-MB pages, fully associative, 64 entries"},
-            {0x5C, "Data TLB: 4-KB or 4-MB pages, fully associative, 128 entries"},
-            {0x5D, "Data TLB: 4-KB or 4-MB pages, fully associative, 256 entries"},
-            {0x60, "1st-level data cache: 16-KB, 8-way set associative, sectored cache, 64-byte line size"},
-            {0x66, "1st-level data cache: 8-KB, 4-way set associative, sectored cache, 64-byte line size"},
-            {0x67, "1st-level data cache: 16-KB, 4-way set associative, sectored cache, 64-byte line size"},
-            {0x68, "1st-level data cache: 32-KB, 4 way set associative, sectored cache, 64-byte line size"},
-            {0x70, "Trace cache: 12K-uops, 8-way set associative"},
-            {0x71, "Trace cache: 16K-uops, 8-way set associative"},
-            {0x72, "Trace cache: 32K-uops, 8-way set associative"},
-            {0x76, "2nd-level cache: 1-MB, 4-way set associative, 64-byte line size"},
-            {0x78, "2nd-level cache: 1-MB, 4-way set associative, 64-byte line size"},
-            {0x79, "2nd-level cache: 128-KB, 8-way set associative, sectored cache, 64-byte line size"},
-            {0x7A, "2nd-level cache: 256-KB, 8-way set associative, sectored cache, 64-byte line size"},
-            {0x7B, "2nd-level cache: 512-KB, 8-way set associative, sectored cache, 64-byte line size"},
-            {0x7C, "2nd-level cache: 1-MB, 8-way set associative, sectored cache, 64-byte line size"},
-            {0x7D, "2nd-level cache: 2-MB, 8-way set associative, 64-byte line size"},
-            {0x7F, "2nd-level cache: 512-KB, 2-way set associative, 64-byte line size"},
-            {0x80, "2nd-level cache: 512-KB, 8-way set associative, 64-byte line size"},
-            {0x82, "2nd-level cache: 256-KB, 8-way set associative, 32-byte line size"},
-            {0x83, "2nd-level cache: 512-KB, 8-way set associative, 32-byte line size"},
-            {0x84, "2nd-level cache: 1-MB, 8-way set associative, 32-byte line size"},
-            {0x85, "2nd-level cache: 2-MB, 8-way set associative, 32-byte line size"},
-            {0x86, "2nd-level cache: 512-KB, 4-way set associative, 64-byte line size"},
-            {0x87, "2nd-level cache: 1-MB, 8-way set associative, 64-byte line size"},
-            {0xB0, "Instruction TLB: 4-KB Pages, 4-way set associative, 128 entries"},
-            {0xB1, "Instruction TLB: 2-MB pages, 4-way, 8 entries or 4M pages, 4-way, 4 entries"},
-            {0xB2, "Instruction TLB: 4-KB pages, 4-way set associative, 64 entries"},
-            {0xB3, "Data TLB: 4-KB Pages, 4-way set associative, 128 entries"},
-            {0xB4, "Data TLB: 4-KB Pages, 4-way set associative, 256 entries"},
-            {0xBA, "Data TLB: 4-KB Pages, 4-way set associative, 64 entries"},
-            {0xC0, "Data TLB: 4-KB or 4-MB Pages, 4-way set associative, 8 entries"},
-            {0xCA, "Shared 2nd-level TLB: 4 KB pages, 4-way set associative, 512 entries"},
-            {0xD0, "3rd-level cache: 512-kB, 4-way set associative, 64-byte line size"},
-            {0xD1, "3rd-level cache: 1-MB, 4-way set associative, 64-byte line size"},
-            {0xD2, "3rd-level cache: 2-MB, 4-way set associative, 64-byte line size"},
-            {0xD6, "3rd-level cache: 1-MB, 8-way set associative, 64-byte line size"},
-            {0xD7, "3rd-level cache: 2-MB, 8-way set associative, 64-byte line size"},
-            {0xD8, "3rd-level cache: 4-MB, 8-way set associative, 64-byte line size"},
-            {0xDC, "3rd-level cache: 1.5-MB, 12-way set associative, 64-byte line size"},
-            {0xDD, "3rd-level cache: 3-MB, 12-way set associative, 64-byte line size"},
-            {0xDE, "3rd-level cache: 6-MB, 12-way set associative, 64-byte line size"},
-            {0xE2, "3rd-level cache: 2-MB, 16-way set associative, 64-byte line size"},
-            {0xE3, "3rd-level cache: 4-MB, 16-way set associative, 64-byte line size"},
-            {0xE4, "3rd-level cache: 8-MB, 16-way set associative, 64-byte line size"},
-            {0xEA, "3rd-level cache: 12-MB, 24-way set associative, 64-byte line size"},
-            {0xEB, "3rd-level cache: 18-MB, 24-way set associative, 64-byte line size"},
-            {0xEC, "3rd-level cache: 24-MB, 24-way set associative, 64-byte line size"},
-            {0xF0, "64-byte Prefetching"},
-            {0xF1, "128-byte Prefetching"}
+        {
+			{0x00, "null descriptor (unused descriptor)"},
+			{0x01, "code TLB, 4K pages, 4 ways, 32 entries"},
+			{0x02, "code TLB, 4M pages, fully, 2 entries"},
+			{0x03, "data TLB, 4K pages, 4 ways, 64 entries"},
+			{0x04, "data TLB, 4M pages, 4 ways, 8 entries"},
+			{0x05, "data TLB, 4M pages, 4 ways, 32 entries"},
+			{0x06, "code L1 cache, 8 KB, 4 ways, 32 byte lines"},
+			{0x08, "code L1 cache, 16 KB, 4 ways, 32 byte lines"},
+			{0x09, "code L1 cache, 32 KB, 4 ways, 64 byte lines"},
+			{0x0A, "data L1 cache, 8 KB, 2 ways, 32 byte lines"},
+			{0x0B, "code TLB, 4M pages, 4 ways, 4 entries"},
+			{0x0C, "data L1 cache, 16 KB, 4 ways, 32 byte lines"},
+			{0x0D, "data L1 cache, 16 KB, 4 ways, 64 byte lines (ECC)"},
+			{0x0E, "data L1 cache, 24 KB, 6 ways, 64 byte lines"},
+			{0x10, "data L1 cache, 16 KB, 4 ways, 32 byte lines (IA-64)"},
+			{0x15, "code L1 cache, 16 KB, 4 ways, 32 byte lines (IA-64)"},
+			{0x1A, "code and data L2 cache, 96 KB, 6 ways, 64 byte lines (IA-64)"},
+			{0x1D, "code and data L2 cache, 128 KB, 2 ways, 64 byte lines"},
+			{0x21, "code and data L2 cache, 256 KB, 8 ways, 64 byte lines"},
+			{0x22, "code and data L3 cache, 512 KB, 4 ways, 64 byte lines, dual-sectored"},
+			{0x23, "code and data L3 cache, 1024 KB, 8 ways, 64 byte lines, dual-sectored"},
+			{0x24, "code and data L2 cache, 1024 KB, 16 ways, 64 byte lines"},
+			{0x25, "code and data L3 cache, 2048 KB, 8 ways, 64 byte lines, dual-sectored"},
+			{0x29, "code and data L3 cache, 4096 KB, 8 ways, 64 byte lines, dual-sectored"},
+			{0x2C, "data L1 cache, 32 KB, 8 ways, 64 byte lines"},
+			{0x30, "code L1 cache, 32 KB, 8 ways, 64 byte lines"},
+			{0x39, "code and data L2 cache, 128 KB, 4 ways, 64 byte lines, sectored"},
+			{0x3A, "code and data L2 cache, 192 KB, 6 ways, 64 byte lines, sectored"},
+			{0x3B, "code and data L2 cache, 128 KB, 2 ways, 64 byte lines, sectored"},
+			{0x3C, "code and data L2 cache, 256 KB, 4 ways, 64 byte lines, sectored"},
+			{0x3D, "code and data L2 cache, 384 KB, 6 ways, 64 byte lines, sectored"},
+			{0x3E, "code and data L2 cache, 512 KB, 4 ways, 64 byte lines, sectored"},
+			{0x40, "no integrated L2 cache (P6 core) or L3 cache (P4 core)"},
+			{0x41, "code and data L2 cache, 128 KB, 4 ways, 32 byte lines"},
+			{0x42, "code and data L2 cache, 256 KB, 4 ways, 32 byte lines"},
+			{0x43, "code and data L2 cache, 512 KB, 4 ways, 32 byte lines"},
+			{0x44, "code and data L2 cache, 1024 KB, 4 ways, 32 byte lines"},
+			{0x45, "code and data L2 cache, 2048 KB, 4 ways, 32 byte lines"},
+			{0x46, "code and data L3 cache, 4096 KB, 4 ways, 64 byte lines"},
+			{0x47, "code and data L3 cache, 8192 KB, 8 ways, 64 byte lines"},
+			{0x48, "code and data L2 cache, 3072 KB, 12 ways, 64 byte lines"},
+			{0x49, "code and data L3 cache, 4096 KB, 16 ways, 64 byte lines (P4) or code and data L2 cache, 4096 KB, 16 ways, 64 byte lines (Core 2)"},
+			{0x4A, "code and data L3 cache, 6144 KB, 12 ways, 64 byte lines"},
+			{0x4B, "code and data L3 cache, 8192 KB, 16 ways, 64 byte lines"},
+			{0x4C, "code and data L3 cache, 12288 KB, 12 ways, 64 byte lines"},
+			{0x4D, "code and data L3 cache, 16384 KB, 16 ways, 64 byte lines"},
+			{0x4E, "code and data L2 cache, 6144 KB, 24 ways, 64 byte lines"},
+			{0x4F, "code TLB, 4K pages, ???, 32 entries"},
+			{0x50, "code TLB, 4K/4M/2M pages, fully, 64 entries"},
+			{0x51, "code TLB, 4K/4M/2M pages, fully, 128 entries"},
+			{0x52, "code TLB, 4K/4M/2M pages, fully, 256 entries"},
+			{0x55, "code TLB, 2M/4M, fully, 7 entries"},
+			{0x56, "L0 data TLB, 4M pages, 4 ways, 16 entries"},
+			{0x57, "L0 data TLB, 4K pages, 4 ways, 16 entries"},
+			{0x59, "L0 data TLB, 4K pages, fully, 16 entries"},
+			{0x5A, "L0 data TLB, 2M/4M, 4 ways, 32 entries"},
+			{0x5B, "data TLB, 4K/4M pages, fully, 64 entries"},
+			{0x5C, "data TLB, 4K/4M pages, fully, 128 entries"},
+			{0x5D, "data TLB, 4K/4M pages, fully, 256 entries"},
+			{0x60, "data L1 cache, 16 KB, 8 ways, 64 byte lines, sectored"},
+			{0x61, "code TLB, 4K pages, fully, 48 entries"},
+			{0x63, "data TLB, 2M/4M pages, 4-way, 32-entries, and data TLB, 1G pages, 4-way, 4 entries"},
+			{0x64, "data TLB, 4K pages, 4-way, 512 entries"},
+			{0x66, "data L1 cache, 8 KB, 4 ways, 64 byte lines, sectored"},
+			{0x67, "data L1 cache, 16 KB, 4 ways, 64 byte lines, sectored"},
+			{0x68, "data L1 cache, 32 KB, 4 ways, 64 byte lines, sectored"},
+			{0x6A, "L0 data TLB, 4K pages, 8-way, 64 entries"},
+			{0x6B, "data TLB, 4K pages, 8-way, 256 entries"},
+			{0x6C, "data TLB, 2M/4M pages, 8-way, 126 entries"},
+			{0x6D, "data TLB, 1G pages, fully, 16 entries"},
+			{0x70, "trace L1 cache, 12 KµOPs, 8 ways"},
+			{0x71, "trace L1 cache, 16 KµOPs, 8 ways"},
+			{0x72, "trace L1 cache, 32 KµOPs, 8 ways"},
+			{0x73, "trace L1 cache, 64 KµOPs, 8 ways"},
+			{0x76, "code TLB, 2M/4M pages, fully, 8 entries"},
+			{0x77, "code L1 cache, 16 KB, 4 ways, 64 byte lines, sectored (IA-64)"},
+			{0x78, "code and data L2 cache, 1024 KB, 4 ways, 64 byte lines"},
+			{0x79, "code and data L2 cache, 128 KB, 8 ways, 64 byte lines, dual-sectored"},
+			{0x7A, "code and data L2 cache, 256 KB, 8 ways, 64 byte lines, dual-sectored"},
+			{0x7B, "code and data L2 cache, 512 KB, 8 ways, 64 byte lines, dual-sectored"},
+			{0x7C, "code and data L2 cache, 1024 KB, 8 ways, 64 byte lines, dual-sectored"},
+			{0x7D, "code and data L2 cache, 2048 KB, 8 ways, 64 byte lines"},
+			{0x7E, "code and data L2 cache, 256 KB, 8 ways, 128 byte lines, sect. (IA-64)"},
+			{0x7F, "code and data L2 cache, 512 KB, 2 ways, 64 byte lines"},
+			{0x80, "code and data L2 cache, 512 KB, 8 ways, 64 byte lines"},
+			{0x81, "code and data L2 cache, 128 KB, 8 ways, 32 byte lines"},
+			{0x82, "code and data L2 cache, 256 KB, 8 ways, 32 byte lines"},
+			{0x83, "code and data L2 cache, 512 KB, 8 ways, 32 byte lines"},
+			{0x84, "code and data L2 cache, 1024 KB, 8 ways, 32 byte lines"},
+			{0x85, "code and data L2 cache, 2048 KB, 8 ways, 32 byte lines"},
+			{0x86, "code and data L2 cache, 512 KB, 4 ways, 64 byte lines"},
+			{0x87, "code and data L2 cache, 1024 KB, 8 ways, 64 byte lines"},
+			{0x88, "code and data L3 cache, 2048 KB, 4 ways, 64 byte lines (IA-64)"},
+			{0x89, "code and data L3 cache, 4096 KB, 4 ways, 64 byte lines (IA-64)"},
+			{0x8A, "code and data L3 cache, 8192 KB, 4 ways, 64 byte lines (IA-64)"},
+			{0x8D, "code and data L3 cache, 3072 KB, 12 ways, 128 byte lines (IA-64)"},
+			{0x90, "code TLB, 4K...256M pages, fully, 64 entries (IA-64)"},
+			{0x96, "data L1 TLB, 4K...256M pages, fully, 32 entries (IA-64)"},
+			{0x9B, "data L2 TLB, 4K...256M pages, fully, 96 entries (IA-64)"},
+			{0xA0, "data TLB, 4K pages, fully, 32 entries"},
+			{0xB0, "code TLB, 4K pages, 4 ways, 128 entries"},
+			{0xB1, "code TLB, 4M pages, 4 ways, 4 entries and code TLB, 2M pages, 4 ways, 8 entries"},
+			{0xB2, "code TLB, 4K pages, 4 ways, 64 entries"},
+			{0xB3, "data TLB, 4K pages, 4 ways, 128 entries"},
+			{0xB4, "data TLB, 4K pages, 4 ways, 256 entries"},
+			{0xB5, "code TLB, 4K pages, 8 ways, 64 entries"},
+			{0xB6, "code TLB, 4K pages, 8 ways, 128 entries"},
+			{0xBA, "data TLB, 4K pages, 4 ways, 64 entries"},
+			{0xC0, "data TLB, 4K/4M pages, 4 ways, 8 entries"},
+			{0xC1, "L2 code and data TLB, 4K/2M pages, 8 ways, 1024 entries"},
+			{0xC2, "data TLB, 2M/4M pages, 4 ways, 16 entries"},
+			{0xC3, "L2 code and data TLB, 4K/2M pages, 6 ways, 1536 entries and L2 code and data TLB, 1G pages, 4 ways, 16 entries"},
+			{0xC4, "data TLB, 2M/4M pages, 4-way, 32 entries"},
+			{0xCA, "L2 code and data TLB, 4K pages, 4 ways, 512 entries"},
+			{0xD0, "code and data L3 cache, 512-kb, 4 ways, 64 byte lines"},
+			{0xD1, "code and data L3 cache, 1024-kb, 4 ways, 64 byte lines"},
+			{0xD2, "code and data L3 cache, 2048-kb, 4 ways, 64 byte lines"},
+			{0xD6, "code and data L3 cache, 1024-kb, 8 ways, 64 byte lines"},
+			{0xD7, "code and data L3 cache, 2048-kb, 8 ways, 64 byte lines"},
+			{0xD8, "code and data L3 cache, 4096-kb, 8 ways, 64 byte lines"},
+			{0xDC, "code and data L3 cache, 1536-kb, 12 ways, 64 byte lines"},
+			{0xDD, "code and data L3 cache, 3072-kb, 12 ways, 64 byte lines"},
+			{0xDE, "code and data L3 cache, 6144-kb, 12 ways, 64 byte lines"},
+			{0xE2, "code and data L3 cache, 2048-kb, 16 ways, 64 byte lines"},
+			{0xE3, "code and data L3 cache, 4096-kb, 16 ways, 64 byte lines"},
+			{0xE4, "code and data L3 cache, 8192-kb, 16 ways, 64 byte lines"},
+			{0xEA, "code and data L3 cache, 12288-kb, 24 ways, 64 byte lines"},
+			{0xEB, "code and data L3 cache, 18432-kb, 24 ways, 64 byte lines"},
+			{0xEC, "code and data L3 cache, 24576-kb, 24 ways, 64 byte lines"},
+			{0xF0, "64 byte prefetching"},
+			{0xF1, "128 byte prefetching"}
         };
 
         public static byte CPUType = 0;
@@ -391,6 +475,42 @@ namespace OpenGLDotNet
         public static bool flagOSXSAVE = false;
         public static bool flagAVX = false;
         public static bool flagF16C = false;
+		public static bool flagRDRAND = false;
+		public static bool flagHV = false;
+
+        // Returned in CPUID:0x00000007.EBX
+        public static bool flagFSGSBASE = false;
+        public static bool flagTSC_ADJUST = false;
+        public static bool flagSGX = false;
+        public static bool flagBMI1 = false;
+        public static bool flagHLE = false;
+        public static bool flagAVX2 = false;
+        public static bool flagFPDP = false;
+        public static bool flagSMEP = false;
+        public static bool flagBMI2 = false;
+        public static bool flagERMS = false;
+        public static bool flagINVPCID = false;
+        public static bool flagRTM = false;
+        public static bool flagPQM = false;
+        public static bool flagFPCSDS = false;
+        public static bool flagMPX = false;
+        public static bool flagPQE = false;
+        public static bool flagAVX512F = false;
+        public static bool flagAVX512DQ = false;
+        public static bool flagRDSEED = false;
+        public static bool flagADX = false;
+        public static bool flagSMAP = false;
+        public static bool flagAVX512IFMA = false;
+        public static bool flagPCOMMIT = false;
+        public static bool flagCLFLUSHOPT = false;
+        public static bool flagCLWB = false;
+        public static bool flagPT = false;
+        public static bool flagAVX512PF = false;
+        public static bool flagAVX512ER = false;
+        public static bool flagAVX512CD = false;
+        public static bool flagSHA = false;
+        public static bool flagAVX512BW = false;
+        public static bool flagAVX512VL = false;
 
         // Returned in CPUID:0x80000001.EDX (Intel)
         public static bool flagINTEL64 = false;
@@ -586,7 +706,7 @@ namespace OpenGLDotNet
             }
         }
 
-        private static uint FeatureSet1
+        private static uint StandardCPUID1_EDX
         {
             get
             {
@@ -602,7 +722,7 @@ namespace OpenGLDotNet
             }
         }
 
-        private static uint FeatureSet2
+        private static uint StandardCPUID1_ECX
         {
             get
             {
@@ -618,7 +738,23 @@ namespace OpenGLDotNet
             }
         }
 
-        private static uint ExtendedFeatureSet1
+        private static uint StandardCPUID7_EBX
+        {
+            get
+            {
+                if (MaxStandardFunction >= 0x07)
+                {
+                    __cpuid(7);
+                    return __reg_ebx();
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+        }
+
+        private static uint ExtendedCPUID1_EDX
         {
             get
             {
@@ -634,7 +770,7 @@ namespace OpenGLDotNet
             }
         }
 
-        private static uint ExtendedFeatureSet2
+        private static uint ExtendedCPUID1_ECX
         {
             get
             {
@@ -669,74 +805,111 @@ namespace OpenGLDotNet
                 CPUExtendedModel = (byte)((_processorSignature >> 16) & 0x0F);
                 CPUExtendedFamily = (byte)((_processorSignature >> 20) & 0xFF);
 
-                uint _featureflags1 = FeatureSet1;
+                uint _edx = StandardCPUID1_EDX;
 
-                flagFPU = ((_featureflags1 & (uint)IntelFeatureFlags1.FPU) > 0);
-                flagVME = ((_featureflags1 & (uint)IntelFeatureFlags1.VME) > 0);
-                flagDE = ((_featureflags1 & (uint)IntelFeatureFlags1.DE) > 0);
-                flagPSE = ((_featureflags1 & (uint)IntelFeatureFlags1.PSE) > 0);
-                flagTSC = ((_featureflags1 & (uint)IntelFeatureFlags1.TSC) > 0);
-                flagMSR = ((_featureflags1 & (uint)IntelFeatureFlags1.MSR) > 0);
-                flagPAE = ((_featureflags1 & (uint)IntelFeatureFlags1.PAE) > 0);
-                flagMCE = ((_featureflags1 & (uint)IntelFeatureFlags1.MCE) > 0);
-                flagCX8 = ((_featureflags1 & (uint)IntelFeatureFlags1.CX8) > 0);
-                flagAPIC = ((_featureflags1 & (uint)IntelFeatureFlags1.APIC) > 0);
-                flagFSC = ((_featureflags1 & (uint)IntelFeatureFlags1.FSC) > 0);
-                flagMTRR = ((_featureflags1 & (uint)IntelFeatureFlags1.MTRR) > 0);
-                flagPGE = ((_featureflags1 & (uint)IntelFeatureFlags1.PGE) > 0);
-                flagMCA = ((_featureflags1 & (uint)IntelFeatureFlags1.MCA) > 0);
-                flagCMOV = ((_featureflags1 & (uint)IntelFeatureFlags1.CMOV) > 0);
-                flagPAT = ((_featureflags1 & (uint)IntelFeatureFlags1.PAT) > 0);
-                flagPSE36 = ((_featureflags1 & (uint)IntelFeatureFlags1.PSE36) > 0);
-                flagSERIAL = ((_featureflags1 & (uint)IntelFeatureFlags1.SERIAL) > 0);
-                flagCLFSH = ((_featureflags1 & (uint)IntelFeatureFlags1.CLFSH) > 0);
-                flagDS = ((_featureflags1 & (uint)IntelFeatureFlags1.DS) > 0);
-                flagACPI = ((_featureflags1 & (uint)IntelFeatureFlags1.ACPI) > 0);
-                flagMMX = ((_featureflags1 & (uint)IntelFeatureFlags1.MMX) > 0);
-                flagFXSR = ((_featureflags1 & (uint)IntelFeatureFlags1.FXSR) > 0);
-                flagSSE = ((_featureflags1 & (uint)IntelFeatureFlags1.SSE) > 0);
-                flagSSE2 = ((_featureflags1 & (uint)IntelFeatureFlags1.SSE2) > 0);
-                flagSS = ((_featureflags1 & (uint)IntelFeatureFlags1.SS) > 0);
-                flagHTT = ((_featureflags1 & (uint)IntelFeatureFlags1.HTT) > 0);
-                flagTM = ((_featureflags1 & (uint)IntelFeatureFlags1.TM) > 0);
-                flagIA64 = ((_featureflags1 & (uint)IntelFeatureFlags1.IA64) > 0);
-                flagSBF = ((_featureflags1 & (uint)IntelFeatureFlags1.SBF) > 0);
+                flagFPU = ((_edx & (uint)StandardFlags1_EDX.FPU) > 0);
+                flagVME = ((_edx & (uint)StandardFlags1_EDX.VME) > 0);
+                flagDE = ((_edx & (uint)StandardFlags1_EDX.DE) > 0);
+                flagPSE = ((_edx & (uint)StandardFlags1_EDX.PSE) > 0);
+                flagTSC = ((_edx & (uint)StandardFlags1_EDX.TSC) > 0);
+                flagMSR = ((_edx & (uint)StandardFlags1_EDX.MSR) > 0);
+                flagPAE = ((_edx & (uint)StandardFlags1_EDX.PAE) > 0);
+                flagMCE = ((_edx & (uint)StandardFlags1_EDX.MCE) > 0);
+                flagCX8 = ((_edx & (uint)StandardFlags1_EDX.CX8) > 0);
+                flagAPIC = ((_edx & (uint)StandardFlags1_EDX.APIC) > 0);
+                flagFSC = ((_edx & (uint)StandardFlags1_EDX.FSC) > 0);
+                flagMTRR = ((_edx & (uint)StandardFlags1_EDX.MTRR) > 0);
+                flagPGE = ((_edx & (uint)StandardFlags1_EDX.PGE) > 0);
+                flagMCA = ((_edx & (uint)StandardFlags1_EDX.MCA) > 0);
+                flagCMOV = ((_edx & (uint)StandardFlags1_EDX.CMOV) > 0);
+                flagPAT = ((_edx & (uint)StandardFlags1_EDX.PAT) > 0);
+                flagPSE36 = ((_edx & (uint)StandardFlags1_EDX.PSE36) > 0);
+                flagSERIAL = ((_edx & (uint)StandardFlags1_EDX.SERIAL) > 0);
+                flagCLFSH = ((_edx & (uint)StandardFlags1_EDX.CLFSH) > 0);
+                flagDS = ((_edx & (uint)StandardFlags1_EDX.DS) > 0);
+                flagACPI = ((_edx & (uint)StandardFlags1_EDX.ACPI) > 0);
+                flagMMX = ((_edx & (uint)StandardFlags1_EDX.MMX) > 0);
+                flagFXSR = ((_edx & (uint)StandardFlags1_EDX.FXSR) > 0);
+                flagSSE = ((_edx & (uint)StandardFlags1_EDX.SSE) > 0);
+                flagSSE2 = ((_edx & (uint)StandardFlags1_EDX.SSE2) > 0);
+                flagSS = ((_edx & (uint)StandardFlags1_EDX.SS) > 0);
+                flagHTT = ((_edx & (uint)StandardFlags1_EDX.HTT) > 0);
+                flagTM = ((_edx & (uint)StandardFlags1_EDX.TM) > 0);
+                flagIA64 = ((_edx & (uint)StandardFlags1_EDX.IA64) > 0);
+                flagSBF = ((_edx & (uint)StandardFlags1_EDX.SBF) > 0);
 
-                uint _featureflags2 = FeatureSet2;
+                uint _ecx = StandardCPUID1_ECX;
 
-                flagSSE3 = ((_featureflags2 & (uint)IntelFeatureFlags2.SSE3) > 0);
-                flagPCLMULQDQ = ((_featureflags2 & (uint)IntelFeatureFlags2.PCLMULQDQ) > 0);
-                flagDS64 = ((_featureflags2 & (uint)IntelFeatureFlags2.DS64) > 0);
-                flagMONITOR = ((_featureflags2 & (uint)IntelFeatureFlags2.MONITOR) > 0);
-                flagDSCPL = ((_featureflags2 & (uint)IntelFeatureFlags2.DSCPL) > 0);
-                flagVMX = ((_featureflags2 & (uint)IntelFeatureFlags2.VMX) > 0);
-                flagSMX = ((_featureflags2 & (uint)IntelFeatureFlags2.SMX) > 0);
-                flagESS = ((_featureflags2 & (uint)IntelFeatureFlags2.ESS) > 0);
-                flagTM2 = ((_featureflags2 & (uint)IntelFeatureFlags2.TM2) > 0);
-                flagSSSE3 = ((_featureflags2 & (uint)IntelFeatureFlags2.SSSE3) > 0);
-                flagCNXTID = ((_featureflags2 & (uint)IntelFeatureFlags2.CNXTID) > 0);
-                flagFMA = ((_featureflags2 & (uint)IntelFeatureFlags2.FMA) > 0);
-                flagCX16 = ((_featureflags2 & (uint)IntelFeatureFlags2.CX16) > 0);
-                flagXTPR = ((_featureflags2 & (uint)IntelFeatureFlags2.XTPR) > 0);
-                flagPDCM = ((_featureflags2 & (uint)IntelFeatureFlags2.PDCM) > 0);
-                flagPCID = ((_featureflags2 & (uint)IntelFeatureFlags2.PCID) > 0);
-                flagDCA = ((_featureflags2 & (uint)IntelFeatureFlags2.DCA) > 0);
-                flagSSE4_1 = ((_featureflags2 & (uint)IntelFeatureFlags2.SSE4_1) > 0);
-                flagSSE4_2 = ((_featureflags2 & (uint)IntelFeatureFlags2.SSE4_2) > 0);
-                flagX2APIC = ((_featureflags2 & (uint)IntelFeatureFlags2.X2APIC) > 0);
-                flagMOVBE = ((_featureflags2 & (uint)IntelFeatureFlags2.MOVBE) > 0);
-                flagPOPCNT = ((_featureflags2 & (uint)IntelFeatureFlags2.POPCNT) > 0);
-                flagTSCDEADLINE = ((_featureflags2 & (uint)IntelFeatureFlags2.TSCDEADLINE) > 0);
-                flagAES = ((_featureflags2 & (uint)IntelFeatureFlags2.AES) > 0);
-                flagXSAVE = ((_featureflags2 & (uint)IntelFeatureFlags2.XSAVE) > 0);
-                flagOSXSAVE = ((_featureflags2 & (uint)IntelFeatureFlags2.OSXSAVE) > 0);
-                flagAVX = ((_featureflags2 & (uint)IntelFeatureFlags2.AVX) > 0);
-                flagF16C = ((_featureflags2 & (uint)IntelFeatureFlags2.F16C) > 0);
+                flagSSE3 = ((_ecx & (uint)StandardFlags1_ECX.SSE3) > 0);
+                flagPCLMULQDQ = ((_ecx & (uint)StandardFlags1_ECX.PCLMULQDQ) > 0);
+                flagDS64 = ((_ecx & (uint)StandardFlags1_ECX.DS64) > 0);
+                flagMONITOR = ((_ecx & (uint)StandardFlags1_ECX.MONITOR) > 0);
+                flagDSCPL = ((_ecx & (uint)StandardFlags1_ECX.DSCPL) > 0);
+                flagVMX = ((_ecx & (uint)StandardFlags1_ECX.VMX) > 0);
+                flagSMX = ((_ecx & (uint)StandardFlags1_ECX.SMX) > 0);
+                flagESS = ((_ecx & (uint)StandardFlags1_ECX.ESS) > 0);
+                flagTM2 = ((_ecx & (uint)StandardFlags1_ECX.TM2) > 0);
+                flagSSSE3 = ((_ecx & (uint)StandardFlags1_ECX.SSSE3) > 0);
+                flagCNXTID = ((_ecx & (uint)StandardFlags1_ECX.CNXTID) > 0);
+                flagFMA = ((_ecx & (uint)StandardFlags1_ECX.FMA) > 0);
+                flagCX16 = ((_ecx & (uint)StandardFlags1_ECX.CX16) > 0);
+                flagXTPR = ((_ecx & (uint)StandardFlags1_ECX.XTPR) > 0);
+                flagPDCM = ((_ecx & (uint)StandardFlags1_ECX.PDCM) > 0);
+                flagPCID = ((_ecx & (uint)StandardFlags1_ECX.PCID) > 0);
+                flagDCA = ((_ecx & (uint)StandardFlags1_ECX.DCA) > 0);
+                flagSSE4_1 = ((_ecx & (uint)StandardFlags1_ECX.SSE4_1) > 0);
+                flagSSE4_2 = ((_ecx & (uint)StandardFlags1_ECX.SSE4_2) > 0);
+                flagX2APIC = ((_ecx & (uint)StandardFlags1_ECX.X2APIC) > 0);
+                flagMOVBE = ((_ecx & (uint)StandardFlags1_ECX.MOVBE) > 0);
+                flagPOPCNT = ((_ecx & (uint)StandardFlags1_ECX.POPCNT) > 0);
+                flagTSCDEADLINE = ((_ecx & (uint)StandardFlags1_ECX.TSCDEADLINE) > 0);
+                flagAES = ((_ecx & (uint)StandardFlags1_ECX.AES) > 0);
+                flagXSAVE = ((_ecx & (uint)StandardFlags1_ECX.XSAVE) > 0);
+                flagOSXSAVE = ((_ecx & (uint)StandardFlags1_ECX.OSXSAVE) > 0);
+                flagAVX = ((_ecx & (uint)StandardFlags1_ECX.AVX) > 0);
+                flagF16C = ((_ecx & (uint)StandardFlags1_ECX.F16C) > 0);
+				flagRDRAND = ((_ecx & (uint)StandardFlags1_ECX.RDRAND) > 0);
+				flagHV = ((_ecx & (uint)StandardFlags1_ECX.HV) > 0);
+
+                uint _ebx = StandardCPUID7_EBX;
+
+                flagFSGSBASE = ((_ebx & (uint)StandardFlags7_EBX.FSGSBASE) > 0);
+                flagTSC_ADJUST = ((_ebx & (uint)StandardFlags7_EBX.TSC_ADJUST) > 0);
+                flagSGX = ((_ebx & (uint)StandardFlags7_EBX.SGX) > 0);
+                flagBMI1 = ((_ebx & (uint)StandardFlags7_EBX.BMI1) > 0);
+                flagHLE = ((_ebx & (uint)StandardFlags7_EBX.HLE) > 0);
+                flagAVX2 = ((_ebx & (uint)StandardFlags7_EBX.AVX2) > 0);
+                flagFPDP = ((_ebx & (uint)StandardFlags7_EBX.FPDP) > 0);
+                flagSMEP = ((_ebx & (uint)StandardFlags7_EBX.SMEP) > 0);
+                flagBMI2 = ((_ebx & (uint)StandardFlags7_EBX.BMI2) > 0);
+                flagERMS = ((_ebx & (uint)StandardFlags7_EBX.ERMS) > 0);
+                flagINVPCID = ((_ebx & (uint)StandardFlags7_EBX.INVPCID) > 0);
+                flagRTM = ((_ebx & (uint)StandardFlags7_EBX.RTM) > 0);
+                flagPQM = ((_ebx & (uint)StandardFlags7_EBX.PQM) > 0);
+                flagFPCSDS = ((_ebx & (uint)StandardFlags7_EBX.FPCSDS) > 0);
+                flagMPX = ((_ebx & (uint)StandardFlags7_EBX.MPX) > 0);
+                flagPQE = ((_ebx & (uint)StandardFlags7_EBX.PQE) > 0);
+                flagAVX512F = ((_ebx & (uint)StandardFlags7_EBX.AVX512F) > 0);
+                flagAVX512DQ = ((_ebx & (uint)StandardFlags7_EBX.AVX512DQ) > 0);
+                flagRDSEED = ((_ebx & (uint)StandardFlags7_EBX.RDSEED) > 0);
+                flagADX = ((_ebx & (uint)StandardFlags7_EBX.ADX) > 0);
+                flagSMAP = ((_ebx & (uint)StandardFlags7_EBX.SMAP) > 0);
+                flagAVX512IFMA = ((_ebx & (uint)StandardFlags7_EBX.AVX512IFMA) > 0);
+                flagPCOMMIT = ((_ebx & (uint)StandardFlags7_EBX.PCOMMIT) > 0);
+                flagCLFLUSHOPT = ((_ebx & (uint)StandardFlags7_EBX.CLFLUSHOPT) > 0);
+                flagCLWB = ((_ebx & (uint)StandardFlags7_EBX.CLWB) > 0);
+                flagPT = ((_ebx & (uint)StandardFlags7_EBX.PT) > 0);
+                flagAVX512PF = ((_ebx & (uint)StandardFlags7_EBX.AVX512PF) > 0);
+                flagAVX512ER = ((_ebx & (uint)StandardFlags7_EBX.AVX512ER) > 0);
+                flagAVX512CD = ((_ebx & (uint)StandardFlags7_EBX.AVX512CD) > 0);
+                flagSHA = ((_ebx & (uint)StandardFlags7_EBX.SHA) > 0);
+                flagAVX512BW = ((_ebx & (uint)StandardFlags7_EBX.AVX512BW) > 0);
+                flagAVX512VL = ((_ebx & (uint)StandardFlags7_EBX.AVX512VL) > 0);
             }
 
             if (_vendorcompany == VendorCompanies.Intel)
             {
-                uint _extfeatureflags1 = ExtendedFeatureSet1;
+                uint _extfeatureflags1 = ExtendedCPUID1_EDX;
 
                 flagSYSCALLSYSRET = ((_extfeatureflags1 & (uint)IntelExtendedFeatureFlags1.SYSCALLSYSRET) > 0);
                 flagNX = ((_extfeatureflags1 & (uint)IntelExtendedFeatureFlags1.NX) > 0);
@@ -744,7 +917,7 @@ namespace OpenGLDotNet
                 flagRDTSCP = ((_extfeatureflags1 & (uint)IntelExtendedFeatureFlags1.RDTSCP) > 0);
                 flagINTEL64 = ((_extfeatureflags1 & (uint)IntelExtendedFeatureFlags1.INTEL64) > 0);
 
-                uint _extfeatureflags2 = ExtendedFeatureSet2;
+                uint _extfeatureflags2 = ExtendedCPUID1_ECX;
 
                 flagLAHFSAHF = ((_extfeatureflags2 & (uint)IntelExtendedFeatureFlags2.LAHFSAHF) > 0);
 
@@ -752,7 +925,7 @@ namespace OpenGLDotNet
 
             if (_vendorcompany == VendorCompanies.AMD)
             {
-                uint _extfeatureflags1 = ExtendedFeatureSet1;
+                uint _extfeatureflags1 = ExtendedCPUID1_EDX;
 
                 // Returned in CPUID:0x80000001.EDX (AMD)
                 flagSYSCALLSYSRET = ((_extfeatureflags1 & (uint)AMDExtendedFeatureFlags1.SYSCALLSYSRET) > 0);
@@ -765,7 +938,7 @@ namespace OpenGLDotNet
                 flag3DNOW = ((_extfeatureflags1 & (uint)AMDExtendedFeatureFlags1.THREEDNOW) > 0);
                 flag3DNOWEXT = ((_extfeatureflags1 & (uint)AMDExtendedFeatureFlags1.THREEDNOWEXT) > 0);
 
-                uint _extfeatureflags2 = ExtendedFeatureSet2;
+                uint _extfeatureflags2 = ExtendedCPUID1_ECX;
                 
                 // Returned in CPUID:0x80000001.ECX (AMD)
                 flagLAHFSAHF = ((_extfeatureflags2 & (uint)AMDExtendedFeatureFlags2.LAHFSAHF) > 0);
@@ -789,17 +962,6 @@ namespace OpenGLDotNet
                 flagTOPOLOGYEXT = ((_extfeatureflags2 & (uint)AMDExtendedFeatureFlags2.TOPOLOGYEXT) > 0);
             }
 
-            if (_vendorcompany == VendorCompanies.Intel || _vendorcompany == VendorCompanies.AMD)
-            {
-                if (flagTSC)        // if we have TimeStampCounter on the cpu
-                {
-                }
-                else
-                {
-                    CPUSpeed = 0;
-                }
-            }
-
             if (_vendorcompany == VendorCompanies.Intel)
             {
                 if (MaxStandardFunction >= 0x02)
@@ -810,8 +972,11 @@ namespace OpenGLDotNet
                     uint _ecx = __reg_ecx();
                     uint _edx = __reg_edx();
 
-                    byte _cachedescriptor;
-
+                    byte _cachedescriptor = 0;
+					byte _nroftimestoreadall = 0;
+					
+					_nroftimestoreadall = (byte)((_eax >> 00) & 0xFF);
+					
                     // Check if _eax is a valid descriptor
                     if (((_eax >> 31) & 0x01) == 0)
                     {

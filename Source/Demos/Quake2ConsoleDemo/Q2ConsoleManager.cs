@@ -1,6 +1,6 @@
 ﻿// ----------------------------------------------------------------------------
 // FILE		: q2consolemanager.cs
-// VERSION	: 1.1.0
+// VERSION	: 1.1.1
 // COMMENT	: This file is part of Quake 2 Console Demo. The Q2ConsoleManager
 //			  shows the background picture, blends the text written on it, logs
 //            input text and command output texts; also reads the font picture
@@ -8,7 +8,7 @@
 // WEB      : http://www.taylaninan.com/opengl-dotnet
 // AUTHOR   : TAYLAN INAN
 // E-MAIL   : info@taylaninan.com
-// DATE     : 2014-2016
+// DATE     : 2014-2017
 // LICENSE  : FREE FOR EDUCATIONAL, PERSONAL AND COMMERCIAL USAGE
 // ----------------------------------------------------------------------------
 

@@ -1,13 +1,13 @@
 ﻿// ----------------------------------------------------------------------------
 // FILE		: cpuglinfo.cs
-// VERSION	: 1.1.0
+// VERSION	: 1.1.1
 // COMMENT	: This file displays cpu and opengl information of the running system
 //            in a very detailed way. At the same time writes a text file containing
 //            the information showed.
 // WEB      : http://www.taylaninan.com/opengl-dotnet
 // AUTHOR   : TAYLAN INAN
 // E-MAIL   : info@taylaninan.com
-// DATE     : 2014-2016
+// DATE     : 2014-2017
 // LICENSE  : FREE FOR EDUCATIONAL, PERSONAL AND COMMERCIAL USAGE
 // ----------------------------------------------------------------------------
 
@@ -92,6 +92,39 @@ namespace OpenGLDemos
             GLConfig.LogWriteLine("Feature XSAVE       : " + CPUInfo.flagXSAVE);
             GLConfig.LogWriteLine("Feature XTPR        : " + CPUInfo.flagXTPR);
             GLConfig.LogWriteLine();
+            GLConfig.LogWriteLine("Feature FSGSBASE    : " + CPUInfo.flagFSGSBASE);
+            GLConfig.LogWriteLine("Feature TSC_ADJUST  : " + CPUInfo.flagTSC_ADJUST);
+            GLConfig.LogWriteLine("Feature SGX         : " + CPUInfo.flagSGX);
+            GLConfig.LogWriteLine("Feature BMI1        : " + CPUInfo.flagBMI1);
+            GLConfig.LogWriteLine("Feature HLE         : " + CPUInfo.flagHLE);
+            GLConfig.LogWriteLine("Feature AVX2        : " + CPUInfo.flagAVX2);
+            GLConfig.LogWriteLine("Feature FPDP        : " + CPUInfo.flagFPDP);
+            GLConfig.LogWriteLine("Feature SMEP        : " + CPUInfo.flagSMEP);
+            GLConfig.LogWriteLine("Feature BMI2        : " + CPUInfo.flagBMI2);
+            GLConfig.LogWriteLine("Feature ERMS        : " + CPUInfo.flagERMS);
+            GLConfig.LogWriteLine("Feature INVPCID     : " + CPUInfo.flagINVPCID);
+            GLConfig.LogWriteLine("Feature RTM         : " + CPUInfo.flagRTM);
+            GLConfig.LogWriteLine("Feature PQM         : " + CPUInfo.flagPQM);
+            GLConfig.LogWriteLine("Feature FPCSDS      : " + CPUInfo.flagFPCSDS);
+            GLConfig.LogWriteLine("Feature MPX         : " + CPUInfo.flagMPX);
+            GLConfig.LogWriteLine("Feature PQE         : " + CPUInfo.flagPQE);
+            GLConfig.LogWriteLine("Feature AVX512F     : " + CPUInfo.flagAVX512F);
+            GLConfig.LogWriteLine("Feature AVX512DQ    : " + CPUInfo.flagAVX512DQ);
+            GLConfig.LogWriteLine("Feature RDSEED      : " + CPUInfo.flagRDSEED);
+            GLConfig.LogWriteLine("Feature ADX         : " + CPUInfo.flagADX);
+            GLConfig.LogWriteLine("Feature SMAP        : " + CPUInfo.flagSMAP);
+            GLConfig.LogWriteLine("Feature AVX512IFMA  : " + CPUInfo.flagAVX512IFMA);
+            GLConfig.LogWriteLine("Feature PCOMMIT     : " + CPUInfo.flagPCOMMIT);
+            GLConfig.LogWriteLine("Feature CLFLUSHOPT  : " + CPUInfo.flagCLFLUSHOPT);
+            GLConfig.LogWriteLine("Feature CLWB        : " + CPUInfo.flagCLWB);
+            GLConfig.LogWriteLine("Feature PT          : " + CPUInfo.flagPT);
+            GLConfig.LogWriteLine("Feature AVX512PF    : " + CPUInfo.flagAVX512PF);
+            GLConfig.LogWriteLine("Feature AVX512ER    : " + CPUInfo.flagAVX512ER);
+            GLConfig.LogWriteLine("Feature AVX512CD    : " + CPUInfo.flagAVX512CD);
+            GLConfig.LogWriteLine("Feature SHA         : " + CPUInfo.flagSHA);
+            GLConfig.LogWriteLine("Feature AVX512BW    : " + CPUInfo.flagAVX512BW);
+            GLConfig.LogWriteLine("Feature AVX512VL    : " + CPUInfo.flagAVX512VL);
+            GLConfig.LogWriteLine();
 
             if (CPUInfo.VendorCompany == CPUInfo.VendorCompanies.AMD)
             {
@@ -151,7 +184,7 @@ namespace OpenGLDemos
         public static void Main(string[] args)
         {
             // First, setup the console window
-            Console.Title = "OpenGLDotNet v1.1.0";
+            Console.Title = "OpenGLDotNet v1.1.1";
             Console.WindowHeight = 50;
             Console.WindowWidth = 100;
             Console.SetBufferSize(100, 1000);
@@ -160,12 +193,12 @@ namespace OpenGLDemos
             WriteCPUInfo();
 
             // After that, setup OpenGL window and OpenGL itself
-            GLConfig.Init(0, 0, "OpenGL Info v1.1.0", 25, 25, 1024, 768);
+            GLConfig.Init(0, 0, "OpenGL Info v1.1.1", 25, 25, 1024, 768);
             GL.Init(true);
 
             // Then, write all Log information
             GLConfig.LogWriteToConsole();
-            GLConfig.LogWriteToFile("opengl_info_v110.log");
+            GLConfig.LogWriteToFile("opengl_info_v111.log");
 
             Console.WriteLine();
             Console.WriteLine("                            _____ PRESS ANY KEY _____");
@@ -174,4 +207,3 @@ namespace OpenGLDemos
         }
     }
 }
-

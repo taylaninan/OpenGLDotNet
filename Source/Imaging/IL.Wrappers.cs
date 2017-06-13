@@ -1,13 +1,13 @@
 ﻿// ----------------------------------------------------------------------------
 // FILE		: il.wrappers.cs
-// VERSION	: 1.1.0
+// VERSION	: 1.1.1
 // COMMENT	: Image Library (IL). This "imported header" (from C/C++) provides 
 //            wrappers for low delegates and functions, which are defined in 
 //            il.functions.cs file.
 // WEB      : http://www.taylaninan.com/opengl-dotnet
 // AUTHOR   : TAYLAN INAN
 // E-MAIL   : info@taylaninan.com
-// DATE     : 2014-2016
+// DATE     : 2014-2017
 // LICENSE  : FREE FOR EDUCATIONAL, PERSONAL AND COMMERCIAL USAGE
 // ----------------------------------------------------------------------------
 

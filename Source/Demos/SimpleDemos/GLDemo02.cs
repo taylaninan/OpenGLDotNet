@@ -1,13 +1,13 @@
 ﻿// ----------------------------------------------------------------------------
 // FILE		: gldemo02.cs
-// VERSION	: 1.1.0
+// VERSION	: 1.1.1
 // COMMENT	: This demo displays 5 different objects on the screen using GLUT
 //            library. The objects can be switched with keys from 1 to 5 and
 //			  also can be rotated.
 // WEB      : http://www.taylaninan.com/opengl-dotnet
 // AUTHOR   : TAYLAN INAN
 // E-MAIL   : info@taylaninan.com
-// DATE     : 2014-2016
+// DATE     : 2014-2017
 // LICENSE  : FREE FOR EDUCATIONAL, PERSONAL AND COMMERCIAL USAGE
 // ----------------------------------------------------------------------------
 
@@ -246,7 +246,7 @@ namespace OpenGLDemos
         public static void Main(string[] args)
         {
             // First, setup the console window
-            Console.Title = "OpenGLDotNet v1.1.0";
+            Console.Title = "OpenGLDotNet v1.1.1";
 
             // After that, setup OpenGL window and OpenGL itself
             GLConfig.Init(0, 0, "Demo #02 - Simple Objects", 25, 25, 1024, 768);
@@ -274,4 +274,3 @@ namespace OpenGLDemos
         }
     }
 }
-

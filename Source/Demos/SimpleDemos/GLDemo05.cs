@@ -1,4 +1,16 @@
-﻿using System;
+﻿// ----------------------------------------------------------------------------
+// FILE		: gldemo05.cs
+// VERSION	: 1.1.1
+// COMMENT	: This demo loads a 256 color palette and related picture into the
+//			  memory of GPU (texture loading) and allows you freely rotate it.
+// WEB      : http://www.taylaninan.com/opengl-dotnet
+// AUTHOR   : TAYLAN INAN
+// E-MAIL   : info@taylaninan.com
+// DATE     : 2014-2017
+// LICENSE  : FREE FOR EDUCATIONAL, PERSONAL AND COMMERCIAL USAGE
+// ----------------------------------------------------------------------------
+
+using System;
 using OpenGLDotNet;
 
 namespace OpenGLDemos
@@ -272,7 +284,7 @@ namespace OpenGLDemos
         public static void Main(string[] args)
         {
             // First, setup the console window
-            Console.Title = "OpenGLDotNet v1.1.0";
+            Console.Title = "OpenGLDotNet v1.1.1";
 
             // After that, setup OpenGL window and OpenGL itself
             GLConfig.Init(2, 0, "Demo #04 - Texturing", 25, 25, 1024, 768);

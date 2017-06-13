@@ -1,11 +1,11 @@
 ﻿// ----------------------------------------------------------------------------
 // FILE		: gldemo01.cs
-// VERSION	: 1.1.0
+// VERSION	: 1.1.1
 // COMMENT	: This demo displays a simple pyramid on screen and rotates it.
 // WEB      : http://www.taylaninan.com/opengl-dotnet
 // AUTHOR   : TAYLAN INAN
 // E-MAIL   : info@taylaninan.com
-// DATE     : 2014-2016
+// DATE     : 2014-2017
 // LICENSE  : FREE FOR EDUCATIONAL, PERSONAL AND COMMERCIAL USAGE
 // ----------------------------------------------------------------------------
 
@@ -240,7 +240,7 @@ namespace OpenGLDemos
         public static void Main(string[] args)
         {
             // First, setup the console window
-            Console.Title = "OpenGLDotNet v1.1.0";
+            Console.Title = "OpenGLDotNet v1.1.1";
 
             // After that, setup OpenGL window and OpenGL itself
             GLConfig.Init(0, 0, "Demo #01 - Orientation", 25, 25, 1024, 768);
