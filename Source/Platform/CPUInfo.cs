@@ -23,7 +23,7 @@ namespace OpenGLDotNet
     {
         [DllImport("assembler.dll", CallingConvention = CallingConvention.StdCall, EntryPoint="_cpuid")]
         [System.Security.SuppressUnmanagedCodeSecurity()]
-        private static extern void __cpuid(uint function);
+        private static extern void __cpuid(uint function, uint subfunction);
 
         [DllImport("assembler.dll", CallingConvention = CallingConvention.StdCall, EntryPoint = "_rdtsc")]
         [System.Security.SuppressUnmanagedCodeSecurity()]
@@ -44,6 +44,15 @@ namespace OpenGLDotNet
         [DllImport("assembler.dll", CallingConvention = CallingConvention.StdCall, EntryPoint = "_reg_edx")]
         [System.Security.SuppressUnmanagedCodeSecurity()]
         private static extern uint __reg_edx();
+
+        public static byte CPUType = 0;
+        public static byte CPUFamily = 0;
+        public static byte CPUExtendedFamily = 0;
+        public static byte CPUModel = 0;
+        public static byte CPUExtendedModel = 0;
+        public static byte CPUStepping = 0;
+
+        public static uint CPUSpeed = 0;                // in Mhz.
 
         public enum VendorCompanies : byte
         {
@@ -270,6 +279,9 @@ namespace OpenGLDotNet
             // Bit 31 = Reserved
         }
 
+        public static SortedDictionary<string, bool> FeatureFlags = new SortedDictionary<string, bool>();
+        public static List<string> IntelCacheDescriptors = new List<string>();
+
         private static Dictionary<byte, string> IntelCacheDefinitions = new Dictionary<byte, string>() 
         {
 			{0x00, "null descriptor (unused descriptor)"},
@@ -405,152 +417,6 @@ namespace OpenGLDotNet
 			{0xF1, "128 byte prefetching"}
         };
 
-        public static byte CPUType = 0;
-        public static byte CPUFamily = 0;
-        public static byte CPUExtendedFamily = 0;
-        public static byte CPUModel = 0;
-        public static byte CPUExtendedModel = 0;
-        public static byte CPUStepping = 0;
-
-        public static uint CPUSpeed = 0;                // in Mhz.
-
-        // Returned in CPUID:0x00000001.EDX
-        public static bool flagFPU = false;
-        public static bool flagVME = false;
-        public static bool flagDE = false;
-        public static bool flagPSE = false;
-        public static bool flagTSC = false;
-        public static bool flagMSR = false;
-        public static bool flagPAE = false;
-        public static bool flagMCE = false;
-        public static bool flagCX8 = false;
-        public static bool flagAPIC = false;
-        public static bool flagFSC = false;
-        public static bool flagMTRR = false;
-        public static bool flagPGE = false;
-        public static bool flagMCA = false;
-        public static bool flagCMOV = false;
-        public static bool flagPAT = false;
-        public static bool flagPSE36 = false;
-        public static bool flagSERIAL = false;
-        public static bool flagCLFSH = false;
-        public static bool flagDS = false;
-        public static bool flagACPI = false;
-        public static bool flagMMX = false;
-        public static bool flagFXSR = false;
-        public static bool flagSSE = false;
-        public static bool flagSSE2 = false;
-        public static bool flagSS = false;
-        public static bool flagHTT = false;
-        public static bool flagTM = false;
-        public static bool flagIA64 = false;
-        public static bool flagSBF = false;
-
-        // Returned in CPUID:0x00000001.ECX
-        public static bool flagSSE3 = false;
-        public static bool flagPCLMULQDQ = false;
-        public static bool flagDS64 = false;
-        public static bool flagMONITOR = false;
-        public static bool flagDSCPL = false;
-        public static bool flagVMX = false;
-        public static bool flagSMX = false;
-        public static bool flagESS = false;
-        public static bool flagTM2 = false;
-        public static bool flagSSSE3 = false;
-        public static bool flagCNXTID = false;
-        public static bool flagFMA = false;
-        public static bool flagCX16 = false;
-        public static bool flagXTPR = false;
-        public static bool flagPDCM = false;
-        public static bool flagPCID = false;
-        public static bool flagDCA = false;
-        public static bool flagSSE4_1 = false;
-        public static bool flagSSE4_2 = false;
-        public static bool flagX2APIC = false;
-        public static bool flagMOVBE = false;
-        public static bool flagPOPCNT = false;
-        public static bool flagTSCDEADLINE = false;
-        public static bool flagAES = false;
-        public static bool flagXSAVE = false;
-        public static bool flagOSXSAVE = false;
-        public static bool flagAVX = false;
-        public static bool flagF16C = false;
-		public static bool flagRDRAND = false;
-		public static bool flagHV = false;
-
-        // Returned in CPUID:0x00000007.EBX
-        public static bool flagFSGSBASE = false;
-        public static bool flagTSC_ADJUST = false;
-        public static bool flagSGX = false;
-        public static bool flagBMI1 = false;
-        public static bool flagHLE = false;
-        public static bool flagAVX2 = false;
-        public static bool flagFPDP = false;
-        public static bool flagSMEP = false;
-        public static bool flagBMI2 = false;
-        public static bool flagERMS = false;
-        public static bool flagINVPCID = false;
-        public static bool flagRTM = false;
-        public static bool flagPQM = false;
-        public static bool flagFPCSDS = false;
-        public static bool flagMPX = false;
-        public static bool flagPQE = false;
-        public static bool flagAVX512F = false;
-        public static bool flagAVX512DQ = false;
-        public static bool flagRDSEED = false;
-        public static bool flagADX = false;
-        public static bool flagSMAP = false;
-        public static bool flagAVX512IFMA = false;
-        public static bool flagPCOMMIT = false;
-        public static bool flagCLFLUSHOPT = false;
-        public static bool flagCLWB = false;
-        public static bool flagPT = false;
-        public static bool flagAVX512PF = false;
-        public static bool flagAVX512ER = false;
-        public static bool flagAVX512CD = false;
-        public static bool flagSHA = false;
-        public static bool flagAVX512BW = false;
-        public static bool flagAVX512VL = false;
-
-        // Returned in CPUID:0x80000001.EDX (Intel)
-        public static bool flagINTEL64 = false;
-
-        // Returned in CPUID:0x80000001.ECX (Intel)
-
-        // Returned in CPUID:0x80000001.EDX (AMD)
-        public static bool flagSYSCALLSYSRET = false;
-        public static bool flagNX = false;
-        public static bool flagMMXEXT = false;
-        public static bool flagFFXSR = false;
-        public static bool flagPAGE1GB = false;
-        public static bool flagRDTSCP = false;
-        public static bool flagLM = false;
-        public static bool flag3DNOW = false;
-        public static bool flag3DNOWEXT = false;
-
-        // Returned in CPUID:0x80000001.ECX (AMD)
-        public static bool flagLAHFSAHF = false;
-        public static bool flagCMPLEGACY = false;
-        public static bool flagSVM = false;
-        public static bool flagEXTAPICSPACE = false;
-        public static bool flagALTMOVCR8 = false;
-        public static bool flagABM = false;
-        public static bool flagSSE4A = false;
-        public static bool flagMISALIGNSSE = false;
-        public static bool flag3DNOWPREFETCH = false;
-        public static bool flagOSVW = false;
-        public static bool flagIBS = false;
-        public static bool flagXOP = false;
-        public static bool flagSKINIT = false;
-        public static bool flagWDT = false;
-        public static bool flagLWP = false;
-        public static bool flagFMA4 = false;
-        public static bool flagNODEID = false;
-        public static bool flagTBM = false;
-        public static bool flagTOPOLOGYEXT = false;
-
-        public static List<string> IntelCacheDescriptors = new List<string>();
-
         public static ulong ReadTSC()
         {
             uint edx = 0;
@@ -567,7 +433,7 @@ namespace OpenGLDotNet
         {
             get
             {
-                __cpuid(0);
+                __cpuid(0, 0);
                 return __reg_eax();
             }
         }
@@ -576,7 +442,7 @@ namespace OpenGLDotNet
         {
             get
             {
-                __cpuid(0x80000000);
+                __cpuid(0x80000000, 0);
                 return __reg_eax();
             }
         }
@@ -587,7 +453,7 @@ namespace OpenGLDotNet
             {
                 uint _ebx, _ecx, _edx;
 
-                __cpuid(0);
+                __cpuid(0, 0);
                 _ebx = __reg_ebx();
                 _ecx = __reg_ecx();
                 _edx = __reg_edx();
@@ -651,7 +517,7 @@ namespace OpenGLDotNet
                     uint _edx;
                     string _cpuname;
 
-                    __cpuid(0x80000002);
+                    __cpuid(0x80000002, 0);
                     _eax = __reg_eax();
                     _ebx = __reg_ebx();
                     _ecx = __reg_ecx();
@@ -661,7 +527,7 @@ namespace OpenGLDotNet
                                ToolsX.Value2String(_ecx, true) +
                                ToolsX.Value2String(_edx, true);
 
-                    __cpuid(0x80000003);
+                    __cpuid(0x80000003, 0);
                     _eax = __reg_eax();
                     _ebx = __reg_ebx();
                     _ecx = __reg_ecx();
@@ -671,7 +537,7 @@ namespace OpenGLDotNet
                                 ToolsX.Value2String(_ecx, true) +
                                 ToolsX.Value2String(_edx, true);
 
-                    __cpuid(0x80000004);
+                    __cpuid(0x80000004, 0);
                     _eax = __reg_eax();
                     _ebx = __reg_ebx();
                     _ecx = __reg_ecx();
@@ -696,7 +562,7 @@ namespace OpenGLDotNet
             {
                 if (MaxStandardFunction >= 0x01)
                 {
-                    __cpuid(1);
+                    __cpuid(1, 0);
                     return __reg_eax();
                 }
                 else
@@ -712,7 +578,7 @@ namespace OpenGLDotNet
             {
                 if (MaxStandardFunction >= 0x01)
                 {
-                    __cpuid(1);
+                    __cpuid(1, 0);
                     return __reg_edx();
                 }
                 else
@@ -728,7 +594,7 @@ namespace OpenGLDotNet
             {
                 if (MaxStandardFunction >= 0x01)
                 {
-                    __cpuid(1);
+                    __cpuid(1, 0);
                     return __reg_ecx();
                 }
                 else
@@ -744,7 +610,7 @@ namespace OpenGLDotNet
             {
                 if (MaxStandardFunction >= 0x07)
                 {
-                    __cpuid(7);
+                    __cpuid(7, 0);
                     return __reg_ebx();
                 }
                 else
@@ -760,7 +626,7 @@ namespace OpenGLDotNet
             {
                 if (MaxExtendedFunction >= 0x80000001)
                 {
-                    __cpuid(0x80000001);
+                    __cpuid(0x80000001, 0);
                     return __reg_edx();
                 }
                 else
@@ -776,7 +642,7 @@ namespace OpenGLDotNet
             {
                 if (MaxExtendedFunction >= 0x80000001)
                 {
-                    __cpuid(0x80000001);
+                    __cpuid(0x80000001, 0);
                     return __reg_ecx();
                 }
                 else
@@ -792,10 +658,6 @@ namespace OpenGLDotNet
 
             if (_vendorcompany == VendorCompanies.Intel || _vendorcompany == VendorCompanies.AMD)
             {
-                RegistryKey RKey = Registry.LocalMachine.OpenSubKey(@"HARDWARE\DESCRIPTION\System\CentralProcessor\0");
-                CPUSpeed = ConvertX.ToUInt(RKey.GetValue("~MHz").ToString(), 0, "", "", 0);
-                RKey.Close();
-                                
                 uint _processorSignature = ProcessorSignature;
 
                 CPUStepping = (byte)((_processorSignature >> 0) & 0x0F);
@@ -805,226 +667,238 @@ namespace OpenGLDotNet
                 CPUExtendedModel = (byte)((_processorSignature >> 16) & 0x0F);
                 CPUExtendedFamily = (byte)((_processorSignature >> 20) & 0xFF);
 
+                RegistryKey RKey = Registry.LocalMachine.OpenSubKey(@"HARDWARE\DESCRIPTION\System\CentralProcessor\0");
+                CPUSpeed = ConvertX.ToUInt(RKey.GetValue("~MHz").ToString(), 0, "", "", 0);
+                RKey.Close();
+
                 uint _edx = StandardCPUID1_EDX;
 
-                flagFPU = ((_edx & (uint)StandardFlags1_EDX.FPU) > 0);
-                flagVME = ((_edx & (uint)StandardFlags1_EDX.VME) > 0);
-                flagDE = ((_edx & (uint)StandardFlags1_EDX.DE) > 0);
-                flagPSE = ((_edx & (uint)StandardFlags1_EDX.PSE) > 0);
-                flagTSC = ((_edx & (uint)StandardFlags1_EDX.TSC) > 0);
-                flagMSR = ((_edx & (uint)StandardFlags1_EDX.MSR) > 0);
-                flagPAE = ((_edx & (uint)StandardFlags1_EDX.PAE) > 0);
-                flagMCE = ((_edx & (uint)StandardFlags1_EDX.MCE) > 0);
-                flagCX8 = ((_edx & (uint)StandardFlags1_EDX.CX8) > 0);
-                flagAPIC = ((_edx & (uint)StandardFlags1_EDX.APIC) > 0);
-                flagFSC = ((_edx & (uint)StandardFlags1_EDX.FSC) > 0);
-                flagMTRR = ((_edx & (uint)StandardFlags1_EDX.MTRR) > 0);
-                flagPGE = ((_edx & (uint)StandardFlags1_EDX.PGE) > 0);
-                flagMCA = ((_edx & (uint)StandardFlags1_EDX.MCA) > 0);
-                flagCMOV = ((_edx & (uint)StandardFlags1_EDX.CMOV) > 0);
-                flagPAT = ((_edx & (uint)StandardFlags1_EDX.PAT) > 0);
-                flagPSE36 = ((_edx & (uint)StandardFlags1_EDX.PSE36) > 0);
-                flagSERIAL = ((_edx & (uint)StandardFlags1_EDX.SERIAL) > 0);
-                flagCLFSH = ((_edx & (uint)StandardFlags1_EDX.CLFSH) > 0);
-                flagDS = ((_edx & (uint)StandardFlags1_EDX.DS) > 0);
-                flagACPI = ((_edx & (uint)StandardFlags1_EDX.ACPI) > 0);
-                flagMMX = ((_edx & (uint)StandardFlags1_EDX.MMX) > 0);
-                flagFXSR = ((_edx & (uint)StandardFlags1_EDX.FXSR) > 0);
-                flagSSE = ((_edx & (uint)StandardFlags1_EDX.SSE) > 0);
-                flagSSE2 = ((_edx & (uint)StandardFlags1_EDX.SSE2) > 0);
-                flagSS = ((_edx & (uint)StandardFlags1_EDX.SS) > 0);
-                flagHTT = ((_edx & (uint)StandardFlags1_EDX.HTT) > 0);
-                flagTM = ((_edx & (uint)StandardFlags1_EDX.TM) > 0);
-                flagIA64 = ((_edx & (uint)StandardFlags1_EDX.IA64) > 0);
-                flagSBF = ((_edx & (uint)StandardFlags1_EDX.SBF) > 0);
+                FeatureFlags.Add("CPU_FPU", (_edx & (uint)StandardFlags1_EDX.FPU) > 0);
+                FeatureFlags.Add("CPU_VME", (_edx & (uint)StandardFlags1_EDX.VME) > 0);
+                FeatureFlags.Add("CPU_DE", (_edx & (uint)StandardFlags1_EDX.DE) > 0);
+                FeatureFlags.Add("CPU_PSE", (_edx & (uint)StandardFlags1_EDX.PSE) > 0);
+                FeatureFlags.Add("CPU_TSC", (_edx & (uint)StandardFlags1_EDX.TSC) > 0);
+                FeatureFlags.Add("CPU_MSR", (_edx & (uint)StandardFlags1_EDX.MSR) > 0);
+                FeatureFlags.Add("CPU_PAE", (_edx & (uint)StandardFlags1_EDX.PAE) > 0);
+                FeatureFlags.Add("CPU_MCE", (_edx & (uint)StandardFlags1_EDX.MCE) > 0);
+                FeatureFlags.Add("CPU_CX8", (_edx & (uint)StandardFlags1_EDX.CX8) > 0);
+                FeatureFlags.Add("CPU_APIC", (_edx & (uint)StandardFlags1_EDX.APIC) > 0);
+                FeatureFlags.Add("CPU_FSC", (_edx & (uint)StandardFlags1_EDX.FSC) > 0);
+                FeatureFlags.Add("CPU_MTRR", (_edx & (uint)StandardFlags1_EDX.MTRR) > 0);
+                FeatureFlags.Add("CPU_PGE", (_edx & (uint)StandardFlags1_EDX.PGE) > 0);
+                FeatureFlags.Add("CPU_MCA", (_edx & (uint)StandardFlags1_EDX.MCA) > 0);
+                FeatureFlags.Add("CPU_CMOV", (_edx & (uint)StandardFlags1_EDX.CMOV) > 0);
+                FeatureFlags.Add("CPU_PAT", (_edx & (uint)StandardFlags1_EDX.PAT) > 0);
+                FeatureFlags.Add("CPU_PSE36", (_edx & (uint)StandardFlags1_EDX.PSE36) > 0);
+                FeatureFlags.Add("CPU_SERIAL", (_edx & (uint)StandardFlags1_EDX.SERIAL) > 0);
+                FeatureFlags.Add("CPU_CLFSH", (_edx & (uint)StandardFlags1_EDX.CLFSH) > 0);
+                FeatureFlags.Add("CPU_DS", (_edx & (uint)StandardFlags1_EDX.DS) > 0);
+                FeatureFlags.Add("CPU_ACPI", (_edx & (uint)StandardFlags1_EDX.ACPI) > 0);
+                FeatureFlags.Add("CPU_MMX", (_edx & (uint)StandardFlags1_EDX.MMX) > 0);
+                FeatureFlags.Add("CPU_FXSR", (_edx & (uint)StandardFlags1_EDX.FXSR) > 0);
+                FeatureFlags.Add("CPU_SSE", (_edx & (uint)StandardFlags1_EDX.SSE) > 0);
+                FeatureFlags.Add("CPU_SSE2", (_edx & (uint)StandardFlags1_EDX.SSE2) > 0);
+                FeatureFlags.Add("CPU_SS", (_edx & (uint)StandardFlags1_EDX.SS) > 0);
+                FeatureFlags.Add("CPU_HTT", (_edx & (uint)StandardFlags1_EDX.HTT) > 0);
+                FeatureFlags.Add("CPU_TM", (_edx & (uint)StandardFlags1_EDX.TM) > 0);
+                FeatureFlags.Add("CPU_IA64", (_edx & (uint)StandardFlags1_EDX.IA64) > 0);
+                FeatureFlags.Add("CPU_SBF", (_edx & (uint)StandardFlags1_EDX.SBF) > 0);
 
                 uint _ecx = StandardCPUID1_ECX;
 
-                flagSSE3 = ((_ecx & (uint)StandardFlags1_ECX.SSE3) > 0);
-                flagPCLMULQDQ = ((_ecx & (uint)StandardFlags1_ECX.PCLMULQDQ) > 0);
-                flagDS64 = ((_ecx & (uint)StandardFlags1_ECX.DS64) > 0);
-                flagMONITOR = ((_ecx & (uint)StandardFlags1_ECX.MONITOR) > 0);
-                flagDSCPL = ((_ecx & (uint)StandardFlags1_ECX.DSCPL) > 0);
-                flagVMX = ((_ecx & (uint)StandardFlags1_ECX.VMX) > 0);
-                flagSMX = ((_ecx & (uint)StandardFlags1_ECX.SMX) > 0);
-                flagESS = ((_ecx & (uint)StandardFlags1_ECX.ESS) > 0);
-                flagTM2 = ((_ecx & (uint)StandardFlags1_ECX.TM2) > 0);
-                flagSSSE3 = ((_ecx & (uint)StandardFlags1_ECX.SSSE3) > 0);
-                flagCNXTID = ((_ecx & (uint)StandardFlags1_ECX.CNXTID) > 0);
-                flagFMA = ((_ecx & (uint)StandardFlags1_ECX.FMA) > 0);
-                flagCX16 = ((_ecx & (uint)StandardFlags1_ECX.CX16) > 0);
-                flagXTPR = ((_ecx & (uint)StandardFlags1_ECX.XTPR) > 0);
-                flagPDCM = ((_ecx & (uint)StandardFlags1_ECX.PDCM) > 0);
-                flagPCID = ((_ecx & (uint)StandardFlags1_ECX.PCID) > 0);
-                flagDCA = ((_ecx & (uint)StandardFlags1_ECX.DCA) > 0);
-                flagSSE4_1 = ((_ecx & (uint)StandardFlags1_ECX.SSE4_1) > 0);
-                flagSSE4_2 = ((_ecx & (uint)StandardFlags1_ECX.SSE4_2) > 0);
-                flagX2APIC = ((_ecx & (uint)StandardFlags1_ECX.X2APIC) > 0);
-                flagMOVBE = ((_ecx & (uint)StandardFlags1_ECX.MOVBE) > 0);
-                flagPOPCNT = ((_ecx & (uint)StandardFlags1_ECX.POPCNT) > 0);
-                flagTSCDEADLINE = ((_ecx & (uint)StandardFlags1_ECX.TSCDEADLINE) > 0);
-                flagAES = ((_ecx & (uint)StandardFlags1_ECX.AES) > 0);
-                flagXSAVE = ((_ecx & (uint)StandardFlags1_ECX.XSAVE) > 0);
-                flagOSXSAVE = ((_ecx & (uint)StandardFlags1_ECX.OSXSAVE) > 0);
-                flagAVX = ((_ecx & (uint)StandardFlags1_ECX.AVX) > 0);
-                flagF16C = ((_ecx & (uint)StandardFlags1_ECX.F16C) > 0);
-				flagRDRAND = ((_ecx & (uint)StandardFlags1_ECX.RDRAND) > 0);
-				flagHV = ((_ecx & (uint)StandardFlags1_ECX.HV) > 0);
+                FeatureFlags.Add("CPU_SSE3", (_ecx & (uint)StandardFlags1_ECX.SSE3) > 0);
+                FeatureFlags.Add("CPU_PCLMULQDQ", (_ecx & (uint)StandardFlags1_ECX.PCLMULQDQ) > 0);
+                FeatureFlags.Add("CPU_DS64", (_ecx & (uint)StandardFlags1_ECX.DS64) > 0);
+                FeatureFlags.Add("CPU_MONITOR", (_ecx & (uint)StandardFlags1_ECX.MONITOR) > 0);
+                FeatureFlags.Add("CPU_DSCPL", (_ecx & (uint)StandardFlags1_ECX.DSCPL) > 0);
+                FeatureFlags.Add("CPU_VMX", (_ecx & (uint)StandardFlags1_ECX.VMX) > 0);
+                FeatureFlags.Add("CPU_SMX", (_ecx & (uint)StandardFlags1_ECX.SMX) > 0);
+                FeatureFlags.Add("CPU_ESS", (_ecx & (uint)StandardFlags1_ECX.ESS) > 0);
+                FeatureFlags.Add("CPU_TM2", (_ecx & (uint)StandardFlags1_ECX.TM2) > 0);
+                FeatureFlags.Add("CPU_SSSE3", (_ecx & (uint)StandardFlags1_ECX.SSSE3) > 0);
+                FeatureFlags.Add("CPU_CNXTID", (_ecx & (uint)StandardFlags1_ECX.CNXTID) > 0);
+                FeatureFlags.Add("CPU_FMA", (_ecx & (uint)StandardFlags1_ECX.FMA) > 0);
+                FeatureFlags.Add("CPU_CX16", (_ecx & (uint)StandardFlags1_ECX.CX16) > 0);
+                FeatureFlags.Add("CPU_XTPR", (_ecx & (uint)StandardFlags1_ECX.XTPR) > 0);
+                FeatureFlags.Add("CPU_PDCM", (_ecx & (uint)StandardFlags1_ECX.PDCM) > 0);
+                FeatureFlags.Add("CPU_PCID", (_ecx & (uint)StandardFlags1_ECX.PCID) > 0);
+                FeatureFlags.Add("CPU_DCA", (_ecx & (uint)StandardFlags1_ECX.DCA) > 0);
+                FeatureFlags.Add("CPU_SSE4_1", (_ecx & (uint)StandardFlags1_ECX.SSE4_1) > 0);
+                FeatureFlags.Add("CPU_SSE4_2", (_ecx & (uint)StandardFlags1_ECX.SSE4_2) > 0);
+                FeatureFlags.Add("CPU_X2APIC", (_ecx & (uint)StandardFlags1_ECX.X2APIC) > 0);
+                FeatureFlags.Add("CPU_MOVBE", (_ecx & (uint)StandardFlags1_ECX.MOVBE) > 0);
+                FeatureFlags.Add("CPU_POPCNT", (_ecx & (uint)StandardFlags1_ECX.POPCNT) > 0);
+                FeatureFlags.Add("CPU_TSCDEADLINE", (_ecx & (uint)StandardFlags1_ECX.TSCDEADLINE) > 0);
+                FeatureFlags.Add("CPU_AES", (_ecx & (uint)StandardFlags1_ECX.AES) > 0);
+                FeatureFlags.Add("CPU_XSAVE", (_ecx & (uint)StandardFlags1_ECX.XSAVE) > 0);
+                FeatureFlags.Add("CPU_OSXSAVE", (_ecx & (uint)StandardFlags1_ECX.OSXSAVE) > 0);
+                FeatureFlags.Add("CPU_AVX", (_ecx & (uint)StandardFlags1_ECX.AVX) > 0);
+                FeatureFlags.Add("CPU_F16C", (_ecx & (uint)StandardFlags1_ECX.F16C) > 0);
+                FeatureFlags.Add("CPU_RDRAND", (_ecx & (uint)StandardFlags1_ECX.RDRAND) > 0);
+                FeatureFlags.Add("CPU_HV", (_ecx & (uint)StandardFlags1_ECX.HV) > 0);
 
                 uint _ebx = StandardCPUID7_EBX;
 
-                flagFSGSBASE = ((_ebx & (uint)StandardFlags7_EBX.FSGSBASE) > 0);
-                flagTSC_ADJUST = ((_ebx & (uint)StandardFlags7_EBX.TSC_ADJUST) > 0);
-                flagSGX = ((_ebx & (uint)StandardFlags7_EBX.SGX) > 0);
-                flagBMI1 = ((_ebx & (uint)StandardFlags7_EBX.BMI1) > 0);
-                flagHLE = ((_ebx & (uint)StandardFlags7_EBX.HLE) > 0);
-                flagAVX2 = ((_ebx & (uint)StandardFlags7_EBX.AVX2) > 0);
-                flagFPDP = ((_ebx & (uint)StandardFlags7_EBX.FPDP) > 0);
-                flagSMEP = ((_ebx & (uint)StandardFlags7_EBX.SMEP) > 0);
-                flagBMI2 = ((_ebx & (uint)StandardFlags7_EBX.BMI2) > 0);
-                flagERMS = ((_ebx & (uint)StandardFlags7_EBX.ERMS) > 0);
-                flagINVPCID = ((_ebx & (uint)StandardFlags7_EBX.INVPCID) > 0);
-                flagRTM = ((_ebx & (uint)StandardFlags7_EBX.RTM) > 0);
-                flagPQM = ((_ebx & (uint)StandardFlags7_EBX.PQM) > 0);
-                flagFPCSDS = ((_ebx & (uint)StandardFlags7_EBX.FPCSDS) > 0);
-                flagMPX = ((_ebx & (uint)StandardFlags7_EBX.MPX) > 0);
-                flagPQE = ((_ebx & (uint)StandardFlags7_EBX.PQE) > 0);
-                flagAVX512F = ((_ebx & (uint)StandardFlags7_EBX.AVX512F) > 0);
-                flagAVX512DQ = ((_ebx & (uint)StandardFlags7_EBX.AVX512DQ) > 0);
-                flagRDSEED = ((_ebx & (uint)StandardFlags7_EBX.RDSEED) > 0);
-                flagADX = ((_ebx & (uint)StandardFlags7_EBX.ADX) > 0);
-                flagSMAP = ((_ebx & (uint)StandardFlags7_EBX.SMAP) > 0);
-                flagAVX512IFMA = ((_ebx & (uint)StandardFlags7_EBX.AVX512IFMA) > 0);
-                flagPCOMMIT = ((_ebx & (uint)StandardFlags7_EBX.PCOMMIT) > 0);
-                flagCLFLUSHOPT = ((_ebx & (uint)StandardFlags7_EBX.CLFLUSHOPT) > 0);
-                flagCLWB = ((_ebx & (uint)StandardFlags7_EBX.CLWB) > 0);
-                flagPT = ((_ebx & (uint)StandardFlags7_EBX.PT) > 0);
-                flagAVX512PF = ((_ebx & (uint)StandardFlags7_EBX.AVX512PF) > 0);
-                flagAVX512ER = ((_ebx & (uint)StandardFlags7_EBX.AVX512ER) > 0);
-                flagAVX512CD = ((_ebx & (uint)StandardFlags7_EBX.AVX512CD) > 0);
-                flagSHA = ((_ebx & (uint)StandardFlags7_EBX.SHA) > 0);
-                flagAVX512BW = ((_ebx & (uint)StandardFlags7_EBX.AVX512BW) > 0);
-                flagAVX512VL = ((_ebx & (uint)StandardFlags7_EBX.AVX512VL) > 0);
+                FeatureFlags.Add("CPU_FSGSBASE", (_ebx & (uint)StandardFlags7_EBX.FSGSBASE) > 0);
+                FeatureFlags.Add("CPU_TSC_ADJUST", (_ebx & (uint)StandardFlags7_EBX.TSC_ADJUST) > 0);
+                FeatureFlags.Add("CPU_SGX", (_ebx & (uint)StandardFlags7_EBX.SGX) > 0);
+                FeatureFlags.Add("CPU_BMI1", (_ebx & (uint)StandardFlags7_EBX.BMI1) > 0);
+                FeatureFlags.Add("CPU_HLE", (_ebx & (uint)StandardFlags7_EBX.HLE) > 0);
+                FeatureFlags.Add("CPU_AVX2", (_ebx & (uint)StandardFlags7_EBX.AVX2) > 0);
+                FeatureFlags.Add("CPU_FPDP", (_ebx & (uint)StandardFlags7_EBX.FPDP) > 0);
+                FeatureFlags.Add("CPU_SMEP", (_ebx & (uint)StandardFlags7_EBX.SMEP) > 0);
+                FeatureFlags.Add("CPU_BMI2", (_ebx & (uint)StandardFlags7_EBX.BMI2) > 0);
+                FeatureFlags.Add("CPU_ERMS", (_ebx & (uint)StandardFlags7_EBX.ERMS) > 0);
+                FeatureFlags.Add("CPU_INVPCID", (_ebx & (uint)StandardFlags7_EBX.INVPCID) > 0);
+                FeatureFlags.Add("CPU_RTM", (_ebx & (uint)StandardFlags7_EBX.RTM) > 0);
+                FeatureFlags.Add("CPU_PQM", (_ebx & (uint)StandardFlags7_EBX.PQM) > 0);
+                FeatureFlags.Add("CPU_FPCSDS", (_ebx & (uint)StandardFlags7_EBX.FPCSDS) > 0);
+                FeatureFlags.Add("CPU_MPX", (_ebx & (uint)StandardFlags7_EBX.MPX) > 0);
+                FeatureFlags.Add("CPU_PQE", (_ebx & (uint)StandardFlags7_EBX.PQE) > 0);
+                FeatureFlags.Add("CPU_AVX512F", (_ebx & (uint)StandardFlags7_EBX.AVX512F) > 0);
+                FeatureFlags.Add("CPU_AVX512DQ", (_ebx & (uint)StandardFlags7_EBX.AVX512DQ) > 0);
+                FeatureFlags.Add("CPU_RDSEED", (_ebx & (uint)StandardFlags7_EBX.RDSEED) > 0);
+                FeatureFlags.Add("CPU_ADX", (_ebx & (uint)StandardFlags7_EBX.ADX) > 0);
+                FeatureFlags.Add("CPU_SMAP", (_ebx & (uint)StandardFlags7_EBX.SMAP) > 0);
+                FeatureFlags.Add("CPU_AVX512IFMA", (_ebx & (uint)StandardFlags7_EBX.AVX512IFMA) > 0);
+                FeatureFlags.Add("CPU_PCOMMIT", (_ebx & (uint)StandardFlags7_EBX.PCOMMIT) > 0);
+                FeatureFlags.Add("CPU_CLFLUSHOPT", (_ebx & (uint)StandardFlags7_EBX.CLFLUSHOPT) > 0);
+                FeatureFlags.Add("CPU_CLWB", (_ebx & (uint)StandardFlags7_EBX.CLWB) > 0);
+                FeatureFlags.Add("CPU_PT", (_ebx & (uint)StandardFlags7_EBX.PT) > 0);
+                FeatureFlags.Add("CPU_AVX512PF", (_ebx & (uint)StandardFlags7_EBX.AVX512PF) > 0);
+                FeatureFlags.Add("CPU_AVX512ER", (_ebx & (uint)StandardFlags7_EBX.AVX512ER) > 0);
+                FeatureFlags.Add("CPU_AVX512CD", (_ebx & (uint)StandardFlags7_EBX.AVX512CD) > 0);
+                FeatureFlags.Add("CPU_SHA", (_ebx & (uint)StandardFlags7_EBX.SHA) > 0);
+                FeatureFlags.Add("CPU_AVX512BW", (_ebx & (uint)StandardFlags7_EBX.AVX512BW) > 0);
+                FeatureFlags.Add("CPU_AVX512VL", (_ebx & (uint)StandardFlags7_EBX.AVX512VL) > 0);
             }
 
             if (_vendorcompany == VendorCompanies.Intel)
             {
-                uint _extfeatureflags1 = ExtendedCPUID1_EDX;
+                uint _edx = ExtendedCPUID1_EDX;
 
-                flagSYSCALLSYSRET = ((_extfeatureflags1 & (uint)IntelExtendedFeatureFlags1.SYSCALLSYSRET) > 0);
-                flagNX = ((_extfeatureflags1 & (uint)IntelExtendedFeatureFlags1.NX) > 0);
-                flagPAGE1GB = ((_extfeatureflags1 & (uint)IntelExtendedFeatureFlags1.PAGE1GB) > 0);
-                flagRDTSCP = ((_extfeatureflags1 & (uint)IntelExtendedFeatureFlags1.RDTSCP) > 0);
-                flagINTEL64 = ((_extfeatureflags1 & (uint)IntelExtendedFeatureFlags1.INTEL64) > 0);
+                FeatureFlags.Add("CPU_SYSCALLSYSRET", (_edx & (uint)IntelExtendedFeatureFlags1.SYSCALLSYSRET) > 0);
+                FeatureFlags.Add("CPU_NX", (_edx & (uint)IntelExtendedFeatureFlags1.NX) > 0);
+                FeatureFlags.Add("CPU_PAGE1GB", (_edx & (uint)IntelExtendedFeatureFlags1.PAGE1GB) > 0);
+                FeatureFlags.Add("CPU_RDTSCP", (_edx & (uint)IntelExtendedFeatureFlags1.RDTSCP) > 0);
+                FeatureFlags.Add("CPU_INTEL64", (_edx & (uint)IntelExtendedFeatureFlags1.INTEL64) > 0);
 
-                uint _extfeatureflags2 = ExtendedCPUID1_ECX;
+                uint _ecx = ExtendedCPUID1_ECX;
 
-                flagLAHFSAHF = ((_extfeatureflags2 & (uint)IntelExtendedFeatureFlags2.LAHFSAHF) > 0);
+                FeatureFlags.Add("CPU_LAHFSAHF", (_ecx & (uint)IntelExtendedFeatureFlags2.LAHFSAHF) > 0);
 
             }
 
             if (_vendorcompany == VendorCompanies.AMD)
             {
-                uint _extfeatureflags1 = ExtendedCPUID1_EDX;
+                uint _edx = ExtendedCPUID1_EDX;
 
                 // Returned in CPUID:0x80000001.EDX (AMD)
-                flagSYSCALLSYSRET = ((_extfeatureflags1 & (uint)AMDExtendedFeatureFlags1.SYSCALLSYSRET) > 0);
-                flagNX = ((_extfeatureflags1 & (uint)AMDExtendedFeatureFlags1.NX) > 0);
-                flagMMXEXT = ((_extfeatureflags1 & (uint)AMDExtendedFeatureFlags1.MMXEXT) > 0);
-                flagFFXSR = ((_extfeatureflags1 & (uint)AMDExtendedFeatureFlags1.FFXSR) > 0);
-                flagPAGE1GB = ((_extfeatureflags1 & (uint)AMDExtendedFeatureFlags1.PAGE1GB) > 0);
-                flagRDTSCP = ((_extfeatureflags1 & (uint)AMDExtendedFeatureFlags1.RDTSCP) > 0);
-                flagLM = ((_extfeatureflags1 & (uint)AMDExtendedFeatureFlags1.LM) > 0);
-                flag3DNOW = ((_extfeatureflags1 & (uint)AMDExtendedFeatureFlags1.THREEDNOW) > 0);
-                flag3DNOWEXT = ((_extfeatureflags1 & (uint)AMDExtendedFeatureFlags1.THREEDNOWEXT) > 0);
+                FeatureFlags.Add("CPU_SYSCALLSYSRET", (_edx & (uint)AMDExtendedFeatureFlags1.SYSCALLSYSRET) > 0);
+                FeatureFlags.Add("CPU_NX", (_edx & (uint)AMDExtendedFeatureFlags1.NX) > 0);
+                FeatureFlags.Add("CPU_MMXEXT", (_edx & (uint)AMDExtendedFeatureFlags1.MMXEXT) > 0);
+                FeatureFlags.Add("CPU_FFXSR", (_edx & (uint)AMDExtendedFeatureFlags1.FFXSR) > 0);
+                FeatureFlags.Add("CPU_PAGE1GB", (_edx & (uint)AMDExtendedFeatureFlags1.PAGE1GB) > 0);
+                FeatureFlags.Add("CPU_RDTSCP", (_edx & (uint)AMDExtendedFeatureFlags1.RDTSCP) > 0);
+                FeatureFlags.Add("CPU_LM", (_edx & (uint)AMDExtendedFeatureFlags1.LM) > 0);
+                FeatureFlags.Add("CPU_3DNOW", (_edx & (uint)AMDExtendedFeatureFlags1.THREEDNOW) > 0);
+                FeatureFlags.Add("CPU_3DNOWEXT", (_edx & (uint)AMDExtendedFeatureFlags1.THREEDNOWEXT) > 0);
 
-                uint _extfeatureflags2 = ExtendedCPUID1_ECX;
-                
+                uint _ecx = ExtendedCPUID1_ECX;
+
                 // Returned in CPUID:0x80000001.ECX (AMD)
-                flagLAHFSAHF = ((_extfeatureflags2 & (uint)AMDExtendedFeatureFlags2.LAHFSAHF) > 0);
-                flagCMPLEGACY = ((_extfeatureflags2 & (uint)AMDExtendedFeatureFlags2.CMPLEGACY) > 0);
-                flagSVM = ((_extfeatureflags2 & (uint)AMDExtendedFeatureFlags2.SVM) > 0);
-                flagEXTAPICSPACE = ((_extfeatureflags2 & (uint)AMDExtendedFeatureFlags2.EXTAPICSPACE) > 0);
-                flagALTMOVCR8 = ((_extfeatureflags2 & (uint)AMDExtendedFeatureFlags2.ALTMOVCR8) > 0);
-                flagABM = ((_extfeatureflags2 & (uint)AMDExtendedFeatureFlags2.ABM) > 0);
-                flagSSE4A = ((_extfeatureflags2 & (uint)AMDExtendedFeatureFlags2.SSE4A) > 0);
-                flagMISALIGNSSE = ((_extfeatureflags2 & (uint)AMDExtendedFeatureFlags2.MISALIGNSSE) > 0);
-                flag3DNOWPREFETCH = ((_extfeatureflags2 & (uint)AMDExtendedFeatureFlags2.THREEDNOWPREFETCH) > 0);
-                flagOSVW = ((_extfeatureflags2 & (uint)AMDExtendedFeatureFlags2.OSVW) > 0);
-                flagIBS = ((_extfeatureflags2 & (uint)AMDExtendedFeatureFlags2.IBS) > 0);
-                flagXOP = ((_extfeatureflags2 & (uint)AMDExtendedFeatureFlags2.XOP) > 0);
-                flagSKINIT = ((_extfeatureflags2 & (uint)AMDExtendedFeatureFlags2.SKINIT) > 0);
-                flagWDT = ((_extfeatureflags2 & (uint)AMDExtendedFeatureFlags2.WDT) > 0);
-                flagLWP = ((_extfeatureflags2 & (uint)AMDExtendedFeatureFlags2.LWP) > 0);
-                flagFMA4 = ((_extfeatureflags2 & (uint)AMDExtendedFeatureFlags2.FMA4) > 0);
-                flagNODEID = ((_extfeatureflags2 & (uint)AMDExtendedFeatureFlags2.NODEID) > 0);
-                flagTBM = ((_extfeatureflags2 & (uint)AMDExtendedFeatureFlags2.TBM) > 0);
-                flagTOPOLOGYEXT = ((_extfeatureflags2 & (uint)AMDExtendedFeatureFlags2.TOPOLOGYEXT) > 0);
+                FeatureFlags.Add("CPU_LAHFSAHF", (_ecx & (uint)AMDExtendedFeatureFlags2.LAHFSAHF) > 0);
+                FeatureFlags.Add("CPU_CMPLEGACY", (_ecx & (uint)AMDExtendedFeatureFlags2.CMPLEGACY) > 0);
+                FeatureFlags.Add("CPU_SVM", (_ecx & (uint)AMDExtendedFeatureFlags2.SVM) > 0);
+                FeatureFlags.Add("CPU_EXTAPICSPACE", (_ecx & (uint)AMDExtendedFeatureFlags2.EXTAPICSPACE) > 0);
+                FeatureFlags.Add("CPU_ALTMOVCR8", (_ecx & (uint)AMDExtendedFeatureFlags2.ALTMOVCR8) > 0);
+                FeatureFlags.Add("CPU_ABM", (_ecx & (uint)AMDExtendedFeatureFlags2.ABM) > 0);
+                FeatureFlags.Add("CPU_SSE4A", (_ecx & (uint)AMDExtendedFeatureFlags2.SSE4A) > 0);
+                FeatureFlags.Add("CPU_MISALIGNSSE", (_ecx & (uint)AMDExtendedFeatureFlags2.MISALIGNSSE) > 0);
+                FeatureFlags.Add("CPU_3DNOWPREFETCH", (_ecx & (uint)AMDExtendedFeatureFlags2.THREEDNOWPREFETCH) > 0);
+                FeatureFlags.Add("CPU_OSVW", (_ecx & (uint)AMDExtendedFeatureFlags2.OSVW) > 0);
+                FeatureFlags.Add("CPU_IBS", (_ecx & (uint)AMDExtendedFeatureFlags2.IBS) > 0);
+                FeatureFlags.Add("CPU_XOP", (_ecx & (uint)AMDExtendedFeatureFlags2.XOP) > 0);
+                FeatureFlags.Add("CPU_SKINIT", (_ecx & (uint)AMDExtendedFeatureFlags2.SKINIT) > 0);
+                FeatureFlags.Add("CPU_WDT", (_ecx & (uint)AMDExtendedFeatureFlags2.WDT) > 0);
+                FeatureFlags.Add("CPU_LWP", (_ecx & (uint)AMDExtendedFeatureFlags2.LWP) > 0);
+                FeatureFlags.Add("CPU_FMA4", (_ecx & (uint)AMDExtendedFeatureFlags2.FMA4) > 0);
+                FeatureFlags.Add("CPU_NODEID", (_ecx & (uint)AMDExtendedFeatureFlags2.NODEID) > 0);
+                FeatureFlags.Add("CPU_TBM", (_ecx & (uint)AMDExtendedFeatureFlags2.TBM) > 0);
+                FeatureFlags.Add("CPU_TOPOLOGYEXT", (_ecx & (uint)AMDExtendedFeatureFlags2.TOPOLOGYEXT) > 0);
             }
 
             if (_vendorcompany == VendorCompanies.Intel)
             {
                 if (MaxStandardFunction >= 0x02)
                 {
-                    __cpuid(0x02);
+                    byte _cachedescriptor = 0;
+
+                    __cpuid(0x02, 0);
                     uint _eax = __reg_eax();
                     uint _ebx = __reg_ebx();
                     uint _ecx = __reg_ecx();
                     uint _edx = __reg_edx();
 
-                    byte _cachedescriptor = 0;
-					byte _nroftimestoreadall = 0;
-					
-					_nroftimestoreadall = (byte)((_eax >> 00) & 0xFF);
-					
-                    // Check if _eax is a valid descriptor
-                    if (((_eax >> 31) & 0x01) == 0)
-                    {
-                        _cachedescriptor = (byte)((_eax >> 08) & 0xFF);
-                        AddCacheDescriptor(_cachedescriptor);
-                        _cachedescriptor = (byte)((_eax >> 16) & 0xFF);
-                        AddCacheDescriptor(_cachedescriptor);
-                        _cachedescriptor = (byte)((_eax >> 24) & 0xFF);
-                        AddCacheDescriptor(_cachedescriptor);
-                    }
+                    byte _nroftimestoreadall = (byte)((_eax >> 00) & 0xFF);
 
-                    // Check if _ebx is a valid descriptor
-                    if (((_ebx >> 31) & 0x01) == 0)
+                    for (byte counter = 0; counter < _nroftimestoreadall; counter++)
                     {
-                        _cachedescriptor = (byte)((_ebx >> 00) & 0xFF);
-                        AddCacheDescriptor(_cachedescriptor);
-                        _cachedescriptor = (byte)((_ebx >> 08) & 0xFF);
-                        AddCacheDescriptor(_cachedescriptor);
-                        _cachedescriptor = (byte)((_ebx >> 16) & 0xFF);
-                        AddCacheDescriptor(_cachedescriptor);
-                        _cachedescriptor = (byte)((_ebx >> 24) & 0xFF);
-                        AddCacheDescriptor(_cachedescriptor);
-                    }
+                        // Check if _eax is a valid descriptor
+                        if (((_eax >> 31) & 0x01) == 0)
+                        {
+                            _cachedescriptor = (byte)((_eax >> 08) & 0xFF);
+                            AddCacheDescriptor(_cachedescriptor);
+                            _cachedescriptor = (byte)((_eax >> 16) & 0xFF);
+                            AddCacheDescriptor(_cachedescriptor);
+                            _cachedescriptor = (byte)((_eax >> 24) & 0xFF);
+                            AddCacheDescriptor(_cachedescriptor);
+                        }
 
-                    // Check if _ecx is a valid descriptor
-                    if (((_ecx >> 31) & 0x01) == 0)
-                    {
-                        _cachedescriptor = (byte)((_ecx >> 00) & 0xFF);
-                        AddCacheDescriptor(_cachedescriptor);
-                        _cachedescriptor = (byte)((_ecx >> 08) & 0xFF);
-                        AddCacheDescriptor(_cachedescriptor);
-                        _cachedescriptor = (byte)((_ecx >> 16) & 0xFF);
-                        AddCacheDescriptor(_cachedescriptor);
-                        _cachedescriptor = (byte)((_ecx >> 24) & 0xFF);
-                        AddCacheDescriptor(_cachedescriptor);
-                    }
+                        // Check if _ebx is a valid descriptor
+                        if (((_ebx >> 31) & 0x01) == 0)
+                        {
+                            _cachedescriptor = (byte)((_ebx >> 00) & 0xFF);
+                            AddCacheDescriptor(_cachedescriptor);
+                            _cachedescriptor = (byte)((_ebx >> 08) & 0xFF);
+                            AddCacheDescriptor(_cachedescriptor);
+                            _cachedescriptor = (byte)((_ebx >> 16) & 0xFF);
+                            AddCacheDescriptor(_cachedescriptor);
+                            _cachedescriptor = (byte)((_ebx >> 24) & 0xFF);
+                            AddCacheDescriptor(_cachedescriptor);
+                        }
 
-                    // Check if _edx is a valid descriptor
-                    if (((_edx >> 31) & 0x01) == 0)
-                    {
-                        _cachedescriptor = (byte)((_edx >> 00) & 0xFF);
-                        AddCacheDescriptor(_cachedescriptor);
-                        _cachedescriptor = (byte)((_edx >> 08) & 0xFF);
-                        AddCacheDescriptor(_cachedescriptor);
-                        _cachedescriptor = (byte)((_edx >> 16) & 0xFF);
-                        AddCacheDescriptor(_cachedescriptor);
-                        _cachedescriptor = (byte)((_edx >> 24) & 0xFF);
-                        AddCacheDescriptor(_cachedescriptor);
+                        // Check if _ecx is a valid descriptor
+                        if (((_ecx >> 31) & 0x01) == 0)
+                        {
+                            _cachedescriptor = (byte)((_ecx >> 00) & 0xFF);
+                            AddCacheDescriptor(_cachedescriptor);
+                            _cachedescriptor = (byte)((_ecx >> 08) & 0xFF);
+                            AddCacheDescriptor(_cachedescriptor);
+                            _cachedescriptor = (byte)((_ecx >> 16) & 0xFF);
+                            AddCacheDescriptor(_cachedescriptor);
+                            _cachedescriptor = (byte)((_ecx >> 24) & 0xFF);
+                            AddCacheDescriptor(_cachedescriptor);
+                        }
+
+                        // Check if _edx is a valid descriptor
+                        if (((_edx >> 31) & 0x01) == 0)
+                        {
+                            _cachedescriptor = (byte)((_edx >> 00) & 0xFF);
+                            AddCacheDescriptor(_cachedescriptor);
+                            _cachedescriptor = (byte)((_edx >> 08) & 0xFF);
+                            AddCacheDescriptor(_cachedescriptor);
+                            _cachedescriptor = (byte)((_edx >> 16) & 0xFF);
+                            AddCacheDescriptor(_cachedescriptor);
+                            _cachedescriptor = (byte)((_edx >> 24) & 0xFF);
+                            AddCacheDescriptor(_cachedescriptor);
+                        }
+
+                        __cpuid(0x02, 0);
+                       _eax = __reg_eax();
+                       _ebx = __reg_ebx();
+                       _ecx = __reg_ecx();
+                       _edx = __reg_edx();
                     }
                 }
             }
@@ -1036,11 +910,11 @@ namespace OpenGLDotNet
             {
                 if (IntelCacheDefinitions.ContainsKey(CacheDescriptor))
                 {
-                    IntelCacheDescriptors.Add(IntelCacheDefinitions[CacheDescriptor]);
+                    IntelCacheDescriptors.Add(String.Format("0x{0:X2} : ", CacheDescriptor) + IntelCacheDefinitions[CacheDescriptor]);
                 }
                 else
                 {
-                    IntelCacheDescriptors.Add(String.Format("0x{0:x} : Unknown Cache Descriptor", CacheDescriptor));
+                    IntelCacheDescriptors.Add(String.Format("0x{0:X2} : Unknown Cache Descriptor", CacheDescriptor));
                 }
             }
         }

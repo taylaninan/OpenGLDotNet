@@ -195,6 +195,7 @@ namespace Quake2DotNet
             ConsoleManager.WriteLine("Vendor Company            : " + CPUInfo.VendorCompany);
             ConsoleManager.WriteLine("Processor Name            : " + CPUInfo.CPUName.Trim());
             ConsoleManager.WriteLine("Processor Speed           : " + CPUInfo.CPUSpeed + " Mhz");
+
             ConsoleManager.WriteLine();
             ConsoleManager.WriteLine("Processor Type            : " + CPUInfo.CPUType);
             ConsoleManager.WriteLine("Processor Family          : " + CPUInfo.CPUFamily);
@@ -202,143 +203,29 @@ namespace Quake2DotNet
             ConsoleManager.WriteLine("Processor Model           : " + CPUInfo.CPUModel);
             ConsoleManager.WriteLine("Processor Extended Model  : " + CPUInfo.CPUExtendedModel);
             ConsoleManager.WriteLine("Processor Stepping ID     : " + CPUInfo.CPUStepping);
-            ConsoleManager.WriteLine();
 
-            ConsoleManager.WriteLine("Feature ACPI        : " + CPUInfo.flagACPI);
-            ConsoleManager.WriteLine("Feature AES         : " + CPUInfo.flagAES);
-            ConsoleManager.WriteLine("Feature APIC        : " + CPUInfo.flagAPIC);
-            ConsoleManager.WriteLine("Feature AVX         : " + CPUInfo.flagAVX);
-            ConsoleManager.WriteLine("Feature CLFSH       : " + CPUInfo.flagCLFSH);
-            ConsoleManager.WriteLine("Feature CMOV        : " + CPUInfo.flagCMOV);
-            ConsoleManager.WriteLine("Feature CNXTID      : " + CPUInfo.flagCNXTID);
-            ConsoleManager.WriteLine("Feature CX16        : " + CPUInfo.flagCX16);
-            ConsoleManager.WriteLine("Feature CX8         : " + CPUInfo.flagCX8);
-            ConsoleManager.WriteLine("Feature DCA         : " + CPUInfo.flagDCA);
-            ConsoleManager.WriteLine("Feature DE          : " + CPUInfo.flagDE);
-            ConsoleManager.WriteLine("Feature DS          : " + CPUInfo.flagDS);
-            ConsoleManager.WriteLine("Feature DS64        : " + CPUInfo.flagDS64);
-            ConsoleManager.WriteLine("Feature DSCPL       : " + CPUInfo.flagDSCPL);
-            ConsoleManager.WriteLine("Feature ESS         : " + CPUInfo.flagESS);
-            ConsoleManager.WriteLine("Feature F16C        : " + CPUInfo.flagF16C);
-            ConsoleManager.WriteLine("Feature FMA         : " + CPUInfo.flagFMA);
-            ConsoleManager.WriteLine("Feature FPU         : " + CPUInfo.flagFPU);
-            ConsoleManager.WriteLine("Feature FSC         : " + CPUInfo.flagFSC);
-            ConsoleManager.WriteLine("Feature FXSR        : " + CPUInfo.flagFXSR);
-            ConsoleManager.WriteLine("Feature HTT         : " + CPUInfo.flagHTT);
-            ConsoleManager.WriteLine("Feature IA64        : " + CPUInfo.flagIA64);
-            ConsoleManager.WriteLine("Feature MCA         : " + CPUInfo.flagMCA);
-            ConsoleManager.WriteLine("Feature MCE         : " + CPUInfo.flagMCE);
-            ConsoleManager.WriteLine("Feature MMX         : " + CPUInfo.flagMMX);
-            ConsoleManager.WriteLine("Feature MONITOR     : " + CPUInfo.flagMONITOR);
-            ConsoleManager.WriteLine("Feature MOVBE       : " + CPUInfo.flagMOVBE);
-            ConsoleManager.WriteLine("Feature MSR         : " + CPUInfo.flagMSR);
-            ConsoleManager.WriteLine("Feature MTRR        : " + CPUInfo.flagMTRR);
-            ConsoleManager.WriteLine("Feature OSXSAVE     : " + CPUInfo.flagOSXSAVE);
-            ConsoleManager.WriteLine("Feature PAE         : " + CPUInfo.flagPAE);
-            ConsoleManager.WriteLine("Feature PAT         : " + CPUInfo.flagPAT);
-            ConsoleManager.WriteLine("Feature PCID        : " + CPUInfo.flagPCID);
-            ConsoleManager.WriteLine("Feature PCLMULQDQ   : " + CPUInfo.flagPCLMULQDQ);
-            ConsoleManager.WriteLine("Feature PDCM        : " + CPUInfo.flagPDCM);
-            ConsoleManager.WriteLine("Feature PGE         : " + CPUInfo.flagPGE);
-            ConsoleManager.WriteLine("Feature POPCNT      : " + CPUInfo.flagPOPCNT);
-            ConsoleManager.WriteLine("Feature PSE         : " + CPUInfo.flagPSE);
-            ConsoleManager.WriteLine("Feature PSE36       : " + CPUInfo.flagPSE36);
-            ConsoleManager.WriteLine("Feature SBF         : " + CPUInfo.flagSBF);
-            ConsoleManager.WriteLine("Feature SERIAL      : " + CPUInfo.flagSERIAL);
-            ConsoleManager.WriteLine("Feature SMX         : " + CPUInfo.flagSMX);
-            ConsoleManager.WriteLine("Feature SS          : " + CPUInfo.flagSS);
-            ConsoleManager.WriteLine("Feature SSE         : " + CPUInfo.flagSSE);
-            ConsoleManager.WriteLine("Feature SSE2        : " + CPUInfo.flagSSE2);
-            ConsoleManager.WriteLine("Feature SSE3        : " + CPUInfo.flagSSE3);
-            ConsoleManager.WriteLine("Feature SSE4.1      : " + CPUInfo.flagSSE4_1);
-            ConsoleManager.WriteLine("Feature SSE4.2      : " + CPUInfo.flagSSE4_2);
-            ConsoleManager.WriteLine("Feature SSSE3       : " + CPUInfo.flagSSSE3);
-            ConsoleManager.WriteLine("Feature TM          : " + CPUInfo.flagTM);
-            ConsoleManager.WriteLine("Feature TM2         : " + CPUInfo.flagTM2);
-            ConsoleManager.WriteLine("Feature TSC         : " + CPUInfo.flagTSC);
-            ConsoleManager.WriteLine("Feature TSCDEADLINE : " + CPUInfo.flagTSCDEADLINE);
-            ConsoleManager.WriteLine("Feature VME         : " + CPUInfo.flagVME);
-            ConsoleManager.WriteLine("Feature VMX         : " + CPUInfo.flagVMX);
-            ConsoleManager.WriteLine("Feature X2APIC      : " + CPUInfo.flagX2APIC);
-            ConsoleManager.WriteLine("Feature XSAVE       : " + CPUInfo.flagXSAVE);
-            ConsoleManager.WriteLine("Feature XTPR        : " + CPUInfo.flagXTPR);
             ConsoleManager.WriteLine();
-            ConsoleManager.WriteLine("Feature FSGSBASE    : " + CPUInfo.flagFSGSBASE);
-            ConsoleManager.WriteLine("Feature TSC_ADJUST  : " + CPUInfo.flagTSC_ADJUST);
-            ConsoleManager.WriteLine("Feature SGX         : " + CPUInfo.flagSGX);
-            ConsoleManager.WriteLine("Feature BMI1        : " + CPUInfo.flagBMI1);
-            ConsoleManager.WriteLine("Feature HLE         : " + CPUInfo.flagHLE);
-            ConsoleManager.WriteLine("Feature AVX2        : " + CPUInfo.flagAVX2);
-            ConsoleManager.WriteLine("Feature FPDP        : " + CPUInfo.flagFPDP);
-            ConsoleManager.WriteLine("Feature SMEP        : " + CPUInfo.flagSMEP);
-            ConsoleManager.WriteLine("Feature BMI2        : " + CPUInfo.flagBMI2);
-            ConsoleManager.WriteLine("Feature ERMS        : " + CPUInfo.flagERMS);
-            ConsoleManager.WriteLine("Feature INVPCID     : " + CPUInfo.flagINVPCID);
-            ConsoleManager.WriteLine("Feature RTM         : " + CPUInfo.flagRTM);
-            ConsoleManager.WriteLine("Feature PQM         : " + CPUInfo.flagPQM);
-            ConsoleManager.WriteLine("Feature FPCSDS      : " + CPUInfo.flagFPCSDS);
-            ConsoleManager.WriteLine("Feature MPX         : " + CPUInfo.flagMPX);
-            ConsoleManager.WriteLine("Feature PQE         : " + CPUInfo.flagPQE);
-            ConsoleManager.WriteLine("Feature AVX512F     : " + CPUInfo.flagAVX512F);
-            ConsoleManager.WriteLine("Feature AVX512DQ    : " + CPUInfo.flagAVX512DQ);
-            ConsoleManager.WriteLine("Feature RDSEED      : " + CPUInfo.flagRDSEED);
-            ConsoleManager.WriteLine("Feature ADX         : " + CPUInfo.flagADX);
-            ConsoleManager.WriteLine("Feature SMAP        : " + CPUInfo.flagSMAP);
-            ConsoleManager.WriteLine("Feature AVX512IFMA  : " + CPUInfo.flagAVX512IFMA);
-            ConsoleManager.WriteLine("Feature PCOMMIT     : " + CPUInfo.flagPCOMMIT);
-            ConsoleManager.WriteLine("Feature CLFLUSHOPT  : " + CPUInfo.flagCLFLUSHOPT);
-            ConsoleManager.WriteLine("Feature CLWB        : " + CPUInfo.flagCLWB);
-            ConsoleManager.WriteLine("Feature PT          : " + CPUInfo.flagPT);
-            ConsoleManager.WriteLine("Feature AVX512PF    : " + CPUInfo.flagAVX512PF);
-            ConsoleManager.WriteLine("Feature AVX512ER    : " + CPUInfo.flagAVX512ER);
-            ConsoleManager.WriteLine("Feature AVX512CD    : " + CPUInfo.flagAVX512CD);
-            ConsoleManager.WriteLine("Feature SHA         : " + CPUInfo.flagSHA);
-            ConsoleManager.WriteLine("Feature AVX512BW    : " + CPUInfo.flagAVX512BW);
-            ConsoleManager.WriteLine("Feature AVX512VL    : " + CPUInfo.flagAVX512VL);
-            ConsoleManager.WriteLine();
-
-            if (CPUInfo.VendorCompany == CPUInfo.VendorCompanies.AMD)
+            ConsoleManager.WriteLine("CPU features...");
+            ConsoleManager.WriteLine("================================================================================");
+            
+            foreach (var CPUFlag in CPUInfo.FeatureFlags)
             {
-                ConsoleManager.WriteLine("Feature SYSCALLSYSRET : " + CPUInfo.flagSYSCALLSYSRET);
-                ConsoleManager.WriteLine("Feature NX            : " + CPUInfo.flagNX);
-                ConsoleManager.WriteLine("Feature MMXEXT        : " + CPUInfo.flagMMXEXT);
-                ConsoleManager.WriteLine("Feature FFXSR         : " + CPUInfo.flagFFXSR);
-                ConsoleManager.WriteLine("Feature PAGE1GB       : " + CPUInfo.flagPAGE1GB);
-                ConsoleManager.WriteLine("Feature RDTSCP        : " + CPUInfo.flagRDTSCP);
-                ConsoleManager.WriteLine("Feature LM            : " + CPUInfo.flagLM);
-                ConsoleManager.WriteLine("Feature 3DNOW         : " + CPUInfo.flag3DNOW);
-                ConsoleManager.WriteLine("Feature 3DNOWEXT      : " + CPUInfo.flag3DNOWEXT);
-                ConsoleManager.WriteLine("Feature LAHFSAHF      : " + CPUInfo.flagLAHFSAHF);
-                ConsoleManager.WriteLine("Feature CMPLEGACY     : " + CPUInfo.flagCMPLEGACY);
-                ConsoleManager.WriteLine("Feature SVM           : " + CPUInfo.flagSVM);
-                ConsoleManager.WriteLine("Feature EXTAPICSPACE  : " + CPUInfo.flagEXTAPICSPACE);
-                ConsoleManager.WriteLine("Feature ALTMOVCR8     : " + CPUInfo.flagALTMOVCR8);
-                ConsoleManager.WriteLine("Feature ABM           : " + CPUInfo.flagABM);
-                ConsoleManager.WriteLine("Feature SSE4A         : " + CPUInfo.flagSSE4A);
-                ConsoleManager.WriteLine("Feature MISALIGNSSE   : " + CPUInfo.flagMISALIGNSSE);
-                ConsoleManager.WriteLine("Feature 3DNOWPREFETCH : " + CPUInfo.flag3DNOWPREFETCH);
-                ConsoleManager.WriteLine("Feature OSVW          : " + CPUInfo.flagOSVW);
-                ConsoleManager.WriteLine("Feature IBS           : " + CPUInfo.flagIBS);
-                ConsoleManager.WriteLine("Feature XOP           : " + CPUInfo.flagXOP);
-                ConsoleManager.WriteLine("Feature SKINIT        : " + CPUInfo.flagSKINIT);
-                ConsoleManager.WriteLine("Feature WDT           : " + CPUInfo.flagWDT);
-                ConsoleManager.WriteLine("Feature LWP           : " + CPUInfo.flagLWP);
-                ConsoleManager.WriteLine("Feature FMA4          : " + CPUInfo.flagFMA4);
-                ConsoleManager.WriteLine("Feature NODEID        : " + CPUInfo.flagNODEID);
-                ConsoleManager.WriteLine("Feature TBM           : " + CPUInfo.flagTBM);
-                ConsoleManager.WriteLine("Feature TOPOLOGYEXT   : " + CPUInfo.flagTOPOLOGYEXT);
-                ConsoleManager.WriteLine();
+                if (CPUFlag.Value)
+                {
+                    ConsoleManager.WriteLine(CPUFlag.Key.PadRight(18, ' ') + " : " + CPUFlag.Value);
+                }
             }
 
             if (CPUInfo.VendorCompany == CPUInfo.VendorCompanies.Intel)
             {
-                ConsoleManager.WriteLine("Feature SYSCALLSYSRET : " + CPUInfo.flagSYSCALLSYSRET);
-                ConsoleManager.WriteLine("Feature NX            : " + CPUInfo.flagNX);
-                ConsoleManager.WriteLine("Feature PAGE1GB       : " + CPUInfo.flagPAGE1GB);
-                ConsoleManager.WriteLine("Feature RDTSCP        : " + CPUInfo.flagRDTSCP);
-                ConsoleManager.WriteLine("Feature INTEL64       : " + CPUInfo.flagINTEL64);
-                ConsoleManager.WriteLine("Feature LAHFSAHF      : " + CPUInfo.flagLAHFSAHF);
                 ConsoleManager.WriteLine();
+                ConsoleManager.WriteLine("CPU cache descriptors... (Intel)");
+                ConsoleManager.WriteLine("================================================================================");
+
+                for (byte counter = 0; counter < CPUInfo.IntelCacheDescriptors.Count; counter++)
+                {
+                    ConsoleManager.WriteLine(CPUInfo.IntelCacheDescriptors[counter]);
+                }
             }
         }
 

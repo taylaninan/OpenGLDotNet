@@ -17,12 +17,13 @@ uint32 _ebx = 0;
 uint32 _ecx = 0;
 uint32 _edx = 0;
 
-__declspec(dllexport) void __stdcall _cpuid(uint32 function)
+__declspec(dllexport) void __stdcall _cpuid(uint32 function, uint32 subfunction)
 {
 	__asm
 	{
 		pusha
 		mov		eax, function
+		mov     ecx, subfunction
 		cpuid
 		mov		_eax, eax
 		mov		_ebx, ebx
