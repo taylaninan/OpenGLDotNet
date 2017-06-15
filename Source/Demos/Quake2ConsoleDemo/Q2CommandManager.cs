@@ -46,10 +46,13 @@ namespace Quake2DotNet
             AddCommand("cpuinfo", 0, "Displays detailed CPU information", Command_cpuinfo);
             AddCommand("version", 0, "Displays current Quake2DotNet information", Command_version);
             AddCommand("dumpconsole", 1, "Dumps all the information in console to a text file", Command_dumpconsole);
-            AddCommand("stopmusic", 0, "Stops the currently playing music", Command_stopmusic);
             AddCommand("playmusic", 1, "Plays the specified music file", Command_playmusic);
+            AddCommand("stopmusic", 0, "Stops the currently playing music", Command_stopmusic);
             AddCommand("background", 1, "Changes the console background image", Command_background);
-
+			AddCommand("imagelist", 0, "Displays detailed texture information, which are uploaded to the GPU", Command_imagelist);
+            AddCommand("demofreeglut", 0, "When console is closed, displays the FREEGLUT demo with simple objects", Command_demofreeglut);
+            AddCommand("democubemapping", 0, "When console is closed, displays the CUBEMAPPING demo", Command_democubemapping);
+            			
             // Required for audio out and the MP3 stream
             waveOutDevice = new WaveOut();
 
@@ -158,6 +161,7 @@ namespace Quake2DotNet
 
         private static void Command_cmdlist(string[] parameters)
         {
+            ConsoleManager.WriteLine();
             ConsoleManager.WriteLine("Listing available commands...");
             ConsoleManager.WriteLine("================================================================================");
 
@@ -179,6 +183,7 @@ namespace Quake2DotNet
             string renderer = GL.GetString(GL.GL_RENDERER).Trim();
             string shader = GL.GetString(GL.GL_SHADING_LANGUAGE_VERSION).Trim();
 
+            ConsoleManager.WriteLine();
             ConsoleManager.WriteLine("OpenGL information...");
             ConsoleManager.WriteLine("================================================================================");
             ConsoleManager.WriteLine("VENDOR          : " + vendor);
@@ -189,6 +194,7 @@ namespace Quake2DotNet
 
         private static void Command_cpuinfo(string[] parameters)
         {
+            ConsoleManager.WriteLine();
             ConsoleManager.WriteLine("CPU information...");
             ConsoleManager.WriteLine("================================================================================");
             ConsoleManager.WriteLine("Vendor String             : " + CPUInfo.VendorString);
@@ -207,14 +213,32 @@ namespace Quake2DotNet
             ConsoleManager.WriteLine();
             ConsoleManager.WriteLine("CPU features...");
             ConsoleManager.WriteLine("================================================================================");
-            
+
+            uint Counter = 0;
+            string FlagBuffer = null;
+
             foreach (var CPUFlag in CPUInfo.FeatureFlags)
             {
                 if (CPUFlag.Value)
                 {
-                    ConsoleManager.WriteLine(CPUFlag.Key.PadRight(18, ' ') + " : " + CPUFlag.Value);
+                    Counter++;
+
+                    if ((Counter % 4) == 0)
+                    {
+                        FlagBuffer += CPUFlag.Key.PadRight(20, ' ');
+
+                        ConsoleManager.WriteLine(FlagBuffer);
+
+                        FlagBuffer = null;
+                    }
+                    else
+                    {
+                        FlagBuffer += CPUFlag.Key.PadRight(20, ' ');
+                    }
                 }
             }
+
+            ConsoleManager.WriteLine(FlagBuffer);
 
             if (CPUInfo.VendorCompany == CPUInfo.VendorCompanies.Intel)
             {
@@ -299,6 +323,60 @@ namespace Quake2DotNet
                 {
                     ConsoleManager.WriteLine("Error! The specified background image not found!");
                 }
+            }
+        }
+		
+		private static void Command_imagelist(string[] parameters)
+		{
+            uint MemoryUsage = 0;
+
+            foreach (var Node in TextureManager.GetValues)
+            {
+                MemoryUsage += Node.DataSize;
+
+                ConsoleManager.WriteLine(Node.FilePath.PadRight(32) + Node.DataSize.ToString().PadLeft(12) + " bytes.");
+            }
+
+            ConsoleManager.WriteLine("TOTAL MEMORY USAGE".PadRight(32) + MemoryUsage.ToString().PadLeft(12) + " bytes.");
+		}
+
+        private static void Command_demofreeglut(string[] parameters)
+        {
+            byte DemoFreeglut = ConsoleVarManager.GetValueToByte("DemoFreeglut");
+
+            if (DemoFreeglut == 0)
+            {   // Start DemoGlut; Make sure that the other demo is stopped
+                ConsoleVarManager.SetOrCreate("DemoFreeglut", "1", 0);
+                ConsoleVarManager.SetOrCreate("DemoCubemapping", "0", 0);
+
+                ConsoleManager.WriteLine("Starting demo FREEGLUT...");
+            }
+            else
+            {   // Stop DemoGlut
+                ConsoleVarManager.SetOrCreate("DemoFreeglut", "0", 0);
+                ConsoleVarManager.SetOrCreate("DemoCubemapping", "0", 0);
+
+                ConsoleManager.WriteLine("Stopping demo FREEGLUT...");
+            }
+        }
+
+        private static void Command_democubemapping(string[] parameters)
+        {
+            byte DemoCubemapping = ConsoleVarManager.GetValueToByte("DemoCubemapping");
+
+            if (DemoCubemapping == 0)
+            {   // Start DemoGlut; Make sure that the other demo is stopped
+                ConsoleVarManager.SetOrCreate("DemoCubemapping", "1", 0);
+                ConsoleVarManager.SetOrCreate("DemoFreeglut", "0", 0);
+
+                ConsoleManager.WriteLine("Starting demo CUBEMAPPING...");
+            }
+            else
+            {   // Stop DemoGlut
+                ConsoleVarManager.SetOrCreate("DemoCubemapping", "0", 0);
+                ConsoleVarManager.SetOrCreate("DemoFreeglut", "0", 0);
+
+                ConsoleManager.WriteLine("Stopping demo CUBEMAPPING...");
             }
         }
     }

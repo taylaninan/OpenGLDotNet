@@ -33,14 +33,16 @@ namespace Quake2DotNet
 
         public static void Init()
         {
-            Create("Quake2DotNetInit", "true", 0);					// When TRUE, Quake 2 Console MUST be initiated.
-            Create("VersionLong", "Quake2DotNet v0.1 alpha", 0);
-            Create("VersionShort", "v0.1 alpha", 0);
+            Create("Q2ConsoleInit", "true", 0);					// When TRUE, Quake 2 Console MUST be initiated.
+            Create("VersionLong", "OpenGLDotNet v1.1.1 Demos", 0);
+            Create("VersionShort", "v1.1.1", 0);
             Create("ScreenWidth", "1024", 0);
             Create("ScreenHeight", "768", 0);
             Create("ConsoleBackground", "conback2.jpg", 0);
             Create("ConsoleCharacters", "conchars.png", 0);
-
+			Create("DemoFreeglut", "0", 0);
+			Create("DemoCubemapping", "0", 0);
+			
             Random RandomTrack = new Random();
             int TrackNumber = RandomTrack.Next(1, 10);
             string TrackString = "track" + TrackNumber.ToString().PadLeft(2, '0') + ".mp3";
@@ -101,6 +103,20 @@ namespace Quake2DotNet
             }
         }
 
+        public static byte GetValueToByte (string Name)
+        {
+            ConsoleVarNode Node = FindVar(Name);
+
+            if (Node != null)
+            {
+                return ConvertX.ToByte(Node.Value, 0, "", "trim", 0);
+            }
+            else
+            {
+                return 0;
+            }
+        }
+		
         public static ConsoleVarNode Create(string var_name, string var_value, uint flags)
         {
             ConsoleVarNode Result = FindVar(var_name);

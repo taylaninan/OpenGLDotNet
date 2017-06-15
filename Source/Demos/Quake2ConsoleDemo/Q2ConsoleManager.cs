@@ -109,6 +109,7 @@ namespace Quake2DotNet
             // Change to 2D Mode
             GL.MatrixMode(GL.GL_PROJECTION);
             GL.LoadIdentity();
+            
             GL.Ortho(0, _ScreenWidth, _ScreenHeight, 0, -4096, 4096);
 
             GL.MatrixMode(GL.GL_MODELVIEW);
@@ -370,12 +371,12 @@ namespace Quake2DotNet
 
         public static void AnimateCursor()
         {
+            ulong Random = CPUInfo.ReadTSC() % (CPUInfo.CPUSpeed * 1000000);
+            bool DrawCursor = (Random <= CPUInfo.CPUSpeed * 500000);
+
             GL.Clear(GL.GL_COLOR_BUFFER_BIT | GL.GL_DEPTH_BUFFER_BIT);
 
             Draw();
-
-            ulong Random = CPUInfo.ReadTSC() % (CPUInfo.CPUSpeed * 1000000);
-            bool DrawCursor = (Random <= CPUInfo.CPUSpeed * 500000);
 
             if (DrawCursor)
             {
@@ -386,7 +387,7 @@ namespace Quake2DotNet
                 GL.Vertex2f(_CursorPosX * 8 + 8, _CursorPosY * 8 + 8);
                 GL.Vertex2f(_CursorPosX * 8 + 8, _CursorPosY * 8);
                 GL.End();
-            }
+			}
 
             FG.SwapBuffers();
         }

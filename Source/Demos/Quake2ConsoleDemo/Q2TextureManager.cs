@@ -167,5 +167,13 @@ namespace Quake2DotNet
                 DeleteTexture(Node.FilePath);
             }
         }
+		
+		public static IList<TextureNode> GetValues
+        {
+            get
+            {
+                return Textures.Values;
+            }
+        }
     }
 }
