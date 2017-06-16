@@ -6,8 +6,14 @@
 /OpenGLDotNet.VC.VC.opendb
 *.suo
 *.user
-Debug/
-Release/
+*.sdf
+*.exp
+*.iobj
+*.ipdb
+*.pdb
+/bin/debug/
+/debug/
+/release/
 obj/
 .git/
 .vs/

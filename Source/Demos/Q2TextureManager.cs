@@ -33,6 +33,11 @@ namespace Quake2DotNet
 
     public static class TextureManager
     {
+        // Texture Manager (TM), PreProcess (PP) Bit Flags
+        public const byte TM_PP_NONE         = 0x00;
+        public const byte TM_PP_FLIP_IMAGE   = 0x01;
+        public const byte TM_PP_MIRROR_IMAGE = 0x02;
+
         private static SortedList<string, TextureNode> Textures = new SortedList<string, TextureNode>();          // <FilePath, TextureNode>
 
         private static string FilePathStandardization(string FilePath)
@@ -77,7 +82,7 @@ namespace Quake2DotNet
             }
         }
 
-        public static TextureNode LoadTexture(string FilePath)
+        public static TextureNode LoadTexture(string FilePath, uint GLTarget, byte ImagePreProcess)
         {
             string FilePathShort = FilePathStandardization(FilePath);
 
@@ -89,7 +94,7 @@ namespace Quake2DotNet
             // Texture not found, load it into the memory
             else
             {
-                // Add the current working directory of Quake2DotNet
+                // Add the current working directory of OpenGLDotNet
                 string currentDirName = System.IO.Directory.GetCurrentDirectory();
                 string FilePathLong = currentDirName + @"\" + FilePathShort;
                 FilePathLong = FilePathLong.Replace(@"\\", @"\");
@@ -101,6 +106,16 @@ namespace Quake2DotNet
                 // Load it into the memory with DevIL
                 if (IL.LoadImage(FilePathLong))
                 {
+                    // Preprocess Check
+                    if ((ImagePreProcess & TM_PP_FLIP_IMAGE) > 0)
+                    {
+                        ILU.FlipImage();
+                    }
+                    if ((ImagePreProcess & TM_PP_MIRROR_IMAGE) > 0)
+                    {
+                        ILU.Mirror();
+                    }
+
                     // Create a new TextureNode
                     TextureNode Node = new TextureNode();
 
@@ -118,14 +133,89 @@ namespace Quake2DotNet
                     // Assign the new number to node
                     Node.GLTextureNumber = GLTextureNumber[0];
 
-                    GL.BindTexture(GL.GL_TEXTURE_2D, Node.GLTextureNumber);
-                    
-                    GL.TexImage2D(GL.GL_TEXTURE_2D, 0, (int)Node.GLImageFormat, (int)Node.Width, (int)Node.Height, 0, Node.GLImageFormat, Node.GLImageType, IL.GetData());
-                    GL.TexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_WRAP_S, (int)GL.GL_CLAMP_TO_EDGE);
-                    GL.TexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_WRAP_T, (int)GL.GL_CLAMP_TO_EDGE);
-                    GL.TexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_MAG_FILTER, (int)GL.GL_LINEAR);
-                    GL.TexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_MIN_FILTER, (int)GL.GL_LINEAR);
-                    GL.TexEnvi(GL.GL_TEXTURE_ENV, GL.GL_TEXTURE_ENV_MODE, (int)GL.GL_DECAL);
+                    GL.BindTexture(GLTarget, Node.GLTextureNumber);
+                    GL.TexImage2D(GLTarget, 0, (int)Node.GLImageFormat, (int)Node.Width, (int)Node.Height, 0, Node.GLImageFormat, Node.GLImageType, IL.GetData());
+
+                    GL.TexParameteri(GLTarget, GL.GL_TEXTURE_WRAP_S, (int)GL.GL_CLAMP_TO_EDGE);
+                    GL.TexParameteri(GLTarget, GL.GL_TEXTURE_WRAP_T, (int)GL.GL_CLAMP_TO_EDGE);
+                    GL.TexParameteri(GLTarget, GL.GL_TEXTURE_WRAP_R, (int)GL.GL_CLAMP_TO_EDGE);
+                    GL.TexParameteri(GLTarget, GL.GL_TEXTURE_MAG_FILTER, (int)GL.GL_LINEAR);
+                    GL.TexParameteri(GLTarget, GL.GL_TEXTURE_MIN_FILTER, (int)GL.GL_LINEAR);
+
+                    // We are done uploading the image, free up memory from DevIL
+                    IL.DeleteImage(ILTextureNumber);
+
+                    Textures.Add(FilePathShort, Node);
+
+                    return Node;
+                }
+                // Texture couldn't be loaded, return null
+                else
+                {
+                    return null;
+                }
+            }
+        }
+
+        public static TextureNode LoadCubemapTexture(string FilePath, uint GLTarget, byte ImagePreProcess)
+        {
+            string FilePathShort = FilePathStandardization(FilePath);
+
+            // Is it already loaded?
+            if (FindTexture(FilePathShort) != null)
+            {
+                return FindTexture(FilePathShort);
+            }
+            // Texture not found, load it into the memory
+            else
+            {
+                // Add the current working directory of OpenGLDotNet
+                string currentDirName = System.IO.Directory.GetCurrentDirectory();
+                string FilePathLong = currentDirName + @"\" + FilePathShort;
+                FilePathLong = FilePathLong.Replace(@"\\", @"\");
+
+                // Generate a new image number from DevIL
+                uint ILTextureNumber = IL.GenImage();
+                IL.BindImage(ILTextureNumber);
+
+                // Load it into the memory with DevIL
+                if (IL.LoadImage(FilePathLong))
+                {
+                    // Preprocess Check
+                    if ((ImagePreProcess & TM_PP_FLIP_IMAGE) > 0)
+                    {
+                        ILU.FlipImage();
+                    }
+                    if ((ImagePreProcess & TM_PP_MIRROR_IMAGE) > 0)
+                    {
+                        ILU.Mirror();
+                    }
+
+                    // Create a new TextureNode
+                    TextureNode Node = new TextureNode();
+
+                    Node.FilePath = FilePathShort;
+                    Node.Width = (uint)IL.GetInteger(IL.IL_IMAGE_WIDTH);
+                    Node.Height = (uint)IL.GetInteger(IL.IL_IMAGE_HEIGHT);
+                    Node.Depth = (uint)IL.GetInteger(IL.IL_IMAGE_DEPTH);
+                    Node.GLImageFormat = (uint)IL.GetInteger(IL.IL_IMAGE_FORMAT);
+                    Node.GLImageType = (uint)IL.GetInteger(IL.IL_IMAGE_TYPE);
+                    Node.DataSize = (uint)IL.GetInteger(IL.IL_IMAGE_SIZE_OF_DATA);
+
+                    // Generate a new texture number from OpenGL
+                    uint[] GLTextureNumber = new uint[1];
+                    GL.GenTextures(1, GLTextureNumber);
+                    // Assign the new number to node
+                    Node.GLTextureNumber = GLTextureNumber[0];
+
+                    GL.BindTexture(GLTarget, Node.GLTextureNumber);
+                    GL.TexImage2D(GLTarget, 0, (int)Node.GLImageFormat, (int)Node.Width, (int)Node.Height, 0, Node.GLImageFormat, Node.GLImageType, IL.GetData());
+
+                    GL.TexParameteri(GL.GL_TEXTURE_CUBE_MAP, GL.GL_TEXTURE_WRAP_S, (int)GL.GL_CLAMP_TO_EDGE);
+                    GL.TexParameteri(GL.GL_TEXTURE_CUBE_MAP, GL.GL_TEXTURE_WRAP_T, (int)GL.GL_CLAMP_TO_EDGE);
+                    GL.TexParameteri(GL.GL_TEXTURE_CUBE_MAP, GL.GL_TEXTURE_WRAP_R, (int)GL.GL_CLAMP_TO_EDGE);
+                    GL.TexParameteri(GL.GL_TEXTURE_CUBE_MAP, GL.GL_TEXTURE_MAG_FILTER, (int)GL.GL_LINEAR);
+                    GL.TexParameteri(GL.GL_TEXTURE_CUBE_MAP, GL.GL_TEXTURE_MIN_FILTER, (int)GL.GL_LINEAR);
 
                     // We are done uploading the image, free up memory from DevIL
                     IL.DeleteImage(ILTextureNumber);

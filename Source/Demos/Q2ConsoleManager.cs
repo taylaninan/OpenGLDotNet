@@ -57,8 +57,11 @@ namespace Quake2DotNet
             _CharsPerLine = (ushort)(_ScreenWidth >> 3);                // division by 8
             _LinesPerScreen = (ushort)((_ScreenHeight >> 3) - 1);       // division by 8; last line is console input line
 
-            _ConsoleBackground = TextureManager.LoadTexture(ConsoleVarManager.GetValueToString("ConsoleBackground"));
-            _ConsoleChars = TextureManager.LoadTexture(ConsoleVarManager.GetValueToString("ConsoleCharacters"));
+            _ConsoleBackground = TextureManager.LoadTexture(ConsoleVarManager.GetValueToString("ConsoleBackground"), GL.GL_TEXTURE_2D, TextureManager.TM_PP_NONE);
+            GL.TexEnvi(GL.GL_TEXTURE_ENV, GL.GL_TEXTURE_ENV_MODE, (int)GL.GL_DECAL);
+
+            _ConsoleChars = TextureManager.LoadTexture(ConsoleVarManager.GetValueToString("ConsoleCharacters"), GL.GL_TEXTURE_2D, TextureManager.TM_PP_NONE);
+            GL.TexEnvi(GL.GL_TEXTURE_ENV, GL.GL_TEXTURE_ENV_MODE, (int)GL.GL_DECAL);
         }
 
         public static void WriteLine(string Line)
