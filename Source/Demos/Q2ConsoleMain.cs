@@ -11,6 +11,7 @@
 // ----------------------------------------------------------------------------
 
 using System;
+using System.Management;
 using OpenGLDotNet;
 
 namespace Quake2DotNet
@@ -260,7 +261,7 @@ namespace Quake2DotNet
 
         public static void Reshape(int width, int height)
         {
-            Console.WriteLine("Reshape: {0}x{1}", width, height);
+            //Console.WriteLine("Reshape: {0}x{1}", width, height);
 
             if (width <= 0) { width = 1; }
             if (height <= 0) { height = 1; }
@@ -608,6 +609,7 @@ namespace Quake2DotNet
 
             // First, setup the console window
             Console.Title = "OpenGLDotNet v1.1.1 Demos";
+
             Console.WriteLine("Starting OpenGLDotNet v1.1.1 - Quake 2 Console Demo ...");
 
             Init();
