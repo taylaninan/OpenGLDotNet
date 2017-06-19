@@ -11,7 +11,6 @@
 // ----------------------------------------------------------------------------
 
 using System;
-using System.Management;
 using OpenGLDotNet;
 
 namespace Quake2DotNet
@@ -610,7 +609,7 @@ namespace Quake2DotNet
             // First, setup the console window
             Console.Title = "OpenGLDotNet v1.1.1 Demos";
 
-            Console.WriteLine("Starting OpenGLDotNet v1.1.1 - Quake 2 Console Demo ...");
+            Console.WriteLine("Starting OpenGLDotNet v1.1.1 - Quake 2 Console Demos ...");
 
             Init();
 
