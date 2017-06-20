@@ -65,7 +65,7 @@ namespace OpenGLDotNet
         }
 
         // GLproc (GLboolean, glAreTexturesResident, (GLsizei n, const GLuint *textures, GLboolean *residences))
-        public unsafe static bool AreTexturesResident(GLsizei n, GLuint[] textures, GLboolean[] residences)
+        public unsafe static GLboolean AreTexturesResident(GLsizei n, GLuint[] textures, GLboolean[] residences)
         {
             if (glAreTexturesResident != null)
             {
