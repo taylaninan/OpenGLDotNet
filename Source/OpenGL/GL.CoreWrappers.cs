@@ -1,11 +1,11 @@
 ﻿// ----------------------------------------------------------------------------
 // FILE		: gl.corewrappers.cs
-// VERSION	: 1.1.1
+// VERSION	: 1.1.2
 // COMMENT	: OpenGL Core Profile wrappers for low level delegates and functions
-// WEB      : http://www.taylaninan.com/opengl-dotnet
+// WEB      : https://github.com/carmack78/opengldotnet
 // AUTHOR   : TAYLAN INAN
-// E-MAIL   : info@taylaninan.com
-// DATE     : 2014-2017
+// E-MAIL   : taylaninan@yahoo.com 
+// DATE     : 2014-2018
 // LICENSE  : FREE FOR EDUCATIONAL, PERSONAL AND COMMERCIAL USAGE
 // ----------------------------------------------------------------------------
 

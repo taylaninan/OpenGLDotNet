@@ -1,13 +1,13 @@
 // ----------------------------------------------------------------------------
 // FILE		: opengldotnet.math.cs
-// VERSION	: 1.1.1
+// VERSION	: 1.1.2
 // COMMENT	: This library provides mathematical and geometry objects like 
 //            Point2, Point3, Vector2, Vector3, Vector4, Matrix2, Matrix3, 
 // 			  Matrix4, Rectangle2, Circle2, Sphere3
-// WEB      : http://www.taylaninan.com/opengl-dotnet
+// WEB      : https://github.com/carmack78/opengldotnet
 // AUTHOR   : TAYLAN INAN
-// E-MAIL   : info@taylaninan.com
-// DATE     : 2014-2017
+// E-MAIL   : taylaninan@yahoo.com 
+// DATE     : 2014-2018
 // LICENSE  : FREE FOR EDUCATIONAL, PERSONAL AND COMMERCIAL USAGE
 // ----------------------------------------------------------------------------
 

@@ -1,12 +1,12 @@
 ﻿// ----------------------------------------------------------------------------
 // FILE		: ilut.types.cs
-// VERSION	: 1.1.1
+// VERSION	: 1.1.2
 // COMMENT	: Image Library Utility Toolkit(ILUT). This "imported header" (from C/C++) 
 //            defines required types for use with ILUT.
-// WEB      : http://www.taylaninan.com/opengl-dotnet
+// WEB      : https://github.com/carmack78/opengldotnet
 // AUTHOR   : TAYLAN INAN
-// E-MAIL   : info@taylaninan.com
-// DATE     : 2014-2017
+// E-MAIL   : taylaninan@yahoo.com 
+// DATE     : 2014-2018
 // LICENSE  : FREE FOR EDUCATIONAL, PERSONAL AND COMMERCIAL USAGE
 // ----------------------------------------------------------------------------
 

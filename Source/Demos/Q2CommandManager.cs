@@ -1,13 +1,13 @@
 ﻿// ----------------------------------------------------------------------------
 // FILE		: q2commandmanager.cs
-// VERSION	: 1.1.1
+// VERSION	: 1.1.2
 // COMMENT	: This file is part of Quake 2 Console Demo. The Q2CommandManager
 //			  allows of adding and executing console commands. Try writing "help"
 //            on console to list available commands and explanations.
-// WEB      : http://www.taylaninan.com/opengl-dotnet
+// WEB      : https://github.com/carmack78/opengldotnet
 // AUTHOR   : TAYLAN INAN
-// E-MAIL   : info@taylaninan.com
-// DATE     : 2014-2017
+// E-MAIL   : taylaninan@yahoo.com 
+// DATE     : 2014-2018
 // LICENSE  : FREE FOR EDUCATIONAL, PERSONAL AND COMMERCIAL USAGE
 // ----------------------------------------------------------------------------
 
