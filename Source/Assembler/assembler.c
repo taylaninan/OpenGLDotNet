@@ -33,6 +33,7 @@ __declspec(dllexport) void __stdcall _cpuid(uint32 function, uint32 subfunction)
 	};
 }
 
+// Return 64bit counter in EDX:EAX
 __declspec(dllexport) void __stdcall _rdtsc()
 {
 	__asm
