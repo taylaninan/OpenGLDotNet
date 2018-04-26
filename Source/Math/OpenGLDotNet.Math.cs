@@ -1,6 +1,7 @@
 // ----------------------------------------------------------------------------
 // FILE		: opengldotnet.math.cs
-// VERSION	: 1.1.2
+// VERSION	: 1.1.3
+// DATE     : 26 April 2018
 // COMMENT	: This library provides mathematical and geometry objects like 
 //            Point2, Point3, Vector2, Vector3, Vector4, Matrix2, Matrix3, 
 // 			  Matrix4, Rectangle2, Circle2, Sphere3

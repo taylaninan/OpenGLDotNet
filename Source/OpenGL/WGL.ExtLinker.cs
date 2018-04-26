@@ -1,6 +1,7 @@
 ﻿// ----------------------------------------------------------------------------
 // FILE		: wgl.extlinker.cs
-// VERSION	: 1.1.2
+// VERSION	: 1.1.3
+// DATE     : 26 April 2018
 // COMMENT	: "Windows" specific OpenGL Extension dynamic linker for functions.
 // WEB      : https://github.com/carmack78/opengldotnet
 // AUTHOR   : TAYLAN INAN

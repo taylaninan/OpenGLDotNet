@@ -1,6 +1,7 @@
 ﻿// ----------------------------------------------------------------------------
 // FILE		: il.functions.cs
-// VERSION	: 1.1.2
+// VERSION	: 1.1.3
+// DATE     : 26 April 2018
 // COMMENT	: Image Library (IL). This "imported header" (from C/C++) provides 
 //            low level (as close as C/C++) function and delegate declarations.
 // WEB      : https://github.com/carmack78/opengldotnet

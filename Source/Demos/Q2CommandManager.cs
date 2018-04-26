@@ -1,6 +1,7 @@
 ﻿// ----------------------------------------------------------------------------
 // FILE		: q2commandmanager.cs
-// VERSION	: 1.1.2
+// VERSION	: 1.1.3
+// DATE     : 26 April 2018
 // COMMENT	: This file is part of Quake 2 Console Demo. The Q2CommandManager
 //			  allows of adding and executing console commands. Try writing "help"
 //            on console to list available commands and explanations.

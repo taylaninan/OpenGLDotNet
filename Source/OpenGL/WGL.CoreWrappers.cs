@@ -1,6 +1,7 @@
 ﻿// ----------------------------------------------------------------------------
 // FILE		: wgl.corewrappers.cs
-// VERSION	: 1.1.2
+// VERSION	: 1.1.3
+// DATE     : 26 April 2018
 // COMMENT	: "Windows" specific OpenGL Core low level function wrappers.
 // WEB      : https://github.com/carmack78/opengldotnet
 // AUTHOR   : TAYLAN INAN

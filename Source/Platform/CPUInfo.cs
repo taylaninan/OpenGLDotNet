@@ -1,6 +1,7 @@
 // ----------------------------------------------------------------------------
 // FILE		: cpuinfo.cs
-// VERSION	: 1.1.2
+// VERSION	: 1.1.3
+// DATE     : 26 April 2018
 // COMMENT	: Defines functionality for displaying detailed information about the
 //            computer CPU. Makes use of "assembler.dll", which is written in "C"
 //            and "Assembler commands" (source code included).
@@ -21,27 +22,29 @@ namespace OpenGLDotNet
 {
     public static class CPUInfo
     {
-        [DllImport("assembler.dll", CallingConvention = CallingConvention.StdCall, EntryPoint="_cpuid")]
+        private const string LIBASSEMBLER = "assembler.dll";
+
+        [DllImport(LIBASSEMBLER, CallingConvention = CallingConvention.StdCall, EntryPoint="_cpuid")]
         [System.Security.SuppressUnmanagedCodeSecurity()]
         private static extern void __cpuid(uint function, uint subfunction);
 
-        [DllImport("assembler.dll", CallingConvention = CallingConvention.StdCall, EntryPoint = "_rdtsc")]
+        [DllImport(LIBASSEMBLER, CallingConvention = CallingConvention.StdCall, EntryPoint = "_rdtsc")]
         [System.Security.SuppressUnmanagedCodeSecurity()]
         private static extern void __rdtsc();
 
-        [DllImport("assembler.dll", CallingConvention = CallingConvention.StdCall, EntryPoint = "_reg_eax")]
+        [DllImport(LIBASSEMBLER, CallingConvention = CallingConvention.StdCall, EntryPoint = "_reg_eax")]
         [System.Security.SuppressUnmanagedCodeSecurity()]
         private static extern uint __reg_eax();
 
-        [DllImport("assembler.dll", CallingConvention = CallingConvention.StdCall, EntryPoint = "_reg_ebx")]
+        [DllImport(LIBASSEMBLER, CallingConvention = CallingConvention.StdCall, EntryPoint = "_reg_ebx")]
         [System.Security.SuppressUnmanagedCodeSecurity()]
         private static extern uint __reg_ebx();
 
-        [DllImport("assembler.dll", CallingConvention = CallingConvention.StdCall, EntryPoint = "_reg_ecx")]
+        [DllImport(LIBASSEMBLER, CallingConvention = CallingConvention.StdCall, EntryPoint = "_reg_ecx")]
         [System.Security.SuppressUnmanagedCodeSecurity()]
         private static extern uint __reg_ecx();
 		
-        [DllImport("assembler.dll", CallingConvention = CallingConvention.StdCall, EntryPoint = "_reg_edx")]
+        [DllImport(LIBASSEMBLER, CallingConvention = CallingConvention.StdCall, EntryPoint = "_reg_edx")]
         [System.Security.SuppressUnmanagedCodeSecurity()]
         private static extern uint __reg_edx();
 

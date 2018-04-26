@@ -1,6 +1,7 @@
 ﻿// ----------------------------------------------------------------------------
 // FILE		: ilut.functions.cs
-// VERSION	: 1.1.2
+// VERSION	: 1.1.3
+// DATE     : 26 April 2018
 // COMMENT	: Image Library Utility Toolkit(ILUT). This "imported header" (from C/C++) 
 //            defines and imports low level C/C++ delegates and functions as close to
 //            C/C++.

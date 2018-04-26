@@ -1,6 +1,7 @@
 ﻿// ----------------------------------------------------------------------------
 // FILE		: ilu.functions.cs
-// VERSION	: 1.1.2
+// VERSION	: 1.1.3
+// DATE     : 26 April 2018
 // COMMENT	: Image Library Utility (ILU). This "imported header" (from C/C++) 
 //            defines low level delegates and functions as close to C/C++.
 // WEB      : https://github.com/carmack78/opengldotnet

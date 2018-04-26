@@ -1,6 +1,7 @@
 ﻿// ----------------------------------------------------------------------------
 // FILE		: ilu.constants.cs
-// VERSION	: 1.1.2
+// VERSION	: 1.1.3
+// DATE     : 26 April 2018
 // COMMENT	: Image Library Utility (ILU). This "imported header" (from C/C++) 
 //            defines required constants for use with ILU.
 // WEB      : https://github.com/carmack78/opengldotnet

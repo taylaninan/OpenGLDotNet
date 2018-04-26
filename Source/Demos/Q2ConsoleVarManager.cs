@@ -1,6 +1,7 @@
 ﻿// ----------------------------------------------------------------------------
 // FILE		: q2consolevarmanager.cs
-// VERSION	: 1.1.2
+// VERSION	: 1.1.3
+// DATE     : 26 April 2018
 // COMMENT	: This file is part of Quake 2 Console Demo. The Q2ConsoleVarManager
 //            (Quake 2 Console Variable Manager) actually holds (creates, reads
 //            and changes) the internal variables used by Quake 2 Console.

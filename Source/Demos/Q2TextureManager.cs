@@ -1,6 +1,7 @@
 ﻿// ----------------------------------------------------------------------------
 // FILE		: q2texturemanager.cs
-// VERSION	: 1.1.2
+// VERSION	: 1.1.3
+// DATE     : 26 April 2018
 // COMMENT	: This file is part of Quake 2 Console Demo. The Q2TextureManager
 //            provides FilePath normalization, Texture reading from disk, holding
 //            the textures in the computer memory and uploading them to the GPU

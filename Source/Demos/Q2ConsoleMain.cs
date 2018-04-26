@@ -1,6 +1,7 @@
 ﻿// ----------------------------------------------------------------------------
 // FILE		: q2consolemain.cs
-// VERSION	: 1.1.2
+// VERSION	: 1.1.3
+// DATE     : 26 April 2018
 // COMMENT	: This file is part of Quake 2 Console Demo. The Q2ConsoleMain is the
 //			  main file, which initializes OpenGL and starts the console demo.
 // WEB      : https://github.com/carmack78/opengldotnet

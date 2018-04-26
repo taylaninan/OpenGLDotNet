@@ -1,6 +1,7 @@
 ﻿// ----------------------------------------------------------------------------
 // FILE		: gl.base.cs
-// VERSION	: 1.1.2
+// VERSION	: 1.1.3
+// DATE     : 26 April 2018
 // COMMENT	: OpenGL initting, configuration and extension loading and management
 //            base functions
 // WEB      : https://github.com/carmack78/opengldotnet

@@ -1,6 +1,7 @@
 // ----------------------------------------------------------------------------
 // FILE		: assembler.c
-// VERSION	: 1.1.2
+// VERSION	: 1.1.3
+// DATE		: 26 April 2018
 // COMMENT	: All assembler routines are written in this file and imported and 
 //            used by the CSharp functions later.
 // WEB      : https://github.com/carmack78/opengldotnet

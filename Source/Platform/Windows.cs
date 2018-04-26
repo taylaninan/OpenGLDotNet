@@ -1,6 +1,7 @@
 ﻿// ----------------------------------------------------------------------------
 // FILE		: windows.cs
-// VERSION	: 1.1.2
+// VERSION	: 1.1.3
+// DATE     : 26 April 2018
 // COMMENT	: Defines and imports "Windows" specific Library (*.dll) functionality
 //            from kernel32.dll.
 // WEB      : https://github.com/carmack78/opengldotnet
@@ -17,18 +18,20 @@ namespace OpenGLDotNet
 {
     public static class Windows
     {
+        private const string LIBKERNEL = "kernel32.dll";
+
         ///////////////////////////////////////////////////////////////////////
         // FUNCTIONS
         ///////////////////////////////////////////////////////////////////////
-        [DllImport("kernel32.dll", CallingConvention = CallingConvention.StdCall, CharSet = CharSet.Unicode, EntryPoint = "LoadLibraryW")]
+        [DllImport(LIBKERNEL, CallingConvention = CallingConvention.StdCall, CharSet = CharSet.Unicode, EntryPoint = "LoadLibraryW")]
         [System.Security.SuppressUnmanagedCodeSecurity()]
         public static extern uint LoadLibrary(string LibraryName);
 
-        [DllImport("kernel32.dll", CallingConvention = CallingConvention.StdCall)]
+        [DllImport(LIBKERNEL, CallingConvention = CallingConvention.StdCall)]
         [System.Security.SuppressUnmanagedCodeSecurity()]
         public static extern bool FreeLibrary(uint LibraryHandle);
 
-        [DllImport("kernel32.dll", CallingConvention = CallingConvention.StdCall, CharSet = CharSet.Ansi)]
+        [DllImport(LIBKERNEL, CallingConvention = CallingConvention.StdCall, CharSet = CharSet.Ansi)]
         [System.Security.SuppressUnmanagedCodeSecurity()]
         public static extern uint GetProcAddress(uint LibraryHandle, string ProcedureName);
     }

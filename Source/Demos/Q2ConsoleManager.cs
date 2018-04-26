@@ -1,6 +1,7 @@
 ﻿// ----------------------------------------------------------------------------
 // FILE		: q2consolemanager.cs
-// VERSION	: 1.1.2
+// VERSION	: 1.1.3
+// DATE     : 26 April 2018
 // COMMENT	: This file is part of Quake 2 Console Demo. The Q2ConsoleManager
 //			  shows the background picture, blends the text written on it, logs
 //            input text and command output texts; also reads the font picture

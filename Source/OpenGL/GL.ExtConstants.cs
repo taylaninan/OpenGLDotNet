@@ -1,6 +1,7 @@
 // ----------------------------------------------------------------------------
 // FILE		: gl.extconstants.cs
-// VERSION	: 1.1.2
+// VERSION	: 1.1.3
+// DATE     : 26 April 2018
 // COMMENT	: OpenGL Extensions constants.
 // WEB      : https://github.com/carmack78/opengldotnet
 // AUTHOR   : TAYLAN INAN

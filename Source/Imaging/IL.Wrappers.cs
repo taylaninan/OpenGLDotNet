@@ -1,6 +1,7 @@
 ﻿// ----------------------------------------------------------------------------
 // FILE		: il.wrappers.cs
-// VERSION	: 1.1.2
+// VERSION	: 1.1.3
+// DATE     : 26 April 2018
 // COMMENT	: Image Library (IL). This "imported header" (from C/C++) provides 
 //            wrappers for low delegates and functions, which are defined in 
 //            il.functions.cs file.
