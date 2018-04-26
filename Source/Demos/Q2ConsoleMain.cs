@@ -608,9 +608,9 @@ namespace Quake2DotNet
             ConsoleVarManager.Init();
 
             // First, setup the console window
-            Console.Title = "OpenGLDotNet v1.1.2 Demos";
+            Console.Title = "OpenGLDotNet v1.1.3 Demos";
 
-            Console.WriteLine("Starting OpenGLDotNet v1.1.2 - Quake 2 Console Demos ...");
+            Console.WriteLine("Starting OpenGLDotNet v1.1.3 - Quake 2 Console Demos ...");
 
             Init();
 

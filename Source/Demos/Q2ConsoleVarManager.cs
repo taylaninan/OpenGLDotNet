@@ -35,8 +35,8 @@ namespace Quake2DotNet
         public static void Init()
         {
             Create("Q2ConsoleInit", "true", 0);					// When TRUE, Quake 2 Console MUST be initiated.
-            Create("VersionLong", "OpenGLDotNet v1.1.2 Demos", 0);
-            Create("VersionShort", "v1.1.2", 0);
+            Create("VersionLong", "OpenGLDotNet v1.1.3 Demos", 0);
+            Create("VersionShort", "v1.1.3", 0);
             Create("ScreenWidth", "1024", 0);
             Create("ScreenHeight", "768", 0);
             Create("ConsoleBackground", "conback2.jpg", 0);
