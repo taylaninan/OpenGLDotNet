@@ -21,7 +21,7 @@ namespace Quake2DotNet
 
         // Variables for TCALLBACK methods
         // Normally we can pass the functions directly to GLUT or FREEGLUT, but then stupid GC collects them unpredictably.
-        // So, when we declare them as variables, and pass variables to the GLUT or FREEGLUT, there is no problem. 
+        // So, when we declare them as variables, and pass variables to the GLUT or FREEGLUT, the problem is solved. 
         // Stupid GC doesn't collect them.
         private static FG.TCALLBACKglutIdleProc IdleProc = Idle;
         private static FG.TCALLBACKglutKeyboardProc KeyboardProc = Keyboard;
