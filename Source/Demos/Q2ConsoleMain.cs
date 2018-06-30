@@ -31,7 +31,7 @@ namespace Quake2DotNet
 
         // Variables for FREEGLUT demo
         private static bool RotateAroundX = false;
-        private static bool RotateAroundY = true;
+        private static bool RotateAroundY = false;
         private static bool RotateAroundZ = false;
 
         private static float SpinAroundX = 0;
@@ -211,6 +211,24 @@ namespace Quake2DotNet
                     SphereQuadratic = GLU.NewQuadric();
                     GLU.QuadricNormals(SphereQuadratic, GLU.GLU_SMOOTH);
                 }
+
+                if (ConsoleVarManager.GetValueToByte("DemoGUI") == 1)
+                {
+                    GL.ClearColor(0.0f, 0.0f, 0.0f, 0.0f);                      // Black background
+
+                    GL.ShadeModel(GL.GL_SMOOTH);                                // Enables smooth color shading
+
+                    GL.ClearDepth(1.0);                                         // Depth buffer setup
+                    GL.Enable(GL.GL_DEPTH_TEST);                                // Enable depth buffer
+                    GL.DepthFunc(GL.GL_LESS);                                   // Type of depth test to do
+
+                    GL.Hint(GL.GL_PERSPECTIVE_CORRECTION_HINT, GL.GL_NICEST);   // Really nice perspective calculations
+
+                    GL.Disable(GL.GL_TEXTURE_2D);                               // Enable texture mapping
+                    GL.Disable(GL.GL_DITHER);
+                    GL.Enable(GL.GL_BLEND);
+                    GL.BlendFunc(GL.GL_SRC_ALPHA, GL.GL_ONE_MINUS_SRC_ALPHA);
+                }
             }
         }
 
@@ -222,7 +240,7 @@ namespace Quake2DotNet
             }
             else
             {
-                if (ConsoleVarManager.GetValueToByte("DemoFreeglut") == 1 || ConsoleVarManager.GetValueToByte("DemoCubemapping") == 1)
+                if (ConsoleVarManager.GetValueToByte("DemoFreeglut") == 1 || ConsoleVarManager.GetValueToByte("DemoCubemapping") == 1 || ConsoleVarManager.GetValueToByte("DemoGUI") == 1)
                 {
                     if (RotateAroundX)
                     {
@@ -319,6 +337,19 @@ namespace Quake2DotNet
                     GL.LoadIdentity();
 
                     GLU.Perspective(45.0, (float)width / (float)height, 1.0, 100.0);  // Do the perspective calculations. Last value = max clipping depth
+
+                    GL.MatrixMode(GL.GL_MODELVIEW);
+                    GL.LoadIdentity();
+                }
+
+                if (ConsoleVarManager.GetValueToByte("DemoGUI") == 1)
+                {
+                    GL.Viewport(0, 0, width, height);
+
+                    GL.MatrixMode(GL.GL_PROJECTION);
+                    GL.LoadIdentity();
+
+                    GL.Ortho(0, width, height, 0, -4096, 4096);
 
                     GL.MatrixMode(GL.GL_MODELVIEW);
                     GL.LoadIdentity();
@@ -456,10 +487,38 @@ namespace Quake2DotNet
                     FG.SwapBuffers();
                 }
 
+                if (ConsoleVarManager.GetValueToByte("DemoGUI") == 1)
+                {
+                    GL.Clear(GL.GL_COLOR_BUFFER_BIT | GL.GL_DEPTH_BUFFER_BIT);
+                    GL.LoadIdentity();
+
+                    GL.PushMatrix();
+
+                    GL.Begin(GL.GL_QUADS);
+                    // GUI Background
+                    GL.Color4f(0.50f, 0.50f, 0.50f, 1.0f);
+                    GL.Vertex3f(0.0f, 0.0f, -100.0f);
+                    GL.Vertex3f(1024.0f, 0.0f, -100.0f);
+                    GL.Vertex3f(1024.0f, 768.0f, -100.0f);
+                    GL.Vertex3f(0.0f, 768.0f, -100.0f);
+                    // GUI Foreground
+                    GL.Color4f(0.50f, 0.50f, 0.50f, 0.5f);
+                    GL.Vertex3f(0.0f, 0.0f, 0.0f);
+                    GL.Vertex3f(512.0f, 0.0f, 0.0f);
+                    GL.Vertex3f(512.0f, 384.0f, 0.0f);
+                    GL.Vertex3f(0.0f, 384.0f, 0.0f);
+                    GL.End();
+
+                    GL.PopMatrix();
+
+                    GL.Flush();
+                    FG.SwapBuffers();
+                }
+
                 ulong FinishTime = CPUInfo.ReadTSC();
-                double Interval = Math.Round((double)(FinishTime - StartTime) / (double)(CPUInfo.CPUSpeed * 1000000), 3);
-                double fps = Math.Round(1 / Interval, 3);
-                //Console.WriteLine("[FRAME_INFO] {0} FPS", fps);
+                double Interval = Math.Round((double)(FinishTime - StartTime) / (double)(CPUInfo.CPUSpeed * 1000000), 5);
+                double fps = Math.Round(1 / Interval, 5);
+                // Console.WriteLine("[FRAME_INFO] {0} FPS", fps);
             }
         }
 
@@ -578,12 +637,73 @@ namespace Quake2DotNet
                             break;
                     }
                 }
+
+                if (ConsoleVarManager.GetValueToByte("DemoGUI") == 1)
+                {
+                    switch (key)
+                    {
+                        case 81:    // 'Q' key pressed
+                        case 113:
+                            SpinIncrement += 0.25f;
+                            break;
+
+                        case 90:    // 'Z' key pressed
+                        case 122:
+                            SpinIncrement -= 0.25f;
+                            break;
+
+                        case 70:    // 'F' key pressed
+                        case 102:
+                            FG.FullScreenToggle();
+                            break;
+
+                        case 65:    // 'A' key pressed
+                        case 97:
+                            GL.MatrixMode(GL.GL_PROJECTION);
+                            GL.Translatef(-1.0f, 0.0f, 0.0f);
+                            GL.MatrixMode(GL.GL_MODELVIEW);
+                            break;
+
+                        case 83:    // 'S' key pressed
+                        case 115:
+                            GL.MatrixMode(GL.GL_PROJECTION);
+                            GL.Translatef(0.0f, -1.0f, 0.0f);
+                            GL.MatrixMode(GL.GL_MODELVIEW);
+                            break;
+
+                        case 68:    // 'D' key pressed
+                        case 100:
+                            GL.MatrixMode(GL.GL_PROJECTION);
+                            GL.Translatef(+1.0f, 0.0f, 0.0f);
+                            GL.MatrixMode(GL.GL_MODELVIEW);
+                            break;
+
+                        case 87:    // 'W' key pressed
+                        case 119:
+                            GL.MatrixMode(GL.GL_PROJECTION);
+                            GL.Translatef(0.0f, +1.0f, 0.0f);
+                            GL.MatrixMode(GL.GL_MODELVIEW);
+                            break;
+
+                        case 27:    // ESCAPE key pressed, so exit the program 
+                            RotateAroundX = false;
+                            RotateAroundY = false;
+                            RotateAroundZ = false;
+
+                            FG.IdleFunc(null);
+                            FG.KeyboardFunc(null);
+                            FG.MouseFunc(null);
+                            FG.ReshapeFunc(null);
+                            FG.DestroyWindow(FG.GetWindow());
+                            break;
+                    }
+                }
             }
         }
 
         public static void Mouse(int button, int state, int x, int y)
         {
-            if (ConsoleVarManager.GetValueToByte("DemoFreeglut") == 1 || ConsoleVarManager.GetValueToByte("DemoCubemapping") == 1)
+            if (ConsoleVarManager.GetValueToByte("DemoFreeglut") == 1 || ConsoleVarManager.GetValueToByte("DemoCubemapping") == 1 || ConsoleVarManager.GetValueToByte("DemoGUI") == 1)
             {
                 if (button == 0 && state == 0)          // Left mouse button clicked
                 {

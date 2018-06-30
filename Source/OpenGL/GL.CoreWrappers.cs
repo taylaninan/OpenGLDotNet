@@ -5182,20 +5182,28 @@ namespace OpenGLDotNet
         }
 
         // GLAPI GLuint APIENTRY glCreateProgram (void)
-        public static void CreateProgram()
+        public static GLuint CreateProgram()
         {
             if (glCreateProgram != null)
             {
-                glCreateProgram();
+                return glCreateProgram();
+            }
+            else
+            {
+                return 0;
             }
         }
 
         // GLAPI GLuint APIENTRY glCreateShader (GLenum type)
-        public static void CreateShader(GLenum type)
+        public static GLuint CreateShader(GLenum type)
         {
             if (glCreateShader != null)
             {
-                glCreateShader(type);
+                return glCreateShader(type);
+            }
+            else
+            {
+                return 0;
             }
         }
 

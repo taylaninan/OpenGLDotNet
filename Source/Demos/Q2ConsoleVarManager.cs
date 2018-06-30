@@ -43,7 +43,8 @@ namespace Quake2DotNet
             Create("ConsoleCharacters", "conchars.png", 0);
 			Create("DemoFreeglut", "0", 0);
 			Create("DemoCubemapping", "0", 0);
-			
+            Create("DemoGUI", "0", 0);
+
             Random RandomTrack = new Random();
             int TrackNumber = RandomTrack.Next(1, 10);
             string TrackString = "track" + TrackNumber.ToString().PadLeft(2, '0') + ".mp3";

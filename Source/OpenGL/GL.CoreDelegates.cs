@@ -3040,13 +3040,13 @@ namespace OpenGLDotNet
         // GLAPI GLuint APIENTRY glCreateProgram (void);
         [UnmanagedFunctionPointer(CallingConvention.StdCall)]
         [System.Security.SuppressUnmanagedCodeSecurity()]
-        private delegate void TglCreateProgram();
+        private delegate GLuint TglCreateProgram();
         private static TglCreateProgram glCreateProgram = null;
 
         // GLAPI GLuint APIENTRY glCreateShader (GLenum type);
         [UnmanagedFunctionPointer(CallingConvention.StdCall)]
         [System.Security.SuppressUnmanagedCodeSecurity()]
-        private delegate void TglCreateShader(GLenum type);
+        private delegate GLuint TglCreateShader(GLenum type);
         private static TglCreateShader glCreateShader = null;
 
         // GLAPI void APIENTRY glDeleteProgram (GLuint program);

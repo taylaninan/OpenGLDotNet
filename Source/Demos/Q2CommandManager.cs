@@ -53,7 +53,7 @@ namespace Quake2DotNet
 			AddCommand("imagelist", 0, "Displays detailed texture information, which are uploaded to the GPU", Command_imagelist);
             AddCommand("demofreeglut", 0, "When console is closed, displays the FREEGLUT demo with simple objects", Command_demofreeglut);
             AddCommand("democubemapping", 0, "When console is closed, displays the CUBEMAPPING demo", Command_democubemapping);
-            			
+            AddCommand("demogui", 0, "When console is closed, displays the GUI demo", Command_demogui);			
             // Required for audio out and the MP3 stream
             waveOutDevice = new WaveOut();
 
@@ -346,16 +346,18 @@ namespace Quake2DotNet
             byte DemoFreeglut = ConsoleVarManager.GetValueToByte("DemoFreeglut");
 
             if (DemoFreeglut == 0)
-            {   // Start DemoGlut; Make sure that the other demo is stopped
+            {   // Start demo; Make sure that the other demos are stopped
                 ConsoleVarManager.SetOrCreate("DemoFreeglut", "1", 0);
                 ConsoleVarManager.SetOrCreate("DemoCubemapping", "0", 0);
+                ConsoleVarManager.SetOrCreate("DemoGUI", "0", 0);
 
                 ConsoleManager.WriteLine("Starting demo FREEGLUT...");
             }
             else
-            {   // Stop DemoGlut
+            {   // Stop demo;
                 ConsoleVarManager.SetOrCreate("DemoFreeglut", "0", 0);
                 ConsoleVarManager.SetOrCreate("DemoCubemapping", "0", 0);
+                ConsoleVarManager.SetOrCreate("DemoGUI", "0", 0);
 
                 ConsoleManager.WriteLine("Stopping demo FREEGLUT...");
             }
@@ -366,18 +368,41 @@ namespace Quake2DotNet
             byte DemoCubemapping = ConsoleVarManager.GetValueToByte("DemoCubemapping");
 
             if (DemoCubemapping == 0)
-            {   // Start DemoGlut; Make sure that the other demo is stopped
-                ConsoleVarManager.SetOrCreate("DemoCubemapping", "1", 0);
+            {   // Start demo; Make sure that the other demos are stopped
                 ConsoleVarManager.SetOrCreate("DemoFreeglut", "0", 0);
-
+                ConsoleVarManager.SetOrCreate("DemoCubemapping", "1", 0);
+                ConsoleVarManager.SetOrCreate("DemoGUI", "0", 0);
                 ConsoleManager.WriteLine("Starting demo CUBEMAPPING...");
             }
             else
-            {   // Stop DemoGlut
-                ConsoleVarManager.SetOrCreate("DemoCubemapping", "0", 0);
+            {   // Stop demo;
                 ConsoleVarManager.SetOrCreate("DemoFreeglut", "0", 0);
+                ConsoleVarManager.SetOrCreate("DemoCubemapping", "0", 0);
+                ConsoleVarManager.SetOrCreate("DemoGUI", "0", 0);
 
                 ConsoleManager.WriteLine("Stopping demo CUBEMAPPING...");
+            }
+        }
+
+        private static void Command_demogui(string[] parameters)
+        {
+            byte DemoGUI = ConsoleVarManager.GetValueToByte("DemoGUI");
+
+            if (DemoGUI == 0)
+            {   // Start demo; Make sure that the other demos are stopped
+                ConsoleVarManager.SetOrCreate("DemoFreeglut", "0", 0);
+                ConsoleVarManager.SetOrCreate("DemoCubemapping", "0", 0);
+                ConsoleVarManager.SetOrCreate("DemoGUI", "1", 0);
+
+                ConsoleManager.WriteLine("Starting demo GUI...");
+            }
+            else
+            {   // Stop demo;
+                ConsoleVarManager.SetOrCreate("DemoCubemapping", "0", 0);
+                ConsoleVarManager.SetOrCreate("DemoFreeglut", "0", 0);
+                ConsoleVarManager.SetOrCreate("DemoGUI", "0", 0);
+
+                ConsoleManager.WriteLine("Stopping demo GUI...");
             }
         }
     }
